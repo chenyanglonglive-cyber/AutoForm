@@ -1,0 +1,16 @@
+{
+  "name": "amfori-auto-form",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local amfori auto form filler using JSON files and Playwright.",
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/storage.js && node --check src/automation/amforiBot.js && node --check src/validate-config.js",
+    "validate:config": "node src/validate-config.js"
+  },
+  "dependencies": {
+    "playwright": "^1.54.0"
+  },
+  "devDependencies": {}
+}

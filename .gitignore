@@ -1,0 +1,7 @@
+node_modules/
+.runtime/
+data/run-logs.jsonl
+data/screenshots/*
+!data/screenshots/.gitkeep
+npm-debug.log*
+.DS_Store

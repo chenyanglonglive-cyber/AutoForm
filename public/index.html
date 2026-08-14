@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>amfori Auto Form</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>amfori Auto Form</h1>
+          <p>本地自动填充 General Description、Report 和 Report Attachments</p>
+        </div>
+      </header>
+
+      <section class="layout">
+        <form id="autoForm" class="panel">
+          <h2>General Description</h2>
+
+          <label class="field">
+            <span>General Description</span>
+            <textarea id="generalDescription" name="generalDescription" rows="12" placeholder="留空则跳过，不会覆盖网页原内容"></textarea>
+          </label>
+
+          <label class="field">
+            <span>Confidential Comments</span>
+            <textarea id="confidentialComments" name="confidentialComments" rows="4"></textarea>
+          </label>
+
+          <h2>Report</h2>
+          <p class="hint">Report 模块字段会从 <code>config/field-mapping.json</code> 读取。当前第一版可先保持为空，后续确认网页字段 selector 后补齐。</p>
+        </form>
+
+        <aside class="panel side">
+          <form id="controllerForm" class="control-card">
+            <h2>控制器</h2>
+
+            <label class="field">
+              <span>Monitoring ID</span>
+              <input id="monitoringId" name="monitoringId" placeholder="例如 26-0426270" required>
+            </label>
+
+            <label class="field">
+              <span>附件文件夹路径</span>
+              <input id="attachmentFolder" name="attachmentFolder" placeholder="留空则跳过附件上传">
+            </label>
+
+            <div class="actions side-actions">
+              <button id="saveTemplateButton" class="secondary" type="button">保存模板</button>
+              <button id="runButton" type="submit">开始执行</button>
+            </div>
+          </form>
+
+          <section class="side-section">
+            <h2>运行状态</h2>
+            <div id="status" class="status idle">等待执行</div>
+            <pre id="resultBox" class="result"></pre>
+          </section>
+
+          <section class="side-section">
+            <div class="section-title-row">
+              <h2>最近日志</h2>
+              <button id="refreshLogsButton" class="secondary compact" type="button">刷新</button>
+            </div>
+            <div id="logs" class="logs"></div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

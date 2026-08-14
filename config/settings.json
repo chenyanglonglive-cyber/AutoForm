@@ -1,0 +1,29 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 3000
+  },
+  "amfori": {
+    "platformUrl": "https://platform.amfori.org/ui/",
+    "todoUrl": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo",
+    "manualLoginTimeoutMs": 180000,
+    "navigationTimeoutMs": 60000,
+    "browserUserDataDir": ".runtime/browser-profile"
+  },
+  "login": {
+    "usernameEnv": "AMFORI_USERNAME",
+    "passwordEnv": "AMFORI_PASSWORD",
+    "usernameSelector": "input[type='email'], input[name='username'], input[name='email'], input[id*='email' i], input[id*='user' i]",
+    "passwordSelector": "input[type='password']",
+    "submitSelector": "button[type='submit'], input[type='submit'], button:has-text('Login'), button:has-text('Sign in')"
+  },
+  "projectLookup": {
+    "monitoringIdFilterSelector": "",
+    "monitoringIdTextExact": true
+  },
+  "automation": {
+    "headless": false,
+    "slowMoMs": 120,
+    "saveAfterEachModule": false
+  }
+}

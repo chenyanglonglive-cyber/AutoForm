@@ -1,0 +1,35 @@
+{
+  "modules": {
+    "generalDescription": {
+      "tabText": "General Description",
+      "fields": [
+        {
+          "localKey": "generalDescription",
+          "label": "General Description",
+          "type": "textarea",
+          "required": true,
+          "selector": "textarea[name='generalDescription']"
+        },
+        {
+          "localKey": "confidentialComments",
+          "label": "Confidential Comments",
+          "type": "textarea",
+          "required": false,
+          "selector": "textarea[name='confidentialComments']"
+        }
+      ]
+    },
+    "report": {
+      "tabText": "Report",
+      "fields": []
+    },
+    "reportAttachments": {
+      "tabText": "Report Attachments",
+      "attachmentSelector": "input[type='file']",
+      "uploadMode": "allFilesInFolder"
+    }
+  },
+  "saveButton": {
+    "selector": "button:has-text('Save'), input[type='submit'][value='Save']"
+  }
+}
