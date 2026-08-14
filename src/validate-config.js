@@ -21,7 +21,7 @@ for (const [moduleKey, moduleConfig] of Object.entries(mapping.modules)) {
     assert(field.localKey, `${moduleKey} field localKey is required`);
     assert(field.label, `${moduleKey}.${field.localKey} label is required`);
     assert(field.type, `${moduleKey}.${field.localKey} type is required`);
-    assert(field.selector, `${moduleKey}.${field.localKey} selector is required`);
+    assert(field.selector || field.fallbackSelectors?.length, `${moduleKey}.${field.localKey} selector is required`);
   }
 }
 

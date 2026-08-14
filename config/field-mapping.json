@@ -8,14 +8,20 @@
           "label": "General Description",
           "type": "textarea",
           "required": true,
-          "selector": "textarea[name='generalDescription']"
+          "selector": "textarea[name='generalDescription']",
+          "fallbackSelectors": [
+            "xpath=(//*[normalize-space()='General Description']/following::textarea)[1]"
+          ]
         },
         {
           "localKey": "confidentialComments",
           "label": "Confidential Comments",
           "type": "textarea",
           "required": false,
-          "selector": "textarea[name='confidentialComments']"
+          "selector": "textarea[name='confidentialComments']",
+          "fallbackSelectors": [
+            "xpath=(//*[normalize-space()='Confidential Comments']/following::textarea)[1]"
+          ]
         }
       ]
     },
@@ -30,6 +36,6 @@
     }
   },
   "saveButton": {
-    "selector": "button:has-text('Save'), input[type='submit'][value='Save']"
+    "selector": "button#saveButton:visible"
   }
 }

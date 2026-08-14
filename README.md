@@ -33,15 +33,15 @@ http://127.0.0.1:3000
 
 ## 登录
 
-工具不会把 amfori 账号密码写入代码或日志。
+工具不会把 amfori 账号密码写入代码、日志或可提交模板。控制器里的账号密码会保存在本机文件 `.runtime/credentials.json`，用于登录态失效时自动填写登录页。
 
-推荐首次运行后，在 Playwright 打开的浏览器里手动登录。登录状态会保存在：
+Playwright 会使用本地浏览器 profile 持久保存登录状态，不需要每次重新登录：
 
 ```text
 .runtime/browser-profile
 ```
 
-也可以临时用环境变量自动填写登录页：
+也仍可以临时用环境变量自动填写登录页：
 
 ```powershell
 $env:AMFORI_USERNAME="your.email@example.com"

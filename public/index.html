@@ -31,6 +31,22 @@
 
           <h2>Report</h2>
           <p class="hint">Report 模块字段会从 <code>config/field-mapping.json</code> 读取。当前第一版可先保持为空，后续确认网页字段 selector 后补齐。</p>
+
+          <h2>Report Attachments</h2>
+          <label class="field">
+            <span>附件文件夹路径</span>
+            <input id="attachmentFolder" name="attachmentFolder" placeholder="留空则跳过附件上传">
+          </label>
+
+          <div class="attachment-actions">
+            <button id="loadAttachmentsButton" class="secondary" type="button">加载附件文件</button>
+            <button id="uploadAttachmentsButton" type="button" disabled>确认仅上传附件</button>
+          </div>
+          <div id="attachmentPreview" class="attachment-preview">填写文件夹路径后，可先加载文件名进行确认。</div>
+
+          <div class="actions form-actions">
+            <button id="saveTemplateButton" class="secondary" type="button">保存模板</button>
+          </div>
         </form>
 
         <aside class="panel side">
@@ -38,17 +54,24 @@
             <h2>控制器</h2>
 
             <label class="field">
+              <span>amfori 账号</span>
+              <input id="username" name="username" autocomplete="username" placeholder="用于自动登录">
+            </label>
+
+            <label class="field">
+              <span>amfori 密码</span>
+              <input id="password" name="password" type="password" autocomplete="current-password" placeholder="保存后以星号显示">
+            </label>
+
+            <button id="saveCredentialsButton" class="secondary" type="button">保存本地登录信息</button>
+            <p class="hint credential-hint">仅写入项目本地登录文件，不会打开浏览器。</p>
+
+            <label class="field">
               <span>Monitoring ID</span>
               <input id="monitoringId" name="monitoringId" placeholder="例如 26-0426270" required>
             </label>
 
-            <label class="field">
-              <span>附件文件夹路径</span>
-              <input id="attachmentFolder" name="attachmentFolder" placeholder="留空则跳过附件上传">
-            </label>
-
             <div class="actions side-actions">
-              <button id="saveTemplateButton" class="secondary" type="button">保存模板</button>
               <button id="runButton" type="submit">开始执行</button>
             </div>
           </form>

@@ -128,8 +128,50 @@ textarea:focus {
 }
 
 .side-actions {
+  margin-top: 6px;
+}
+
+.side-actions button {
+  width: 100%;
+}
+
+.form-actions {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #d8e0ea;
+}
+
+.attachment-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: -2px 0 10px;
+}
+
+.attachment-preview {
+  max-height: 180px;
+  overflow: auto;
+  margin-bottom: 18px;
+  border: 1px solid #d8e0ea;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #526173;
+  background: #f8fafc;
+  font-size: 13px;
+}
+
+.attachment-preview strong {
+  color: #243044;
+}
+
+.attachment-preview ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.credential-hint {
+  margin: 8px 0 18px;
+  font-size: 13px;
 }
 
 button {
@@ -233,6 +275,10 @@ button.compact {
 
 @media (max-width: 420px) {
   .side-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .attachment-actions {
     grid-template-columns: 1fr;
   }
 }
