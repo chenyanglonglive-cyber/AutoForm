@@ -6,7 +6,8 @@
   "description": "Local amfori auto form filler using JSON files and Playwright.",
   "scripts": {
     "start": "node src/server.js",
-    "check": "node --check src/server.js && node --check src/storage.js && node --check src/automation/amforiBot.js && node --check src/validate-config.js",
+    "build:report-schema": "node scripts/build-report-schema.mjs",
+    "check": "node --check src/server.js && node --check src/storage.js && node --check src/reportStorage.js && node --check src/automation/amforiBot.js && node --check src/validate-config.js && node --check scripts/build-report-schema.mjs && node --check public/app.js",
     "validate:config": "node src/validate-config.js"
   },
   "dependencies": {

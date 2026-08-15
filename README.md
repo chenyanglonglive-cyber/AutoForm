@@ -1,71 +1,126 @@
 # amfori Auto Form
 
-本项目是一个只在本机运行的 amfori 自动填表工具。
+个人 Windows 电脑本地运行的 amfori 自动填表工具。它根据本地模板和一个 `Monitoring ID` 打开对应项目，再将确认过的内容写入真实 amfori 页面。
 
-技术路线：
+工具不部署线上，不使用 Python、数据库或 SQLite。账号、浏览器登录态、导入值模板和运行日志均只保留在本机。
 
-- 本地页面：原生 HTML/CSS/JavaScript
-- 本地服务：Node.js 内置 HTTP 服务
-- 自动化：Playwright
-- 数据：JSON
-- 日志：JSONL
+## 当前范围
 
-第一版只处理三个模块：
+- `General Description`：填写文本字段并保存。
+- `Report`：23 个业务模块的本地模板、模块选择和逐模块自动化。
+- `Report Attachments`：独立加载、预览并上传指定文件夹中的附件。
 
-- General Description
-- Report
-- Report Attachments
+不处理 `Details`、`Closing Meeting`、`Previous Monitorings`。
+
+## 当前进度
+
+| 功能 | 状态 | 说明 |
+| --- | --- | --- |
+| 本地登录信息与持久化浏览器登录 | 已验证 | 优先复用浏览器 profile，失效时使用本机凭据重新登录。 |
+| General Description 填写与保存校验 | 已验证 | 已在真实项目验证成功提示和刷新后持久化。 |
+| Report Attachments 独立上传 | 已验证 | 先显示文件名，再确认上传；不会填写文本字段。 |
+| Report 23 模块 schema | 已完成 | 23 个模块、1,302 个可编辑字段、46 个固定表格结构。 |
+| Report 本地编辑器与逐模块保存流程 | 已实现 | 支持选择模块、保存本地模板、逐模块 Save、刷新校验、失败停止。 |
+| Report 真实项目分批验证 | 待进行 | 必须先测试单模块和各类控件，不可直接执行全部模块。 |
+| 动态搜索下拉选项采集 | 已完成 | 90 个 `ui-select` 已展开采集，按内容去重为 20 组候选项源，全部为完整固定列表。 |
+| 本地页面与目标 Report 结构对齐 | 已采集并校验 | 23 模块的章节/分组/选项组/表格布局已采集并重建 schema；表格内无 id 的 ui-select 已按单元格绑定（兜底区为空），字段集不变性校验通过；待人工对照目标页核验。 |
 
 ## 启动
+
+全新环境的搭建与数据重建清单见 [SETUP.md](SETUP.md)。
+
+安装依赖后运行：
 
 ```powershell
 npm install
 npm start
 ```
 
-打开：
+打开 [http://127.0.0.1:3000](http://127.0.0.1:3000)。根目录的 `AutoForm.lnk` 也可用于一键启动。
 
-```text
-http://127.0.0.1:3000
-```
-
-如果当前机器已经有上级目录的 `playwright` 依赖，可能无需重新安装即可运行。项目本身不依赖 Python、不使用 SQLite。
-
-## 登录
-
-工具不会把 amfori 账号密码写入代码、日志或可提交模板。控制器里的账号密码会保存在本机文件 `.runtime/credentials.json`，用于登录态失效时自动填写登录页。
-
-Playwright 会使用本地浏览器 profile 持久保存登录状态，不需要每次重新登录：
-
-```text
-.runtime/browser-profile
-```
-
-也仍可以临时用环境变量自动填写登录页：
+检查项目：
 
 ```powershell
-$env:AMFORI_USERNAME="your.email@example.com"
-$env:AMFORI_PASSWORD="your-password"
-npm start
+npm run check
+npm run validate:config
 ```
 
-## 配置
+## 使用方式
 
-主要配置文件：
+### 1. 保存登录信息
 
-- `config/settings.json`
-- `config/field-mapping.json`
-- `data/templates/default.json`
+在右侧控制器填写 amfori 账号和密码，点击“保存本地登录信息”。
 
-amfori 页面字段的 selector 需要在真实页面中确认后更新。若字段找不到，程序会停止、截图、写日志，不会继续点击 Save。
+- 凭据仅写入 `.runtime/credentials.json`。
+- 点击保存不会打开浏览器。
+- 实际任务运行时，Playwright 优先复用 `.runtime/browser-profile` 的登录态。
 
-## 运行规则
+### 2. 填写 General Description
 
-- 每次只处理一个 Monitoring ID。
-- 表单字段为空时跳过，不会覆盖网页原内容。
-- 表单字段有内容时会覆盖网页原内容，执行前会弹窗确认。
-- 附件文件夹为空时跳过附件上传。
-- 附件文件夹有文件时，文件夹内全部文件会上传到 Report Attachments。
-- 有字段填写或附件上传成功后才点击 Save；全部为空时不点击 Save。
-- 失败截图保存在 `data/screenshots/`。
-- 执行日志写入 `data/run-logs.jsonl`。
+填写左侧文本字段和右侧 `Monitoring ID`，点击“开始执行”。
+
+- 空文本字段跳过，不覆盖网页内容。
+- 有内容的字段会覆盖目标字段，执行前显示确认提示。
+- 该按钮不上传附件，也不执行 Report。
+
+### 3. 上传附件
+
+在 `Report Attachments` 输入文件夹路径，先点击“加载附件文件”确认文件名，再点击“确认仅上传附件”。
+
+- 路径或 `Monitoring ID` 改变后必须重新加载。
+- 上传任务只处理附件，不会覆盖 General Description 或 Report。
+
+### 4. 编辑和执行 Report
+
+在 `Report` 工作区点击一个模块名称后才加载该模块字段；通过模块左侧勾选框选择需要执行的模块。
+
+- “保存 Report 模板”只保存本地模板。
+- “执行已选 Report 模块”只运行已勾选的模块。
+- 自动化从当前 `Monitoring ID` 动态进入真实 Report 页面，不使用采集项目的绝对 URL。
+- 每个模块填写后单独点击真实 Save，刷新并校验后再继续下一个模块。
+- 遇到失败立即停止，日志会记录已完成模块，重新勾选失败模块即可续跑。
+
+## 数据与文件
+
+```text
+config/
+  settings.json                     平台、登录、超时和浏览器设置
+  field-mapping.json                General Description 与附件映射
+data/
+  report-schema/index.json          23 个 Report 模块索引
+  report-schema/modules/*.json      无值的字段、表格和定位 schema
+  report-layout/                    每模块章节/分组/表格/选项组布局与下拉候选项，已忽略
+  templates/default.json            General Description 与附件路径模板
+  templates/report-imported.json    本机 Report 当前值模板，已忽略
+  report_schema.json                原始采集快照，已忽略
+  run-logs.jsonl                    本机运行日志，已忽略
+  screenshots/                      失败截图，已忽略
+.runtime/
+  credentials.json                  本机凭据，已忽略
+  browser-profile/                  Playwright 登录态，已忽略
+```
+
+当原始 Report 采集快照更新后，重新生成 schema：
+
+```powershell
+npm run build:report-schema
+```
+
+## 安全与执行规则
+
+- 每次仅操作一个 `Monitoring ID`。
+- 自动化不会直接调用或重放 amfori 内部写接口，只通过真实网页填写和点击 Save。
+- 找不到字段、模块或保存确认时，任务停止，不继续处理后续模块。
+- 失败截图写入 `data/screenshots/`；操作日志写入 `data/run-logs.jsonl`。
+- 不要提交 `.runtime/`、`report-imported.json`、原始采集快照、日志或截图。
+
+## Report 验证顺序
+
+1. 使用低风险项目，先勾选一个基础模块。
+2. 分别验证文本、textarea、原生下拉、radio、checkbox、数字、时间和固定表格。
+3. 单独验证一个动态 `ui-select` 搜索下拉。
+4. 验证一个 PA 模块的复选与单选组合。
+5. 验证两个模块连续执行。
+6. 最后才选择全部 23 个模块。
+
+完整的接手信息、技术路径和后续工作见 [PROJECT_HANDOFF.md](PROJECT_HANDOFF.md)；环境搭建见 [SETUP.md](SETUP.md)。

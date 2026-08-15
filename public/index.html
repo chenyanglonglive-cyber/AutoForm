@@ -30,7 +30,22 @@
           </label>
 
           <h2>Report</h2>
-          <p class="hint">Report 模块字段会从 <code>config/field-mapping.json</code> 读取。当前第一版可先保持为空，后续确认网页字段 selector 后补齐。</p>
+          <section id="reportWorkspace" class="report-workspace" aria-label="Report 模板编辑器">
+            <div class="report-toolbar">
+              <p id="reportSummary" class="hint">正在读取 Report schema...</p>
+              <button id="selectAllReportButton" class="secondary compact" type="button">选择全部模块</button>
+            </div>
+            <div class="report-layout">
+              <nav id="reportModuleList" class="report-module-list" aria-label="Report 模块"></nav>
+              <section class="report-editor">
+                <div id="reportEditorHeader" class="report-editor-header"></div>
+                <div id="reportFields" class="report-fields">请选择一个模块。</div>
+              </section>
+            </div>
+            <div class="actions report-actions">
+              <button id="saveReportTemplateButton" class="secondary" type="button">保存 Report 模板</button>
+            </div>
+          </section>
 
           <h2>Report Attachments</h2>
           <label class="field">
@@ -73,6 +88,7 @@
 
             <div class="actions side-actions">
               <button id="runButton" type="submit">开始执行</button>
+              <button id="runReportButton" class="secondary" type="button">执行已选 Report 模块</button>
             </div>
           </form>
 

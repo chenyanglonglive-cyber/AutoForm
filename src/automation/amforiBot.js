@@ -101,9 +101,7 @@ export async function runAmforiAutomation({ template, mapping, settings }) {
     await openProjectByMonitoringId(page, template.monitoringId, settings, addStep);
 
     const generalDescriptionFilled = await fillModule(page, mapping.modules.generalDescription, template.fields, addStep);
-    const reportFilled = await fillModule(page, mapping.modules.report, template.fields, addStep);
-
-    const filledFields = generalDescriptionFilled + reportFilled;
+    const filledFields = generalDescriptionFilled;
     const hasChanges = filledFields > 0;
     let saveConfirmation = null;
 
@@ -117,7 +115,7 @@ export async function runAmforiAutomation({ template, mapping, settings }) {
     return {
       status: 'success',
       monitoringId: template.monitoringId,
-      modules: ['General Description', 'Report'],
+      modules: ['General Description'],
       filledFields,
       uploadedFiles: 0,
       saved: hasChanges,
@@ -140,6 +138,78 @@ export async function runAmforiAutomation({ template, mapping, settings }) {
     if (context) {
       await context.close();
     }
+  }
+}
+
+export async function runAmforiReportAutomation({ monitoringId, modules, values, credentials, settings }) {
+  const steps = [];
+  const completedModules = [];
+  let context;
+  let page;
+  let screenshot = '';
+  let filledFields = 0;
+
+  const addStep = (message) => steps.push({ time: new Date().toISOString(), message });
+
+  try {
+    if (!String(monitoringId || '').trim()) {
+      throw new Error('Monitoring ID is required.');
+    }
+    if (!Array.isArray(modules) || modules.length === 0) {
+      throw new Error('No Report modules were selected.');
+    }
+
+    context = await launchPersistentContext(settings);
+    page = context.pages()[0] || await context.newPage();
+    configurePageTimeouts(page, settings);
+    await page.goto(settings.amfori.todoUrl || settings.amfori.platformUrl, { waitUntil: 'domcontentloaded' });
+    await ensureLoggedIn(page, settings, credentials, addStep);
+    await openProjectByMonitoringId(page, monitoringId, settings, addStep);
+    const reportIndexUrl = await openReportIndex(page, addStep);
+
+    for (const module of modules) {
+      const moduleValues = values?.[module.id] || {};
+      const fieldsToFill = module.fields.filter((field) => hasTemplateValue(moduleValues, field));
+      if (fieldsToFill.length === 0) {
+        addStep(`${module.title}: no local values, skipped.`);
+        completedModules.push(module.title);
+        continue;
+      }
+
+      await openReportModule(page, module, reportIndexUrl, addStep);
+      let moduleFilled = 0;
+      for (const field of fieldsToFill) {
+        await fillReportField(page, field, moduleValues[field.key]);
+        moduleFilled += 1;
+      }
+
+      const confirmation = await clickSave(page, {
+        selector: '#saveButtonTop:visible, button#saveButton:visible'
+      }, settings, addStep);
+      await page.reload({ waitUntil: 'domcontentloaded' });
+      await page.waitForTimeout(Number(settings.automation.saveSettleMs || 2500));
+      await openReportModule(page, module, reportIndexUrl, addStep);
+      await verifyReportModule(page, fieldsToFill, moduleValues);
+      filledFields += moduleFilled;
+      completedModules.push(module.title);
+      addStep(`${module.title}: saved and refreshed (${moduleFilled} field(s)).`);
+      if (!confirmation) {
+        throw new Error(`${module.title}: Save confirmation was not received.`);
+      }
+    }
+
+    return {
+      status: 'success', monitoringId, modules: modules.map((module) => module.title),
+      completedModules, filledFields, saved: filledFields > 0, steps
+    };
+  } catch (error) {
+    if (page) screenshot = await captureFailureScreenshot(page, monitoringId);
+    return {
+      status: 'failed', monitoringId: monitoringId || '', reason: error.message, screenshot,
+      completedModules, filledFields, saved: completedModules.length > 0, steps
+    };
+  } finally {
+    if (context) await context.close();
   }
 }
 
@@ -277,6 +347,177 @@ async function openProjectByMonitoringId(page, monitoringId, settings, addStep) 
 
   await page.waitForLoadState('networkidle').catch(() => {});
   addStep(`Opened project ${idText}.`);
+}
+
+async function openReportIndex(page, addStep) {
+  const reportHref = await page.evaluate(() => {
+    const link = [...document.querySelectorAll('a[href*="report-sections"]')]
+      .find((element) => /report/i.test(element.textContent || '') || element.href.includes('report-sections'));
+    return link?.href || '';
+  });
+
+  if (!reportHref) {
+    throw new Error('Report tab link was not found on the current project.');
+  }
+
+  await page.goto(reportHref, { waitUntil: 'domcontentloaded' });
+  await page.waitForLoadState('networkidle').catch(() => {});
+  await page.locator('a.js-open-section').first().waitFor({ state: 'visible' }).catch(() => {
+    throw new Error('Report module list was not found.');
+  });
+  addStep('Opened the current project Report module list.');
+  return page.url();
+}
+
+async function openReportModule(page, module, reportIndexUrl, addStep) {
+  await page.goto(reportIndexUrl, { waitUntil: 'domcontentloaded' });
+  await page.waitForLoadState('networkidle').catch(() => {});
+
+  const links = page.locator('a.js-open-section');
+  await links.first().waitFor({ state: 'visible' }).catch(() => {
+    throw new Error('Report module list was not found.');
+  });
+
+  let link = links.nth(Number(module.sectionOrder || 0));
+  const indexedTitle = normalizeFieldValue(await link.textContent().catch(() => ''));
+  if (indexedTitle !== normalizeFieldValue(module.title)) {
+    link = links.filter({ hasText: module.title }).first();
+  }
+
+  await link.waitFor({ state: 'visible' }).catch(() => {
+    throw new Error(`Report module was not found on the current project: ${module.title}`);
+  });
+  await link.click();
+  await page.waitForLoadState('domcontentloaded').catch(() => {});
+  await page.locator('#sectionName, select#currentsection').first().waitFor({ state: 'visible' }).catch(() => {
+    throw new Error(`Report module did not open: ${module.title}`);
+  });
+  await expandCollapsedPanels(page, addStep);
+  addStep(`Opened Report module: ${module.title}.`);
+}
+
+// 展开模块内默认关闭的折叠面板（如 PA 模块的 Finding 折叠区），使其中字段可见、可被填充。
+// 通用做法：找到所有处于折叠态的折叠开关（aria-expanded="false" 且带 aria-controls），逐个点击展开。
+// 该操作纯属客户端 UI 状态切换，不触发任何写请求。
+async function expandCollapsedPanels(page, addStep) {
+  const toggleSelector = 'a[role="button"][aria-expanded="false"][aria-controls]';
+  // 部分模块的折叠区异步渲染，先等任一折叠开关出现；没有折叠面板的模块直接返回。
+  const hasPanels = await page.locator('a[role="button"][aria-controls]').first()
+    .waitFor({ state: 'attached', timeout: 5000 })
+    .then(() => true)
+    .catch(() => false);
+  if (!hasPanels) {
+    return;
+  }
+
+  const toggleIds = await page.evaluate((selector) =>
+    [...document.querySelectorAll(selector)].map((element) => element.id).filter(Boolean),
+    toggleSelector
+  );
+
+  let expanded = 0;
+  for (const id of toggleIds) {
+    const toggle = page.locator(`a[id="${id}"]`);
+    if (await toggle.count() === 0) continue;
+    const stillCollapsed = await toggle
+      .evaluate((element) => element.getAttribute('aria-expanded') === 'false')
+      .catch(() => false);
+    if (!stillCollapsed) continue;
+    await toggle.scrollIntoViewIfNeeded().catch(() => {});
+    await toggle.click({ timeout: 5000 }).catch(() => {});
+    expanded += 1;
+    await page.waitForTimeout(120);
+  }
+
+  if (expanded > 0) {
+    addStep(`Expanded ${expanded} collapsed panel(s) so their fields are visible.`);
+  }
+  await page.waitForTimeout(250);
+}
+
+function hasTemplateValue(values, field) {
+  if (!Object.hasOwn(values, field.key)) return false;
+  const value = values[field.key];
+  return typeof value === 'boolean' || String(value ?? '').trim() !== '';
+}
+
+async function fillReportField(page, field, value) {
+  const locator = await resolveReportFieldLocator(page, field);
+  if (field.type === 'radio') {
+    if (value === true) await locator.check();
+    return;
+  }
+  if (field.type === 'checkbox') {
+    if (value === true) await locator.check();
+    else await locator.uncheck();
+    await commitFieldChange(locator);
+    return;
+  }
+  if (field.type === 'select') {
+    const stringValue = String(value ?? '');
+    await locator.selectOption(stringValue).catch(() => locator.selectOption({ label: stringValue }));
+    await commitFieldChange(locator);
+    return;
+  }
+  if (field.type === 'ui-select') {
+    const text = String(value ?? '').trim();
+    if (!text) return;
+    await locator.fill(text);
+    const choice = page.locator('.ui-select-choices-row:visible, [role="option"]:visible')
+      .filter({ hasText: text }).first();
+    await choice.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {
+      throw new Error(`Dropdown option not found for ${field.label}: ${text}`);
+    });
+    await choice.click();
+    return;
+  }
+  const stringValue = String(value ?? '');
+  await locator.fill(stringValue);
+  await commitFieldChange(locator, stringValue);
+}
+
+async function resolveReportFieldLocator(page, field) {
+  if (field.type === 'ui-select') {
+    const search = page.locator('input.ui-select-search').nth(Number(field.uiSelectIndex || 0));
+    await search.waitFor({ state: 'attached', timeout: 5000 }).catch(() => {
+      throw new Error(`Custom dropdown not found: ${field.label}`);
+    });
+    const container = search.locator('xpath=ancestor::div[contains(concat(" ", normalize-space(@class), " "), " ui-select-container ")][1]');
+    await container.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {
+      throw new Error(`Custom dropdown container not found: ${field.label}`);
+    });
+    await container.click();
+    await search.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {
+      throw new Error(`Custom dropdown did not open: ${field.label}`);
+    });
+    return search;
+  }
+  return resolveFieldLocator(page, field);
+}
+
+async function verifyReportModule(page, fields, values) {
+  for (const field of fields) {
+    if (field.type === 'ui-select') continue;
+    const locator = await resolveReportFieldLocator(page, field);
+    const expected = values[field.key];
+    if (field.type === 'radio' || field.type === 'checkbox') {
+      if (Boolean(await locator.isChecked()) !== Boolean(expected)) {
+        throw new Error(`${field.label} was not persisted after Save.`);
+      }
+      continue;
+    }
+    if (field.type === 'select') {
+      const actual = await locator.inputValue();
+      if (normalizeFieldValue(actual) !== normalizeFieldValue(expected)) {
+        throw new Error(`${field.label} was not persisted after Save.`);
+      }
+      continue;
+    }
+    const actual = await locator.inputValue();
+    if (normalizeFieldValue(actual) !== normalizeFieldValue(expected)) {
+      throw new Error(`${field.label} was not persisted after Save.`);
+    }
+  }
 }
 
 async function fillModule(page, moduleConfig, fields, addStep) {

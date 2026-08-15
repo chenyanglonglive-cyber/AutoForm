@@ -1,0 +1,166 @@
+{
+  "id": "07-grievance-mechanism",
+  "title": "Grievance Mechanism",
+  "sectionOrder": 6,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "field",
+      "key": "07-grievance-mechanism__search_1"
+    },
+    {
+      "type": "group",
+      "title": "Grievance Mechanism",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "field",
+          "key": "GrievanceMechanismTypeofMechanism-operatedByTheBusinessPartner"
+        },
+        {
+          "type": "field",
+          "key": "GrievanceMechanismTypeofMechanism-external"
+        },
+        {
+          "type": "field",
+          "key": "GrievanceSampleNoofSample"
+        },
+        {
+          "type": "field",
+          "key": "GrievanceSamplePercentageofSample"
+        },
+        {
+          "type": "field",
+          "key": "GrievanceSampleSelectionCriteria"
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [],
+          "rowCount": 0,
+          "rows": []
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        ""
+      ],
+      "rowCount": 0,
+      "sampleRows": [],
+      "className": "table datagrid-table table-striped"
+    }
+  ],
+  "fields": [
+    {
+      "key": "07-grievance-mechanism__search_1",
+      "type": "ui-select",
+      "order": 1,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "GrievanceMechanismTypeofMechanism-operatedByTheBusinessPartner",
+      "type": "checkbox",
+      "order": 3,
+      "label": "Operated by the business partner",
+      "name": "GrievanceMechanismTypeofMechanism-operatedByTheBusinessPartner",
+      "selector": "#GrievanceMechanismTypeofMechanism-operatedByTheBusinessPartner",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Operated by the business partner']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "operatedByTheBusinessPartner",
+          "label": "Operated by the business partner"
+        }
+      ]
+    },
+    {
+      "key": "GrievanceMechanismTypeofMechanism-external",
+      "type": "checkbox",
+      "order": 4,
+      "label": "External",
+      "name": "GrievanceMechanismTypeofMechanism-external",
+      "selector": "#GrievanceMechanismTypeofMechanism-external",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'External']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "external",
+          "label": "External"
+        }
+      ]
+    },
+    {
+      "key": "GrievanceSampleNoofSample",
+      "type": "text",
+      "order": 5,
+      "label": "No of grievances sampled",
+      "name": "GrievanceSampleNoofSample",
+      "selector": "#GrievanceSampleNoofSample",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No of grievances sampled']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "GrievanceSamplePercentageofSample",
+      "type": "text",
+      "order": 6,
+      "label": "% compared to total",
+      "name": "GrievanceSamplePercentageofSample",
+      "selector": "#GrievanceSamplePercentageofSample",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'% compared to total']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "GrievanceSampleSelectionCriteria",
+      "type": "textarea",
+      "order": 7,
+      "label": "Selection criteria",
+      "name": "GrievanceSampleSelectionCriteria",
+      "selector": "#GrievanceSampleSelectionCriteria",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Selection criteria']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    }
+  ]
+}

@@ -1,0 +1,1615 @@
+{
+  "id": "03-social-performance-management",
+  "title": "Social Performance Management",
+  "sectionOrder": 2,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "group",
+      "title": "Social Performance Management",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "group",
+          "title": "Overall Social Performance Management",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "OverallSocPerformanceMngOverview"
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Name",
+                "Title",
+                "Select box"
+              ],
+              "rowCount": 1,
+              "rows": [
+                [
+                  "OverallSocPerformanceMngRSPProceduresName-0-0",
+                  "OverallSocPerformanceMngRSPProceduresTitle-0-0",
+                  "03-social-performance-management__search_4"
+                ]
+              ]
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Name",
+                "Title",
+                "Select box"
+              ],
+              "rowCount": 1,
+              "rows": [
+                [
+                  "OverallSocPerformanceMngRSPRemediationName-0-0",
+                  "OverallSocPerformanceMngRSPRemediationTitle-0-0",
+                  "03-social-performance-management__search_8"
+                ]
+              ]
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Name",
+                "Title",
+                "Select box"
+              ],
+              "rowCount": 1,
+              "rows": [
+                [
+                  "OverallSocPerformanceMngRSPGrievanceName-0-0",
+                  "OverallSocPerformanceMngRSPGrievanceTitle-0-0",
+                  "03-social-performance-management__search_12"
+                ]
+              ]
+            },
+            {
+              "type": "field-group",
+              "controlType": "radio",
+              "label": "Has the auditee completed continuous improvement prior to this amfori BSCI audit?",
+              "optionKeys": [
+                "ContinuoustImprovementCompletedPriorThisAudit-yes",
+                "ContinuoustImprovementCompletedPriorThisAudit-no",
+                "ContinuoustImprovementCompletedPriorThisAudit-notApplicableFirstAudit"
+              ]
+            },
+            {
+              "type": "field-group",
+              "controlType": "radio",
+              "label": "Has the auditee completed amfori BSCI Social Risk Assessment prior to this amfori BSCI audit?",
+              "optionKeys": [
+                "BSCI_SRACompletedPriorThisAudit-yes",
+                "BSCI_SRACompletedPriorThisAudit-no"
+              ]
+            },
+            {
+              "type": "field",
+              "key": "OverallSocPerformanceMngObservations"
+            },
+            {
+              "type": "field-group",
+              "controlType": "radio",
+              "label": "Is there a consultant working with the business partner ?",
+              "optionKeys": [
+                "panelOverallSocPerformanceMngbpconsultantonsite-yes",
+                "panelOverallSocPerformanceMngbpconsultantonsite-no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Freedom of Association",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "FoAOverview"
+            },
+            {
+              "type": "field",
+              "key": "FoAStrikewalkoutprotestpast12Months"
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Name of organization/union",
+                "Year of establishment at auditee",
+                "No of affiliated workers"
+              ],
+              "rowCount": 1,
+              "rows": [
+                [
+                  "FoAWorkerOrganizationsTradeUnionsName-0-0",
+                  "FoAWorkerOrganizationsTradeUnionsYear-0-0",
+                  "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0"
+                ]
+              ]
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Name of worker/union representative",
+                "Title of representative",
+                "Year of election",
+                "Select box"
+              ],
+              "rowCount": 3,
+              "rows": [
+                [
+                  "FoARepresentativesName-0-0",
+                  "FoARepresentativesTitle-0-0",
+                  "FoARepresentativesYearofElection-0-0",
+                  "03-social-performance-management__search_30"
+                ],
+                [
+                  "FoARepresentativesName-1-0",
+                  "FoARepresentativesTitle-1-0",
+                  "FoARepresentativesYearofElection-1-0",
+                  "03-social-performance-management__search_35"
+                ],
+                [
+                  "FoARepresentativesName-2-0",
+                  "FoARepresentativesTitle-2-0",
+                  "FoARepresentativesYearofElection-2-0",
+                  "03-social-performance-management__search_40"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Occupational Health and Safety",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "OHSOverviewAccidentMng"
+            },
+            {
+              "type": "field",
+              "key": "OHSAccidentsPast6Months"
+            },
+            {
+              "type": "field",
+              "key": "OHSHighRiskProduction"
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Name",
+                "Title",
+                "Select box"
+              ],
+              "rowCount": 1,
+              "rows": [
+                [
+                  "OHSRSPOHSAccidentsName-0-0",
+                  "OHSRSPOHSAccidentsTitle-0-0",
+                  "03-social-performance-management__search_47"
+                ]
+              ]
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [],
+              "rowCount": 0,
+              "rows": []
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [],
+              "rowCount": 0,
+              "rows": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPProceduresName-0-0",
+            "id": "OverallSocPerformanceMngRSPProceduresName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPProceduresName-0-0",
+            "id": "OverallSocPerformanceMngRSPProceduresName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPProceduresTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPProceduresTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPProceduresName-0-0",
+            "id": "OverallSocPerformanceMngRSPProceduresName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPProceduresTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPProceduresTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPProceduresName-0-0",
+            "id": "OverallSocPerformanceMngRSPProceduresName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPProceduresTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPProceduresTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPRemediationName-0-0",
+            "id": "OverallSocPerformanceMngRSPRemediationName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPRemediationName-0-0",
+            "id": "OverallSocPerformanceMngRSPRemediationName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPRemediationTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPRemediationTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPRemediationName-0-0",
+            "id": "OverallSocPerformanceMngRSPRemediationName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPRemediationTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPRemediationTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPRemediationName-0-0",
+            "id": "OverallSocPerformanceMngRSPRemediationName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPRemediationTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPRemediationTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPGrievanceName-0-0",
+            "id": "OverallSocPerformanceMngRSPGrievanceName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPGrievanceName-0-0",
+            "id": "OverallSocPerformanceMngRSPGrievanceName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPGrievanceTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPGrievanceTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPGrievanceName-0-0",
+            "id": "OverallSocPerformanceMngRSPGrievanceName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPGrievanceTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPGrievanceTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPGrievanceName-0-0",
+            "id": "OverallSocPerformanceMngRSPGrievanceName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OverallSocPerformanceMngRSPGrievanceTitle-0-0",
+            "id": "OverallSocPerformanceMngRSPGrievanceTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsName-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsName-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsYear-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsYear-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsName-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsYear-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsYear-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0"
+          }
+        ]
+      ],
+      "className": "table datagrid-table"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsName-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsYear-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsYear-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0",
+            "id": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0"
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 6,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-0-0",
+            "id": "FoARepresentativesName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-0-0",
+            "id": "FoARepresentativesName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesTitle-0-0",
+            "id": "FoARepresentativesTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesYearofElection-0-0",
+            "id": "FoARepresentativesYearofElection-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-0-0",
+            "id": "FoARepresentativesName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesTitle-0-0",
+            "id": "FoARepresentativesTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesYearofElection-0-0",
+            "id": "FoARepresentativesYearofElection-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-1-0",
+            "id": "FoARepresentativesName-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-1-0",
+            "id": "FoARepresentativesName-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesTitle-1-0",
+            "id": "FoARepresentativesTitle-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesYearofElection-1-0",
+            "id": "FoARepresentativesYearofElection-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-0-0",
+            "id": "FoARepresentativesName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesTitle-0-0",
+            "id": "FoARepresentativesTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesYearofElection-0-0",
+            "id": "FoARepresentativesYearofElection-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-1-0",
+            "id": "FoARepresentativesName-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesTitle-1-0",
+            "id": "FoARepresentativesTitle-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesYearofElection-1-0",
+            "id": "FoARepresentativesYearofElection-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesName-2-0",
+            "id": "FoARepresentativesName-2-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesTitle-2-0",
+            "id": "FoARepresentativesTitle-2-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "FoARepresentativesYearofElection-2-0",
+            "id": "FoARepresentativesYearofElection-2-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OHSRSPOHSAccidentsName-0-0",
+            "id": "OHSRSPOHSAccidentsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OHSRSPOHSAccidentsName-0-0",
+            "id": "OHSRSPOHSAccidentsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OHSRSPOHSAccidentsTitle-0-0",
+            "id": "OHSRSPOHSAccidentsTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OHSRSPOHSAccidentsName-0-0",
+            "id": "OHSRSPOHSAccidentsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OHSRSPOHSAccidentsTitle-0-0",
+            "id": "OHSRSPOHSAccidentsTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OHSRSPOHSAccidentsName-0-0",
+            "id": "OHSRSPOHSAccidentsName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "OHSRSPOHSAccidentsTitle-0-0",
+            "id": "OHSRSPOHSAccidentsTitle-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        ""
+      ],
+      "rowCount": 0,
+      "sampleRows": [],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [
+        ""
+      ],
+      "rowCount": 0,
+      "sampleRows": [],
+      "className": "table datagrid-table table-condensed"
+    }
+  ],
+  "fields": [
+    {
+      "key": "OverallSocPerformanceMngOverview",
+      "type": "textarea",
+      "order": 1,
+      "label": "Overview of how social performance is managed:",
+      "name": "OverallSocPerformanceMngOverview",
+      "selector": "#OverallSocPerformanceMngOverview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Overview of how social performance is ma']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OverallSocPerformanceMngRSPProceduresName-0-0",
+      "type": "text",
+      "order": 2,
+      "label": "Name",
+      "name": "OverallSocPerformanceMngRSPProceduresName-0-0",
+      "selector": "#OverallSocPerformanceMngRSPProceduresName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OverallSocPerformanceMngRSPProceduresTitle-0-0",
+      "type": "text",
+      "order": 3,
+      "label": "Title",
+      "name": "OverallSocPerformanceMngRSPProceduresTitle-0-0",
+      "selector": "#OverallSocPerformanceMngRSPProceduresTitle-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Title']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "03-social-performance-management__search_4",
+      "type": "ui-select",
+      "order": 4,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "OverallSocPerformanceMngRSPRemediationName-0-0",
+      "type": "text",
+      "order": 6,
+      "label": "Name",
+      "name": "OverallSocPerformanceMngRSPRemediationName-0-0",
+      "selector": "#OverallSocPerformanceMngRSPRemediationName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OverallSocPerformanceMngRSPRemediationTitle-0-0",
+      "type": "text",
+      "order": 7,
+      "label": "Title",
+      "name": "OverallSocPerformanceMngRSPRemediationTitle-0-0",
+      "selector": "#OverallSocPerformanceMngRSPRemediationTitle-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Title']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "03-social-performance-management__search_8",
+      "type": "ui-select",
+      "order": 8,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 1,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "OverallSocPerformanceMngRSPGrievanceName-0-0",
+      "type": "text",
+      "order": 10,
+      "label": "Name",
+      "name": "OverallSocPerformanceMngRSPGrievanceName-0-0",
+      "selector": "#OverallSocPerformanceMngRSPGrievanceName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OverallSocPerformanceMngRSPGrievanceTitle-0-0",
+      "type": "text",
+      "order": 11,
+      "label": "Title",
+      "name": "OverallSocPerformanceMngRSPGrievanceTitle-0-0",
+      "selector": "#OverallSocPerformanceMngRSPGrievanceTitle-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Title']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "03-social-performance-management__search_12",
+      "type": "ui-select",
+      "order": 12,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 2,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "ContinuoustImprovementCompletedPriorThisAudit-yes",
+      "type": "radio",
+      "order": 14,
+      "label": "Yes",
+      "name": "134",
+      "selector": "#ContinuoustImprovementCompletedPriorThisAudit-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "ContinuoustImprovementCompletedPriorThisAudit-no",
+      "type": "radio",
+      "order": 15,
+      "label": "No",
+      "name": "137",
+      "selector": "#ContinuoustImprovementCompletedPriorThisAudit-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "ContinuoustImprovementCompletedPriorThisAudit-notApplicableFirstAudit",
+      "type": "radio",
+      "order": 16,
+      "label": "Not Applicable (first audit)",
+      "name": "140",
+      "selector": "#ContinuoustImprovementCompletedPriorThisAudit-notApplicableFirstAudit",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Not Applicable (first audit)']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "notApplicableFirstAudit",
+          "label": "Not Applicable (first audit)"
+        }
+      ]
+    },
+    {
+      "key": "BSCI_SRACompletedPriorThisAudit-yes",
+      "type": "radio",
+      "order": 17,
+      "label": "Yes",
+      "name": "148",
+      "selector": "#BSCI_SRACompletedPriorThisAudit-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "BSCI_SRACompletedPriorThisAudit-no",
+      "type": "radio",
+      "order": 18,
+      "label": "No",
+      "name": "151",
+      "selector": "#BSCI_SRACompletedPriorThisAudit-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "OverallSocPerformanceMngObservations",
+      "type": "textarea",
+      "order": 19,
+      "label": "Observations",
+      "name": "OverallSocPerformanceMngObservations",
+      "selector": "#OverallSocPerformanceMngObservations",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Observations']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelOverallSocPerformanceMngbpconsultantonsite-yes",
+      "type": "radio",
+      "order": 20,
+      "label": "Yes",
+      "name": "164",
+      "selector": "#panelOverallSocPerformanceMngbpconsultantonsite-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "panelOverallSocPerformanceMngbpconsultantonsite-no",
+      "type": "radio",
+      "order": 21,
+      "label": "No",
+      "name": "167",
+      "selector": "#panelOverallSocPerformanceMngbpconsultantonsite-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "FoAOverview",
+      "type": "textarea",
+      "order": 22,
+      "label": "Overview of how worker representation and freedom of association are managed:",
+      "name": "FoAOverview",
+      "selector": "#FoAOverview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Overview of how worker representation an']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoAStrikewalkoutprotestpast12Months",
+      "type": "textarea",
+      "order": 23,
+      "label": "Description of a strike, walkout and/or protest in the 12 months prior to the audit, if any:",
+      "name": "FoAStrikewalkoutprotestpast12Months",
+      "selector": "#FoAStrikewalkoutprotestpast12Months",
+      "xpathFallback": "",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoAWorkerOrganizationsTradeUnionsName-0-0",
+      "type": "text",
+      "order": 24,
+      "label": "Name of organization/union",
+      "name": "FoAWorkerOrganizationsTradeUnionsName-0-0",
+      "selector": "#FoAWorkerOrganizationsTradeUnionsName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of organization/union']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoAWorkerOrganizationsTradeUnionsYear-0-0",
+      "type": "text",
+      "order": 25,
+      "label": "Year of establishment at auditee",
+      "name": "FoAWorkerOrganizationsTradeUnionsYear-0-0",
+      "selector": "#FoAWorkerOrganizationsTradeUnionsYear-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year of establishment at auditee']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0",
+      "type": "text",
+      "order": 26,
+      "label": "No of affiliated workers",
+      "name": "FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0",
+      "selector": "#FoAWorkerOrganizationsTradeUnionsNoofWorkers-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No of affiliated workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoARepresentativesName-0-0",
+      "type": "text",
+      "order": 27,
+      "label": "Name of worker/union representative",
+      "name": "FoARepresentativesName-0-0",
+      "selector": "#FoARepresentativesName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of worker/union representative']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoARepresentativesTitle-0-0",
+      "type": "text",
+      "order": 28,
+      "label": "Title of representative",
+      "name": "FoARepresentativesTitle-0-0",
+      "selector": "#FoARepresentativesTitle-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Title of representative']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoARepresentativesYearofElection-0-0",
+      "type": "text",
+      "order": 29,
+      "label": "Year of election",
+      "name": "FoARepresentativesYearofElection-0-0",
+      "selector": "#FoARepresentativesYearofElection-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year of election']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "03-social-performance-management__search_30",
+      "type": "ui-select",
+      "order": 30,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 3,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "FoARepresentativesName-1-0",
+      "type": "text",
+      "order": 32,
+      "label": "Name of worker/union representative",
+      "name": "FoARepresentativesName-1-0",
+      "selector": "#FoARepresentativesName-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of worker/union representative']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoARepresentativesTitle-1-0",
+      "type": "text",
+      "order": 33,
+      "label": "Title of representative",
+      "name": "FoARepresentativesTitle-1-0",
+      "selector": "#FoARepresentativesTitle-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Title of representative']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoARepresentativesYearofElection-1-0",
+      "type": "text",
+      "order": 34,
+      "label": "Year of election",
+      "name": "FoARepresentativesYearofElection-1-0",
+      "selector": "#FoARepresentativesYearofElection-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year of election']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "03-social-performance-management__search_35",
+      "type": "ui-select",
+      "order": 35,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 4,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "FoARepresentativesName-2-0",
+      "type": "text",
+      "order": 37,
+      "label": "Name of worker/union representative",
+      "name": "FoARepresentativesName-2-0",
+      "selector": "#FoARepresentativesName-2-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of worker/union representative']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoARepresentativesTitle-2-0",
+      "type": "text",
+      "order": 38,
+      "label": "Title of representative",
+      "name": "FoARepresentativesTitle-2-0",
+      "selector": "#FoARepresentativesTitle-2-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Title of representative']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "FoARepresentativesYearofElection-2-0",
+      "type": "text",
+      "order": 39,
+      "label": "Year of election",
+      "name": "FoARepresentativesYearofElection-2-0",
+      "selector": "#FoARepresentativesYearofElection-2-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year of election']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "03-social-performance-management__search_40",
+      "type": "ui-select",
+      "order": 40,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 5,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "OHSOverviewAccidentMng",
+      "type": "textarea",
+      "order": 42,
+      "label": "Overview of accident management:",
+      "name": "OHSOverviewAccidentMng",
+      "selector": "#OHSOverviewAccidentMng",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Overview of accident management:']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OHSAccidentsPast6Months",
+      "type": "textarea",
+      "order": 43,
+      "label": "Description of accidents that occured up to 6 months prior to the audit, if any:",
+      "name": "OHSAccidentsPast6Months",
+      "selector": "#OHSAccidentsPast6Months",
+      "xpathFallback": "",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OHSHighRiskProduction",
+      "type": "textarea",
+      "order": 44,
+      "label": "Description of a highly risky production technique that could affect workers' health (e.g. sandblasting), if any:",
+      "name": "OHSHighRiskProduction",
+      "selector": "#OHSHighRiskProduction",
+      "xpathFallback": "",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OHSRSPOHSAccidentsName-0-0",
+      "type": "text",
+      "order": 45,
+      "label": "Name",
+      "name": "OHSRSPOHSAccidentsName-0-0",
+      "selector": "#OHSRSPOHSAccidentsName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OHSRSPOHSAccidentsTitle-0-0",
+      "type": "text",
+      "order": 46,
+      "label": "Title",
+      "name": "OHSRSPOHSAccidentsTitle-0-0",
+      "selector": "#OHSRSPOHSAccidentsTitle-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Title']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "03-social-performance-management__search_47",
+      "type": "ui-select",
+      "order": 47,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 6,
+      "optionsStatus": "complete"
+    }
+  ]
+}

@@ -1,0 +1,7459 @@
+{
+  "id": "17-pa-7-occupational-health-and-safety",
+  "title": "PA 7: Occupational Health and Safety",
+  "sectionOrder": 16,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "group",
+      "title": "General Description",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "field",
+          "key": "GeneralDescriptionPA7"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Good Practices",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "field",
+          "key": "GoodPracticesPA7"
+        }
+      ]
+    },
+    {
+      "type": "field",
+      "key": "17-pa-7-occupational-health-and-safety__search_3"
+    },
+    {
+      "type": "group",
+      "title": "Performance Area 7: Occupational Health and Safety",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "group",
+          "title": "Regulations",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_1-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_1Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_2Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Risk Assessment",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_3-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_3Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_4Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Training",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_5-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_5Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Personal Protective Equipment",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_6-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_6Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Chemicals",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_7-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_7Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Accident and Emergency Procedures",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_8-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_8Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_9Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_10Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_11Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Electricity",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_13-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_13-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_13-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_13-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_13FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_13FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence2-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence2-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence2-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence2-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_12Evidence2-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Fire Protection",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_14-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_14Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Escape Routes and Emergency Exits",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_15-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_15Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_16Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Machine and Vehicle Safety",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_17-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_17Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "First Aid",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_18-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_18Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_19Evidence-de"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Workplace and Social Facilities, including housing when provided by the auditee",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MAN_PA7_20-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_20Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_21Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_22Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_23Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_24Evidence-de"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25-yes"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25-partially"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25-no"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25-n/A"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25FindingEN"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25FindingLOCAL"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25Evidence-mi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25Evidence-wi"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25Evidence-wri"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25Evidence-so"
+            },
+            {
+              "type": "field",
+              "key": "MAN_PA7_25Evidence-de"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [],
+  "fields": [
+    {
+      "key": "GeneralDescriptionPA7",
+      "type": "textarea",
+      "order": 1,
+      "label": "GeneralDescriptionPA7",
+      "name": "GeneralDescriptionPA7",
+      "selector": "#GeneralDescriptionPA7",
+      "xpathFallback": "",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "GoodPracticesPA7",
+      "type": "textarea",
+      "order": 2,
+      "label": "GoodPracticesPA7",
+      "name": "GoodPracticesPA7",
+      "selector": "#GoodPracticesPA7",
+      "xpathFallback": "",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "17-pa-7-occupational-health-and-safety__search_3",
+      "type": "ui-select",
+      "order": 3,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "MAN_PA7_1-yes",
+      "type": "radio",
+      "order": 5,
+      "label": "Yes",
+      "name": "MAN_PA7_1",
+      "selector": "#MAN_PA7_1-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1-partially",
+      "type": "radio",
+      "order": 6,
+      "label": "Partially",
+      "name": "MAN_PA7_1",
+      "selector": "#MAN_PA7_1-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1-no",
+      "type": "radio",
+      "order": 7,
+      "label": "No",
+      "name": "MAN_PA7_1",
+      "selector": "#MAN_PA7_1-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1-n/A",
+      "type": "radio",
+      "order": 8,
+      "label": "N/A",
+      "name": "MAN_PA7_1",
+      "selector": "#MAN_PA7_1-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1FindingEN",
+      "type": "textarea",
+      "order": 9,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_1FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_1FindingLOCAL",
+      "type": "textarea",
+      "order": 10,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_1FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_1Evidence-mi",
+      "type": "checkbox",
+      "order": 11,
+      "label": "MI",
+      "name": "MAN_PA7_1Evidence-mi",
+      "selector": "#MAN_PA7_1Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1Evidence-wi",
+      "type": "checkbox",
+      "order": 12,
+      "label": "WI",
+      "name": "MAN_PA7_1Evidence-wi",
+      "selector": "#MAN_PA7_1Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1Evidence-wri",
+      "type": "checkbox",
+      "order": 13,
+      "label": "WRI",
+      "name": "MAN_PA7_1Evidence-wri",
+      "selector": "#MAN_PA7_1Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1Evidence-so",
+      "type": "checkbox",
+      "order": 14,
+      "label": "SO",
+      "name": "MAN_PA7_1Evidence-so",
+      "selector": "#MAN_PA7_1Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_1Evidence-de",
+      "type": "checkbox",
+      "order": 15,
+      "label": "DE",
+      "name": "MAN_PA7_1Evidence-de",
+      "selector": "#MAN_PA7_1Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2-yes",
+      "type": "radio",
+      "order": 16,
+      "label": "Yes",
+      "name": "MAN_PA7_2",
+      "selector": "#MAN_PA7_2-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2-partially",
+      "type": "radio",
+      "order": 17,
+      "label": "Partially",
+      "name": "MAN_PA7_2",
+      "selector": "#MAN_PA7_2-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2-no",
+      "type": "radio",
+      "order": 18,
+      "label": "No",
+      "name": "MAN_PA7_2",
+      "selector": "#MAN_PA7_2-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2-n/A",
+      "type": "radio",
+      "order": 19,
+      "label": "N/A",
+      "name": "MAN_PA7_2",
+      "selector": "#MAN_PA7_2-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2FindingEN",
+      "type": "textarea",
+      "order": 20,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_2FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_2FindingLOCAL",
+      "type": "textarea",
+      "order": 21,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_2FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_2Evidence-mi",
+      "type": "checkbox",
+      "order": 22,
+      "label": "MI",
+      "name": "MAN_PA7_2Evidence-mi",
+      "selector": "#MAN_PA7_2Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2Evidence-wi",
+      "type": "checkbox",
+      "order": 23,
+      "label": "WI",
+      "name": "MAN_PA7_2Evidence-wi",
+      "selector": "#MAN_PA7_2Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2Evidence-wri",
+      "type": "checkbox",
+      "order": 24,
+      "label": "WRI",
+      "name": "MAN_PA7_2Evidence-wri",
+      "selector": "#MAN_PA7_2Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2Evidence-so",
+      "type": "checkbox",
+      "order": 25,
+      "label": "SO",
+      "name": "MAN_PA7_2Evidence-so",
+      "selector": "#MAN_PA7_2Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_2Evidence-de",
+      "type": "checkbox",
+      "order": 26,
+      "label": "DE",
+      "name": "MAN_PA7_2Evidence-de",
+      "selector": "#MAN_PA7_2Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3-yes",
+      "type": "radio",
+      "order": 27,
+      "label": "Yes",
+      "name": "MAN_PA7_3",
+      "selector": "#MAN_PA7_3-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3-partially",
+      "type": "radio",
+      "order": 28,
+      "label": "Partially",
+      "name": "MAN_PA7_3",
+      "selector": "#MAN_PA7_3-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3-no",
+      "type": "radio",
+      "order": 29,
+      "label": "No",
+      "name": "MAN_PA7_3",
+      "selector": "#MAN_PA7_3-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3-n/A",
+      "type": "radio",
+      "order": 30,
+      "label": "N/A",
+      "name": "MAN_PA7_3",
+      "selector": "#MAN_PA7_3-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3FindingEN",
+      "type": "textarea",
+      "order": 31,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_3FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_3FindingLOCAL",
+      "type": "textarea",
+      "order": 32,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_3FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_3Evidence-mi",
+      "type": "checkbox",
+      "order": 33,
+      "label": "MI",
+      "name": "MAN_PA7_3Evidence-mi",
+      "selector": "#MAN_PA7_3Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3Evidence-wi",
+      "type": "checkbox",
+      "order": 34,
+      "label": "WI",
+      "name": "MAN_PA7_3Evidence-wi",
+      "selector": "#MAN_PA7_3Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3Evidence-wri",
+      "type": "checkbox",
+      "order": 35,
+      "label": "WRI",
+      "name": "MAN_PA7_3Evidence-wri",
+      "selector": "#MAN_PA7_3Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3Evidence-so",
+      "type": "checkbox",
+      "order": 36,
+      "label": "SO",
+      "name": "MAN_PA7_3Evidence-so",
+      "selector": "#MAN_PA7_3Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_3Evidence-de",
+      "type": "checkbox",
+      "order": 37,
+      "label": "DE",
+      "name": "MAN_PA7_3Evidence-de",
+      "selector": "#MAN_PA7_3Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4-yes",
+      "type": "radio",
+      "order": 38,
+      "label": "Yes",
+      "name": "MAN_PA7_4",
+      "selector": "#MAN_PA7_4-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4-partially",
+      "type": "radio",
+      "order": 39,
+      "label": "Partially",
+      "name": "MAN_PA7_4",
+      "selector": "#MAN_PA7_4-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4-no",
+      "type": "radio",
+      "order": 40,
+      "label": "No",
+      "name": "MAN_PA7_4",
+      "selector": "#MAN_PA7_4-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4-n/A",
+      "type": "radio",
+      "order": 41,
+      "label": "N/A",
+      "name": "MAN_PA7_4",
+      "selector": "#MAN_PA7_4-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4FindingEN",
+      "type": "textarea",
+      "order": 42,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_4FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_4FindingLOCAL",
+      "type": "textarea",
+      "order": 43,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_4FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_4Evidence-mi",
+      "type": "checkbox",
+      "order": 44,
+      "label": "MI",
+      "name": "MAN_PA7_4Evidence-mi",
+      "selector": "#MAN_PA7_4Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4Evidence-wi",
+      "type": "checkbox",
+      "order": 45,
+      "label": "WI",
+      "name": "MAN_PA7_4Evidence-wi",
+      "selector": "#MAN_PA7_4Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4Evidence-wri",
+      "type": "checkbox",
+      "order": 46,
+      "label": "WRI",
+      "name": "MAN_PA7_4Evidence-wri",
+      "selector": "#MAN_PA7_4Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4Evidence-so",
+      "type": "checkbox",
+      "order": 47,
+      "label": "SO",
+      "name": "MAN_PA7_4Evidence-so",
+      "selector": "#MAN_PA7_4Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_4Evidence-de",
+      "type": "checkbox",
+      "order": 48,
+      "label": "DE",
+      "name": "MAN_PA7_4Evidence-de",
+      "selector": "#MAN_PA7_4Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5-yes",
+      "type": "radio",
+      "order": 49,
+      "label": "Yes",
+      "name": "MAN_PA7_5",
+      "selector": "#MAN_PA7_5-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5-partially",
+      "type": "radio",
+      "order": 50,
+      "label": "Partially",
+      "name": "MAN_PA7_5",
+      "selector": "#MAN_PA7_5-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5-no",
+      "type": "radio",
+      "order": 51,
+      "label": "No",
+      "name": "MAN_PA7_5",
+      "selector": "#MAN_PA7_5-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5-n/A",
+      "type": "radio",
+      "order": 52,
+      "label": "N/A",
+      "name": "MAN_PA7_5",
+      "selector": "#MAN_PA7_5-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5FindingEN",
+      "type": "textarea",
+      "order": 53,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_5FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_5FindingLOCAL",
+      "type": "textarea",
+      "order": 54,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_5FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_5Evidence-mi",
+      "type": "checkbox",
+      "order": 55,
+      "label": "MI",
+      "name": "MAN_PA7_5Evidence-mi",
+      "selector": "#MAN_PA7_5Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5Evidence-wi",
+      "type": "checkbox",
+      "order": 56,
+      "label": "WI",
+      "name": "MAN_PA7_5Evidence-wi",
+      "selector": "#MAN_PA7_5Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5Evidence-wri",
+      "type": "checkbox",
+      "order": 57,
+      "label": "WRI",
+      "name": "MAN_PA7_5Evidence-wri",
+      "selector": "#MAN_PA7_5Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5Evidence-so",
+      "type": "checkbox",
+      "order": 58,
+      "label": "SO",
+      "name": "MAN_PA7_5Evidence-so",
+      "selector": "#MAN_PA7_5Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_5Evidence-de",
+      "type": "checkbox",
+      "order": 59,
+      "label": "DE",
+      "name": "MAN_PA7_5Evidence-de",
+      "selector": "#MAN_PA7_5Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6-yes",
+      "type": "radio",
+      "order": 60,
+      "label": "Yes",
+      "name": "MAN_PA7_6",
+      "selector": "#MAN_PA7_6-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6-partially",
+      "type": "radio",
+      "order": 61,
+      "label": "Partially",
+      "name": "MAN_PA7_6",
+      "selector": "#MAN_PA7_6-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6-no",
+      "type": "radio",
+      "order": 62,
+      "label": "No",
+      "name": "MAN_PA7_6",
+      "selector": "#MAN_PA7_6-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6-n/A",
+      "type": "radio",
+      "order": 63,
+      "label": "N/A",
+      "name": "MAN_PA7_6",
+      "selector": "#MAN_PA7_6-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6FindingEN",
+      "type": "textarea",
+      "order": 64,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_6FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_6FindingLOCAL",
+      "type": "textarea",
+      "order": 65,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_6FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_6Evidence-mi",
+      "type": "checkbox",
+      "order": 66,
+      "label": "MI",
+      "name": "MAN_PA7_6Evidence-mi",
+      "selector": "#MAN_PA7_6Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6Evidence-wi",
+      "type": "checkbox",
+      "order": 67,
+      "label": "WI",
+      "name": "MAN_PA7_6Evidence-wi",
+      "selector": "#MAN_PA7_6Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6Evidence-wri",
+      "type": "checkbox",
+      "order": 68,
+      "label": "WRI",
+      "name": "MAN_PA7_6Evidence-wri",
+      "selector": "#MAN_PA7_6Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6Evidence-so",
+      "type": "checkbox",
+      "order": 69,
+      "label": "SO",
+      "name": "MAN_PA7_6Evidence-so",
+      "selector": "#MAN_PA7_6Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_6Evidence-de",
+      "type": "checkbox",
+      "order": 70,
+      "label": "DE",
+      "name": "MAN_PA7_6Evidence-de",
+      "selector": "#MAN_PA7_6Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7-yes",
+      "type": "radio",
+      "order": 71,
+      "label": "Yes",
+      "name": "MAN_PA7_7",
+      "selector": "#MAN_PA7_7-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7-partially",
+      "type": "radio",
+      "order": 72,
+      "label": "Partially",
+      "name": "MAN_PA7_7",
+      "selector": "#MAN_PA7_7-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7-no",
+      "type": "radio",
+      "order": 73,
+      "label": "No",
+      "name": "MAN_PA7_7",
+      "selector": "#MAN_PA7_7-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7-n/A",
+      "type": "radio",
+      "order": 74,
+      "label": "N/A",
+      "name": "MAN_PA7_7",
+      "selector": "#MAN_PA7_7-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7FindingEN",
+      "type": "textarea",
+      "order": 75,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_7FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_7FindingLOCAL",
+      "type": "textarea",
+      "order": 76,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_7FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_7Evidence-mi",
+      "type": "checkbox",
+      "order": 77,
+      "label": "MI",
+      "name": "MAN_PA7_7Evidence-mi",
+      "selector": "#MAN_PA7_7Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7Evidence-wi",
+      "type": "checkbox",
+      "order": 78,
+      "label": "WI",
+      "name": "MAN_PA7_7Evidence-wi",
+      "selector": "#MAN_PA7_7Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7Evidence-wri",
+      "type": "checkbox",
+      "order": 79,
+      "label": "WRI",
+      "name": "MAN_PA7_7Evidence-wri",
+      "selector": "#MAN_PA7_7Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7Evidence-so",
+      "type": "checkbox",
+      "order": 80,
+      "label": "SO",
+      "name": "MAN_PA7_7Evidence-so",
+      "selector": "#MAN_PA7_7Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_7Evidence-de",
+      "type": "checkbox",
+      "order": 81,
+      "label": "DE",
+      "name": "MAN_PA7_7Evidence-de",
+      "selector": "#MAN_PA7_7Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8-yes",
+      "type": "radio",
+      "order": 82,
+      "label": "Yes",
+      "name": "MAN_PA7_8",
+      "selector": "#MAN_PA7_8-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8-partially",
+      "type": "radio",
+      "order": 83,
+      "label": "Partially",
+      "name": "MAN_PA7_8",
+      "selector": "#MAN_PA7_8-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8-no",
+      "type": "radio",
+      "order": 84,
+      "label": "No",
+      "name": "MAN_PA7_8",
+      "selector": "#MAN_PA7_8-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8-n/A",
+      "type": "radio",
+      "order": 85,
+      "label": "N/A",
+      "name": "MAN_PA7_8",
+      "selector": "#MAN_PA7_8-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8FindingEN",
+      "type": "textarea",
+      "order": 86,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_8FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_8FindingLOCAL",
+      "type": "textarea",
+      "order": 87,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_8FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_8Evidence-mi",
+      "type": "checkbox",
+      "order": 88,
+      "label": "MI",
+      "name": "MAN_PA7_8Evidence-mi",
+      "selector": "#MAN_PA7_8Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8Evidence-wi",
+      "type": "checkbox",
+      "order": 89,
+      "label": "WI",
+      "name": "MAN_PA7_8Evidence-wi",
+      "selector": "#MAN_PA7_8Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8Evidence-wri",
+      "type": "checkbox",
+      "order": 90,
+      "label": "WRI",
+      "name": "MAN_PA7_8Evidence-wri",
+      "selector": "#MAN_PA7_8Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8Evidence-so",
+      "type": "checkbox",
+      "order": 91,
+      "label": "SO",
+      "name": "MAN_PA7_8Evidence-so",
+      "selector": "#MAN_PA7_8Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_8Evidence-de",
+      "type": "checkbox",
+      "order": 92,
+      "label": "DE",
+      "name": "MAN_PA7_8Evidence-de",
+      "selector": "#MAN_PA7_8Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9-yes",
+      "type": "radio",
+      "order": 93,
+      "label": "Yes",
+      "name": "MAN_PA7_9",
+      "selector": "#MAN_PA7_9-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9-partially",
+      "type": "radio",
+      "order": 94,
+      "label": "Partially",
+      "name": "MAN_PA7_9",
+      "selector": "#MAN_PA7_9-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9-no",
+      "type": "radio",
+      "order": 95,
+      "label": "No",
+      "name": "MAN_PA7_9",
+      "selector": "#MAN_PA7_9-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9-n/A",
+      "type": "radio",
+      "order": 96,
+      "label": "N/A",
+      "name": "MAN_PA7_9",
+      "selector": "#MAN_PA7_9-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9FindingEN",
+      "type": "textarea",
+      "order": 97,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_9FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_9FindingLOCAL",
+      "type": "textarea",
+      "order": 98,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_9FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_9Evidence-mi",
+      "type": "checkbox",
+      "order": 99,
+      "label": "MI",
+      "name": "MAN_PA7_9Evidence-mi",
+      "selector": "#MAN_PA7_9Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9Evidence-wi",
+      "type": "checkbox",
+      "order": 100,
+      "label": "WI",
+      "name": "MAN_PA7_9Evidence-wi",
+      "selector": "#MAN_PA7_9Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9Evidence-wri",
+      "type": "checkbox",
+      "order": 101,
+      "label": "WRI",
+      "name": "MAN_PA7_9Evidence-wri",
+      "selector": "#MAN_PA7_9Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9Evidence-so",
+      "type": "checkbox",
+      "order": 102,
+      "label": "SO",
+      "name": "MAN_PA7_9Evidence-so",
+      "selector": "#MAN_PA7_9Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_9Evidence-de",
+      "type": "checkbox",
+      "order": 103,
+      "label": "DE",
+      "name": "MAN_PA7_9Evidence-de",
+      "selector": "#MAN_PA7_9Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10-yes",
+      "type": "radio",
+      "order": 104,
+      "label": "Yes",
+      "name": "MAN_PA7_10",
+      "selector": "#MAN_PA7_10-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10-partially",
+      "type": "radio",
+      "order": 105,
+      "label": "Partially",
+      "name": "MAN_PA7_10",
+      "selector": "#MAN_PA7_10-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10-no",
+      "type": "radio",
+      "order": 106,
+      "label": "No",
+      "name": "MAN_PA7_10",
+      "selector": "#MAN_PA7_10-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10-n/A",
+      "type": "radio",
+      "order": 107,
+      "label": "N/A",
+      "name": "MAN_PA7_10",
+      "selector": "#MAN_PA7_10-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10FindingEN",
+      "type": "textarea",
+      "order": 108,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_10FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_10FindingLOCAL",
+      "type": "textarea",
+      "order": 109,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_10FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_10Evidence-mi",
+      "type": "checkbox",
+      "order": 110,
+      "label": "MI",
+      "name": "MAN_PA7_10Evidence-mi",
+      "selector": "#MAN_PA7_10Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10Evidence-wi",
+      "type": "checkbox",
+      "order": 111,
+      "label": "WI",
+      "name": "MAN_PA7_10Evidence-wi",
+      "selector": "#MAN_PA7_10Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10Evidence-wri",
+      "type": "checkbox",
+      "order": 112,
+      "label": "WRI",
+      "name": "MAN_PA7_10Evidence-wri",
+      "selector": "#MAN_PA7_10Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10Evidence-so",
+      "type": "checkbox",
+      "order": 113,
+      "label": "SO",
+      "name": "MAN_PA7_10Evidence-so",
+      "selector": "#MAN_PA7_10Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_10Evidence-de",
+      "type": "checkbox",
+      "order": 114,
+      "label": "DE",
+      "name": "MAN_PA7_10Evidence-de",
+      "selector": "#MAN_PA7_10Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11-yes",
+      "type": "radio",
+      "order": 115,
+      "label": "Yes",
+      "name": "MAN_PA7_11",
+      "selector": "#MAN_PA7_11-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11-partially",
+      "type": "radio",
+      "order": 116,
+      "label": "Partially",
+      "name": "MAN_PA7_11",
+      "selector": "#MAN_PA7_11-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11-no",
+      "type": "radio",
+      "order": 117,
+      "label": "No",
+      "name": "MAN_PA7_11",
+      "selector": "#MAN_PA7_11-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11-n/A",
+      "type": "radio",
+      "order": 118,
+      "label": "N/A",
+      "name": "MAN_PA7_11",
+      "selector": "#MAN_PA7_11-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11FindingEN",
+      "type": "textarea",
+      "order": 119,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_11FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_11FindingLOCAL",
+      "type": "textarea",
+      "order": 120,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_11FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_11Evidence-mi",
+      "type": "checkbox",
+      "order": 121,
+      "label": "MI",
+      "name": "MAN_PA7_11Evidence-mi",
+      "selector": "#MAN_PA7_11Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11Evidence-wi",
+      "type": "checkbox",
+      "order": 122,
+      "label": "WI",
+      "name": "MAN_PA7_11Evidence-wi",
+      "selector": "#MAN_PA7_11Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11Evidence-wri",
+      "type": "checkbox",
+      "order": 123,
+      "label": "WRI",
+      "name": "MAN_PA7_11Evidence-wri",
+      "selector": "#MAN_PA7_11Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11Evidence-so",
+      "type": "checkbox",
+      "order": 124,
+      "label": "SO",
+      "name": "MAN_PA7_11Evidence-so",
+      "selector": "#MAN_PA7_11Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_11Evidence-de",
+      "type": "checkbox",
+      "order": 125,
+      "label": "DE",
+      "name": "MAN_PA7_11Evidence-de",
+      "selector": "#MAN_PA7_11Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12-yes",
+      "type": "radio",
+      "order": 126,
+      "label": "Yes",
+      "name": "MAN_PA7_12",
+      "selector": "#MAN_PA7_12-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12-partially",
+      "type": "radio",
+      "order": 127,
+      "label": "Partially",
+      "name": "MAN_PA7_12",
+      "selector": "#MAN_PA7_12-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12-no",
+      "type": "radio",
+      "order": 128,
+      "label": "No",
+      "name": "MAN_PA7_12",
+      "selector": "#MAN_PA7_12-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12-n/A",
+      "type": "radio",
+      "order": 129,
+      "label": "N/A",
+      "name": "MAN_PA7_12",
+      "selector": "#MAN_PA7_12-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12FindingEN",
+      "type": "textarea",
+      "order": 130,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_12FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_12FindingLOCAL",
+      "type": "textarea",
+      "order": 131,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_12FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_12Evidence-mi",
+      "type": "checkbox",
+      "order": 132,
+      "label": "MI",
+      "name": "MAN_PA7_12Evidence-mi",
+      "selector": "#MAN_PA7_12Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence-wi",
+      "type": "checkbox",
+      "order": 133,
+      "label": "WI",
+      "name": "MAN_PA7_12Evidence-wi",
+      "selector": "#MAN_PA7_12Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence-wri",
+      "type": "checkbox",
+      "order": 134,
+      "label": "WRI",
+      "name": "MAN_PA7_12Evidence-wri",
+      "selector": "#MAN_PA7_12Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence-so",
+      "type": "checkbox",
+      "order": 135,
+      "label": "SO",
+      "name": "MAN_PA7_12Evidence-so",
+      "selector": "#MAN_PA7_12Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence-de",
+      "type": "checkbox",
+      "order": 136,
+      "label": "DE",
+      "name": "MAN_PA7_12Evidence-de",
+      "selector": "#MAN_PA7_12Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_13-yes",
+      "type": "radio",
+      "order": 137,
+      "label": "Yes",
+      "name": "MAN_PA7_13",
+      "selector": "#MAN_PA7_13-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_13-partially",
+      "type": "radio",
+      "order": 138,
+      "label": "Partially",
+      "name": "MAN_PA7_13",
+      "selector": "#MAN_PA7_13-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_13-no",
+      "type": "radio",
+      "order": 139,
+      "label": "No",
+      "name": "MAN_PA7_13",
+      "selector": "#MAN_PA7_13-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_13-n/A",
+      "type": "radio",
+      "order": 140,
+      "label": "N/A",
+      "name": "MAN_PA7_13",
+      "selector": "#MAN_PA7_13-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_13FindingEN",
+      "type": "textarea",
+      "order": 141,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_13FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_13FindingLOCAL",
+      "type": "textarea",
+      "order": 142,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_13FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_12Evidence2-mi",
+      "type": "checkbox",
+      "order": 143,
+      "label": "MI",
+      "name": "MAN_PA7_12Evidence2-mi",
+      "selector": "#MAN_PA7_12Evidence2-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence2-wi",
+      "type": "checkbox",
+      "order": 144,
+      "label": "WI",
+      "name": "MAN_PA7_12Evidence2-wi",
+      "selector": "#MAN_PA7_12Evidence2-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence2-wri",
+      "type": "checkbox",
+      "order": 145,
+      "label": "WRI",
+      "name": "MAN_PA7_12Evidence2-wri",
+      "selector": "#MAN_PA7_12Evidence2-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence2-so",
+      "type": "checkbox",
+      "order": 146,
+      "label": "SO",
+      "name": "MAN_PA7_12Evidence2-so",
+      "selector": "#MAN_PA7_12Evidence2-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_12Evidence2-de",
+      "type": "checkbox",
+      "order": 147,
+      "label": "DE",
+      "name": "MAN_PA7_12Evidence2-de",
+      "selector": "#MAN_PA7_12Evidence2-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14-yes",
+      "type": "radio",
+      "order": 148,
+      "label": "Yes",
+      "name": "MAN_PA7_14",
+      "selector": "#MAN_PA7_14-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14-partially",
+      "type": "radio",
+      "order": 149,
+      "label": "Partially",
+      "name": "MAN_PA7_14",
+      "selector": "#MAN_PA7_14-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14-no",
+      "type": "radio",
+      "order": 150,
+      "label": "No",
+      "name": "MAN_PA7_14",
+      "selector": "#MAN_PA7_14-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14-n/A",
+      "type": "radio",
+      "order": 151,
+      "label": "N/A",
+      "name": "MAN_PA7_14",
+      "selector": "#MAN_PA7_14-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14FindingEN",
+      "type": "textarea",
+      "order": 152,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_14FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_14FindingLOCAL",
+      "type": "textarea",
+      "order": 153,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_14FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_14Evidence-mi",
+      "type": "checkbox",
+      "order": 154,
+      "label": "MI",
+      "name": "MAN_PA7_14Evidence-mi",
+      "selector": "#MAN_PA7_14Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14Evidence-wi",
+      "type": "checkbox",
+      "order": 155,
+      "label": "WI",
+      "name": "MAN_PA7_14Evidence-wi",
+      "selector": "#MAN_PA7_14Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14Evidence-wri",
+      "type": "checkbox",
+      "order": 156,
+      "label": "WRI",
+      "name": "MAN_PA7_14Evidence-wri",
+      "selector": "#MAN_PA7_14Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14Evidence-so",
+      "type": "checkbox",
+      "order": 157,
+      "label": "SO",
+      "name": "MAN_PA7_14Evidence-so",
+      "selector": "#MAN_PA7_14Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_14Evidence-de",
+      "type": "checkbox",
+      "order": 158,
+      "label": "DE",
+      "name": "MAN_PA7_14Evidence-de",
+      "selector": "#MAN_PA7_14Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15-yes",
+      "type": "radio",
+      "order": 159,
+      "label": "Yes",
+      "name": "MAN_PA7_15",
+      "selector": "#MAN_PA7_15-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15-partially",
+      "type": "radio",
+      "order": 160,
+      "label": "Partially",
+      "name": "MAN_PA7_15",
+      "selector": "#MAN_PA7_15-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15-no",
+      "type": "radio",
+      "order": 161,
+      "label": "No",
+      "name": "MAN_PA7_15",
+      "selector": "#MAN_PA7_15-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15-n/A",
+      "type": "radio",
+      "order": 162,
+      "label": "N/A",
+      "name": "MAN_PA7_15",
+      "selector": "#MAN_PA7_15-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15FindingEN",
+      "type": "textarea",
+      "order": 163,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_15FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_15FindingLOCAL",
+      "type": "textarea",
+      "order": 164,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_15FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_15Evidence-mi",
+      "type": "checkbox",
+      "order": 165,
+      "label": "MI",
+      "name": "MAN_PA7_15Evidence-mi",
+      "selector": "#MAN_PA7_15Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15Evidence-wi",
+      "type": "checkbox",
+      "order": 166,
+      "label": "WI",
+      "name": "MAN_PA7_15Evidence-wi",
+      "selector": "#MAN_PA7_15Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15Evidence-wri",
+      "type": "checkbox",
+      "order": 167,
+      "label": "WRI",
+      "name": "MAN_PA7_15Evidence-wri",
+      "selector": "#MAN_PA7_15Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15Evidence-so",
+      "type": "checkbox",
+      "order": 168,
+      "label": "SO",
+      "name": "MAN_PA7_15Evidence-so",
+      "selector": "#MAN_PA7_15Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_15Evidence-de",
+      "type": "checkbox",
+      "order": 169,
+      "label": "DE",
+      "name": "MAN_PA7_15Evidence-de",
+      "selector": "#MAN_PA7_15Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16-yes",
+      "type": "radio",
+      "order": 170,
+      "label": "Yes",
+      "name": "MAN_PA7_16",
+      "selector": "#MAN_PA7_16-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16-partially",
+      "type": "radio",
+      "order": 171,
+      "label": "Partially",
+      "name": "MAN_PA7_16",
+      "selector": "#MAN_PA7_16-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16-no",
+      "type": "radio",
+      "order": 172,
+      "label": "No",
+      "name": "MAN_PA7_16",
+      "selector": "#MAN_PA7_16-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16-n/A",
+      "type": "radio",
+      "order": 173,
+      "label": "N/A",
+      "name": "MAN_PA7_16",
+      "selector": "#MAN_PA7_16-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16FindingEN",
+      "type": "textarea",
+      "order": 174,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_16FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_16FindingLOCAL",
+      "type": "textarea",
+      "order": 175,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_16FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_16Evidence-mi",
+      "type": "checkbox",
+      "order": 176,
+      "label": "MI",
+      "name": "MAN_PA7_16Evidence-mi",
+      "selector": "#MAN_PA7_16Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16Evidence-wi",
+      "type": "checkbox",
+      "order": 177,
+      "label": "WI",
+      "name": "MAN_PA7_16Evidence-wi",
+      "selector": "#MAN_PA7_16Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16Evidence-wri",
+      "type": "checkbox",
+      "order": 178,
+      "label": "WRI",
+      "name": "MAN_PA7_16Evidence-wri",
+      "selector": "#MAN_PA7_16Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16Evidence-so",
+      "type": "checkbox",
+      "order": 179,
+      "label": "SO",
+      "name": "MAN_PA7_16Evidence-so",
+      "selector": "#MAN_PA7_16Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_16Evidence-de",
+      "type": "checkbox",
+      "order": 180,
+      "label": "DE",
+      "name": "MAN_PA7_16Evidence-de",
+      "selector": "#MAN_PA7_16Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17-yes",
+      "type": "radio",
+      "order": 181,
+      "label": "Yes",
+      "name": "MAN_PA7_17",
+      "selector": "#MAN_PA7_17-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17-partially",
+      "type": "radio",
+      "order": 182,
+      "label": "Partially",
+      "name": "MAN_PA7_17",
+      "selector": "#MAN_PA7_17-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17-no",
+      "type": "radio",
+      "order": 183,
+      "label": "No",
+      "name": "MAN_PA7_17",
+      "selector": "#MAN_PA7_17-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17-n/A",
+      "type": "radio",
+      "order": 184,
+      "label": "N/A",
+      "name": "MAN_PA7_17",
+      "selector": "#MAN_PA7_17-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17FindingEN",
+      "type": "textarea",
+      "order": 185,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_17FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_17FindingLOCAL",
+      "type": "textarea",
+      "order": 186,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_17FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_17Evidence-mi",
+      "type": "checkbox",
+      "order": 187,
+      "label": "MI",
+      "name": "MAN_PA7_17Evidence-mi",
+      "selector": "#MAN_PA7_17Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17Evidence-wi",
+      "type": "checkbox",
+      "order": 188,
+      "label": "WI",
+      "name": "MAN_PA7_17Evidence-wi",
+      "selector": "#MAN_PA7_17Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17Evidence-wri",
+      "type": "checkbox",
+      "order": 189,
+      "label": "WRI",
+      "name": "MAN_PA7_17Evidence-wri",
+      "selector": "#MAN_PA7_17Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17Evidence-so",
+      "type": "checkbox",
+      "order": 190,
+      "label": "SO",
+      "name": "MAN_PA7_17Evidence-so",
+      "selector": "#MAN_PA7_17Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_17Evidence-de",
+      "type": "checkbox",
+      "order": 191,
+      "label": "DE",
+      "name": "MAN_PA7_17Evidence-de",
+      "selector": "#MAN_PA7_17Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18-yes",
+      "type": "radio",
+      "order": 192,
+      "label": "Yes",
+      "name": "MAN_PA7_18",
+      "selector": "#MAN_PA7_18-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18-partially",
+      "type": "radio",
+      "order": 193,
+      "label": "Partially",
+      "name": "MAN_PA7_18",
+      "selector": "#MAN_PA7_18-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18-no",
+      "type": "radio",
+      "order": 194,
+      "label": "No",
+      "name": "MAN_PA7_18",
+      "selector": "#MAN_PA7_18-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18-n/A",
+      "type": "radio",
+      "order": 195,
+      "label": "N/A",
+      "name": "MAN_PA7_18",
+      "selector": "#MAN_PA7_18-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18FindingEN",
+      "type": "textarea",
+      "order": 196,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_18FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_18FindingLOCAL",
+      "type": "textarea",
+      "order": 197,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_18FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_18Evidence-mi",
+      "type": "checkbox",
+      "order": 198,
+      "label": "MI",
+      "name": "MAN_PA7_18Evidence-mi",
+      "selector": "#MAN_PA7_18Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18Evidence-wi",
+      "type": "checkbox",
+      "order": 199,
+      "label": "WI",
+      "name": "MAN_PA7_18Evidence-wi",
+      "selector": "#MAN_PA7_18Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18Evidence-wri",
+      "type": "checkbox",
+      "order": 200,
+      "label": "WRI",
+      "name": "MAN_PA7_18Evidence-wri",
+      "selector": "#MAN_PA7_18Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18Evidence-so",
+      "type": "checkbox",
+      "order": 201,
+      "label": "SO",
+      "name": "MAN_PA7_18Evidence-so",
+      "selector": "#MAN_PA7_18Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_18Evidence-de",
+      "type": "checkbox",
+      "order": 202,
+      "label": "DE",
+      "name": "MAN_PA7_18Evidence-de",
+      "selector": "#MAN_PA7_18Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19-yes",
+      "type": "radio",
+      "order": 203,
+      "label": "Yes",
+      "name": "MAN_PA7_19",
+      "selector": "#MAN_PA7_19-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19-partially",
+      "type": "radio",
+      "order": 204,
+      "label": "Partially",
+      "name": "MAN_PA7_19",
+      "selector": "#MAN_PA7_19-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19-no",
+      "type": "radio",
+      "order": 205,
+      "label": "No",
+      "name": "MAN_PA7_19",
+      "selector": "#MAN_PA7_19-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19-n/A",
+      "type": "radio",
+      "order": 206,
+      "label": "N/A",
+      "name": "MAN_PA7_19",
+      "selector": "#MAN_PA7_19-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19FindingEN",
+      "type": "textarea",
+      "order": 207,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_19FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_19FindingLOCAL",
+      "type": "textarea",
+      "order": 208,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_19FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_19Evidence-mi",
+      "type": "checkbox",
+      "order": 209,
+      "label": "MI",
+      "name": "MAN_PA7_19Evidence-mi",
+      "selector": "#MAN_PA7_19Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19Evidence-wi",
+      "type": "checkbox",
+      "order": 210,
+      "label": "WI",
+      "name": "MAN_PA7_19Evidence-wi",
+      "selector": "#MAN_PA7_19Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19Evidence-wri",
+      "type": "checkbox",
+      "order": 211,
+      "label": "WRI",
+      "name": "MAN_PA7_19Evidence-wri",
+      "selector": "#MAN_PA7_19Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19Evidence-so",
+      "type": "checkbox",
+      "order": 212,
+      "label": "SO",
+      "name": "MAN_PA7_19Evidence-so",
+      "selector": "#MAN_PA7_19Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_19Evidence-de",
+      "type": "checkbox",
+      "order": 213,
+      "label": "DE",
+      "name": "MAN_PA7_19Evidence-de",
+      "selector": "#MAN_PA7_19Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20-yes",
+      "type": "radio",
+      "order": 214,
+      "label": "Yes",
+      "name": "MAN_PA7_20",
+      "selector": "#MAN_PA7_20-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20-partially",
+      "type": "radio",
+      "order": 215,
+      "label": "Partially",
+      "name": "MAN_PA7_20",
+      "selector": "#MAN_PA7_20-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20-no",
+      "type": "radio",
+      "order": 216,
+      "label": "No",
+      "name": "MAN_PA7_20",
+      "selector": "#MAN_PA7_20-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20-n/A",
+      "type": "radio",
+      "order": 217,
+      "label": "N/A",
+      "name": "MAN_PA7_20",
+      "selector": "#MAN_PA7_20-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20FindingEN",
+      "type": "textarea",
+      "order": 218,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_20FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_20FindingLOCAL",
+      "type": "textarea",
+      "order": 219,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_20FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_20Evidence-mi",
+      "type": "checkbox",
+      "order": 220,
+      "label": "MI",
+      "name": "MAN_PA7_20Evidence-mi",
+      "selector": "#MAN_PA7_20Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20Evidence-wi",
+      "type": "checkbox",
+      "order": 221,
+      "label": "WI",
+      "name": "MAN_PA7_20Evidence-wi",
+      "selector": "#MAN_PA7_20Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20Evidence-wri",
+      "type": "checkbox",
+      "order": 222,
+      "label": "WRI",
+      "name": "MAN_PA7_20Evidence-wri",
+      "selector": "#MAN_PA7_20Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20Evidence-so",
+      "type": "checkbox",
+      "order": 223,
+      "label": "SO",
+      "name": "MAN_PA7_20Evidence-so",
+      "selector": "#MAN_PA7_20Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_20Evidence-de",
+      "type": "checkbox",
+      "order": 224,
+      "label": "DE",
+      "name": "MAN_PA7_20Evidence-de",
+      "selector": "#MAN_PA7_20Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21-yes",
+      "type": "radio",
+      "order": 225,
+      "label": "Yes",
+      "name": "MAN_PA7_21",
+      "selector": "#MAN_PA7_21-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21-partially",
+      "type": "radio",
+      "order": 226,
+      "label": "Partially",
+      "name": "MAN_PA7_21",
+      "selector": "#MAN_PA7_21-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21-no",
+      "type": "radio",
+      "order": 227,
+      "label": "No",
+      "name": "MAN_PA7_21",
+      "selector": "#MAN_PA7_21-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21-n/A",
+      "type": "radio",
+      "order": 228,
+      "label": "N/A",
+      "name": "MAN_PA7_21",
+      "selector": "#MAN_PA7_21-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21FindingEN",
+      "type": "textarea",
+      "order": 229,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_21FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_21FindingLOCAL",
+      "type": "textarea",
+      "order": 230,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_21FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_21Evidence-mi",
+      "type": "checkbox",
+      "order": 231,
+      "label": "MI",
+      "name": "MAN_PA7_21Evidence-mi",
+      "selector": "#MAN_PA7_21Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21Evidence-wi",
+      "type": "checkbox",
+      "order": 232,
+      "label": "WI",
+      "name": "MAN_PA7_21Evidence-wi",
+      "selector": "#MAN_PA7_21Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21Evidence-wri",
+      "type": "checkbox",
+      "order": 233,
+      "label": "WRI",
+      "name": "MAN_PA7_21Evidence-wri",
+      "selector": "#MAN_PA7_21Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21Evidence-so",
+      "type": "checkbox",
+      "order": 234,
+      "label": "SO",
+      "name": "MAN_PA7_21Evidence-so",
+      "selector": "#MAN_PA7_21Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_21Evidence-de",
+      "type": "checkbox",
+      "order": 235,
+      "label": "DE",
+      "name": "MAN_PA7_21Evidence-de",
+      "selector": "#MAN_PA7_21Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22-yes",
+      "type": "radio",
+      "order": 236,
+      "label": "Yes",
+      "name": "MAN_PA7_22",
+      "selector": "#MAN_PA7_22-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22-partially",
+      "type": "radio",
+      "order": 237,
+      "label": "Partially",
+      "name": "MAN_PA7_22",
+      "selector": "#MAN_PA7_22-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22-no",
+      "type": "radio",
+      "order": 238,
+      "label": "No",
+      "name": "MAN_PA7_22",
+      "selector": "#MAN_PA7_22-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22-n/A",
+      "type": "radio",
+      "order": 239,
+      "label": "N/A",
+      "name": "MAN_PA7_22",
+      "selector": "#MAN_PA7_22-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22FindingEN",
+      "type": "textarea",
+      "order": 240,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_22FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_22FindingLOCAL",
+      "type": "textarea",
+      "order": 241,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_22FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_22Evidence-mi",
+      "type": "checkbox",
+      "order": 242,
+      "label": "MI",
+      "name": "MAN_PA7_22Evidence-mi",
+      "selector": "#MAN_PA7_22Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22Evidence-wi",
+      "type": "checkbox",
+      "order": 243,
+      "label": "WI",
+      "name": "MAN_PA7_22Evidence-wi",
+      "selector": "#MAN_PA7_22Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22Evidence-wri",
+      "type": "checkbox",
+      "order": 244,
+      "label": "WRI",
+      "name": "MAN_PA7_22Evidence-wri",
+      "selector": "#MAN_PA7_22Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22Evidence-so",
+      "type": "checkbox",
+      "order": 245,
+      "label": "SO",
+      "name": "MAN_PA7_22Evidence-so",
+      "selector": "#MAN_PA7_22Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_22Evidence-de",
+      "type": "checkbox",
+      "order": 246,
+      "label": "DE",
+      "name": "MAN_PA7_22Evidence-de",
+      "selector": "#MAN_PA7_22Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23-yes",
+      "type": "radio",
+      "order": 247,
+      "label": "Yes",
+      "name": "MAN_PA7_23",
+      "selector": "#MAN_PA7_23-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23-partially",
+      "type": "radio",
+      "order": 248,
+      "label": "Partially",
+      "name": "MAN_PA7_23",
+      "selector": "#MAN_PA7_23-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23-no",
+      "type": "radio",
+      "order": 249,
+      "label": "No",
+      "name": "MAN_PA7_23",
+      "selector": "#MAN_PA7_23-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23-n/A",
+      "type": "radio",
+      "order": 250,
+      "label": "N/A",
+      "name": "MAN_PA7_23",
+      "selector": "#MAN_PA7_23-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23FindingEN",
+      "type": "textarea",
+      "order": 251,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_23FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_23FindingLOCAL",
+      "type": "textarea",
+      "order": 252,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_23FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_23Evidence-mi",
+      "type": "checkbox",
+      "order": 253,
+      "label": "MI",
+      "name": "MAN_PA7_23Evidence-mi",
+      "selector": "#MAN_PA7_23Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23Evidence-wi",
+      "type": "checkbox",
+      "order": 254,
+      "label": "WI",
+      "name": "MAN_PA7_23Evidence-wi",
+      "selector": "#MAN_PA7_23Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23Evidence-wri",
+      "type": "checkbox",
+      "order": 255,
+      "label": "WRI",
+      "name": "MAN_PA7_23Evidence-wri",
+      "selector": "#MAN_PA7_23Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23Evidence-so",
+      "type": "checkbox",
+      "order": 256,
+      "label": "SO",
+      "name": "MAN_PA7_23Evidence-so",
+      "selector": "#MAN_PA7_23Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_23Evidence-de",
+      "type": "checkbox",
+      "order": 257,
+      "label": "DE",
+      "name": "MAN_PA7_23Evidence-de",
+      "selector": "#MAN_PA7_23Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24-yes",
+      "type": "radio",
+      "order": 258,
+      "label": "Yes",
+      "name": "MAN_PA7_24",
+      "selector": "#MAN_PA7_24-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24-partially",
+      "type": "radio",
+      "order": 259,
+      "label": "Partially",
+      "name": "MAN_PA7_24",
+      "selector": "#MAN_PA7_24-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24-no",
+      "type": "radio",
+      "order": 260,
+      "label": "No",
+      "name": "MAN_PA7_24",
+      "selector": "#MAN_PA7_24-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24-n/A",
+      "type": "radio",
+      "order": 261,
+      "label": "N/A",
+      "name": "MAN_PA7_24",
+      "selector": "#MAN_PA7_24-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24FindingEN",
+      "type": "textarea",
+      "order": 262,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_24FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_24FindingLOCAL",
+      "type": "textarea",
+      "order": 263,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_24FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_24Evidence-mi",
+      "type": "checkbox",
+      "order": 264,
+      "label": "MI",
+      "name": "MAN_PA7_24Evidence-mi",
+      "selector": "#MAN_PA7_24Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24Evidence-wi",
+      "type": "checkbox",
+      "order": 265,
+      "label": "WI",
+      "name": "MAN_PA7_24Evidence-wi",
+      "selector": "#MAN_PA7_24Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24Evidence-wri",
+      "type": "checkbox",
+      "order": 266,
+      "label": "WRI",
+      "name": "MAN_PA7_24Evidence-wri",
+      "selector": "#MAN_PA7_24Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24Evidence-so",
+      "type": "checkbox",
+      "order": 267,
+      "label": "SO",
+      "name": "MAN_PA7_24Evidence-so",
+      "selector": "#MAN_PA7_24Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_24Evidence-de",
+      "type": "checkbox",
+      "order": 268,
+      "label": "DE",
+      "name": "MAN_PA7_24Evidence-de",
+      "selector": "#MAN_PA7_24Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25-yes",
+      "type": "radio",
+      "order": 269,
+      "label": "Yes",
+      "name": "MAN_PA7_25",
+      "selector": "#MAN_PA7_25-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25-partially",
+      "type": "radio",
+      "order": 270,
+      "label": "Partially",
+      "name": "MAN_PA7_25",
+      "selector": "#MAN_PA7_25-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25-no",
+      "type": "radio",
+      "order": 271,
+      "label": "No",
+      "name": "MAN_PA7_25",
+      "selector": "#MAN_PA7_25-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25-n/A",
+      "type": "radio",
+      "order": 272,
+      "label": "N/A",
+      "name": "MAN_PA7_25",
+      "selector": "#MAN_PA7_25-n\\/A",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'N/A']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "partially",
+          "label": "Partially"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "n/A",
+          "label": "N/A"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25FindingEN",
+      "type": "textarea",
+      "order": 273,
+      "label": "Finding (English)",
+      "name": "",
+      "selector": "#MAN_PA7_25FindingEN",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (English)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_25FindingLOCAL",
+      "type": "textarea",
+      "order": 274,
+      "label": "Finding (local language)",
+      "name": "",
+      "selector": "#MAN_PA7_25FindingLOCAL",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Finding (local language)']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MAN_PA7_25Evidence-mi",
+      "type": "checkbox",
+      "order": 275,
+      "label": "MI",
+      "name": "MAN_PA7_25Evidence-mi",
+      "selector": "#MAN_PA7_25Evidence-mi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'MI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "mi",
+          "label": "MI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25Evidence-wi",
+      "type": "checkbox",
+      "order": 276,
+      "label": "WI",
+      "name": "MAN_PA7_25Evidence-wi",
+      "selector": "#MAN_PA7_25Evidence-wi",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wi",
+          "label": "WI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25Evidence-wri",
+      "type": "checkbox",
+      "order": 277,
+      "label": "WRI",
+      "name": "MAN_PA7_25Evidence-wri",
+      "selector": "#MAN_PA7_25Evidence-wri",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'WRI']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wri",
+          "label": "WRI"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25Evidence-so",
+      "type": "checkbox",
+      "order": 278,
+      "label": "SO",
+      "name": "MAN_PA7_25Evidence-so",
+      "selector": "#MAN_PA7_25Evidence-so",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'SO']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "so",
+          "label": "SO"
+        }
+      ]
+    },
+    {
+      "key": "MAN_PA7_25Evidence-de",
+      "type": "checkbox",
+      "order": 279,
+      "label": "DE",
+      "name": "MAN_PA7_25Evidence-de",
+      "selector": "#MAN_PA7_25Evidence-de",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'DE']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "de",
+          "label": "DE"
+        }
+      ]
+    }
+  ]
+}

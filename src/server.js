@@ -9,7 +9,8 @@ import {
   readRecentLogs,
   writeJsonFile
 } from './storage.js';
-import { runAmforiAttachmentUpload, runAmforiAutomation } from './automation/amforiBot.js';
+import { runAmforiAttachmentUpload, runAmforiAutomation, runAmforiReportAutomation } from './automation/amforiBot.js';
+import { readReportIndex, readReportModule, readReportTemplate, writeReportTemplate } from './reportStorage.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -54,6 +55,88 @@ async function handleApi(req, res, url) {
     const limit = Number(url.searchParams.get('limit') || 50);
     const logs = await readRecentLogs(limit);
     sendJson(res, 200, { ok: true, logs });
+    return;
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/report/index') {
+    sendJson(res, 200, { ok: true, index: await readReportIndex() });
+    return;
+  }
+
+  if (req.method === 'GET' && url.pathname.startsWith('/api/report/modules/')) {
+    const moduleId = decodeURIComponent(url.pathname.slice('/api/report/modules/'.length));
+    sendJson(res, 200, { ok: true, module: await readReportModule(moduleId) });
+    return;
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/report/template') {
+    sendJson(res, 200, { ok: true, template: await readReportTemplate() });
+    return;
+  }
+
+  if (req.method === 'POST' && url.pathname === '/api/report/template') {
+    const body = await readJsonBody(req);
+    await writeReportTemplate(body.template);
+    sendJson(res, 200, { ok: true });
+    return;
+  }
+
+  if (req.method === 'POST' && url.pathname === '/api/report/run') {
+    if (isRunning) {
+      sendJson(res, 409, { ok: false, error: 'A task is already running.' });
+      return;
+    }
+
+    isRunning = true;
+    const body = await readJsonBody(req);
+    const monitoringId = String(body.monitoringId || '').trim();
+    const index = await readReportIndex();
+    const requestedIds = Array.isArray(body.moduleIds) ? body.moduleIds : [];
+    const moduleIds = requestedIds.length > 0 ? requestedIds : index.modules.map((module) => module.id);
+    const knownIds = new Set(index.modules.map((module) => module.id));
+
+    if (!monitoringId) {
+      isRunning = false;
+      sendJson(res, 422, { ok: false, error: 'Monitoring ID is required.' });
+      return;
+    }
+    if (moduleIds.some((id) => !knownIds.has(id))) {
+      isRunning = false;
+      sendJson(res, 422, { ok: false, error: 'One or more Report modules are invalid.' });
+      return;
+    }
+
+    try {
+      const credentials = await readCredentials();
+      const currentSettings = await readJsonFile('config/settings.json');
+      const template = body.template?.modules ? body.template : await readReportTemplate();
+      await writeReportTemplate(template);
+      const modules = await Promise.all(moduleIds.map((moduleId) => readReportModule(moduleId)));
+      const result = await runAmforiReportAutomation({
+        monitoringId,
+        modules,
+        values: template.modules || {},
+        credentials,
+        settings: currentSettings
+      });
+
+      const logEntry = await appendRunLog({
+        operation: 'report-fill',
+        monitoringId,
+        status: result.status,
+        modules: result.completedModules || result.modules || [],
+        filledFields: result.filledFields || 0,
+        uploadedFiles: 0,
+        saved: Boolean(result.saved),
+        saveConfirmation: result.saveConfirmation || null,
+        reason: result.reason || '',
+        screenshot: result.screenshot || ''
+      });
+
+      sendJson(res, result.status === 'success' ? 200 : 422, { ok: result.status === 'success', result, logEntry });
+    } finally {
+      isRunning = false;
+    }
     return;
   }
 

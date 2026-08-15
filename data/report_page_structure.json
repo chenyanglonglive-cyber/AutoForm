@@ -1,0 +1,68 @@
+{
+  "tag": "body",
+  "id": "",
+  "cls": "ng-scope",
+  "role": "",
+  "text": "",
+  "children": [
+    {
+      "tag": "hybrid-root",
+      "id": "",
+      "cls": "ng-isolate-scope",
+      "role": "",
+      "text": "",
+      "children": [
+        {
+          "tag": "root",
+          "id": "",
+          "cls": "",
+          "role": "",
+          "text": "",
+          "children": [
+            {
+              "tag": "app",
+              "id": "",
+              "cls": "",
+              "role": "",
+              "text": "",
+              "children": [
+                {
+                  "tag": "div",
+                  "id": "",
+                  "cls": "ui",
+                  "role": "",
+                  "text": "",
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": "",
+                      "cls": "page",
+                      "role": "",
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "div",
+      "id": "fc_frame",
+      "cls": "fc-widget-normal",
+      "role": "",
+      "text": "",
+      "children": [
+        {
+          "tag": "iframe",
+          "id": "fc_widget",
+          "cls": "",
+          "role": "",
+          "text": ""
+        }
+      ]
+    }
+  ]
+}

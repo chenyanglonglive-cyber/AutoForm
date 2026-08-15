@@ -1,0 +1,1941 @@
+{
+  "id": "08-sampled-workers",
+  "title": "Sampled Workers",
+  "sectionOrder": 7,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "group",
+      "title": "Sampled Workers",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "Name of Worker",
+            "Select box",
+            "Department",
+            "Day",
+            "Month",
+            "Year",
+            "Select box",
+            "Select box",
+            "Select box",
+            "Select box",
+            "Worker Interview",
+            "Worker/Union Representative Interview",
+            "Remuneration/Working Hours",
+            "Comments"
+          ],
+          "rowCount": 5,
+          "rows": [
+            [
+              "SampledWorkerName-0-0",
+              "08-sampled-workers__search_2",
+              "SampledWorkerDepartment-0-0",
+              "SampledWorkerEmployedSince-0-0-day",
+              "SampledWorkerEmployedSince-0-0-month",
+              "SampledWorkerEmployedSince-0-0-year",
+              "08-sampled-workers__search_8",
+              "08-sampled-workers__search_10",
+              "08-sampled-workers__search_12",
+              "08-sampled-workers__search_14",
+              "SampledWorkerSampleReason-0-0-workerInterview",
+              "SampledWorkerSampleReason-0-0-workerUnionRepresentativeInterview",
+              "SampledWorkerSampleReason-0-0-remunerationWorkingHours",
+              "SampledWorkerComments-0-0"
+            ],
+            [
+              "SampledWorkerName-1-0",
+              "08-sampled-workers__search_21",
+              "SampledWorkerDepartment-1-0",
+              "SampledWorkerEmployedSince-1-0-day",
+              "SampledWorkerEmployedSince-1-0-month",
+              "SampledWorkerEmployedSince-1-0-year",
+              "08-sampled-workers__search_27",
+              "08-sampled-workers__search_29",
+              "08-sampled-workers__search_31",
+              "08-sampled-workers__search_33",
+              "SampledWorkerSampleReason-1-0-workerInterview",
+              "SampledWorkerSampleReason-1-0-workerUnionRepresentativeInterview",
+              "SampledWorkerSampleReason-1-0-remunerationWorkingHours",
+              "SampledWorkerComments-1-0"
+            ],
+            [
+              "SampledWorkerName-2-0",
+              "08-sampled-workers__search_40",
+              "SampledWorkerDepartment-2-0",
+              "SampledWorkerEmployedSince-2-0-day",
+              "SampledWorkerEmployedSince-2-0-month",
+              "SampledWorkerEmployedSince-2-0-year",
+              "08-sampled-workers__search_46",
+              "08-sampled-workers__search_48",
+              "08-sampled-workers__search_50",
+              "08-sampled-workers__search_52",
+              "SampledWorkerSampleReason-2-0-workerInterview",
+              "SampledWorkerSampleReason-2-0-workerUnionRepresentativeInterview",
+              "SampledWorkerSampleReason-2-0-remunerationWorkingHours",
+              "SampledWorkerComments-2-0"
+            ],
+            [
+              "SampledWorkerName-3-0",
+              "08-sampled-workers__search_59",
+              "SampledWorkerDepartment-3-0",
+              "SampledWorkerEmployedSince-3-0-day",
+              "SampledWorkerEmployedSince-3-0-month",
+              "SampledWorkerEmployedSince-3-0-year",
+              "08-sampled-workers__search_65",
+              "08-sampled-workers__search_67",
+              "08-sampled-workers__search_69",
+              "08-sampled-workers__search_71",
+              "SampledWorkerSampleReason-3-0-workerInterview",
+              "SampledWorkerSampleReason-3-0-workerUnionRepresentativeInterview",
+              "SampledWorkerSampleReason-3-0-remunerationWorkingHours",
+              "SampledWorkerComments-3-0"
+            ],
+            [
+              "SampledWorkerName-4-0",
+              "08-sampled-workers__search_78",
+              "SampledWorkerDepartment-4-0",
+              "SampledWorkerEmployedSince-4-0-day",
+              "SampledWorkerEmployedSince-4-0-month",
+              "SampledWorkerEmployedSince-4-0-year",
+              "08-sampled-workers__search_84",
+              "08-sampled-workers__search_86",
+              "08-sampled-workers__search_88",
+              "08-sampled-workers__search_90",
+              "SampledWorkerSampleReason-4-0-workerInterview",
+              "SampledWorkerSampleReason-4-0-workerUnionRepresentativeInterview",
+              "SampledWorkerSampleReason-4-0-remunerationWorkingHours",
+              "SampledWorkerComments-4-0"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 10,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-0-0",
+            "id": "SampledWorkerName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-0-0",
+            "id": "SampledWorkerName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-0-0",
+            "id": "SampledWorkerName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-1-0",
+            "id": "SampledWorkerName-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-1-0",
+            "id": "SampledWorkerName-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-0-0",
+            "id": "SampledWorkerName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-1-0",
+            "id": "SampledWorkerName-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-2-0",
+            "id": "SampledWorkerName-2-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-3-0",
+            "id": "SampledWorkerName-3-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "SampledWorkerName-4-0",
+            "id": "SampledWorkerName-4-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    }
+  ],
+  "fields": [
+    {
+      "key": "SampledWorkerName-0-0",
+      "type": "text",
+      "order": 1,
+      "label": "Name of Worker",
+      "name": "SampledWorkerName-0-0",
+      "selector": "#SampledWorkerName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of Worker']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_2",
+      "type": "ui-select",
+      "order": 2,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerDepartment-0-0",
+      "type": "text",
+      "order": 4,
+      "label": "Department",
+      "name": "SampledWorkerDepartment-0-0",
+      "selector": "#SampledWorkerDepartment-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-0-0-day",
+      "type": "number",
+      "order": 5,
+      "label": "Day",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-0-0-day",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Day']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-0-0-month",
+      "type": "select",
+      "order": 6,
+      "label": "Month",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-0-0-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-0-0-year",
+      "type": "number",
+      "order": 7,
+      "label": "Year",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-0-0-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_8",
+      "type": "ui-select",
+      "order": 8,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Permanent",
+          "label": "Permanent"
+        },
+        {
+          "value": "Temporary",
+          "label": "Temporary"
+        },
+        {
+          "value": "Seasonal",
+          "label": "Seasonal"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 1,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_10",
+      "type": "ui-select",
+      "order": 10,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 2,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_12",
+      "type": "ui-select",
+      "order": 12,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 3,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_14",
+      "type": "ui-select",
+      "order": 14,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Directly",
+          "label": "Directly"
+        },
+        {
+          "value": "Indirectly (via agency/broker)",
+          "label": "Indirectly (via agency/broker)"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 4,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerSampleReason-0-0-workerInterview",
+      "type": "checkbox",
+      "order": 16,
+      "label": "Worker Interview",
+      "name": "SampledWorkerSampleReason-0-0-workerInterview",
+      "selector": "#SampledWorkerSampleReason-0-0-workerInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerInterview",
+          "label": "Worker Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-0-0-workerUnionRepresentativeInterview",
+      "type": "checkbox",
+      "order": 17,
+      "label": "Worker/Union Representative Interview",
+      "name": "SampledWorkerSampleReason-0-0-workerUnionRepresentativeInterview",
+      "selector": "#SampledWorkerSampleReason-0-0-workerUnionRepresentativeInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker/Union Representative Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerUnionRepresentativeInterview",
+          "label": "Worker/Union Representative Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-0-0-remunerationWorkingHours",
+      "type": "checkbox",
+      "order": 18,
+      "label": "Remuneration/Working Hours",
+      "name": "SampledWorkerSampleReason-0-0-remunerationWorkingHours",
+      "selector": "#SampledWorkerSampleReason-0-0-remunerationWorkingHours",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Remuneration/Working Hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "remunerationWorkingHours",
+          "label": "Remuneration/Working Hours"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerComments-0-0",
+      "type": "textarea",
+      "order": 19,
+      "label": "Comments",
+      "name": "SampledWorkerComments-0-0",
+      "selector": "#SampledWorkerComments-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Comments']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerName-1-0",
+      "type": "text",
+      "order": 20,
+      "label": "Name of Worker",
+      "name": "SampledWorkerName-1-0",
+      "selector": "#SampledWorkerName-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of Worker']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_21",
+      "type": "ui-select",
+      "order": 21,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 5,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerDepartment-1-0",
+      "type": "text",
+      "order": 23,
+      "label": "Department",
+      "name": "SampledWorkerDepartment-1-0",
+      "selector": "#SampledWorkerDepartment-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-1-0-day",
+      "type": "number",
+      "order": 24,
+      "label": "Day",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-1-0-day",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Day']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-1-0-month",
+      "type": "select",
+      "order": 25,
+      "label": "Month",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-1-0-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-1-0-year",
+      "type": "number",
+      "order": 26,
+      "label": "Year",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-1-0-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_27",
+      "type": "ui-select",
+      "order": 27,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Permanent",
+          "label": "Permanent"
+        },
+        {
+          "value": "Temporary",
+          "label": "Temporary"
+        },
+        {
+          "value": "Seasonal",
+          "label": "Seasonal"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 6,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_29",
+      "type": "ui-select",
+      "order": 29,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 7,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_31",
+      "type": "ui-select",
+      "order": 31,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 8,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_33",
+      "type": "ui-select",
+      "order": 33,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Directly",
+          "label": "Directly"
+        },
+        {
+          "value": "Indirectly (via agency/broker)",
+          "label": "Indirectly (via agency/broker)"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 9,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerSampleReason-1-0-workerInterview",
+      "type": "checkbox",
+      "order": 35,
+      "label": "Worker Interview",
+      "name": "SampledWorkerSampleReason-1-0-workerInterview",
+      "selector": "#SampledWorkerSampleReason-1-0-workerInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerInterview",
+          "label": "Worker Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-1-0-workerUnionRepresentativeInterview",
+      "type": "checkbox",
+      "order": 36,
+      "label": "Worker/Union Representative Interview",
+      "name": "SampledWorkerSampleReason-1-0-workerUnionRepresentativeInterview",
+      "selector": "#SampledWorkerSampleReason-1-0-workerUnionRepresentativeInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker/Union Representative Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerUnionRepresentativeInterview",
+          "label": "Worker/Union Representative Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-1-0-remunerationWorkingHours",
+      "type": "checkbox",
+      "order": 37,
+      "label": "Remuneration/Working Hours",
+      "name": "SampledWorkerSampleReason-1-0-remunerationWorkingHours",
+      "selector": "#SampledWorkerSampleReason-1-0-remunerationWorkingHours",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Remuneration/Working Hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "remunerationWorkingHours",
+          "label": "Remuneration/Working Hours"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerComments-1-0",
+      "type": "textarea",
+      "order": 38,
+      "label": "Comments",
+      "name": "SampledWorkerComments-1-0",
+      "selector": "#SampledWorkerComments-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Comments']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerName-2-0",
+      "type": "text",
+      "order": 39,
+      "label": "Name of Worker",
+      "name": "SampledWorkerName-2-0",
+      "selector": "#SampledWorkerName-2-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of Worker']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_40",
+      "type": "ui-select",
+      "order": 40,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 10,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerDepartment-2-0",
+      "type": "text",
+      "order": 42,
+      "label": "Department",
+      "name": "SampledWorkerDepartment-2-0",
+      "selector": "#SampledWorkerDepartment-2-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-2-0-day",
+      "type": "number",
+      "order": 43,
+      "label": "Day",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-2-0-day",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Day']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-2-0-month",
+      "type": "select",
+      "order": 44,
+      "label": "Month",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-2-0-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-2-0-year",
+      "type": "number",
+      "order": 45,
+      "label": "Year",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-2-0-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_46",
+      "type": "ui-select",
+      "order": 46,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Permanent",
+          "label": "Permanent"
+        },
+        {
+          "value": "Temporary",
+          "label": "Temporary"
+        },
+        {
+          "value": "Seasonal",
+          "label": "Seasonal"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 11,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_48",
+      "type": "ui-select",
+      "order": 48,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 12,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_50",
+      "type": "ui-select",
+      "order": 50,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 13,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_52",
+      "type": "ui-select",
+      "order": 52,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Directly",
+          "label": "Directly"
+        },
+        {
+          "value": "Indirectly (via agency/broker)",
+          "label": "Indirectly (via agency/broker)"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 14,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerSampleReason-2-0-workerInterview",
+      "type": "checkbox",
+      "order": 54,
+      "label": "Worker Interview",
+      "name": "SampledWorkerSampleReason-2-0-workerInterview",
+      "selector": "#SampledWorkerSampleReason-2-0-workerInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerInterview",
+          "label": "Worker Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-2-0-workerUnionRepresentativeInterview",
+      "type": "checkbox",
+      "order": 55,
+      "label": "Worker/Union Representative Interview",
+      "name": "SampledWorkerSampleReason-2-0-workerUnionRepresentativeInterview",
+      "selector": "#SampledWorkerSampleReason-2-0-workerUnionRepresentativeInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker/Union Representative Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerUnionRepresentativeInterview",
+          "label": "Worker/Union Representative Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-2-0-remunerationWorkingHours",
+      "type": "checkbox",
+      "order": 56,
+      "label": "Remuneration/Working Hours",
+      "name": "SampledWorkerSampleReason-2-0-remunerationWorkingHours",
+      "selector": "#SampledWorkerSampleReason-2-0-remunerationWorkingHours",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Remuneration/Working Hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "remunerationWorkingHours",
+          "label": "Remuneration/Working Hours"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerComments-2-0",
+      "type": "textarea",
+      "order": 57,
+      "label": "Comments",
+      "name": "SampledWorkerComments-2-0",
+      "selector": "#SampledWorkerComments-2-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Comments']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerName-3-0",
+      "type": "text",
+      "order": 58,
+      "label": "Name of Worker",
+      "name": "SampledWorkerName-3-0",
+      "selector": "#SampledWorkerName-3-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of Worker']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_59",
+      "type": "ui-select",
+      "order": 59,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 15,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerDepartment-3-0",
+      "type": "text",
+      "order": 61,
+      "label": "Department",
+      "name": "SampledWorkerDepartment-3-0",
+      "selector": "#SampledWorkerDepartment-3-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-3-0-day",
+      "type": "number",
+      "order": 62,
+      "label": "Day",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-3-0-day",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Day']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-3-0-month",
+      "type": "select",
+      "order": 63,
+      "label": "Month",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-3-0-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-3-0-year",
+      "type": "number",
+      "order": 64,
+      "label": "Year",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-3-0-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_65",
+      "type": "ui-select",
+      "order": 65,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Permanent",
+          "label": "Permanent"
+        },
+        {
+          "value": "Temporary",
+          "label": "Temporary"
+        },
+        {
+          "value": "Seasonal",
+          "label": "Seasonal"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 16,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_67",
+      "type": "ui-select",
+      "order": 67,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 17,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_69",
+      "type": "ui-select",
+      "order": 69,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 18,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_71",
+      "type": "ui-select",
+      "order": 71,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Directly",
+          "label": "Directly"
+        },
+        {
+          "value": "Indirectly (via agency/broker)",
+          "label": "Indirectly (via agency/broker)"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 19,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerSampleReason-3-0-workerInterview",
+      "type": "checkbox",
+      "order": 73,
+      "label": "Worker Interview",
+      "name": "SampledWorkerSampleReason-3-0-workerInterview",
+      "selector": "#SampledWorkerSampleReason-3-0-workerInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerInterview",
+          "label": "Worker Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-3-0-workerUnionRepresentativeInterview",
+      "type": "checkbox",
+      "order": 74,
+      "label": "Worker/Union Representative Interview",
+      "name": "SampledWorkerSampleReason-3-0-workerUnionRepresentativeInterview",
+      "selector": "#SampledWorkerSampleReason-3-0-workerUnionRepresentativeInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker/Union Representative Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerUnionRepresentativeInterview",
+          "label": "Worker/Union Representative Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-3-0-remunerationWorkingHours",
+      "type": "checkbox",
+      "order": 75,
+      "label": "Remuneration/Working Hours",
+      "name": "SampledWorkerSampleReason-3-0-remunerationWorkingHours",
+      "selector": "#SampledWorkerSampleReason-3-0-remunerationWorkingHours",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Remuneration/Working Hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "remunerationWorkingHours",
+          "label": "Remuneration/Working Hours"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerComments-3-0",
+      "type": "textarea",
+      "order": 76,
+      "label": "Comments",
+      "name": "SampledWorkerComments-3-0",
+      "selector": "#SampledWorkerComments-3-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Comments']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerName-4-0",
+      "type": "text",
+      "order": 77,
+      "label": "Name of Worker",
+      "name": "SampledWorkerName-4-0",
+      "selector": "#SampledWorkerName-4-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Name of Worker']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_78",
+      "type": "ui-select",
+      "order": 78,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 20,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerDepartment-4-0",
+      "type": "text",
+      "order": 80,
+      "label": "Department",
+      "name": "SampledWorkerDepartment-4-0",
+      "selector": "#SampledWorkerDepartment-4-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-4-0-day",
+      "type": "number",
+      "order": 81,
+      "label": "Day",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-4-0-day",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Day']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-4-0-month",
+      "type": "select",
+      "order": 82,
+      "label": "Month",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-4-0-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "SampledWorkerEmployedSince-4-0-year",
+      "type": "number",
+      "order": 83,
+      "label": "Year",
+      "name": "",
+      "selector": "#SampledWorkerEmployedSince-4-0-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "08-sampled-workers__search_84",
+      "type": "ui-select",
+      "order": 84,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Permanent",
+          "label": "Permanent"
+        },
+        {
+          "value": "Temporary",
+          "label": "Temporary"
+        },
+        {
+          "value": "Seasonal",
+          "label": "Seasonal"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 21,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_86",
+      "type": "ui-select",
+      "order": 86,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 22,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_88",
+      "type": "ui-select",
+      "order": 88,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 23,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "08-sampled-workers__search_90",
+      "type": "ui-select",
+      "order": 90,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Directly",
+          "label": "Directly"
+        },
+        {
+          "value": "Indirectly (via agency/broker)",
+          "label": "Indirectly (via agency/broker)"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 24,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampledWorkerSampleReason-4-0-workerInterview",
+      "type": "checkbox",
+      "order": 92,
+      "label": "Worker Interview",
+      "name": "SampledWorkerSampleReason-4-0-workerInterview",
+      "selector": "#SampledWorkerSampleReason-4-0-workerInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerInterview",
+          "label": "Worker Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-4-0-workerUnionRepresentativeInterview",
+      "type": "checkbox",
+      "order": 93,
+      "label": "Worker/Union Representative Interview",
+      "name": "SampledWorkerSampleReason-4-0-workerUnionRepresentativeInterview",
+      "selector": "#SampledWorkerSampleReason-4-0-workerUnionRepresentativeInterview",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Worker/Union Representative Interview']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "workerUnionRepresentativeInterview",
+          "label": "Worker/Union Representative Interview"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerSampleReason-4-0-remunerationWorkingHours",
+      "type": "checkbox",
+      "order": 94,
+      "label": "Remuneration/Working Hours",
+      "name": "SampledWorkerSampleReason-4-0-remunerationWorkingHours",
+      "selector": "#SampledWorkerSampleReason-4-0-remunerationWorkingHours",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Remuneration/Working Hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "remunerationWorkingHours",
+          "label": "Remuneration/Working Hours"
+        }
+      ]
+    },
+    {
+      "key": "SampledWorkerComments-4-0",
+      "type": "textarea",
+      "order": 95,
+      "label": "Comments",
+      "name": "SampledWorkerComments-4-0",
+      "selector": "#SampledWorkerComments-4-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Comments']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    }
+  ]
+}

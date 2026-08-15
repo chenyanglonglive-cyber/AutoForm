@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "modules": [
+    {
+      "id": "01-monitoring-details",
+      "title": "Monitoring Details",
+      "fieldCount": 14,
+      "file": "modules/01-monitoring-details.json"
+    },
+    {
+      "id": "02-data-validation",
+      "title": "Data Validation",
+      "fieldCount": 5,
+      "file": "modules/02-data-validation.json"
+    },
+    {
+      "id": "03-social-performance-management",
+      "title": "Social Performance Management",
+      "fieldCount": 41,
+      "file": "modules/03-social-performance-management.json"
+    },
+    {
+      "id": "04-production-and-employment-structure",
+      "title": "Production and Employment Structure",
+      "fieldCount": 132,
+      "file": "modules/04-production-and-employment-structure.json"
+    },
+    {
+      "id": "05-remuneration-and-working-hours",
+      "title": "Remuneration and Working Hours",
+      "fieldCount": 57,
+      "file": "modules/05-remuneration-and-working-hours.json"
+    },
+    {
+      "id": "06-housing-information",
+      "title": "Housing Information",
+      "fieldCount": 1,
+      "file": "modules/06-housing-information.json"
+    },
+    {
+      "id": "07-grievance-mechanism",
+      "title": "Grievance Mechanism",
+      "fieldCount": 6,
+      "file": "modules/07-grievance-mechanism.json"
+    },
+    {
+      "id": "08-sampled-workers",
+      "title": "Sampled Workers",
+      "fieldCount": 70,
+      "file": "modules/08-sampled-workers.json"
+    },
+    {
+      "id": "09-young-worker-data",
+      "title": "Young Worker Data",
+      "fieldCount": 1,
+      "file": "modules/09-young-worker-data.json"
+    },
+    {
+      "id": "10-interview-evidence",
+      "title": "Interview Evidence",
+      "fieldCount": 45,
+      "file": "modules/10-interview-evidence.json"
+    },
+    {
+      "id": "11-pa1-social-management-system",
+      "title": "PA1: Social Management System",
+      "fieldCount": 80,
+      "file": "modules/11-pa1-social-management-system.json"
+    },
+    {
+      "id": "12-pa-2-workers-involvement-and-protection",
+      "title": "PA 2: Workers Involvement and Protection",
+      "fieldCount": 58,
+      "file": "modules/12-pa-2-workers-involvement-and-protection.json"
+    },
+    {
+      "id": "13-pa-3-the-rights-of-freedom-of-association-and-collective-bargaining",
+      "title": "PA 3: The Rights of Freedom of Association and Collective Bargaining",
+      "fieldCount": 47,
+      "file": "modules/13-pa-3-the-rights-of-freedom-of-association-and-collective-bargaining.json"
+    },
+    {
+      "id": "14-pa-4-no-discrimination-violence-or-harassment",
+      "title": "PA 4: No Discrimination, Violence or Harassment",
+      "fieldCount": 36,
+      "file": "modules/14-pa-4-no-discrimination-violence-or-harassment.json"
+    },
+    {
+      "id": "15-pa-5-fair-remuneration",
+      "title": "PA 5: Fair Remuneration",
+      "fieldCount": 69,
+      "file": "modules/15-pa-5-fair-remuneration.json"
+    },
+    {
+      "id": "16-pa-6-decent-working-hours",
+      "title": "PA 6: Decent Working Hours",
+      "fieldCount": 47,
+      "file": "modules/16-pa-6-decent-working-hours.json"
+    },
+    {
+      "id": "17-pa-7-occupational-health-and-safety",
+      "title": "PA 7: Occupational Health and Safety",
+      "fieldCount": 278,
+      "file": "modules/17-pa-7-occupational-health-and-safety.json"
+    },
+    {
+      "id": "18-pa-8-no-child-labour",
+      "title": "PA 8: No Child Labour",
+      "fieldCount": 47,
+      "file": "modules/18-pa-8-no-child-labour.json"
+    },
+    {
+      "id": "19-pa-9-special-protection-for-young-workers",
+      "title": "PA 9: Special Protection for Young Workers",
+      "fieldCount": 69,
+      "file": "modules/19-pa-9-special-protection-for-young-workers.json"
+    },
+    {
+      "id": "20-pa-10-no-precarious-employment",
+      "title": "PA 10: No Precarious Employment",
+      "fieldCount": 47,
+      "file": "modules/20-pa-10-no-precarious-employment.json"
+    },
+    {
+      "id": "21-pa-11-no-bonded-forced-labour-or-human-trafficking",
+      "title": "PA 11: No Bonded, Forced Labour or Human Trafficking",
+      "fieldCount": 47,
+      "file": "modules/21-pa-11-no-bonded-forced-labour-or-human-trafficking.json"
+    },
+    {
+      "id": "22-pa-12-protection-of-the-environment",
+      "title": "PA 12: Protection of the Environment",
+      "fieldCount": 58,
+      "file": "modules/22-pa-12-protection-of-the-environment.json"
+    },
+    {
+      "id": "23-pa-13-ethical-business-behaviour",
+      "title": "PA 13: Ethical Business Behaviour",
+      "fieldCount": 47,
+      "file": "modules/23-pa-13-ethical-business-behaviour.json"
+    }
+  ]
+}

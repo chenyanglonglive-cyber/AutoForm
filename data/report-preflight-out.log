@@ -1,0 +1,44 @@
+{
+  "time": "2026-08-15T08:18:05.629Z",
+  "monitoringId": "26-0423225",
+  "writeRequestsBlocked": true,
+  "sessionMode": "persistent-profile",
+  "results": [
+    {
+      "module": "Monitoring Details",
+      "title": "Monitoring Details",
+      "saveButton": true,
+      "totalFields": 17,
+      "uiSelects": 3,
+      "collapsedPanels": 0,
+      "uiSelectOpens": true
+    },
+    {
+      "module": "Production and Employment Structure",
+      "title": "Production and Employment Structure",
+      "saveButton": true,
+      "totalFields": 127,
+      "uiSelects": 3,
+      "collapsedPanels": 0,
+      "uiSelectOpens": true
+    },
+    {
+      "module": "PA1: Social Management System",
+      "title": "PA1: Social Management System",
+      "saveButton": true,
+      "totalFields": 81,
+      "uiSelects": 1,
+      "collapsedPanels": 5,
+      "uiSelectOpens": true
+    },
+    {
+      "module": "PA 7: Occupational Health and Safety",
+      "title": "PA 7: Occupational Health and Safety",
+      "saveButton": true,
+      "totalFields": 279,
+      "uiSelects": 1,
+      "collapsedPanels": 22,
+      "uiSelectOpens": true
+    }
+  ]
+}

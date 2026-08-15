@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByText('26-0423225', { exact: true }).first()[22m
+
+    at D:\AIcode-hub\AutoForm\scripts\collect-ui-select-labels.mjs:43:72 {
+  log: [
+    "  - waiting for getByText('26-0423225', { exact: true }).first()"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.14.1

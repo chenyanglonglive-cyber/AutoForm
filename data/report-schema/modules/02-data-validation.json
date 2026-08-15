@@ -1,0 +1,917 @@
+{
+  "id": "02-data-validation",
+  "title": "Data Validation",
+  "sectionOrder": 1,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "field-group",
+      "controlType": "radio",
+      "label": "Does the data correspond to the business partner/site profile?",
+      "optionKeys": [
+        "DataCorrespondConfirmation-yes",
+        "DataCorrespondConfirmation-partially",
+        "DataCorrespondConfirmation-no"
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Languages Used at Site",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "Official Language:",
+            "If the official language of the site is not listed, enter it here:"
+          ],
+          "rowCount": 1,
+          "rows": [
+            [
+              "02-data-validation__search_4",
+              "LanguagesatSiteOfficialLanguageFree-0-1"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [],
+          "rowCount": 0,
+          "rows": []
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "Official Language:",
+        "If the official language of the site is not listed, enter it here:",
+        ""
+      ],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "LanguagesatSiteOfficialLanguageFree-0-1",
+            "id": "LanguagesatSiteOfficialLanguageFree-0-1"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [
+        ""
+      ],
+      "rowCount": 0,
+      "sampleRows": [],
+      "className": "table datagrid-table table-condensed"
+    }
+  ],
+  "fields": [
+    {
+      "key": "DataCorrespondConfirmation-yes",
+      "type": "radio",
+      "order": 1,
+      "label": "Yes",
+      "name": "32",
+      "selector": "#DataCorrespondConfirmation-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "DataCorrespondConfirmation-partially",
+      "type": "radio",
+      "order": 2,
+      "label": "Partially",
+      "name": "35",
+      "selector": "#DataCorrespondConfirmation-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "partially",
+          "label": "Partially"
+        }
+      ]
+    },
+    {
+      "key": "DataCorrespondConfirmation-no",
+      "type": "radio",
+      "order": 3,
+      "label": "No",
+      "name": "38",
+      "selector": "#DataCorrespondConfirmation-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "02-data-validation__search_4",
+      "type": "ui-select",
+      "order": 4,
+      "label": "Official Language:",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Official Language:']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Abkhazian",
+          "label": "Abkhazian"
+        },
+        {
+          "value": "Afar",
+          "label": "Afar"
+        },
+        {
+          "value": "Afrikaans",
+          "label": "Afrikaans"
+        },
+        {
+          "value": "Akan",
+          "label": "Akan"
+        },
+        {
+          "value": "Albanian",
+          "label": "Albanian"
+        },
+        {
+          "value": "Amharic",
+          "label": "Amharic"
+        },
+        {
+          "value": "Arabic",
+          "label": "Arabic"
+        },
+        {
+          "value": "Aragonese",
+          "label": "Aragonese"
+        },
+        {
+          "value": "Armenian",
+          "label": "Armenian"
+        },
+        {
+          "value": "Assamese",
+          "label": "Assamese"
+        },
+        {
+          "value": "Avaric",
+          "label": "Avaric"
+        },
+        {
+          "value": "Avestan",
+          "label": "Avestan"
+        },
+        {
+          "value": "Aymara",
+          "label": "Aymara"
+        },
+        {
+          "value": "Azerbaijani",
+          "label": "Azerbaijani"
+        },
+        {
+          "value": "Bambara",
+          "label": "Bambara"
+        },
+        {
+          "value": "Bashkir",
+          "label": "Bashkir"
+        },
+        {
+          "value": "Basque",
+          "label": "Basque"
+        },
+        {
+          "value": "Belarusian",
+          "label": "Belarusian"
+        },
+        {
+          "value": "Bengali",
+          "label": "Bengali"
+        },
+        {
+          "value": "Bihari languages",
+          "label": "Bihari languages"
+        },
+        {
+          "value": "Bislama",
+          "label": "Bislama"
+        },
+        {
+          "value": "Bosnian",
+          "label": "Bosnian"
+        },
+        {
+          "value": "Breton",
+          "label": "Breton"
+        },
+        {
+          "value": "Bulgarian",
+          "label": "Bulgarian"
+        },
+        {
+          "value": "Burmese",
+          "label": "Burmese"
+        },
+        {
+          "value": "Catalan",
+          "label": "Catalan"
+        },
+        {
+          "value": "Central Khmer",
+          "label": "Central Khmer"
+        },
+        {
+          "value": "Chamorro",
+          "label": "Chamorro"
+        },
+        {
+          "value": "Chechen",
+          "label": "Chechen"
+        },
+        {
+          "value": "Chichewa",
+          "label": "Chichewa"
+        },
+        {
+          "value": "Chinese",
+          "label": "Chinese"
+        },
+        {
+          "value": "Church Slavic",
+          "label": "Church Slavic"
+        },
+        {
+          "value": "Chuvash",
+          "label": "Chuvash"
+        },
+        {
+          "value": "Cornish",
+          "label": "Cornish"
+        },
+        {
+          "value": "Corsican",
+          "label": "Corsican"
+        },
+        {
+          "value": "Cree",
+          "label": "Cree"
+        },
+        {
+          "value": "Croatian",
+          "label": "Croatian"
+        },
+        {
+          "value": "Czech",
+          "label": "Czech"
+        },
+        {
+          "value": "Danish",
+          "label": "Danish"
+        },
+        {
+          "value": "Divehi",
+          "label": "Divehi"
+        },
+        {
+          "value": "Dutch",
+          "label": "Dutch"
+        },
+        {
+          "value": "Dzongkha",
+          "label": "Dzongkha"
+        },
+        {
+          "value": "English",
+          "label": "English"
+        },
+        {
+          "value": "Esperanto",
+          "label": "Esperanto"
+        },
+        {
+          "value": "Estonian",
+          "label": "Estonian"
+        },
+        {
+          "value": "Ewe",
+          "label": "Ewe"
+        },
+        {
+          "value": "Faroese",
+          "label": "Faroese"
+        },
+        {
+          "value": "Fijian",
+          "label": "Fijian"
+        },
+        {
+          "value": "Finnish",
+          "label": "Finnish"
+        },
+        {
+          "value": "French",
+          "label": "French"
+        },
+        {
+          "value": "Fulah",
+          "label": "Fulah"
+        },
+        {
+          "value": "Gaelic",
+          "label": "Gaelic"
+        },
+        {
+          "value": "Galician",
+          "label": "Galician"
+        },
+        {
+          "value": "Ganda",
+          "label": "Ganda"
+        },
+        {
+          "value": "Georgian",
+          "label": "Georgian"
+        },
+        {
+          "value": "German",
+          "label": "German"
+        },
+        {
+          "value": "Greek",
+          "label": "Greek"
+        },
+        {
+          "value": "Guarani",
+          "label": "Guarani"
+        },
+        {
+          "value": "Gujarati",
+          "label": "Gujarati"
+        },
+        {
+          "value": "Haitian",
+          "label": "Haitian"
+        },
+        {
+          "value": "Hausa",
+          "label": "Hausa"
+        },
+        {
+          "value": "Hebrew",
+          "label": "Hebrew"
+        },
+        {
+          "value": "Herero",
+          "label": "Herero"
+        },
+        {
+          "value": "Hindi",
+          "label": "Hindi"
+        },
+        {
+          "value": "Hiri Motu",
+          "label": "Hiri Motu"
+        },
+        {
+          "value": "Hungarian",
+          "label": "Hungarian"
+        },
+        {
+          "value": "Icelandic",
+          "label": "Icelandic"
+        },
+        {
+          "value": "Ido",
+          "label": "Ido"
+        },
+        {
+          "value": "Igbo",
+          "label": "Igbo"
+        },
+        {
+          "value": "Indonesian",
+          "label": "Indonesian"
+        },
+        {
+          "value": "Interlingua",
+          "label": "Interlingua"
+        },
+        {
+          "value": "Interlingue",
+          "label": "Interlingue"
+        },
+        {
+          "value": "Inuktitut",
+          "label": "Inuktitut"
+        },
+        {
+          "value": "Inupiaq",
+          "label": "Inupiaq"
+        },
+        {
+          "value": "Irish",
+          "label": "Irish"
+        },
+        {
+          "value": "Italian",
+          "label": "Italian"
+        },
+        {
+          "value": "Japanese",
+          "label": "Japanese"
+        },
+        {
+          "value": "Javanese",
+          "label": "Javanese"
+        },
+        {
+          "value": "Kalaallisut",
+          "label": "Kalaallisut"
+        },
+        {
+          "value": "Kannada",
+          "label": "Kannada"
+        },
+        {
+          "value": "Kanuri",
+          "label": "Kanuri"
+        },
+        {
+          "value": "Kashmiri",
+          "label": "Kashmiri"
+        },
+        {
+          "value": "Kazakh",
+          "label": "Kazakh"
+        },
+        {
+          "value": "Kikuyu; Gikuyu",
+          "label": "Kikuyu; Gikuyu"
+        },
+        {
+          "value": "Kinyarwanda",
+          "label": "Kinyarwanda"
+        },
+        {
+          "value": "Kirghiz",
+          "label": "Kirghiz"
+        },
+        {
+          "value": "Komi",
+          "label": "Komi"
+        },
+        {
+          "value": "Kongo",
+          "label": "Kongo"
+        },
+        {
+          "value": "Korean",
+          "label": "Korean"
+        },
+        {
+          "value": "Kuanyama",
+          "label": "Kuanyama"
+        },
+        {
+          "value": "Kurdish",
+          "label": "Kurdish"
+        },
+        {
+          "value": "Lao",
+          "label": "Lao"
+        },
+        {
+          "value": "Latin",
+          "label": "Latin"
+        },
+        {
+          "value": "Latvian",
+          "label": "Latvian"
+        },
+        {
+          "value": "Limburgan",
+          "label": "Limburgan"
+        },
+        {
+          "value": "Lingala",
+          "label": "Lingala"
+        },
+        {
+          "value": "Lithuanian",
+          "label": "Lithuanian"
+        },
+        {
+          "value": "Luba-Katanga",
+          "label": "Luba-Katanga"
+        },
+        {
+          "value": "Luxembourgish",
+          "label": "Luxembourgish"
+        },
+        {
+          "value": "Macedonian",
+          "label": "Macedonian"
+        },
+        {
+          "value": "Malagasy",
+          "label": "Malagasy"
+        },
+        {
+          "value": "Malay",
+          "label": "Malay"
+        },
+        {
+          "value": "Malayalam",
+          "label": "Malayalam"
+        },
+        {
+          "value": "Maltese",
+          "label": "Maltese"
+        },
+        {
+          "value": "Manx",
+          "label": "Manx"
+        },
+        {
+          "value": "Maori",
+          "label": "Maori"
+        },
+        {
+          "value": "Marathi",
+          "label": "Marathi"
+        },
+        {
+          "value": "Marshallese",
+          "label": "Marshallese"
+        },
+        {
+          "value": "Mongolian",
+          "label": "Mongolian"
+        },
+        {
+          "value": "Nauru",
+          "label": "Nauru"
+        },
+        {
+          "value": "Navajo",
+          "label": "Navajo"
+        },
+        {
+          "value": "Ndebele",
+          "label": "Ndebele"
+        },
+        {
+          "value": "Ndebele",
+          "label": "Ndebele"
+        },
+        {
+          "value": "Ndonga",
+          "label": "Ndonga"
+        },
+        {
+          "value": "Nepali",
+          "label": "Nepali"
+        },
+        {
+          "value": "Northern Sami",
+          "label": "Northern Sami"
+        },
+        {
+          "value": "Norwegian",
+          "label": "Norwegian"
+        },
+        {
+          "value": "Norwegian Bokmål",
+          "label": "Norwegian Bokmål"
+        },
+        {
+          "value": "Norwegian Nynorsk",
+          "label": "Norwegian Nynorsk"
+        },
+        {
+          "value": "Occitan",
+          "label": "Occitan"
+        },
+        {
+          "value": "Ojibwa",
+          "label": "Ojibwa"
+        },
+        {
+          "value": "Oriya",
+          "label": "Oriya"
+        },
+        {
+          "value": "Oromo",
+          "label": "Oromo"
+        },
+        {
+          "value": "Ossetian",
+          "label": "Ossetian"
+        },
+        {
+          "value": "Pali",
+          "label": "Pali"
+        },
+        {
+          "value": "Panjabi",
+          "label": "Panjabi"
+        },
+        {
+          "value": "Persian",
+          "label": "Persian"
+        },
+        {
+          "value": "Polish",
+          "label": "Polish"
+        },
+        {
+          "value": "Portuguese",
+          "label": "Portuguese"
+        },
+        {
+          "value": "Pushto",
+          "label": "Pushto"
+        },
+        {
+          "value": "Quechua",
+          "label": "Quechua"
+        },
+        {
+          "value": "Romanian",
+          "label": "Romanian"
+        },
+        {
+          "value": "Romansh",
+          "label": "Romansh"
+        },
+        {
+          "value": "Rundi",
+          "label": "Rundi"
+        },
+        {
+          "value": "Russian",
+          "label": "Russian"
+        },
+        {
+          "value": "Samoan",
+          "label": "Samoan"
+        },
+        {
+          "value": "Sango",
+          "label": "Sango"
+        },
+        {
+          "value": "Sanskrit",
+          "label": "Sanskrit"
+        },
+        {
+          "value": "Sardinian",
+          "label": "Sardinian"
+        },
+        {
+          "value": "Serbian",
+          "label": "Serbian"
+        },
+        {
+          "value": "Shona",
+          "label": "Shona"
+        },
+        {
+          "value": "Sichuan",
+          "label": "Sichuan"
+        },
+        {
+          "value": "Sindhi",
+          "label": "Sindhi"
+        },
+        {
+          "value": "Sinhala",
+          "label": "Sinhala"
+        },
+        {
+          "value": "Slovak",
+          "label": "Slovak"
+        },
+        {
+          "value": "Slovenian",
+          "label": "Slovenian"
+        },
+        {
+          "value": "Somali",
+          "label": "Somali"
+        },
+        {
+          "value": "Sotho, Southern",
+          "label": "Sotho, Southern"
+        },
+        {
+          "value": "Spanish",
+          "label": "Spanish"
+        },
+        {
+          "value": "Sundanese",
+          "label": "Sundanese"
+        },
+        {
+          "value": "Swahili",
+          "label": "Swahili"
+        },
+        {
+          "value": "Swati",
+          "label": "Swati"
+        },
+        {
+          "value": "Swedish",
+          "label": "Swedish"
+        },
+        {
+          "value": "Tagalog",
+          "label": "Tagalog"
+        },
+        {
+          "value": "Tahitian",
+          "label": "Tahitian"
+        },
+        {
+          "value": "Tajik",
+          "label": "Tajik"
+        },
+        {
+          "value": "Tamil",
+          "label": "Tamil"
+        },
+        {
+          "value": "Tatar",
+          "label": "Tatar"
+        },
+        {
+          "value": "Telugu",
+          "label": "Telugu"
+        },
+        {
+          "value": "Thai",
+          "label": "Thai"
+        },
+        {
+          "value": "Tibetan",
+          "label": "Tibetan"
+        },
+        {
+          "value": "Tigrinya",
+          "label": "Tigrinya"
+        },
+        {
+          "value": "Tonga (Tonga Islands)",
+          "label": "Tonga (Tonga Islands)"
+        },
+        {
+          "value": "Tsonga",
+          "label": "Tsonga"
+        },
+        {
+          "value": "Tswana",
+          "label": "Tswana"
+        },
+        {
+          "value": "Turkish",
+          "label": "Turkish"
+        },
+        {
+          "value": "Turkmen",
+          "label": "Turkmen"
+        },
+        {
+          "value": "Twi",
+          "label": "Twi"
+        },
+        {
+          "value": "Ukrainian",
+          "label": "Ukrainian"
+        },
+        {
+          "value": "Urdu",
+          "label": "Urdu"
+        },
+        {
+          "value": "Uyghur",
+          "label": "Uyghur"
+        },
+        {
+          "value": "Uzbek",
+          "label": "Uzbek"
+        },
+        {
+          "value": "Venda",
+          "label": "Venda"
+        },
+        {
+          "value": "Vietnamese",
+          "label": "Vietnamese"
+        },
+        {
+          "value": "Volapük",
+          "label": "Volapük"
+        },
+        {
+          "value": "Walloon",
+          "label": "Walloon"
+        },
+        {
+          "value": "Welsh",
+          "label": "Welsh"
+        },
+        {
+          "value": "Western Frisian",
+          "label": "Western Frisian"
+        },
+        {
+          "value": "Wolof",
+          "label": "Wolof"
+        },
+        {
+          "value": "Xhosa",
+          "label": "Xhosa"
+        },
+        {
+          "value": "Yiddish",
+          "label": "Yiddish"
+        },
+        {
+          "value": "Yoruba",
+          "label": "Yoruba"
+        },
+        {
+          "value": "Zhuang",
+          "label": "Zhuang"
+        },
+        {
+          "value": "Zulu",
+          "label": "Zulu"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "LanguagesatSiteOfficialLanguageFree-0-1",
+      "type": "text",
+      "order": 6,
+      "label": "If the official language of the site is not listed, enter it here:",
+      "name": "LanguagesatSiteOfficialLanguageFree-0-1",
+      "selector": "#LanguagesatSiteOfficialLanguageFree-0-1",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'If the official language of the site is ']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    }
+  ]
+}

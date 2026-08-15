@@ -1,0 +1,498 @@
+{
+  "id": "01-monitoring-details",
+  "title": "Monitoring Details",
+  "sectionOrder": 0,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "group",
+      "title": "Monitoring Details",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "group",
+          "title": "Monitoring Team",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Full Name",
+                "APSCA Number",
+                "Role",
+                "Gender"
+              ],
+              "rowCount": 1,
+              "rows": [
+                [
+                  "MonitoringTeamFullName-0-0",
+                  "MonitoringTeamAPSCA-0-1",
+                  "01-monitoring-details__search_3",
+                  "01-monitoring-details__search_5"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "field",
+          "key": "01-monitoring-details__search_7"
+        },
+        {
+          "type": "group",
+          "title": "Activity Duration",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "ActivityDurationStartDateTime-day"
+            },
+            {
+              "type": "field",
+              "key": "ActivityDurationStartDateTime-month"
+            },
+            {
+              "type": "field",
+              "key": "ActivityDurationStartDateTime-year"
+            },
+            {
+              "type": "field",
+              "key": "ActivityDurationEndDateTime-day"
+            },
+            {
+              "type": "field",
+              "key": "ActivityDurationEndDateTime-month"
+            },
+            {
+              "type": "field",
+              "key": "ActivityDurationEndDateTime-year"
+            },
+            {
+              "type": "field",
+              "key": "ActivityDurationPersonDays"
+            }
+          ]
+        },
+        {
+          "type": "field-group",
+          "controlType": "radio",
+          "label": "Has the monitoring team audited on-site activities during night-shift hours (5:00 PM–8:00 AM)?",
+          "optionKeys": [
+            "monitoringDetailsOnsiteActivitiesDuringNight-yes",
+            "monitoringDetailsOnsiteActivitiesDuringNight-no"
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "Full Name",
+        "APSCA Number",
+        "Role",
+        "Gender",
+        ""
+      ],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MonitoringTeamFullName-0-0",
+            "id": "MonitoringTeamFullName-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MonitoringTeamAPSCA-0-1",
+            "id": "MonitoringTeamAPSCA-0-1"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table"
+    }
+  ],
+  "fields": [
+    {
+      "key": "MonitoringTeamFullName-0-0",
+      "type": "text",
+      "order": 1,
+      "label": "Full Name",
+      "name": "MonitoringTeamFullName-0-0",
+      "selector": "#MonitoringTeamFullName-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Full Name']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MonitoringTeamAPSCA-0-1",
+      "type": "text",
+      "order": 2,
+      "label": "APSCA Number",
+      "name": "MonitoringTeamAPSCA-0-1",
+      "selector": "#MonitoringTeamAPSCA-0-1",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'APSCA Number']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "01-monitoring-details__search_3",
+      "type": "ui-select",
+      "order": 3,
+      "label": "Role",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Role']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Lead",
+          "label": "Lead"
+        },
+        {
+          "value": "Team member",
+          "label": "Team member"
+        },
+        {
+          "value": "Trainee",
+          "label": "Trainee"
+        },
+        {
+          "value": "Expert",
+          "label": "Expert"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "01-monitoring-details__search_5",
+      "type": "ui-select",
+      "order": 5,
+      "label": "Gender",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Gender']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Male",
+          "label": "Male"
+        },
+        {
+          "value": "Female",
+          "label": "Female"
+        },
+        {
+          "value": "Non-binary",
+          "label": "Non-binary"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 1,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "01-monitoring-details__search_7",
+      "type": "ui-select",
+      "order": 7,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 2,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "ActivityDurationStartDateTime-day",
+      "type": "number",
+      "order": 9,
+      "label": "Day",
+      "name": "",
+      "selector": "#ActivityDurationStartDateTime-day",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Day']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ActivityDurationStartDateTime-month",
+      "type": "select",
+      "order": 10,
+      "label": "Month",
+      "name": "",
+      "selector": "#ActivityDurationStartDateTime-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "ActivityDurationStartDateTime-year",
+      "type": "number",
+      "order": 11,
+      "label": "Year",
+      "name": "",
+      "selector": "#ActivityDurationStartDateTime-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ActivityDurationEndDateTime-day",
+      "type": "number",
+      "order": 12,
+      "label": "Day",
+      "name": "",
+      "selector": "#ActivityDurationEndDateTime-day",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Day']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ActivityDurationEndDateTime-month",
+      "type": "select",
+      "order": 13,
+      "label": "Month",
+      "name": "",
+      "selector": "#ActivityDurationEndDateTime-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "ActivityDurationEndDateTime-year",
+      "type": "number",
+      "order": 14,
+      "label": "Year",
+      "name": "",
+      "selector": "#ActivityDurationEndDateTime-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ActivityDurationPersonDays",
+      "type": "text",
+      "order": 15,
+      "label": "Time spent on-site (excluding reporting time)",
+      "name": "ActivityDurationPersonDays",
+      "selector": "#ActivityDurationPersonDays",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Time spent on-site (excluding reporting ']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "monitoringDetailsOnsiteActivitiesDuringNight-yes",
+      "type": "radio",
+      "order": 16,
+      "label": "Yes",
+      "name": "56",
+      "selector": "#monitoringDetailsOnsiteActivitiesDuringNight-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "monitoringDetailsOnsiteActivitiesDuringNight-no",
+      "type": "radio",
+      "order": 17,
+      "label": "No",
+      "name": "59",
+      "selector": "#monitoringDetailsOnsiteActivitiesDuringNight-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    }
+  ]
+}

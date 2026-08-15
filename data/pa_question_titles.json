@@ -1,0 +1,108 @@
+{
+  "1": {
+    "1": "Is there satisfactory evidence that the auditee has set up an effective management system to implement the amfori BSCI Code of Conduct?",
+    "2": "Is there satisfactory evidence that a senior manager has been appointed to ensure that the values and principles of amfori BSCI are followed in a satisfactory manner?",
+    "3": "Is there satisfactory evidence that the auditee has identified their significant business partners and their level of alignment with the amfori BSCI Code of Conduct?",
+    "4": "Is there satisfactory evidence that the auditee’s workforce capacity is properly organised to meet the expectations of the delivery order and/or contracts?",
+    "5": "Is there satisfactory evidence that the auditee monitors how its business partners observe the amfori BSCI Code of Conduct?",
+    "6": "Is there satisfactory evidence that the auditee has developed the necessary policies and processes to prevent and address any adverse human rights impacts that may be detected in its supply chain?",
+    "7": "Is there satisfactory evidence that the auditee manages its business relations in a responsible manner?"
+  },
+  "2": {
+    "1": "Is there satisfactory evidence that the auditee has good management practices that involve workers and their representatives in sound information exchange on workplace issues?",
+    "2": "Is there satisfactory evidence that the auditee defines long-term goals for protecting workers in line with the aspirations of the amfori BSCI Code of Conduct?",
+    "3": "CRUCIAL: Is there satisfactory evidence that the auditee takes specific steps to make workers aware of their rights and responsibilities?",
+    "4": "Is there satisfactory evidence that the auditee builds sufficient competence among managers, workers and workers representatives to successfully embed responsible practices in the business operation?",
+    "5": "Is there satisfactory evidence that the auditee has established, or participates in, an effective operational-level grievance mechanism for individuals and communities?"
+  },
+  "3": {
+    "1": "Is there satisfactory evidence that the auditee respects the right of workers to form unions - or to refrain from doing so- without distinction whatsoever and irrespective of gender in a free and democratic way?",
+    "2": "CRUCIAL: Is there satisfactory evidence that the auditee respects workers’ right to bargain collectively without distinction whatsoever and irrespective of gender?",
+    "3": "Is there satisfactory evidence that the auditee does not discriminate against workers because of their trade union membership?",
+    "4": "Is there satisfactory evidence that the auditee does not prevent workers’ representatives from accessing or interacting with workers in the workplace?"
+  },
+  "4": {
+    "1": "CRUCIAL: Is there satisfactory evidence that the auditee takes the necessary measures to avoid or eradicate discrimination in the workplace?",
+    "2": "Is there satisfactory evidence that the auditee takes the necessary preventative and/or remedial measures to ensure workers are not disciplined, dismissed, harassed or otherwise discriminated against because of their complaints against infringements of their rights?",
+    "3": "Is there satisfactory evidence that the auditee takes the necessary preventative and/or remedial measures so workers are not harassed or disciplined on grounds of discrimination as listed in the amfori BSCI Code?"
+  },
+  "5": {
+    "1": "CRUCIAL: Is there satisfactory evidence that the auditee complies with the government’s minimum wage legislation or the industry standard approved through collective bargaining?",
+    "2": "Is there satisfactory evidence that wages are paid in a timely, stable and regular manner, and fully in legal tender?",
+    "3": "Is there satisfactory evidence that the level of wages reflects the skills, seniority, responsibility and education of workers?",
+    "4": "Is there satisfactory evidence that the auditee provides sufficient remuneration that allows workers to meet a decent standard of living?",
+    "5": "Is there satisfactory evidence that the auditee provides workers with the social benefits that are legally granted without negative impact on their pay, level of seniority, position, or promotion prospects?",
+    "6": "CRUCIAL: Is there satisfactory evidence that the auditee ensures that deductions are only taken under the conditions and to the extent prescribed by the law?"
+  },
+  "6": {
+    "1": "Is there satisfactory evidence that the auditee does not require more than 48 standard working hours per week, without prejudice to the exceptions recognised by the ILO?",
+    "2": "CRUCIAL: Is there satisfactory evidence that the auditee request of overtime is in line with the requirements of the amfori BSCI Code of Conduct?",
+    "3": "CRUCIAL: Is there satisfactory evidence that the auditee grants workers the right to resting breaks in every working day?",
+    "4": "CRUCIAL: Is there satisfactory evidence that the auditee grants workers the right to at least one day off in every seven days?"
+  },
+  "7": {
+    "1": "Is there satisfactory evidence that the auditee observes occupational health and safety regulations applicable for its activities?",
+    "2": "Is there satisfactory evidence that the auditee seeks to improve workers’ protection in case of accident, including through compulsory insurance schemes?",
+    "3": "Is there satisfactory evidence that the auditee set up an effective management system that ensures they regularly carry out risk assessments for safe, healthy and hygienic working conditions?",
+    "4": "Is there satisfactory evidence of active cooperation between management and workers (and/or their representatives) when developing and implementing systems towards ensuring OHS?",
+    "5": "Is there satisfactory evidence that the auditee regularly provides OHS trainings to ensure workers understand the rules of work, personal protection and measures for preventing and reacting to injury to themselves and fellow workers?",
+    "6": "Is there satisfactory evidence that the auditee enforces the use of PPE to provide protection to workers alongside other controls and safety systems?",
+    "7": "Is there satisfactory evidence that the auditee implements engineering and administrative control measures to avoid or minimise the release of hazardous substances into the work environment, keeping the level of exposure below internationally established or recognised limits?",
+    "8": "Is there satisfactory evidence that the auditee has developed and implemented accident and emergency procedures?",
+    "9": "Is there satisfactory evidence that the auditee makes visible potential hazards to the workers and visitors through signs and warnings?",
+    "10": "Is there satisfactory evidence that the auditee has and properly uses procedures and systems for reporting and recording occupational accidents and injuries?",
+    "11": "Is there satisfactory evidence that the auditee confirms that the equipment and buildings used for production are stable and safe?",
+    "12": "CRUCIAL: Is there satisfactory evidence that the auditee respects the workers’ right to remove themselves from imminent danger without seeking permission?",
+    "13": "Is there satisfactory evidence that the auditee makes sure a competent person periodically checks the electrical installations and equipment?",
+    "14": "CRUCIAL: Is there satisfactory evidence that the auditee has installed an adequate amount of properly working firefighting equipment?",
+    "15": "CRUCIAL: Is there satisfactory evidence that the auditee ensures that escape routes, aisles and emergency exits in the production site are not blocked, easily accessible and clearly marked?",
+    "16": "Is there satisfactory evidence that the auditee ensures evacuations plans meet legal requirements and that these plans are posted in relevant places so workers can see and understand them?",
+    "17": "Is there satisfactory evidence that the auditee ensures adequate safeguards for any machine part, function, or process which may cause injury to workers?",
+    "18": "CRUCIAL: Is there satisfactory evidence that the auditee ensures qualified first-aid is available at all times?",
+    "19": "Is there satisfactory evidence that the auditee has emergency procedures, in writing, to deal with cases of trauma or serious illness?",
+    "20": "CRUCIAL: Is there satisfactory evidence that the auditee always provides workers with access to potable water?",
+    "21": "Is there satisfactory evidence that the auditee provides workers with access to an appropriate, clean area for storing food, eating and/or cooking?",
+    "22": "Is there satisfactory evidence that the auditee provides workers with clean washing facilities, changing rooms and toilets that are also respectful of local customs?",
+    "23": "Is there satisfactory evidence that the auditee provision of transportation to workers is safe and complies with national regulations?",
+    "24": "Is there satisfactory evidence that the auditee has chosen the location of the social facilities or workers housing to ensure occupants are not exposed to natural hazards or affected by the operational impacts of the worksite (for example noise, emissions or dust)?",
+    "25": "Is there satisfactory evidence the auditee verifies that temperature, humidity, space, sanitation, illumination are adequate for the health and safety of workers?"
+  },
+  "8": {
+    "1": "CRUCIAL: Is there satisfactory evidence that the auditee does not engage in illegal child labour directly or indirectly?",
+    "2": "Is there satisfactory evidence that the auditee has established robust age-verification mechanisms as part of the recruitment process, which may not be in any way degrading or disrespectful to the worker?",
+    "3": "Is there satisfactory evidence that the auditee has adequate policies and procedures in writing toward protecting children from any kind of exploitation?",
+    "4": "Is there satisfactory evidence that the auditee has adequate and remedial policies and procedures to provide for further protection in case children are found to be working?"
+  },
+  "9": {
+    "1": "Is there satisfactory evidence that the auditee ensures that young persons do not work at night and are protected against conditions of work which are prejudicial to their health, safety, morals and development?",
+    "2": "CRUCIAL: Is there satisfactory evidence that young workers’ working hours do not prejudice their attendance at school, their participation in vocational orientation approved by the competent authority or their capacity to benefit from training or instruction programmes?",
+    "4": "Is there satisfactory evidence that the auditee seeks to ensure young workers have access to effective grievance mechanisms?",
+    "5": "Is there satisfactory evidence that the auditee seeks to ensure that young workers are properly trained on OHS and have access to related training programmes?",
+    "6": "Is there satisfactory evidence that the auditee has a good overview of all young workers engaged in its production site?"
+  },
+  "10": {
+    "1": "Is there satisfactory evidence that auditee employment relationships are not precarious for the workers?",
+    "2": "Is there satisfactory evidence that the auditee engages workers based on recognised and documented employment relationships?",
+    "3": "Is there satisfactory evidence that the auditee provides workers with understandable information before entering into employment?",
+    "4": "CRUCIAL: Is there satisfactory evidence that the auditee does not use employment arrangements in a way that deliberately conflicts with the genuine purpose of the law?"
+  },
+  "11": {
+    "1": "CRUCIAL: Is there satisfactory evidence that the auditee does not engage in, or through business partners, complicit to in any form of servitude, forced, state-imposed forced labour, bonded, indentured, trafficked or non-voluntary labour?",
+    "2": "Is there satisfactory evidence that the auditee acts rigorously and diligently when engaging and recruiting migrant workers both directly and indirectly?",
+    "3": "CRUCIAL: Is there satisfactory evidence that the auditee does not subject workers to inhumane or degrading treatment, corporal punishment, mental, physical coercion, verbal and/or sexual abuse?",
+    "4": "Is there satisfactory evidence that the auditee has established all applicable disciplinary procedures in writing and has explained them verbally to workers in clear and understandable terms?"
+  },
+  "12": {
+    "1": "Is there satisfactory evidence that the auditee continuously identifies the significant impacts and environmental implications associated to its activity?",
+    "2": "Is there satisfactory evidence that the auditee has procedures in place to ensure integration of local environmental law into the business model?",
+    "3": "Is there satisfactory evidence of the auditee’s required environmental permits and licences?",
+    "4": "Is there satisfactory evidence that waste is managed in a way that does not lead to the pollution of the environment?",
+    "5": "Is there satisfactory evidence that water is managed in a way that respects the environment, particularly but not limited to preserving local water sources?"
+  },
+  "13": {
+    "1": "Is there satisfactory evidence that the auditee actively opposes any act of corruption, extortion or embezzlement, or any form of bribery in its activities as a business enterprise?",
+    "2": "Is there satisfactory evidence that the auditee keeps accurate information regarding its own activities, structure and performance?",
+    "3": "CRUCIAL: Is there satisfactory evidence that the auditee takes the necessary measures to not take part in falsifying Information related to its activities, structure and performance; nor in any act of misrepresentation of its supply chain?",
+    "4": "Is there satisfactory evidence that the auditee collects uses and otherwise processes personal information with reasonable care and in accordance with privacy and information security laws and regulatory requirements?"
+  }
+}

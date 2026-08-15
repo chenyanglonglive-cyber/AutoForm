@@ -1,0 +1,3312 @@
+{
+  "id": "05-remuneration-and-working-hours",
+  "title": "Remuneration and Working Hours",
+  "sectionOrder": 4,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "group",
+      "title": "Remuneration",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "group",
+          "title": "Collective Bargaining Agreement (CBA)",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "05-remuneration-and-working-hours__search_1"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Minimum Wage",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "MinimumWageLegalMinimumWage"
+            },
+            {
+              "type": "field",
+              "key": "MinimumWageLowestWageatSite"
+            },
+            {
+              "type": "field",
+              "key": "05-remuneration-and-working-hours__search_5"
+            },
+            {
+              "type": "field",
+              "key": "MinimumWageIndustrySpecificRem"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Benefits and Bonuses",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "Select box",
+                "Details of benefit",
+                "Select box"
+              ],
+              "rowCount": 2,
+              "rows": [
+                [
+                  "05-remuneration-and-working-hours__search_8",
+                  "BenefitsNonCBADetails-0-0",
+                  "05-remuneration-and-working-hours__search_11"
+                ],
+                [
+                  "05-remuneration-and-working-hours__search_13",
+                  "BenefitsNonCBADetails-1-0",
+                  "05-remuneration-and-working-hours__search_16"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Living Wage",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "field",
+              "key": "CalculatedLivingWage"
+            },
+            {
+              "type": "field",
+              "key": "05-remuneration-and-working-hours__search_19"
+            },
+            {
+              "type": "field",
+              "key": "LivingWagePleaseaddthelinkofGlwCSource"
+            },
+            {
+              "type": "field",
+              "key": "CalculatedLivingWagePleaseEnterMonthAndYearGlwc-month"
+            },
+            {
+              "type": "field",
+              "key": "CalculatedLivingWagePleaseEnterMonthAndYearGlwc-year"
+            },
+            {
+              "type": "field",
+              "key": "05-remuneration-and-working-hours__search_24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Working Hours",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "field-group",
+          "controlType": "checkbox",
+          "label": "Standard day off in the country",
+          "optionKeys": [
+            "WorkingHoursStandardDayOff-monday",
+            "WorkingHoursStandardDayOff-tuesday",
+            "WorkingHoursStandardDayOff-wednesday",
+            "WorkingHoursStandardDayOff-thursday",
+            "WorkingHoursStandardDayOff-friday",
+            "WorkingHoursStandardDayOff-saturday",
+            "WorkingHoursStandardDayOff-sunday"
+          ]
+        },
+        {
+          "type": "field",
+          "key": "WHStandardsLegalWHperWeek"
+        },
+        {
+          "type": "field",
+          "key": "WHStandardsLegalOTperWeek"
+        },
+        {
+          "type": "field",
+          "key": "WHStandardsLegalOTperMonth"
+        },
+        {
+          "type": "field",
+          "key": "OTRateStandardOTPremiumWorkday"
+        },
+        {
+          "type": "field",
+          "key": "OTRateStandardOTPremiumDayOff"
+        },
+        {
+          "type": "field",
+          "key": "OTRateStandardOTPremiumHoliday"
+        },
+        {
+          "type": "field",
+          "key": "OTRateAppliedOTPremiumWorkday"
+        },
+        {
+          "type": "field",
+          "key": "OTRateAppliedOTPremiumDayOff"
+        },
+        {
+          "type": "field",
+          "key": "OTRateAppliedOTPremiumHoliday"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "title": "Sample Details - Remuneration and Working Hours",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "field",
+          "key": "SampleDetailsTotalSample"
+        },
+        {
+          "type": "field",
+          "key": "SampleDetailsSampleMale"
+        },
+        {
+          "type": "field",
+          "key": "SampleDetailsSampleFemale"
+        },
+        {
+          "type": "field",
+          "key": "SampleDetailsSampleNonBinary"
+        },
+        {
+          "type": "field",
+          "key": "05-remuneration-and-working-hours__search_46"
+        },
+        {
+          "type": "field",
+          "key": "05-remuneration-and-working-hours__search_47"
+        },
+        {
+          "type": "field",
+          "key": "SampleContextDetails"
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "No of hours",
+            "No of workers",
+            "Select box",
+            "Department"
+          ],
+          "rowCount": 1,
+          "rows": [
+            [
+              "HighestOTHours-0-0",
+              "HighestOTWorkers-0-0",
+              "05-remuneration-and-working-hours__search_51",
+              "HighestOTDepartment-0-0"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "Select box",
+            "Weekly standard working hours",
+            "Maximum weekly overtime hours"
+          ],
+          "rowCount": 3,
+          "rows": [
+            [
+              "05-remuneration-and-working-hours__search_54",
+              "panelSampleDetailsWeeklyStandardWh-0-1",
+              "panelSampleDetailsWeeklyOvertimeHours-0-2"
+            ],
+            [
+              "05-remuneration-and-working-hours__search_58",
+              "panelSampleDetailsWeeklyStandardWh-1-1",
+              "panelSampleDetailsWeeklyOvertimeHours-1-2"
+            ],
+            [
+              "05-remuneration-and-working-hours__search_62",
+              "panelSampleDetailsWeeklyStandardWh-2-1",
+              "panelSampleDetailsWeeklyOvertimeHours-2-2"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "Amount",
+            "No of workers",
+            "Select box",
+            "Department"
+          ],
+          "rowCount": 1,
+          "rows": [
+            [
+              "LowestWageAmount-0-0",
+              "LowestWageWorkers-0-0",
+              "05-remuneration-and-working-hours__search_68",
+              "LowestWageDepartment-0-0"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "HighestOTHours-0-0",
+            "id": "HighestOTHours-0-0"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "rowCount": 3,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelSampleDetailsWeeklyStandardWh-0-1",
+            "id": "panelSampleDetailsWeeklyStandardWh-0-1"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelSampleDetailsWeeklyOvertimeHours-0-2",
+            "id": "panelSampleDetailsWeeklyOvertimeHours-0-2"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelSampleDetailsWeeklyStandardWh-1-1",
+            "id": "panelSampleDetailsWeeklyStandardWh-1-1"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelSampleDetailsWeeklyOvertimeHours-1-2",
+            "id": "panelSampleDetailsWeeklyOvertimeHours-1-2"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelSampleDetailsWeeklyStandardWh-2-1",
+            "id": "panelSampleDetailsWeeklyStandardWh-2-1"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelSampleDetailsWeeklyOvertimeHours-2-2",
+            "id": "panelSampleDetailsWeeklyOvertimeHours-2-2"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-striped"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "LowestWageAmount-0-0",
+            "id": "LowestWageAmount-0-0"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-bordered table-condensed"
+    }
+  ],
+  "fields": [
+    {
+      "key": "05-remuneration-and-working-hours__search_1",
+      "type": "ui-select",
+      "order": 1,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "MinimumWageLegalMinimumWage",
+      "type": "text",
+      "order": 3,
+      "label": "Legal minimum wage in local currency",
+      "name": "MinimumWageLegalMinimumWage",
+      "selector": "#MinimumWageLegalMinimumWage",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Legal minimum wage in local currency']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MinimumWageLowestWageatSite",
+      "type": "text",
+      "order": 4,
+      "label": "Lowest wage paid for regular work at the site",
+      "name": "MinimumWageLowestWageatSite",
+      "selector": "#MinimumWageLowestWageatSite",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Lowest wage paid for regular work at the']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_5",
+      "type": "ui-select",
+      "order": 5,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "AED (United Arab Emirates Dirham)",
+          "label": "AED (United Arab Emirates Dirham)"
+        },
+        {
+          "value": "AFN (Afghan Afghani)",
+          "label": "AFN (Afghan Afghani)"
+        },
+        {
+          "value": "ALL (Albanian Lek)",
+          "label": "ALL (Albanian Lek)"
+        },
+        {
+          "value": "AMD (Armenian Dram)",
+          "label": "AMD (Armenian Dram)"
+        },
+        {
+          "value": "ANG (Netherlands Antillean Guilder)",
+          "label": "ANG (Netherlands Antillean Guilder)"
+        },
+        {
+          "value": "AOA (Angolan Kwanza)",
+          "label": "AOA (Angolan Kwanza)"
+        },
+        {
+          "value": "ARS (Argentine Peso)",
+          "label": "ARS (Argentine Peso)"
+        },
+        {
+          "value": "AUD (Australian Dollar)",
+          "label": "AUD (Australian Dollar)"
+        },
+        {
+          "value": "AWG (Aruban Florin)",
+          "label": "AWG (Aruban Florin)"
+        },
+        {
+          "value": "AZM (Azerbaijaniani Manat (old))",
+          "label": "AZM (Azerbaijaniani Manat (old))"
+        },
+        {
+          "value": "AZN (Azerbaijaniani Manat)",
+          "label": "AZN (Azerbaijaniani Manat)"
+        },
+        {
+          "value": "BAM (Bosnian Convertible Marka)",
+          "label": "BAM (Bosnian Convertible Marka)"
+        },
+        {
+          "value": "BBD (Barbados Dollar)",
+          "label": "BBD (Barbados Dollar)"
+        },
+        {
+          "value": "BDT (Bangladeshi Taka)",
+          "label": "BDT (Bangladeshi Taka)"
+        },
+        {
+          "value": "BGN (Bulgarian Lev)",
+          "label": "BGN (Bulgarian Lev)"
+        },
+        {
+          "value": "BHD (Bahraini Dinar)",
+          "label": "BHD (Bahraini Dinar)"
+        },
+        {
+          "value": "BIF (Burundi Franc)",
+          "label": "BIF (Burundi Franc)"
+        },
+        {
+          "value": "BMD (Bermudian Dollar)",
+          "label": "BMD (Bermudian Dollar)"
+        },
+        {
+          "value": "BND (Brunei Dollar)",
+          "label": "BND (Brunei Dollar)"
+        },
+        {
+          "value": "BOB (Bolivian Boliviano)",
+          "label": "BOB (Bolivian Boliviano)"
+        },
+        {
+          "value": "BRL (Brazilian Real)",
+          "label": "BRL (Brazilian Real)"
+        },
+        {
+          "value": "BSD (Bahamian Dollar)",
+          "label": "BSD (Bahamian Dollar)"
+        },
+        {
+          "value": "BTN (Bhutanese Ngultrum)",
+          "label": "BTN (Bhutanese Ngultrum)"
+        },
+        {
+          "value": "BWP (Botswana Pula)",
+          "label": "BWP (Botswana Pula)"
+        },
+        {
+          "value": "BYN (Belarussian Ruble)",
+          "label": "BYN (Belarussian Ruble)"
+        },
+        {
+          "value": "BYR (Belarussian Ruble)",
+          "label": "BYR (Belarussian Ruble)"
+        },
+        {
+          "value": "BZD (Belize Dollar)",
+          "label": "BZD (Belize Dollar)"
+        },
+        {
+          "value": "CAD (Canadian Dollar)",
+          "label": "CAD (Canadian Dollar)"
+        },
+        {
+          "value": "CDF (Congolese Franc)",
+          "label": "CDF (Congolese Franc)"
+        },
+        {
+          "value": "CHF (Swiss Franc)",
+          "label": "CHF (Swiss Franc)"
+        },
+        {
+          "value": "CLF (Chilean unidades de fomento)",
+          "label": "CLF (Chilean unidades de fomento)"
+        },
+        {
+          "value": "CLP (Chilean Peso)",
+          "label": "CLP (Chilean Peso)"
+        },
+        {
+          "value": "CNH (Offshore Traded Renminbi)",
+          "label": "CNH (Offshore Traded Renminbi)"
+        },
+        {
+          "value": "CNY (Yuan Renminbi)",
+          "label": "CNY (Yuan Renminbi)"
+        },
+        {
+          "value": "COP (Colombian Peso)",
+          "label": "COP (Colombian Peso)"
+        },
+        {
+          "value": "CRC (Costa Rican Colon)",
+          "label": "CRC (Costa Rican Colon)"
+        },
+        {
+          "value": "CSD (Serbian Dinar (old))",
+          "label": "CSD (Serbian Dinar (old))"
+        },
+        {
+          "value": "CUP (Cuban Peso)",
+          "label": "CUP (Cuban Peso)"
+        },
+        {
+          "value": "CVE (Cape Verde Escudo)",
+          "label": "CVE (Cape Verde Escudo)"
+        },
+        {
+          "value": "CYP (Cyprus Pound)",
+          "label": "CYP (Cyprus Pound)"
+        },
+        {
+          "value": "CZK (Czech Koruna)",
+          "label": "CZK (Czech Koruna)"
+        },
+        {
+          "value": "DJF (Djibouti Franc)",
+          "label": "DJF (Djibouti Franc)"
+        },
+        {
+          "value": "DKK (Danish Krone)",
+          "label": "DKK (Danish Krone)"
+        },
+        {
+          "value": "DOP (Dominican Peso)",
+          "label": "DOP (Dominican Peso)"
+        },
+        {
+          "value": "DZD (Algerian Dinar)",
+          "label": "DZD (Algerian Dinar)"
+        },
+        {
+          "value": "EEK (Estonian Kroon)",
+          "label": "EEK (Estonian Kroon)"
+        },
+        {
+          "value": "EGP (Egyptian Pound)",
+          "label": "EGP (Egyptian Pound)"
+        },
+        {
+          "value": "ERN (Eritrean Nakfa)",
+          "label": "ERN (Eritrean Nakfa)"
+        },
+        {
+          "value": "ETB (Ethiopian Birr)",
+          "label": "ETB (Ethiopian Birr)"
+        },
+        {
+          "value": "EUR (Euro)",
+          "label": "EUR (Euro)"
+        },
+        {
+          "value": "FJD (Fijian Dollar)",
+          "label": "FJD (Fijian Dollar)"
+        },
+        {
+          "value": "FKP (Falkland Islands Pound)",
+          "label": "FKP (Falkland Islands Pound)"
+        },
+        {
+          "value": "GBP (Pound Sterling)",
+          "label": "GBP (Pound Sterling)"
+        },
+        {
+          "value": "GEL (Georgian Lari)",
+          "label": "GEL (Georgian Lari)"
+        },
+        {
+          "value": "GGP (Guernsey Pound)",
+          "label": "GGP (Guernsey Pound)"
+        },
+        {
+          "value": "GHC (Ghana Cedi (old))",
+          "label": "GHC (Ghana Cedi (old))"
+        },
+        {
+          "value": "GHS (Ghanaian Cedi)",
+          "label": "GHS (Ghanaian Cedi)"
+        },
+        {
+          "value": "GIP (Gibraltar Pound)",
+          "label": "GIP (Gibraltar Pound)"
+        },
+        {
+          "value": "GMD (Gambian Dalasi)",
+          "label": "GMD (Gambian Dalasi)"
+        },
+        {
+          "value": "GNF (Guinean Franc)",
+          "label": "GNF (Guinean Franc)"
+        },
+        {
+          "value": "GTQ (Guatemalan Quetzal)",
+          "label": "GTQ (Guatemalan Quetzal)"
+        },
+        {
+          "value": "GWP (Guinean Peso)",
+          "label": "GWP (Guinean Peso)"
+        },
+        {
+          "value": "GYD (Guyana Dollar)",
+          "label": "GYD (Guyana Dollar)"
+        },
+        {
+          "value": "HKD (Hong Kong Dollar)",
+          "label": "HKD (Hong Kong Dollar)"
+        },
+        {
+          "value": "HNL (Honduran Lempira)",
+          "label": "HNL (Honduran Lempira)"
+        },
+        {
+          "value": "HRK (Croatian Kuna)",
+          "label": "HRK (Croatian Kuna)"
+        },
+        {
+          "value": "HTG (Haitian Gourde)",
+          "label": "HTG (Haitian Gourde)"
+        },
+        {
+          "value": "HUF (Hungarian Forint)",
+          "label": "HUF (Hungarian Forint)"
+        },
+        {
+          "value": "IDR (Indonesian Rupiah)",
+          "label": "IDR (Indonesian Rupiah)"
+        },
+        {
+          "value": "ILS (Israeli New Sheqel)",
+          "label": "ILS (Israeli New Sheqel)"
+        },
+        {
+          "value": "IMP (Isle of Man Pound)",
+          "label": "IMP (Isle of Man Pound)"
+        },
+        {
+          "value": "INR (Indian Rupee)",
+          "label": "INR (Indian Rupee)"
+        },
+        {
+          "value": "IQD (Iraqi Dinar)",
+          "label": "IQD (Iraqi Dinar)"
+        },
+        {
+          "value": "IRR (Iranian Rial)",
+          "label": "IRR (Iranian Rial)"
+        },
+        {
+          "value": "ISK (Icelandic Krona)",
+          "label": "ISK (Icelandic Krona)"
+        },
+        {
+          "value": "JEP (Jersey Pound)",
+          "label": "JEP (Jersey Pound)"
+        },
+        {
+          "value": "JMD (Jamaican Dollar)",
+          "label": "JMD (Jamaican Dollar)"
+        },
+        {
+          "value": "JOD (Jordanian Dinar)",
+          "label": "JOD (Jordanian Dinar)"
+        },
+        {
+          "value": "JPY (Japanese Yen)",
+          "label": "JPY (Japanese Yen)"
+        },
+        {
+          "value": "KES (Kenyan Shilling)",
+          "label": "KES (Kenyan Shilling)"
+        },
+        {
+          "value": "KGS (Kyrgyzstan Som)",
+          "label": "KGS (Kyrgyzstan Som)"
+        },
+        {
+          "value": "KHR (Cambodian Riel)",
+          "label": "KHR (Cambodian Riel)"
+        },
+        {
+          "value": "KMF (Comoro Franc)",
+          "label": "KMF (Comoro Franc)"
+        },
+        {
+          "value": "KPW (North Korean Won)",
+          "label": "KPW (North Korean Won)"
+        },
+        {
+          "value": "KRW (South Korean Won)",
+          "label": "KRW (South Korean Won)"
+        },
+        {
+          "value": "KWD (Kuwaiti Dinar)",
+          "label": "KWD (Kuwaiti Dinar)"
+        },
+        {
+          "value": "KYD (Cayman Islands Dollar)",
+          "label": "KYD (Cayman Islands Dollar)"
+        },
+        {
+          "value": "KZT (Kazakhstani Tenge)",
+          "label": "KZT (Kazakhstani Tenge)"
+        },
+        {
+          "value": "LAK (Laotian Kip)",
+          "label": "LAK (Laotian Kip)"
+        },
+        {
+          "value": "LBP (Lebanese Pound)",
+          "label": "LBP (Lebanese Pound)"
+        },
+        {
+          "value": "LKR (Sri Lanka Rupee)",
+          "label": "LKR (Sri Lanka Rupee)"
+        },
+        {
+          "value": "LRD (Liberian Dollar)",
+          "label": "LRD (Liberian Dollar)"
+        },
+        {
+          "value": "LSL (Lesotho Loti)",
+          "label": "LSL (Lesotho Loti)"
+        },
+        {
+          "value": "LTL (Lithuanian Litas)",
+          "label": "LTL (Lithuanian Litas)"
+        },
+        {
+          "value": "LVL (Latvian Lats)",
+          "label": "LVL (Latvian Lats)"
+        },
+        {
+          "value": "LYD (Libyan Dinar)",
+          "label": "LYD (Libyan Dinar)"
+        },
+        {
+          "value": "MAD (Moroccan Dirham)",
+          "label": "MAD (Moroccan Dirham)"
+        },
+        {
+          "value": "MDL (Moldovan Leu)",
+          "label": "MDL (Moldovan Leu)"
+        },
+        {
+          "value": "MGA (Malagasy Ariary)",
+          "label": "MGA (Malagasy Ariary)"
+        },
+        {
+          "value": "MKD (Macedonian Denar)",
+          "label": "MKD (Macedonian Denar)"
+        },
+        {
+          "value": "MMK (Myanmar Kyat)",
+          "label": "MMK (Myanmar Kyat)"
+        },
+        {
+          "value": "MNT (Mongolian Tugrik)",
+          "label": "MNT (Mongolian Tugrik)"
+        },
+        {
+          "value": "MOP (Macau Pataca)",
+          "label": "MOP (Macau Pataca)"
+        },
+        {
+          "value": "MRO (Mauritanian Ouguiya)",
+          "label": "MRO (Mauritanian Ouguiya)"
+        },
+        {
+          "value": "MTL (Maltese Lira)",
+          "label": "MTL (Maltese Lira)"
+        },
+        {
+          "value": "MUR (Mauritius Rupee)",
+          "label": "MUR (Mauritius Rupee)"
+        },
+        {
+          "value": "MVR (Maldivian Rufiyaa)",
+          "label": "MVR (Maldivian Rufiyaa)"
+        },
+        {
+          "value": "MWK (Malawi Kwacha)",
+          "label": "MWK (Malawi Kwacha)"
+        },
+        {
+          "value": "MXN (Mexican Peso)",
+          "label": "MXN (Mexican Peso)"
+        },
+        {
+          "value": "MYR (Malaysian Ringgit)",
+          "label": "MYR (Malaysian Ringgit)"
+        },
+        {
+          "value": "MZM (Mozambican Metical (old))",
+          "label": "MZM (Mozambican Metical (old))"
+        },
+        {
+          "value": "MZN (Mozambique Metical)",
+          "label": "MZN (Mozambique Metical)"
+        },
+        {
+          "value": "NAD (Namibia Dollar)",
+          "label": "NAD (Namibia Dollar)"
+        },
+        {
+          "value": "NGN (Nigerian Naira)",
+          "label": "NGN (Nigerian Naira)"
+        },
+        {
+          "value": "NIO (Córdoba Oro)",
+          "label": "NIO (Córdoba Oro)"
+        },
+        {
+          "value": "NOK (Norwegian Krone)",
+          "label": "NOK (Norwegian Krone)"
+        },
+        {
+          "value": "NPR (Nepalese Rupee)",
+          "label": "NPR (Nepalese Rupee)"
+        },
+        {
+          "value": "NZD (New Zealand Dollar)",
+          "label": "NZD (New Zealand Dollar)"
+        },
+        {
+          "value": "OMR (Omani Rial)",
+          "label": "OMR (Omani Rial)"
+        },
+        {
+          "value": "PAB (Panamian Balboa)",
+          "label": "PAB (Panamian Balboa)"
+        },
+        {
+          "value": "PEN (Sol)",
+          "label": "PEN (Sol)"
+        },
+        {
+          "value": "PGK (Papua New Guinean Kina)",
+          "label": "PGK (Papua New Guinean Kina)"
+        },
+        {
+          "value": "PHP (Philippine Peso)",
+          "label": "PHP (Philippine Peso)"
+        },
+        {
+          "value": "PKR (Pakistan Rupee)",
+          "label": "PKR (Pakistan Rupee)"
+        },
+        {
+          "value": "PLN (Polish Zloty)",
+          "label": "PLN (Polish Zloty)"
+        },
+        {
+          "value": "PYG (Paraguayan Guarani)",
+          "label": "PYG (Paraguayan Guarani)"
+        },
+        {
+          "value": "QAR (Qatari Rial)",
+          "label": "QAR (Qatari Rial)"
+        },
+        {
+          "value": "ROL (Romanian Leu)",
+          "label": "ROL (Romanian Leu)"
+        },
+        {
+          "value": "RON (Romanian New Leu)",
+          "label": "RON (Romanian New Leu)"
+        },
+        {
+          "value": "RSD (Serbian Dinar)",
+          "label": "RSD (Serbian Dinar)"
+        },
+        {
+          "value": "RUB (Russian Ruble)",
+          "label": "RUB (Russian Ruble)"
+        },
+        {
+          "value": "RWF (Rwandan Franc)",
+          "label": "RWF (Rwandan Franc)"
+        },
+        {
+          "value": "SAR (Saudi Arabian Riyal)",
+          "label": "SAR (Saudi Arabian Riyal)"
+        },
+        {
+          "value": "SBD (Solomon Islands Dollar)",
+          "label": "SBD (Solomon Islands Dollar)"
+        },
+        {
+          "value": "SCR (Seychelles Rupee)",
+          "label": "SCR (Seychelles Rupee)"
+        },
+        {
+          "value": "SDD (Sudanese Dinar)",
+          "label": "SDD (Sudanese Dinar)"
+        },
+        {
+          "value": "SDG (Sudanese Pound)",
+          "label": "SDG (Sudanese Pound)"
+        },
+        {
+          "value": "SEK (Swedish Krona)",
+          "label": "SEK (Swedish Krona)"
+        },
+        {
+          "value": "SGD (Singapore Dollar)",
+          "label": "SGD (Singapore Dollar)"
+        },
+        {
+          "value": "SHP (Saint Helena Pound)",
+          "label": "SHP (Saint Helena Pound)"
+        },
+        {
+          "value": "SIT (Slovene Tolar)",
+          "label": "SIT (Slovene Tolar)"
+        },
+        {
+          "value": "SKK (Slovak Koruna)",
+          "label": "SKK (Slovak Koruna)"
+        },
+        {
+          "value": "SLL (Sierra Leonean Leone)",
+          "label": "SLL (Sierra Leonean Leone)"
+        },
+        {
+          "value": "SOS (Somali Shilling)",
+          "label": "SOS (Somali Shilling)"
+        },
+        {
+          "value": "SPL (Seborga Luigino)",
+          "label": "SPL (Seborga Luigino)"
+        },
+        {
+          "value": "SRD (Surinam Dollar)",
+          "label": "SRD (Surinam Dollar)"
+        },
+        {
+          "value": "SSP (South Sudanese Pound)",
+          "label": "SSP (South Sudanese Pound)"
+        },
+        {
+          "value": "STD (Sao Tomean Dobra)",
+          "label": "STD (Sao Tomean Dobra)"
+        },
+        {
+          "value": "SVC (El Salvador Colón)",
+          "label": "SVC (El Salvador Colón)"
+        },
+        {
+          "value": "SYP (Syrian Pound)",
+          "label": "SYP (Syrian Pound)"
+        },
+        {
+          "value": "SZL (Swazi Lilangeni)",
+          "label": "SZL (Swazi Lilangeni)"
+        },
+        {
+          "value": "THB (Thai Baht)",
+          "label": "THB (Thai Baht)"
+        },
+        {
+          "value": "TJS (Tajikistani Somoni)",
+          "label": "TJS (Tajikistani Somoni)"
+        },
+        {
+          "value": "TMM (Turkmenistani Manat (old))",
+          "label": "TMM (Turkmenistani Manat (old))"
+        },
+        {
+          "value": "TMT (Turkmenistani Manat)",
+          "label": "TMT (Turkmenistani Manat)"
+        },
+        {
+          "value": "TND (Tunisian Dinar)",
+          "label": "TND (Tunisian Dinar)"
+        },
+        {
+          "value": "TOP (Tongan Pa''anga)",
+          "label": "TOP (Tongan Pa''anga)"
+        },
+        {
+          "value": "TRL (Turkish Lira (old))",
+          "label": "TRL (Turkish Lira (old))"
+        },
+        {
+          "value": "TRY (Turkish Lira)",
+          "label": "TRY (Turkish Lira)"
+        },
+        {
+          "value": "TTD (Trinidadian Dollar)",
+          "label": "TTD (Trinidadian Dollar)"
+        },
+        {
+          "value": "TVD (Tuvalu Dollar)",
+          "label": "TVD (Tuvalu Dollar)"
+        },
+        {
+          "value": "TWD (Taiwan New Dollar)",
+          "label": "TWD (Taiwan New Dollar)"
+        },
+        {
+          "value": "TZS (Tanzanian Shilling)",
+          "label": "TZS (Tanzanian Shilling)"
+        },
+        {
+          "value": "UAH (Ukrainian Hryvna)",
+          "label": "UAH (Ukrainian Hryvna)"
+        },
+        {
+          "value": "UGX (Uganda Shilling)",
+          "label": "UGX (Uganda Shilling)"
+        },
+        {
+          "value": "USD (US Dollar)",
+          "label": "USD (US Dollar)"
+        },
+        {
+          "value": "UYU (Peso Uruguayo)",
+          "label": "UYU (Peso Uruguayo)"
+        },
+        {
+          "value": "UZS (Uzbekistan Sum)",
+          "label": "UZS (Uzbekistan Sum)"
+        },
+        {
+          "value": "VEB (Venezuelan Bolivar (old))",
+          "label": "VEB (Venezuelan Bolivar (old))"
+        },
+        {
+          "value": "VEF (Bolívar)",
+          "label": "VEF (Bolívar)"
+        },
+        {
+          "value": "VND (Vietnamese Dong)",
+          "label": "VND (Vietnamese Dong)"
+        },
+        {
+          "value": "VUV (Vanuatu Vatu)",
+          "label": "VUV (Vanuatu Vatu)"
+        },
+        {
+          "value": "WST (Samoan Tala)",
+          "label": "WST (Samoan Tala)"
+        },
+        {
+          "value": "XAF (CFA Franc (BEAC))",
+          "label": "XAF (CFA Franc (BEAC))"
+        },
+        {
+          "value": "XAG (Silver Ounce)",
+          "label": "XAG (Silver Ounce)"
+        },
+        {
+          "value": "XAU (Gold Ounce)",
+          "label": "XAU (Gold Ounce)"
+        },
+        {
+          "value": "XCD (East Caribbean Dollar)",
+          "label": "XCD (East Caribbean Dollar)"
+        },
+        {
+          "value": "XDR (SDR (IMF Special Drawing Right))",
+          "label": "XDR (SDR (IMF Special Drawing Right))"
+        },
+        {
+          "value": "XOF (CFA Franc (BCEAO))",
+          "label": "XOF (CFA Franc (BCEAO))"
+        },
+        {
+          "value": "XPD (Palladium)",
+          "label": "XPD (Palladium)"
+        },
+        {
+          "value": "XPF (CFP Franc)",
+          "label": "XPF (CFP Franc)"
+        },
+        {
+          "value": "XPT (Platinum Ounce)",
+          "label": "XPT (Platinum Ounce)"
+        },
+        {
+          "value": "YER (Yemeni Rial)",
+          "label": "YER (Yemeni Rial)"
+        },
+        {
+          "value": "YUM (Yugoslavian New Dinar)",
+          "label": "YUM (Yugoslavian New Dinar)"
+        },
+        {
+          "value": "ZAR (South African Rand)",
+          "label": "ZAR (South African Rand)"
+        },
+        {
+          "value": "ZMK (Zambian Kwacha (old))",
+          "label": "ZMK (Zambian Kwacha (old))"
+        },
+        {
+          "value": "ZMW (Zambian Kwacha)",
+          "label": "ZMW (Zambian Kwacha)"
+        },
+        {
+          "value": "ZWD (Zimbabwe Dollar (old))",
+          "label": "ZWD (Zimbabwe Dollar (old))"
+        },
+        {
+          "value": "ZWL (Zimbabwe Dollar)",
+          "label": "ZWL (Zimbabwe Dollar)"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 1,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "MinimumWageIndustrySpecificRem",
+      "type": "textarea",
+      "order": 7,
+      "label": "If there is an industry-specific remuneration system, please provide details:",
+      "name": "MinimumWageIndustrySpecificRem",
+      "selector": "#MinimumWageIndustrySpecificRem",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'If there is an industry-specific remuner']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_8",
+      "type": "ui-select",
+      "order": 8,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Medical",
+          "label": "Medical"
+        },
+        {
+          "value": "Food",
+          "label": "Food"
+        },
+        {
+          "value": "Housing",
+          "label": "Housing"
+        },
+        {
+          "value": "Education",
+          "label": "Education"
+        },
+        {
+          "value": "Transportation",
+          "label": "Transportation"
+        },
+        {
+          "value": "Clothing",
+          "label": "Clothing"
+        },
+        {
+          "value": "Bonus",
+          "label": "Bonus"
+        },
+        {
+          "value": "Leave",
+          "label": "Leave"
+        },
+        {
+          "value": "Insurance",
+          "label": "Insurance"
+        },
+        {
+          "value": "Women hygiene kits",
+          "label": "Women hygiene kits"
+        },
+        {
+          "value": "Other",
+          "label": "Other"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 2,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "BenefitsNonCBADetails-0-0",
+      "type": "text",
+      "order": 10,
+      "label": "Details of benefit",
+      "name": "BenefitsNonCBADetails-0-0",
+      "selector": "#BenefitsNonCBADetails-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Details of benefit']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_11",
+      "type": "ui-select",
+      "order": 11,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Daily",
+          "label": "Daily"
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly"
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "Quarterly",
+          "label": "Quarterly"
+        },
+        {
+          "value": "Bi-annual",
+          "label": "Bi-annual"
+        },
+        {
+          "value": "Annual",
+          "label": "Annual"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 3,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_13",
+      "type": "ui-select",
+      "order": 13,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Medical",
+          "label": "Medical"
+        },
+        {
+          "value": "Food",
+          "label": "Food"
+        },
+        {
+          "value": "Housing",
+          "label": "Housing"
+        },
+        {
+          "value": "Education",
+          "label": "Education"
+        },
+        {
+          "value": "Transportation",
+          "label": "Transportation"
+        },
+        {
+          "value": "Clothing",
+          "label": "Clothing"
+        },
+        {
+          "value": "Bonus",
+          "label": "Bonus"
+        },
+        {
+          "value": "Leave",
+          "label": "Leave"
+        },
+        {
+          "value": "Insurance",
+          "label": "Insurance"
+        },
+        {
+          "value": "Women hygiene kits",
+          "label": "Women hygiene kits"
+        },
+        {
+          "value": "Other",
+          "label": "Other"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 4,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "BenefitsNonCBADetails-1-0",
+      "type": "text",
+      "order": 15,
+      "label": "Details of benefit",
+      "name": "BenefitsNonCBADetails-1-0",
+      "selector": "#BenefitsNonCBADetails-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Details of benefit']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_16",
+      "type": "ui-select",
+      "order": 16,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Daily",
+          "label": "Daily"
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly"
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "Quarterly",
+          "label": "Quarterly"
+        },
+        {
+          "value": "Bi-annual",
+          "label": "Bi-annual"
+        },
+        {
+          "value": "Annual",
+          "label": "Annual"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 5,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "CalculatedLivingWage",
+      "type": "text",
+      "order": 18,
+      "label": "Calculated living wage in local currency",
+      "name": "CalculatedLivingWage",
+      "selector": "#CalculatedLivingWage",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Calculated living wage in local currency']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_19",
+      "type": "ui-select",
+      "order": 19,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Manually collected by auditor",
+          "label": "Manually collected by auditor"
+        },
+        {
+          "value": "Provided by auditing company",
+          "label": "Provided by auditing company"
+        },
+        {
+          "value": "GLWC website",
+          "label": "GLWC website"
+        },
+        {
+          "value": "Manually collected by auditee",
+          "label": "Manually collected by auditee"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 6,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "LivingWagePleaseaddthelinkofGlwCSource",
+      "type": "text",
+      "order": 21,
+      "label": "Please add the link of GLWC source.",
+      "name": "LivingWagePleaseaddthelinkofGlwCSource",
+      "selector": "#LivingWagePleaseaddthelinkofGlwCSource",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Please add the link of GLWC source.']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "CalculatedLivingWagePleaseEnterMonthAndYearGlwc-month",
+      "type": "select",
+      "order": 22,
+      "label": "Month",
+      "name": "",
+      "selector": "#CalculatedLivingWagePleaseEnterMonthAndYearGlwc-month",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Month']/following::select)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "string:00",
+          "label": ""
+        },
+        {
+          "value": "string:01",
+          "label": "January"
+        },
+        {
+          "value": "string:02",
+          "label": "February"
+        },
+        {
+          "value": "string:03",
+          "label": "March"
+        },
+        {
+          "value": "string:04",
+          "label": "April"
+        },
+        {
+          "value": "string:05",
+          "label": "May"
+        },
+        {
+          "value": "string:06",
+          "label": "June"
+        },
+        {
+          "value": "string:07",
+          "label": "July"
+        },
+        {
+          "value": "string:08",
+          "label": "August"
+        },
+        {
+          "value": "string:09",
+          "label": "September"
+        },
+        {
+          "value": "string:10",
+          "label": "October"
+        },
+        {
+          "value": "string:11",
+          "label": "November"
+        },
+        {
+          "value": "string:12",
+          "label": "December"
+        }
+      ],
+      "groupValues": []
+    },
+    {
+      "key": "CalculatedLivingWagePleaseEnterMonthAndYearGlwc-year",
+      "type": "number",
+      "order": 23,
+      "label": "Year",
+      "name": "",
+      "selector": "#CalculatedLivingWagePleaseEnterMonthAndYearGlwc-year",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Year']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_24",
+      "type": "ui-select",
+      "order": 24,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "AED (United Arab Emirates Dirham)",
+          "label": "AED (United Arab Emirates Dirham)"
+        },
+        {
+          "value": "AFN (Afghan Afghani)",
+          "label": "AFN (Afghan Afghani)"
+        },
+        {
+          "value": "ALL (Albanian Lek)",
+          "label": "ALL (Albanian Lek)"
+        },
+        {
+          "value": "AMD (Armenian Dram)",
+          "label": "AMD (Armenian Dram)"
+        },
+        {
+          "value": "ANG (Netherlands Antillean Guilder)",
+          "label": "ANG (Netherlands Antillean Guilder)"
+        },
+        {
+          "value": "AOA (Angolan Kwanza)",
+          "label": "AOA (Angolan Kwanza)"
+        },
+        {
+          "value": "ARS (Argentine Peso)",
+          "label": "ARS (Argentine Peso)"
+        },
+        {
+          "value": "AUD (Australian Dollar)",
+          "label": "AUD (Australian Dollar)"
+        },
+        {
+          "value": "AWG (Aruban Florin)",
+          "label": "AWG (Aruban Florin)"
+        },
+        {
+          "value": "AZM (Azerbaijaniani Manat (old))",
+          "label": "AZM (Azerbaijaniani Manat (old))"
+        },
+        {
+          "value": "AZN (Azerbaijaniani Manat)",
+          "label": "AZN (Azerbaijaniani Manat)"
+        },
+        {
+          "value": "BAM (Bosnian Convertible Marka)",
+          "label": "BAM (Bosnian Convertible Marka)"
+        },
+        {
+          "value": "BBD (Barbados Dollar)",
+          "label": "BBD (Barbados Dollar)"
+        },
+        {
+          "value": "BDT (Bangladeshi Taka)",
+          "label": "BDT (Bangladeshi Taka)"
+        },
+        {
+          "value": "BGN (Bulgarian Lev)",
+          "label": "BGN (Bulgarian Lev)"
+        },
+        {
+          "value": "BHD (Bahraini Dinar)",
+          "label": "BHD (Bahraini Dinar)"
+        },
+        {
+          "value": "BIF (Burundi Franc)",
+          "label": "BIF (Burundi Franc)"
+        },
+        {
+          "value": "BMD (Bermudian Dollar)",
+          "label": "BMD (Bermudian Dollar)"
+        },
+        {
+          "value": "BND (Brunei Dollar)",
+          "label": "BND (Brunei Dollar)"
+        },
+        {
+          "value": "BOB (Bolivian Boliviano)",
+          "label": "BOB (Bolivian Boliviano)"
+        },
+        {
+          "value": "BRL (Brazilian Real)",
+          "label": "BRL (Brazilian Real)"
+        },
+        {
+          "value": "BSD (Bahamian Dollar)",
+          "label": "BSD (Bahamian Dollar)"
+        },
+        {
+          "value": "BTN (Bhutanese Ngultrum)",
+          "label": "BTN (Bhutanese Ngultrum)"
+        },
+        {
+          "value": "BWP (Botswana Pula)",
+          "label": "BWP (Botswana Pula)"
+        },
+        {
+          "value": "BYN (Belarussian Ruble)",
+          "label": "BYN (Belarussian Ruble)"
+        },
+        {
+          "value": "BYR (Belarussian Ruble)",
+          "label": "BYR (Belarussian Ruble)"
+        },
+        {
+          "value": "BZD (Belize Dollar)",
+          "label": "BZD (Belize Dollar)"
+        },
+        {
+          "value": "CAD (Canadian Dollar)",
+          "label": "CAD (Canadian Dollar)"
+        },
+        {
+          "value": "CDF (Congolese Franc)",
+          "label": "CDF (Congolese Franc)"
+        },
+        {
+          "value": "CHF (Swiss Franc)",
+          "label": "CHF (Swiss Franc)"
+        },
+        {
+          "value": "CLF (Chilean unidades de fomento)",
+          "label": "CLF (Chilean unidades de fomento)"
+        },
+        {
+          "value": "CLP (Chilean Peso)",
+          "label": "CLP (Chilean Peso)"
+        },
+        {
+          "value": "CNH (Offshore Traded Renminbi)",
+          "label": "CNH (Offshore Traded Renminbi)"
+        },
+        {
+          "value": "CNY (Yuan Renminbi)",
+          "label": "CNY (Yuan Renminbi)"
+        },
+        {
+          "value": "COP (Colombian Peso)",
+          "label": "COP (Colombian Peso)"
+        },
+        {
+          "value": "CRC (Costa Rican Colon)",
+          "label": "CRC (Costa Rican Colon)"
+        },
+        {
+          "value": "CSD (Serbian Dinar (old))",
+          "label": "CSD (Serbian Dinar (old))"
+        },
+        {
+          "value": "CUP (Cuban Peso)",
+          "label": "CUP (Cuban Peso)"
+        },
+        {
+          "value": "CVE (Cape Verde Escudo)",
+          "label": "CVE (Cape Verde Escudo)"
+        },
+        {
+          "value": "CYP (Cyprus Pound)",
+          "label": "CYP (Cyprus Pound)"
+        },
+        {
+          "value": "CZK (Czech Koruna)",
+          "label": "CZK (Czech Koruna)"
+        },
+        {
+          "value": "DJF (Djibouti Franc)",
+          "label": "DJF (Djibouti Franc)"
+        },
+        {
+          "value": "DKK (Danish Krone)",
+          "label": "DKK (Danish Krone)"
+        },
+        {
+          "value": "DOP (Dominican Peso)",
+          "label": "DOP (Dominican Peso)"
+        },
+        {
+          "value": "DZD (Algerian Dinar)",
+          "label": "DZD (Algerian Dinar)"
+        },
+        {
+          "value": "EEK (Estonian Kroon)",
+          "label": "EEK (Estonian Kroon)"
+        },
+        {
+          "value": "EGP (Egyptian Pound)",
+          "label": "EGP (Egyptian Pound)"
+        },
+        {
+          "value": "ERN (Eritrean Nakfa)",
+          "label": "ERN (Eritrean Nakfa)"
+        },
+        {
+          "value": "ETB (Ethiopian Birr)",
+          "label": "ETB (Ethiopian Birr)"
+        },
+        {
+          "value": "EUR (Euro)",
+          "label": "EUR (Euro)"
+        },
+        {
+          "value": "FJD (Fijian Dollar)",
+          "label": "FJD (Fijian Dollar)"
+        },
+        {
+          "value": "FKP (Falkland Islands Pound)",
+          "label": "FKP (Falkland Islands Pound)"
+        },
+        {
+          "value": "GBP (Pound Sterling)",
+          "label": "GBP (Pound Sterling)"
+        },
+        {
+          "value": "GEL (Georgian Lari)",
+          "label": "GEL (Georgian Lari)"
+        },
+        {
+          "value": "GGP (Guernsey Pound)",
+          "label": "GGP (Guernsey Pound)"
+        },
+        {
+          "value": "GHC (Ghana Cedi (old))",
+          "label": "GHC (Ghana Cedi (old))"
+        },
+        {
+          "value": "GHS (Ghanaian Cedi)",
+          "label": "GHS (Ghanaian Cedi)"
+        },
+        {
+          "value": "GIP (Gibraltar Pound)",
+          "label": "GIP (Gibraltar Pound)"
+        },
+        {
+          "value": "GMD (Gambian Dalasi)",
+          "label": "GMD (Gambian Dalasi)"
+        },
+        {
+          "value": "GNF (Guinean Franc)",
+          "label": "GNF (Guinean Franc)"
+        },
+        {
+          "value": "GTQ (Guatemalan Quetzal)",
+          "label": "GTQ (Guatemalan Quetzal)"
+        },
+        {
+          "value": "GWP (Guinean Peso)",
+          "label": "GWP (Guinean Peso)"
+        },
+        {
+          "value": "GYD (Guyana Dollar)",
+          "label": "GYD (Guyana Dollar)"
+        },
+        {
+          "value": "HKD (Hong Kong Dollar)",
+          "label": "HKD (Hong Kong Dollar)"
+        },
+        {
+          "value": "HNL (Honduran Lempira)",
+          "label": "HNL (Honduran Lempira)"
+        },
+        {
+          "value": "HRK (Croatian Kuna)",
+          "label": "HRK (Croatian Kuna)"
+        },
+        {
+          "value": "HTG (Haitian Gourde)",
+          "label": "HTG (Haitian Gourde)"
+        },
+        {
+          "value": "HUF (Hungarian Forint)",
+          "label": "HUF (Hungarian Forint)"
+        },
+        {
+          "value": "IDR (Indonesian Rupiah)",
+          "label": "IDR (Indonesian Rupiah)"
+        },
+        {
+          "value": "ILS (Israeli New Sheqel)",
+          "label": "ILS (Israeli New Sheqel)"
+        },
+        {
+          "value": "IMP (Isle of Man Pound)",
+          "label": "IMP (Isle of Man Pound)"
+        },
+        {
+          "value": "INR (Indian Rupee)",
+          "label": "INR (Indian Rupee)"
+        },
+        {
+          "value": "IQD (Iraqi Dinar)",
+          "label": "IQD (Iraqi Dinar)"
+        },
+        {
+          "value": "IRR (Iranian Rial)",
+          "label": "IRR (Iranian Rial)"
+        },
+        {
+          "value": "ISK (Icelandic Krona)",
+          "label": "ISK (Icelandic Krona)"
+        },
+        {
+          "value": "JEP (Jersey Pound)",
+          "label": "JEP (Jersey Pound)"
+        },
+        {
+          "value": "JMD (Jamaican Dollar)",
+          "label": "JMD (Jamaican Dollar)"
+        },
+        {
+          "value": "JOD (Jordanian Dinar)",
+          "label": "JOD (Jordanian Dinar)"
+        },
+        {
+          "value": "JPY (Japanese Yen)",
+          "label": "JPY (Japanese Yen)"
+        },
+        {
+          "value": "KES (Kenyan Shilling)",
+          "label": "KES (Kenyan Shilling)"
+        },
+        {
+          "value": "KGS (Kyrgyzstan Som)",
+          "label": "KGS (Kyrgyzstan Som)"
+        },
+        {
+          "value": "KHR (Cambodian Riel)",
+          "label": "KHR (Cambodian Riel)"
+        },
+        {
+          "value": "KMF (Comoro Franc)",
+          "label": "KMF (Comoro Franc)"
+        },
+        {
+          "value": "KPW (North Korean Won)",
+          "label": "KPW (North Korean Won)"
+        },
+        {
+          "value": "KRW (South Korean Won)",
+          "label": "KRW (South Korean Won)"
+        },
+        {
+          "value": "KWD (Kuwaiti Dinar)",
+          "label": "KWD (Kuwaiti Dinar)"
+        },
+        {
+          "value": "KYD (Cayman Islands Dollar)",
+          "label": "KYD (Cayman Islands Dollar)"
+        },
+        {
+          "value": "KZT (Kazakhstani Tenge)",
+          "label": "KZT (Kazakhstani Tenge)"
+        },
+        {
+          "value": "LAK (Laotian Kip)",
+          "label": "LAK (Laotian Kip)"
+        },
+        {
+          "value": "LBP (Lebanese Pound)",
+          "label": "LBP (Lebanese Pound)"
+        },
+        {
+          "value": "LKR (Sri Lanka Rupee)",
+          "label": "LKR (Sri Lanka Rupee)"
+        },
+        {
+          "value": "LRD (Liberian Dollar)",
+          "label": "LRD (Liberian Dollar)"
+        },
+        {
+          "value": "LSL (Lesotho Loti)",
+          "label": "LSL (Lesotho Loti)"
+        },
+        {
+          "value": "LTL (Lithuanian Litas)",
+          "label": "LTL (Lithuanian Litas)"
+        },
+        {
+          "value": "LVL (Latvian Lats)",
+          "label": "LVL (Latvian Lats)"
+        },
+        {
+          "value": "LYD (Libyan Dinar)",
+          "label": "LYD (Libyan Dinar)"
+        },
+        {
+          "value": "MAD (Moroccan Dirham)",
+          "label": "MAD (Moroccan Dirham)"
+        },
+        {
+          "value": "MDL (Moldovan Leu)",
+          "label": "MDL (Moldovan Leu)"
+        },
+        {
+          "value": "MGA (Malagasy Ariary)",
+          "label": "MGA (Malagasy Ariary)"
+        },
+        {
+          "value": "MKD (Macedonian Denar)",
+          "label": "MKD (Macedonian Denar)"
+        },
+        {
+          "value": "MMK (Myanmar Kyat)",
+          "label": "MMK (Myanmar Kyat)"
+        },
+        {
+          "value": "MNT (Mongolian Tugrik)",
+          "label": "MNT (Mongolian Tugrik)"
+        },
+        {
+          "value": "MOP (Macau Pataca)",
+          "label": "MOP (Macau Pataca)"
+        },
+        {
+          "value": "MRO (Mauritanian Ouguiya)",
+          "label": "MRO (Mauritanian Ouguiya)"
+        },
+        {
+          "value": "MTL (Maltese Lira)",
+          "label": "MTL (Maltese Lira)"
+        },
+        {
+          "value": "MUR (Mauritius Rupee)",
+          "label": "MUR (Mauritius Rupee)"
+        },
+        {
+          "value": "MVR (Maldivian Rufiyaa)",
+          "label": "MVR (Maldivian Rufiyaa)"
+        },
+        {
+          "value": "MWK (Malawi Kwacha)",
+          "label": "MWK (Malawi Kwacha)"
+        },
+        {
+          "value": "MXN (Mexican Peso)",
+          "label": "MXN (Mexican Peso)"
+        },
+        {
+          "value": "MYR (Malaysian Ringgit)",
+          "label": "MYR (Malaysian Ringgit)"
+        },
+        {
+          "value": "MZM (Mozambican Metical (old))",
+          "label": "MZM (Mozambican Metical (old))"
+        },
+        {
+          "value": "MZN (Mozambique Metical)",
+          "label": "MZN (Mozambique Metical)"
+        },
+        {
+          "value": "NAD (Namibia Dollar)",
+          "label": "NAD (Namibia Dollar)"
+        },
+        {
+          "value": "NGN (Nigerian Naira)",
+          "label": "NGN (Nigerian Naira)"
+        },
+        {
+          "value": "NIO (Córdoba Oro)",
+          "label": "NIO (Córdoba Oro)"
+        },
+        {
+          "value": "NOK (Norwegian Krone)",
+          "label": "NOK (Norwegian Krone)"
+        },
+        {
+          "value": "NPR (Nepalese Rupee)",
+          "label": "NPR (Nepalese Rupee)"
+        },
+        {
+          "value": "NZD (New Zealand Dollar)",
+          "label": "NZD (New Zealand Dollar)"
+        },
+        {
+          "value": "OMR (Omani Rial)",
+          "label": "OMR (Omani Rial)"
+        },
+        {
+          "value": "PAB (Panamian Balboa)",
+          "label": "PAB (Panamian Balboa)"
+        },
+        {
+          "value": "PEN (Sol)",
+          "label": "PEN (Sol)"
+        },
+        {
+          "value": "PGK (Papua New Guinean Kina)",
+          "label": "PGK (Papua New Guinean Kina)"
+        },
+        {
+          "value": "PHP (Philippine Peso)",
+          "label": "PHP (Philippine Peso)"
+        },
+        {
+          "value": "PKR (Pakistan Rupee)",
+          "label": "PKR (Pakistan Rupee)"
+        },
+        {
+          "value": "PLN (Polish Zloty)",
+          "label": "PLN (Polish Zloty)"
+        },
+        {
+          "value": "PYG (Paraguayan Guarani)",
+          "label": "PYG (Paraguayan Guarani)"
+        },
+        {
+          "value": "QAR (Qatari Rial)",
+          "label": "QAR (Qatari Rial)"
+        },
+        {
+          "value": "ROL (Romanian Leu)",
+          "label": "ROL (Romanian Leu)"
+        },
+        {
+          "value": "RON (Romanian New Leu)",
+          "label": "RON (Romanian New Leu)"
+        },
+        {
+          "value": "RSD (Serbian Dinar)",
+          "label": "RSD (Serbian Dinar)"
+        },
+        {
+          "value": "RUB (Russian Ruble)",
+          "label": "RUB (Russian Ruble)"
+        },
+        {
+          "value": "RWF (Rwandan Franc)",
+          "label": "RWF (Rwandan Franc)"
+        },
+        {
+          "value": "SAR (Saudi Arabian Riyal)",
+          "label": "SAR (Saudi Arabian Riyal)"
+        },
+        {
+          "value": "SBD (Solomon Islands Dollar)",
+          "label": "SBD (Solomon Islands Dollar)"
+        },
+        {
+          "value": "SCR (Seychelles Rupee)",
+          "label": "SCR (Seychelles Rupee)"
+        },
+        {
+          "value": "SDD (Sudanese Dinar)",
+          "label": "SDD (Sudanese Dinar)"
+        },
+        {
+          "value": "SDG (Sudanese Pound)",
+          "label": "SDG (Sudanese Pound)"
+        },
+        {
+          "value": "SEK (Swedish Krona)",
+          "label": "SEK (Swedish Krona)"
+        },
+        {
+          "value": "SGD (Singapore Dollar)",
+          "label": "SGD (Singapore Dollar)"
+        },
+        {
+          "value": "SHP (Saint Helena Pound)",
+          "label": "SHP (Saint Helena Pound)"
+        },
+        {
+          "value": "SIT (Slovene Tolar)",
+          "label": "SIT (Slovene Tolar)"
+        },
+        {
+          "value": "SKK (Slovak Koruna)",
+          "label": "SKK (Slovak Koruna)"
+        },
+        {
+          "value": "SLL (Sierra Leonean Leone)",
+          "label": "SLL (Sierra Leonean Leone)"
+        },
+        {
+          "value": "SOS (Somali Shilling)",
+          "label": "SOS (Somali Shilling)"
+        },
+        {
+          "value": "SPL (Seborga Luigino)",
+          "label": "SPL (Seborga Luigino)"
+        },
+        {
+          "value": "SRD (Surinam Dollar)",
+          "label": "SRD (Surinam Dollar)"
+        },
+        {
+          "value": "SSP (South Sudanese Pound)",
+          "label": "SSP (South Sudanese Pound)"
+        },
+        {
+          "value": "STD (Sao Tomean Dobra)",
+          "label": "STD (Sao Tomean Dobra)"
+        },
+        {
+          "value": "SVC (El Salvador Colón)",
+          "label": "SVC (El Salvador Colón)"
+        },
+        {
+          "value": "SYP (Syrian Pound)",
+          "label": "SYP (Syrian Pound)"
+        },
+        {
+          "value": "SZL (Swazi Lilangeni)",
+          "label": "SZL (Swazi Lilangeni)"
+        },
+        {
+          "value": "THB (Thai Baht)",
+          "label": "THB (Thai Baht)"
+        },
+        {
+          "value": "TJS (Tajikistani Somoni)",
+          "label": "TJS (Tajikistani Somoni)"
+        },
+        {
+          "value": "TMM (Turkmenistani Manat (old))",
+          "label": "TMM (Turkmenistani Manat (old))"
+        },
+        {
+          "value": "TMT (Turkmenistani Manat)",
+          "label": "TMT (Turkmenistani Manat)"
+        },
+        {
+          "value": "TND (Tunisian Dinar)",
+          "label": "TND (Tunisian Dinar)"
+        },
+        {
+          "value": "TOP (Tongan Pa''anga)",
+          "label": "TOP (Tongan Pa''anga)"
+        },
+        {
+          "value": "TRL (Turkish Lira (old))",
+          "label": "TRL (Turkish Lira (old))"
+        },
+        {
+          "value": "TRY (Turkish Lira)",
+          "label": "TRY (Turkish Lira)"
+        },
+        {
+          "value": "TTD (Trinidadian Dollar)",
+          "label": "TTD (Trinidadian Dollar)"
+        },
+        {
+          "value": "TVD (Tuvalu Dollar)",
+          "label": "TVD (Tuvalu Dollar)"
+        },
+        {
+          "value": "TWD (Taiwan New Dollar)",
+          "label": "TWD (Taiwan New Dollar)"
+        },
+        {
+          "value": "TZS (Tanzanian Shilling)",
+          "label": "TZS (Tanzanian Shilling)"
+        },
+        {
+          "value": "UAH (Ukrainian Hryvna)",
+          "label": "UAH (Ukrainian Hryvna)"
+        },
+        {
+          "value": "UGX (Uganda Shilling)",
+          "label": "UGX (Uganda Shilling)"
+        },
+        {
+          "value": "USD (US Dollar)",
+          "label": "USD (US Dollar)"
+        },
+        {
+          "value": "UYU (Peso Uruguayo)",
+          "label": "UYU (Peso Uruguayo)"
+        },
+        {
+          "value": "UZS (Uzbekistan Sum)",
+          "label": "UZS (Uzbekistan Sum)"
+        },
+        {
+          "value": "VEB (Venezuelan Bolivar (old))",
+          "label": "VEB (Venezuelan Bolivar (old))"
+        },
+        {
+          "value": "VEF (Bolívar)",
+          "label": "VEF (Bolívar)"
+        },
+        {
+          "value": "VND (Vietnamese Dong)",
+          "label": "VND (Vietnamese Dong)"
+        },
+        {
+          "value": "VUV (Vanuatu Vatu)",
+          "label": "VUV (Vanuatu Vatu)"
+        },
+        {
+          "value": "WST (Samoan Tala)",
+          "label": "WST (Samoan Tala)"
+        },
+        {
+          "value": "XAF (CFA Franc (BEAC))",
+          "label": "XAF (CFA Franc (BEAC))"
+        },
+        {
+          "value": "XAG (Silver Ounce)",
+          "label": "XAG (Silver Ounce)"
+        },
+        {
+          "value": "XAU (Gold Ounce)",
+          "label": "XAU (Gold Ounce)"
+        },
+        {
+          "value": "XCD (East Caribbean Dollar)",
+          "label": "XCD (East Caribbean Dollar)"
+        },
+        {
+          "value": "XDR (SDR (IMF Special Drawing Right))",
+          "label": "XDR (SDR (IMF Special Drawing Right))"
+        },
+        {
+          "value": "XOF (CFA Franc (BCEAO))",
+          "label": "XOF (CFA Franc (BCEAO))"
+        },
+        {
+          "value": "XPD (Palladium)",
+          "label": "XPD (Palladium)"
+        },
+        {
+          "value": "XPF (CFP Franc)",
+          "label": "XPF (CFP Franc)"
+        },
+        {
+          "value": "XPT (Platinum Ounce)",
+          "label": "XPT (Platinum Ounce)"
+        },
+        {
+          "value": "YER (Yemeni Rial)",
+          "label": "YER (Yemeni Rial)"
+        },
+        {
+          "value": "YUM (Yugoslavian New Dinar)",
+          "label": "YUM (Yugoslavian New Dinar)"
+        },
+        {
+          "value": "ZAR (South African Rand)",
+          "label": "ZAR (South African Rand)"
+        },
+        {
+          "value": "ZMK (Zambian Kwacha (old))",
+          "label": "ZMK (Zambian Kwacha (old))"
+        },
+        {
+          "value": "ZMW (Zambian Kwacha)",
+          "label": "ZMW (Zambian Kwacha)"
+        },
+        {
+          "value": "ZWD (Zimbabwe Dollar (old))",
+          "label": "ZWD (Zimbabwe Dollar (old))"
+        },
+        {
+          "value": "ZWL (Zimbabwe Dollar)",
+          "label": "ZWL (Zimbabwe Dollar)"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 7,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "WorkingHoursStandardDayOff-monday",
+      "type": "checkbox",
+      "order": 26,
+      "label": "Monday",
+      "name": "WorkingHoursStandardDayOff-monday",
+      "selector": "#WorkingHoursStandardDayOff-monday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Monday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "monday",
+          "label": "Monday"
+        }
+      ]
+    },
+    {
+      "key": "WorkingHoursStandardDayOff-tuesday",
+      "type": "checkbox",
+      "order": 27,
+      "label": "Tuesday",
+      "name": "WorkingHoursStandardDayOff-tuesday",
+      "selector": "#WorkingHoursStandardDayOff-tuesday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Tuesday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "tuesday",
+          "label": "Tuesday"
+        }
+      ]
+    },
+    {
+      "key": "WorkingHoursStandardDayOff-wednesday",
+      "type": "checkbox",
+      "order": 28,
+      "label": "Wednesday",
+      "name": "WorkingHoursStandardDayOff-wednesday",
+      "selector": "#WorkingHoursStandardDayOff-wednesday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Wednesday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "wednesday",
+          "label": "Wednesday"
+        }
+      ]
+    },
+    {
+      "key": "WorkingHoursStandardDayOff-thursday",
+      "type": "checkbox",
+      "order": 29,
+      "label": "Thursday",
+      "name": "WorkingHoursStandardDayOff-thursday",
+      "selector": "#WorkingHoursStandardDayOff-thursday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Thursday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "thursday",
+          "label": "Thursday"
+        }
+      ]
+    },
+    {
+      "key": "WorkingHoursStandardDayOff-friday",
+      "type": "checkbox",
+      "order": 30,
+      "label": "Friday",
+      "name": "WorkingHoursStandardDayOff-friday",
+      "selector": "#WorkingHoursStandardDayOff-friday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Friday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "friday",
+          "label": "Friday"
+        }
+      ]
+    },
+    {
+      "key": "WorkingHoursStandardDayOff-saturday",
+      "type": "checkbox",
+      "order": 31,
+      "label": "Saturday",
+      "name": "WorkingHoursStandardDayOff-saturday",
+      "selector": "#WorkingHoursStandardDayOff-saturday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Saturday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "saturday",
+          "label": "Saturday"
+        }
+      ]
+    },
+    {
+      "key": "WorkingHoursStandardDayOff-sunday",
+      "type": "checkbox",
+      "order": 32,
+      "label": "Sunday",
+      "name": "WorkingHoursStandardDayOff-sunday",
+      "selector": "#WorkingHoursStandardDayOff-sunday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Sunday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "sunday",
+          "label": "Sunday"
+        }
+      ]
+    },
+    {
+      "key": "WHStandardsLegalWHperWeek",
+      "type": "text",
+      "order": 33,
+      "label": "Legal working hours per week",
+      "name": "WHStandardsLegalWHperWeek",
+      "selector": "#WHStandardsLegalWHperWeek",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Legal working hours per week']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "WHStandardsLegalOTperWeek",
+      "type": "text",
+      "order": 34,
+      "label": "Legal overtime limit per week (if applicable)",
+      "name": "WHStandardsLegalOTperWeek",
+      "selector": "#WHStandardsLegalOTperWeek",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Legal overtime limit per week (if applic']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "WHStandardsLegalOTperMonth",
+      "type": "text",
+      "order": 35,
+      "label": "Legal overtime limit per month (if applicable)",
+      "name": "WHStandardsLegalOTperMonth",
+      "selector": "#WHStandardsLegalOTperMonth",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Legal overtime limit per month (if appli']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OTRateStandardOTPremiumWorkday",
+      "type": "text",
+      "order": 36,
+      "label": "Standard overtime premium rate - Workday (if applicable)",
+      "name": "OTRateStandardOTPremiumWorkday",
+      "selector": "#OTRateStandardOTPremiumWorkday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Standard overtime premium rate - Workday']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OTRateStandardOTPremiumDayOff",
+      "type": "text",
+      "order": 37,
+      "label": "Standard overtime premium rate - Day off (if applicable)",
+      "name": "OTRateStandardOTPremiumDayOff",
+      "selector": "#OTRateStandardOTPremiumDayOff",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Standard overtime premium rate - Day off']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OTRateStandardOTPremiumHoliday",
+      "type": "text",
+      "order": 38,
+      "label": "Standard overtime premium rate - National holiday (if applicable)",
+      "name": "OTRateStandardOTPremiumHoliday",
+      "selector": "#OTRateStandardOTPremiumHoliday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Standard overtime premium rate - Nationa']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OTRateAppliedOTPremiumWorkday",
+      "type": "text",
+      "order": 39,
+      "label": "Overtime premium rate applied - Workday",
+      "name": "OTRateAppliedOTPremiumWorkday",
+      "selector": "#OTRateAppliedOTPremiumWorkday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Overtime premium rate applied - Workday']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OTRateAppliedOTPremiumDayOff",
+      "type": "text",
+      "order": 40,
+      "label": "Overtime premium rate applied - Day off",
+      "name": "OTRateAppliedOTPremiumDayOff",
+      "selector": "#OTRateAppliedOTPremiumDayOff",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Overtime premium rate applied - Day off']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "OTRateAppliedOTPremiumHoliday",
+      "type": "text",
+      "order": 41,
+      "label": "Overtime premium rate applied - National holiday",
+      "name": "OTRateAppliedOTPremiumHoliday",
+      "selector": "#OTRateAppliedOTPremiumHoliday",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Overtime premium rate applied - National']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampleDetailsTotalSample",
+      "type": "text",
+      "order": 42,
+      "label": "Total sample",
+      "name": "SampleDetailsTotalSample",
+      "selector": "#SampleDetailsTotalSample",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Total sample']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampleDetailsSampleMale",
+      "type": "text",
+      "order": 43,
+      "label": "Sample - Male",
+      "name": "SampleDetailsSampleMale",
+      "selector": "#SampleDetailsSampleMale",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Sample - Male']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampleDetailsSampleFemale",
+      "type": "text",
+      "order": 44,
+      "label": "Sample - Female",
+      "name": "SampleDetailsSampleFemale",
+      "selector": "#SampleDetailsSampleFemale",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Sample - Female']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "SampleDetailsSampleNonBinary",
+      "type": "text",
+      "order": 45,
+      "label": "Sample - Non-binary",
+      "name": "SampleDetailsSampleNonBinary",
+      "selector": "#SampleDetailsSampleNonBinary",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Sample - Non-binary']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_46",
+      "type": "ui-select",
+      "order": 46,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Temporary",
+          "label": "Temporary"
+        },
+        {
+          "value": "Seasonal",
+          "label": "Seasonal"
+        },
+        {
+          "value": "Apprentice",
+          "label": "Apprentice"
+        },
+        {
+          "value": "On probation",
+          "label": "On probation"
+        },
+        {
+          "value": "Night shift",
+          "label": "Night shift"
+        },
+        {
+          "value": "With disabilities",
+          "label": "With disabilities"
+        },
+        {
+          "value": "Foreign migrant",
+          "label": "Foreign migrant"
+        },
+        {
+          "value": "Hired Indirectly",
+          "label": "Hired Indirectly"
+        },
+        {
+          "value": "Unionised",
+          "label": "Unionised"
+        },
+        {
+          "value": "Under CBA",
+          "label": "Under CBA"
+        },
+        {
+          "value": "Pregnant",
+          "label": "Pregnant"
+        },
+        {
+          "value": "New parent",
+          "label": "New parent"
+        },
+        {
+          "value": "Young worker",
+          "label": "Young worker"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 8,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_47",
+      "type": "ui-select",
+      "order": 47,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "January",
+          "label": "January"
+        },
+        {
+          "value": "February",
+          "label": "February"
+        },
+        {
+          "value": "March",
+          "label": "March"
+        },
+        {
+          "value": "April",
+          "label": "April"
+        },
+        {
+          "value": "May",
+          "label": "May"
+        },
+        {
+          "value": "June",
+          "label": "June"
+        },
+        {
+          "value": "September",
+          "label": "September"
+        },
+        {
+          "value": "October",
+          "label": "October"
+        },
+        {
+          "value": "November",
+          "label": "November"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 9,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "SampleContextDetails",
+      "type": "textarea",
+      "order": 48,
+      "label": "Sample details",
+      "name": "SampleContextDetails",
+      "selector": "#SampleContextDetails",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Sample details']/following::textarea)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "HighestOTHours-0-0",
+      "type": "text",
+      "order": 49,
+      "label": "No of hours",
+      "name": "HighestOTHours-0-0",
+      "selector": "#HighestOTHours-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No of hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "HighestOTWorkers-0-0",
+      "type": "text",
+      "order": 50,
+      "label": "No of workers",
+      "name": "HighestOTWorkers-0-0",
+      "selector": "#HighestOTWorkers-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No of workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_51",
+      "type": "ui-select",
+      "order": 51,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Daily",
+          "label": "Daily"
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly"
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "Quarterly",
+          "label": "Quarterly"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 10,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "HighestOTDepartment-0-0",
+      "type": "text",
+      "order": 53,
+      "label": "Department",
+      "name": "HighestOTDepartment-0-0",
+      "selector": "#HighestOTDepartment-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_54",
+      "type": "ui-select",
+      "order": 54,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "January",
+          "label": "January"
+        },
+        {
+          "value": "February",
+          "label": "February"
+        },
+        {
+          "value": "March",
+          "label": "March"
+        },
+        {
+          "value": "April",
+          "label": "April"
+        },
+        {
+          "value": "May",
+          "label": "May"
+        },
+        {
+          "value": "June",
+          "label": "June"
+        },
+        {
+          "value": "July",
+          "label": "July"
+        },
+        {
+          "value": "August",
+          "label": "August"
+        },
+        {
+          "value": "September",
+          "label": "September"
+        },
+        {
+          "value": "October",
+          "label": "October"
+        },
+        {
+          "value": "November",
+          "label": "November"
+        },
+        {
+          "value": "December",
+          "label": "December"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 11,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "panelSampleDetailsWeeklyStandardWh-0-1",
+      "type": "text",
+      "order": 56,
+      "label": "Weekly standard working hours",
+      "name": "panelSampleDetailsWeeklyStandardWh-0-1",
+      "selector": "#panelSampleDetailsWeeklyStandardWh-0-1",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Weekly standard working hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelSampleDetailsWeeklyOvertimeHours-0-2",
+      "type": "text",
+      "order": 57,
+      "label": "Maximum weekly overtime hours",
+      "name": "panelSampleDetailsWeeklyOvertimeHours-0-2",
+      "selector": "#panelSampleDetailsWeeklyOvertimeHours-0-2",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Maximum weekly overtime hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_58",
+      "type": "ui-select",
+      "order": 58,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "January",
+          "label": "January"
+        },
+        {
+          "value": "February",
+          "label": "February"
+        },
+        {
+          "value": "March",
+          "label": "March"
+        },
+        {
+          "value": "April",
+          "label": "April"
+        },
+        {
+          "value": "May",
+          "label": "May"
+        },
+        {
+          "value": "June",
+          "label": "June"
+        },
+        {
+          "value": "July",
+          "label": "July"
+        },
+        {
+          "value": "August",
+          "label": "August"
+        },
+        {
+          "value": "September",
+          "label": "September"
+        },
+        {
+          "value": "October",
+          "label": "October"
+        },
+        {
+          "value": "November",
+          "label": "November"
+        },
+        {
+          "value": "December",
+          "label": "December"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 12,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "panelSampleDetailsWeeklyStandardWh-1-1",
+      "type": "text",
+      "order": 60,
+      "label": "Weekly standard working hours",
+      "name": "panelSampleDetailsWeeklyStandardWh-1-1",
+      "selector": "#panelSampleDetailsWeeklyStandardWh-1-1",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Weekly standard working hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelSampleDetailsWeeklyOvertimeHours-1-2",
+      "type": "text",
+      "order": 61,
+      "label": "Maximum weekly overtime hours",
+      "name": "panelSampleDetailsWeeklyOvertimeHours-1-2",
+      "selector": "#panelSampleDetailsWeeklyOvertimeHours-1-2",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Maximum weekly overtime hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_62",
+      "type": "ui-select",
+      "order": 62,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "January",
+          "label": "January"
+        },
+        {
+          "value": "February",
+          "label": "February"
+        },
+        {
+          "value": "March",
+          "label": "March"
+        },
+        {
+          "value": "April",
+          "label": "April"
+        },
+        {
+          "value": "May",
+          "label": "May"
+        },
+        {
+          "value": "June",
+          "label": "June"
+        },
+        {
+          "value": "July",
+          "label": "July"
+        },
+        {
+          "value": "August",
+          "label": "August"
+        },
+        {
+          "value": "September",
+          "label": "September"
+        },
+        {
+          "value": "October",
+          "label": "October"
+        },
+        {
+          "value": "November",
+          "label": "November"
+        },
+        {
+          "value": "December",
+          "label": "December"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 13,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "panelSampleDetailsWeeklyStandardWh-2-1",
+      "type": "text",
+      "order": 64,
+      "label": "Weekly standard working hours",
+      "name": "panelSampleDetailsWeeklyStandardWh-2-1",
+      "selector": "#panelSampleDetailsWeeklyStandardWh-2-1",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Weekly standard working hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelSampleDetailsWeeklyOvertimeHours-2-2",
+      "type": "text",
+      "order": 65,
+      "label": "Maximum weekly overtime hours",
+      "name": "panelSampleDetailsWeeklyOvertimeHours-2-2",
+      "selector": "#panelSampleDetailsWeeklyOvertimeHours-2-2",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Maximum weekly overtime hours']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "LowestWageAmount-0-0",
+      "type": "text",
+      "order": 66,
+      "label": "Amount",
+      "name": "LowestWageAmount-0-0",
+      "selector": "#LowestWageAmount-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Amount']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "LowestWageWorkers-0-0",
+      "type": "text",
+      "order": 67,
+      "label": "No of workers",
+      "name": "LowestWageWorkers-0-0",
+      "selector": "#LowestWageWorkers-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No of workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "05-remuneration-and-working-hours__search_68",
+      "type": "ui-select",
+      "order": 68,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Hourly",
+          "label": "Hourly"
+        },
+        {
+          "value": "Weekly",
+          "label": "Weekly"
+        },
+        {
+          "value": "Monthly",
+          "label": "Monthly"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 14,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "LowestWageDepartment-0-0",
+      "type": "text",
+      "order": 70,
+      "label": "Department",
+      "name": "LowestWageDepartment-0-0",
+      "selector": "#LowestWageDepartment-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    }
+  ]
+}

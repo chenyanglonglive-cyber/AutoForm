@@ -1,0 +1,266 @@
+[
+  {
+    "text": "English",
+    "tagName": "BUTTON",
+    "href": "",
+    "className": "btn btn-default pull-right text-black",
+    "rect": {
+      "x": 1124.234375,
+      "y": 28,
+      "w": 114.34375,
+      "h": 35
+    }
+  },
+  {
+    "text": "Collapse Menu",
+    "tagName": "A",
+    "href": "",
+    "className": "",
+    "rect": {
+      "x": 0,
+      "y": 92,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "Sustainability",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/sustainability/zero-tolerance",
+    "className": "",
+    "rect": {
+      "x": 0,
+      "y": 138,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "Risk Assessment",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/risk/riskassessment/riskresult",
+    "className": "",
+    "rect": {
+      "x": 0,
+      "y": 184,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "Monitoring",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo",
+    "className": "",
+    "rect": {
+      "x": 0,
+      "y": 230,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "To Do",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo",
+    "className": "",
+    "rect": {
+      "x": 0,
+      "y": 276,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "Completed",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/completed",
+    "className": "",
+    "rect": {
+      "x": 0,
+      "y": 322,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "Admin",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/my-qualified-monitoring-person-profile",
+    "className": "",
+    "rect": {
+      "x": 0,
+      "y": 368,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "amfori Academy",
+    "tagName": "A",
+    "href": "http://amfori-academy.amfori.org/",
+    "className": "cursor-pointer bg-silver",
+    "rect": {
+      "x": 0,
+      "y": 414,
+      "w": 249,
+      "h": 45
+    }
+  },
+  {
+    "text": "amfori Social Audit - Manufacturing for SHENZHEN YUNHONG TOYS & GIFTS CO.,LTD",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo/12746488-5ad4-41fe-9c5f-ce7e956b0506",
+    "className": "",
+    "rect": {
+      "x": 332.453125,
+      "y": 108,
+      "w": 472.578125,
+      "h": 14
+    }
+  },
+  {
+    "text": "SHENZHEN YUNHONG TOYS & GIFTS CO.,LTD",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo/12746488-5ad4-41fe-9c5f-ce7e956b0506/monitoring-reports/156-047812-001",
+    "className": "",
+    "rect": {
+      "x": 820.703125,
+      "y": 108,
+      "w": 265.828125,
+      "h": 14
+    }
+  },
+  {
+    "text": "Add Attachment(s)",
+    "tagName": "BUTTON",
+    "href": "",
+    "className": "btn btn-primary pull-left whitespace-nowrap",
+    "rect": {
+      "x": 1146.46875,
+      "y": 166,
+      "w": 170.078125,
+      "h": 35
+    }
+  },
+  {
+    "text": "General Description",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo/12746488-5ad4-41fe-9c5f-ce7e956b0506/monitoring-reports/156-047812-001/general-description",
+    "className": "",
+    "rect": {
+      "x": 357.921875,
+      "y": 282,
+      "w": 175.046875,
+      "h": 46
+    }
+  },
+  {
+    "text": "General Description",
+    "tagName": "SPAN",
+    "href": "",
+    "className": "",
+    "rect": {
+      "x": 378.921875,
+      "y": 297,
+      "w": 133.046875,
+      "h": 16
+    }
+  },
+  {
+    "text": "Report Attachments (8)",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo/12746488-5ad4-41fe-9c5f-ce7e956b0506/monitoring-reports/156-047812-001/attachments",
+    "className": "",
+    "rect": {
+      "x": 620.09375,
+      "y": 282,
+      "w": 196.28125,
+      "h": 46
+    }
+  },
+  {
+    "text": "Report Attachments (8)",
+    "tagName": "SPAN",
+    "href": "",
+    "className": "",
+    "rect": {
+      "x": 641.09375,
+      "y": 297,
+      "w": 154.28125,
+      "h": 16
+    }
+  },
+  {
+    "text": "Closing Meeting",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo/12746488-5ad4-41fe-9c5f-ce7e956b0506/monitoring-reports/156-047812-001/closing-meeting",
+    "className": "",
+    "rect": {
+      "x": 816.375,
+      "y": 282,
+      "w": 150.125,
+      "h": 46
+    }
+  },
+  {
+    "text": "Closing Meeting",
+    "tagName": "SPAN",
+    "href": "",
+    "className": "",
+    "rect": {
+      "x": 837.375,
+      "y": 297,
+      "w": 108.125,
+      "h": 16
+    }
+  },
+  {
+    "text": "Previous Monitorings (3)",
+    "tagName": "A",
+    "href": "https://platform.amfori.org/ui/monitoring/monitoring-assignments/todo/12746488-5ad4-41fe-9c5f-ce7e956b0506/monitoring-reports/156-047812-001/previous-monitorings",
+    "className": "",
+    "rect": {
+      "x": 966.5,
+      "y": 282,
+      "w": 206.125,
+      "h": 46
+    }
+  },
+  {
+    "text": "Previous Monitorings (3)",
+    "tagName": "SPAN",
+    "href": "",
+    "className": "",
+    "rect": {
+      "x": 987.5,
+      "y": 297,
+      "w": 164.125,
+      "h": 16
+    }
+  },
+  {
+    "text": "Privacy Statement",
+    "tagName": "A",
+    "href": "",
+    "className": "text-underline cursor-pointer",
+    "rect": {
+      "x": 270,
+      "y": 341,
+      "w": 113.609375,
+      "h": 16
+    }
+  },
+  {
+    "text": "Terms & Conditions",
+    "tagName": "A",
+    "href": "",
+    "className": "text-underline cursor-pointer",
+    "rect": {
+      "x": 398.515625,
+      "y": 341,
+      "w": 121.390625,
+      "h": 16
+    }
+  }
+]

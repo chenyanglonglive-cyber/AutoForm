@@ -1,5 +1,13 @@
 node_modules/
 .runtime/
+.codegraph/
+data/report_schema.json
+data/templates/report-imported.json
+data/report_layout.json
+data/report-layout/
+data/report_dom_probe.json
+data/report-preflight.json
+data/report-preflight-run.log
 data/run-logs.jsonl
 data/screenshots/*
 !data/screenshots/.gitkeep

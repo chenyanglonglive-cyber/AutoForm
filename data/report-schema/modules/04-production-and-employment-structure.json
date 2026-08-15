@@ -1,0 +1,3052 @@
+{
+  "id": "04-production-and-employment-structure",
+  "title": "Production and Employment Structure",
+  "sectionOrder": 3,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "group",
+      "title": "Production and Employment Structure",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "field",
+          "key": "ProdEmpStructureAnnualProdVol"
+        },
+        {
+          "type": "field",
+          "key": "04-production-and-employment-structure__search_2"
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "High",
+            "Medium",
+            "Low",
+            "High",
+            "Medium",
+            "Low",
+            "High",
+            "Medium",
+            "Low"
+          ],
+          "rowCount": 4,
+          "rows": [
+            [
+              "ProdEmpStructureProductionCalendarJanuary-high",
+              "ProdEmpStructureProductionCalendarJanuary-medium",
+              "ProdEmpStructureProductionCalendarJanuary-low",
+              "ProdEmpStructureProductionCalendarFebruary-high",
+              "ProdEmpStructureProductionCalendarFebruary-medium",
+              "ProdEmpStructureProductionCalendarFebruary-low",
+              "ProdEmpStructureProductionCalendarMarch-high",
+              "ProdEmpStructureProductionCalendarMarch-medium",
+              "ProdEmpStructureProductionCalendarMarch-low"
+            ],
+            [
+              "ProdEmpStructureProductionCalendarApril-high",
+              "ProdEmpStructureProductionCalendarApril-medium",
+              "ProdEmpStructureProductionCalendarApril-low",
+              "ProdEmpStructureProductionCalendarMay-high",
+              "ProdEmpStructureProductionCalendarMay-medium",
+              "ProdEmpStructureProductionCalendarMay-low",
+              "ProdEmpStructureProductionCalendarJune-high",
+              "ProdEmpStructureProductionCalendarJune-medium",
+              "ProdEmpStructureProductionCalendarJune-low"
+            ],
+            [
+              "ProdEmpStructureProductionCalendarJuly-high",
+              "ProdEmpStructureProductionCalendarJuly-medium",
+              "ProdEmpStructureProductionCalendarJuly-low",
+              "ProdEmpStructureProductionCalendarAugust-high",
+              "ProdEmpStructureProductionCalendarAugust-medium",
+              "ProdEmpStructureProductionCalendarAugust-low",
+              "ProdEmpStructureProductionCalendarSeptember-high",
+              "ProdEmpStructureProductionCalendarSeptember-medium",
+              "ProdEmpStructureProductionCalendarSeptember-low"
+            ],
+            [
+              "ProdEmpStructureProductionCalendarOctober-high",
+              "ProdEmpStructureProductionCalendarOctober-medium",
+              "ProdEmpStructureProductionCalendarOctober-low",
+              "ProdEmpStructureProductionCalendarNovember-high",
+              "ProdEmpStructureProductionCalendarNovember-medium",
+              "ProdEmpStructureProductionCalendarNovember-low",
+              "ProdEmpStructureProductionCalendarDecember-high",
+              "ProdEmpStructureProductionCalendarDecember-medium",
+              "ProdEmpStructureProductionCalendarDecember-low"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "Department",
+            "No of workers",
+            "Select box",
+            "Shift 1",
+            "Shift 1",
+            "Shift 2",
+            "Shift 2",
+            "Shift 3",
+            "Shift 3"
+          ],
+          "rowCount": 2,
+          "rows": [
+            [
+              "ProdEmpStructureProductionStructureDepartment-0-0",
+              "ProdEmpStructureProductionStructureNoofWorkers-0-0",
+              "04-production-and-employment-structure__search_42",
+              "ProdEmpStructureProductionStructureShift1Start-0-0",
+              "ProdEmpStructureProductionStructureShift1End-0-0",
+              "ProdEmpStructureProductionStructureShift2Start-0-0",
+              "ProdEmpStructureProductionStructureShift2End-0-0",
+              "ProdEmpStructureProductionStructureShift3Start-0-0",
+              "ProdEmpStructureProductionStructureShift3End-0-0"
+            ],
+            [
+              "ProdEmpStructureProductionStructureDepartment-1-0",
+              "ProdEmpStructureProductionStructureNoofWorkers-1-0",
+              "04-production-and-employment-structure__search_52",
+              "ProdEmpStructureProductionStructureShift1Start-1-0",
+              "ProdEmpStructureProductionStructureShift1End-1-0",
+              "ProdEmpStructureProductionStructureShift2Start-1-0",
+              "ProdEmpStructureProductionStructureShift2End-1-0",
+              "ProdEmpStructureProductionStructureShift3Start-1-0",
+              "ProdEmpStructureProductionStructureShift3End-1-0"
+            ]
+          ]
+        },
+        {
+          "type": "field-group",
+          "controlType": "radio",
+          "label": "Is there production activity during night hours (5:00 p.m. to 8:00 a.m.)?",
+          "optionKeys": [
+            "ProdEmpStructureActivityDuringNight-yes",
+            "ProdEmpStructureActivityDuringNight-no"
+          ]
+        },
+        {
+          "type": "field-group",
+          "controlType": "radio",
+          "label": "Are there any activities provided by service provider (canteen, cleaning, maintenance) occurring during night hours (5:00 PM–8:00 AM)?",
+          "optionKeys": [
+            "ProductionStructureActivityProvidedDuringNight-yes",
+            "ProductionStructureActivityProvidedDuringNight-no"
+          ]
+        },
+        {
+          "type": "field-group",
+          "controlType": "radio",
+          "label": "Indicate if the auditee works with a subcontractor",
+          "optionKeys": [
+            "panelProdEmpStructureSubcontractAuditeeWorkWith-yes",
+            "panelProdEmpStructureSubcontractAuditeeWorkWith-no",
+            "panelProdEmpStructureSubcontractAuditeeWorkWith-informationIsNotDisclosed"
+          ]
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "How many subcontractors does the auditee work with?",
+            "For which processes?",
+            "For how long?"
+          ],
+          "rowCount": 1,
+          "rows": [
+            [
+              "panelProdEmpStructureHowmanysubcontractors",
+              "panelProdEmpStructureForwhichprocesses",
+              "panelProdEmpStructureForhowlong"
+            ]
+          ]
+        },
+        {
+          "type": "field-group",
+          "controlType": "radio",
+          "label": "Does the subcontractor/do the subcontractors operate in the same facility?",
+          "optionKeys": [
+            "panelProdEmpStructureSameFacility-yes",
+            "panelProdEmpStructureSameFacility-partially",
+            "panelProdEmpStructureSameFacility-no",
+            "panelProdEmpStructureSameFacility-informationIsNotDisclosed"
+          ]
+        },
+        {
+          "type": "field",
+          "key": "TOT_WR"
+        },
+        {
+          "type": "field",
+          "key": "M_TOT_WR"
+        },
+        {
+          "type": "field",
+          "key": "F_TOT_WR"
+        },
+        {
+          "type": "field",
+          "key": "NB_TOT_WR"
+        },
+        {
+          "type": "field",
+          "key": "ProdEmpStructureEmpStructureGeneralTotal"
+        },
+        {
+          "type": "field",
+          "key": "ProdEmpStructureEmpStructureGeneralMale"
+        },
+        {
+          "type": "field",
+          "key": "ProdEmpStructureEmpStructureGeneralFemale"
+        },
+        {
+          "type": "field",
+          "key": "ProdEmpStructureEmpStructureGeneralNonBinary"
+        },
+        {
+          "type": "table",
+          "title": "",
+          "headers": [
+            "Permanent workers - Male",
+            "Permanent workers - Female",
+            "Permanent workers - Non-binary"
+          ],
+          "rowCount": 16,
+          "rows": [
+            [
+              "M_PER_WR",
+              "F_PER_WR",
+              "NB_PER_WR"
+            ],
+            [
+              "M_TMP_WR",
+              "F_TMP_WR",
+              "NB_TMP_WR"
+            ],
+            [
+              "M_SEAS_WR",
+              "F_SEAS_WR",
+              "NB_SEAS_WR"
+            ],
+            [
+              "M_MGMT_WR",
+              "F_MGMT_WR",
+              "NB_MGMT_WR"
+            ],
+            [
+              "M_APPR_WR",
+              "F_APPR_WR",
+              "NB_APPR_WR"
+            ],
+            [
+              "M_PROB_WR",
+              "F_PROB_WR",
+              "NB_PROB_WR"
+            ],
+            [
+              "M_NGT_WR",
+              "F_NGT_WR",
+              "NB_NGT_WR"
+            ],
+            [
+              "M_DIS_WR",
+              "F_DIS_WR",
+              "NB_DIS_WR"
+            ],
+            [
+              "M_NAT_MIG_WR",
+              "F_NAT_MIG_WR",
+              "NB_NAT_MIG_WR"
+            ],
+            [
+              "M_FRGN_MIG_WR",
+              "F_FRGN_MIG_WR",
+              "NB_FRGN_MIG_WR"
+            ],
+            [
+              "M_DIR_WR",
+              "F_DIR_WR",
+              "NB_DIR_WR"
+            ],
+            [
+              "M_INDIR_WR",
+              "F_INDIR_WR",
+              "NB_INDIR_WR"
+            ],
+            [
+              "M_UNION_WR",
+              "F_UNION_WR",
+              "NB_UNION_WR"
+            ],
+            [
+              "M_CBA_WR",
+              "F_CBA_WR",
+              "NB_CBA_WR"
+            ],
+            [
+              "PRGNT_WR"
+            ],
+            [
+              "M_PARENT_WR",
+              "F_PARENT_WR",
+              "NB_PARENT_WR"
+            ]
+          ]
+        },
+        {
+          "type": "group",
+          "title": "Migrant Worker Breakdown",
+          "collapsed": false,
+          "children": [
+            {
+              "type": "table",
+              "title": "",
+              "headers": [],
+              "rowCount": 0,
+              "rows": []
+            },
+            {
+              "type": "table",
+              "title": "",
+              "headers": [
+                "City/region of origin",
+                "Male workers",
+                "Female workers",
+                "Non-binary workers"
+              ],
+              "rowCount": 1,
+              "rows": [
+                [
+                  "MigrantWorkerDomesticRegion-0-0",
+                  "MigrantWorkerDomestic-0-0",
+                  "MigrantWorkerDomesticFemale-0-0",
+                  "MigrantWorkerDomesticNonBinary-0-0"
+                ]
+              ]
+            },
+            {
+              "type": "field-group",
+              "controlType": "radio",
+              "label": "Indicate if the auditee engages with recruitment agency or partner for recruitment of foreign migrant workers for both manufacturing and agricultural production",
+              "optionKeys": [
+                "panelMigrantWorkerIndicateRecruitmentAgency-yes",
+                "panelMigrantWorkerIndicateRecruitmentAgency-no"
+              ]
+            },
+            {
+              "type": "field-group",
+              "controlType": "radio",
+              "label": "Indicate if the auditee engages with recruitment agency or partner for recruitment of domestic migrant workers for both manufacturing and agricultural production.",
+              "optionKeys": [
+                "panelMigrantWorkerAgencyDomesticMigrantWorkers-yes",
+                "panelMigrantWorkerAgencyDomesticMigrantWorkers-no"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "headers": [],
+      "rowCount": 4,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "732",
+            "id": "ProdEmpStructureProductionCalendarJanuary-high"
+          },
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "747",
+            "id": "ProdEmpStructureProductionCalendarFebruary-high"
+          },
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "762",
+            "id": "ProdEmpStructureProductionCalendarMarch-high"
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "777",
+            "id": "ProdEmpStructureProductionCalendarApril-high"
+          },
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "792",
+            "id": "ProdEmpStructureProductionCalendarMay-high"
+          },
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "807",
+            "id": "ProdEmpStructureProductionCalendarJune-high"
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "822",
+            "id": "ProdEmpStructureProductionCalendarJuly-high"
+          },
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "837",
+            "id": "ProdEmpStructureProductionCalendarAugust-high"
+          },
+          {
+            "type": "input",
+            "inputType": "radio",
+            "name": "852",
+            "id": "ProdEmpStructureProductionCalendarSeptember-high"
+          }
+        ]
+      ],
+      "className": "table table-striped table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 6,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureDepartment-0-0",
+            "id": "ProdEmpStructureProductionStructureDepartment-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureDepartment-0-0",
+            "id": "ProdEmpStructureProductionStructureDepartment-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureNoofWorkers-0-0",
+            "id": "ProdEmpStructureProductionStructureNoofWorkers-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift1Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift1Start-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift2Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift2Start-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift3Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift3Start-0-0"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureDepartment-0-0",
+            "id": "ProdEmpStructureProductionStructureDepartment-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureNoofWorkers-0-0",
+            "id": "ProdEmpStructureProductionStructureNoofWorkers-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift1Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift1Start-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift2Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift2Start-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift3Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift3Start-0-0"
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureDepartment-0-0",
+            "id": "ProdEmpStructureProductionStructureDepartment-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureNoofWorkers-0-0",
+            "id": "ProdEmpStructureProductionStructureNoofWorkers-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift1Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift1Start-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift2Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift2Start-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift3Start-0-0",
+            "id": "ProdEmpStructureProductionStructureShift3Start-0-0"
+          }
+        ]
+      ],
+      "className": "table table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureDepartment-1-0",
+            "id": "ProdEmpStructureProductionStructureDepartment-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "ProdEmpStructureProductionStructureNoofWorkers-1-0",
+            "id": "ProdEmpStructureProductionStructureNoofWorkers-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "search",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift1Start-1-0",
+            "id": "ProdEmpStructureProductionStructureShift1Start-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift2Start-1-0",
+            "id": "ProdEmpStructureProductionStructureShift2Start-1-0"
+          },
+          {
+            "type": "input",
+            "inputType": "time",
+            "name": "ProdEmpStructureProductionStructureShift3Start-1-0",
+            "id": "ProdEmpStructureProductionStructureShift3Start-1-0"
+          }
+        ]
+      ],
+      "className": "table table-bordered table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 3,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelProdEmpStructureHowmanysubcontractors",
+            "id": "panelProdEmpStructureHowmanysubcontractors"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelProdEmpStructureForwhichprocesses",
+            "id": "panelProdEmpStructureForwhichprocesses"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelProdEmpStructureForwhichprocesses",
+            "id": "panelProdEmpStructureForwhichprocesses"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelProdEmpStructureForhowlong",
+            "id": "panelProdEmpStructureForhowlong"
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelProdEmpStructureForwhichprocesses",
+            "id": "panelProdEmpStructureForwhichprocesses"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "panelProdEmpStructureForwhichprocesses",
+            "id": "panelProdEmpStructureForwhichprocesses"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ]
+      ],
+      "className": "table table-bordered"
+    },
+    {
+      "headers": [],
+      "rowCount": 16,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "M_PER_WR",
+            "id": "M_PER_WR"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "F_PER_WR",
+            "id": "F_PER_WR"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "NB_PER_WR",
+            "id": "NB_PER_WR"
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "M_TMP_WR",
+            "id": "M_TMP_WR"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "F_TMP_WR",
+            "id": "F_TMP_WR"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "NB_TMP_WR",
+            "id": "NB_TMP_WR"
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "M_SEAS_WR",
+            "id": "M_SEAS_WR"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "F_SEAS_WR",
+            "id": "F_SEAS_WR"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "NB_SEAS_WR",
+            "id": "NB_SEAS_WR"
+          }
+        ]
+      ],
+      "className": "table table-bordered table-condensed"
+    },
+    {
+      "headers": [
+        ""
+      ],
+      "rowCount": 0,
+      "sampleRows": [],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [
+        "",
+        ""
+      ],
+      "rowCount": 2,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticRegion-0-0",
+            "id": "MigrantWorkerDomesticRegion-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticRegion-0-0",
+            "id": "MigrantWorkerDomesticRegion-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomestic-0-0",
+            "id": "MigrantWorkerDomestic-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticFemale-0-0",
+            "id": "MigrantWorkerDomesticFemale-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticNonBinary-0-0",
+            "id": "MigrantWorkerDomesticNonBinary-0-0"
+          },
+          {
+            "type": "text",
+            "inputType": "",
+            "name": "",
+            "id": ""
+          }
+        ],
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticRegion-0-0",
+            "id": "MigrantWorkerDomesticRegion-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomestic-0-0",
+            "id": "MigrantWorkerDomestic-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticFemale-0-0",
+            "id": "MigrantWorkerDomesticFemale-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticNonBinary-0-0",
+            "id": "MigrantWorkerDomesticNonBinary-0-0"
+          }
+        ]
+      ],
+      "className": "table datagrid-table table-condensed"
+    },
+    {
+      "headers": [],
+      "rowCount": 1,
+      "sampleRows": [
+        [
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticRegion-0-0",
+            "id": "MigrantWorkerDomesticRegion-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomestic-0-0",
+            "id": "MigrantWorkerDomestic-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticFemale-0-0",
+            "id": "MigrantWorkerDomesticFemale-0-0"
+          },
+          {
+            "type": "input",
+            "inputType": "text",
+            "name": "MigrantWorkerDomesticNonBinary-0-0",
+            "id": "MigrantWorkerDomesticNonBinary-0-0"
+          }
+        ]
+      ],
+      "className": "table"
+    }
+  ],
+  "fields": [
+    {
+      "key": "ProdEmpStructureAnnualProdVol",
+      "type": "text",
+      "order": 1,
+      "label": "Annual production volume",
+      "name": "ProdEmpStructureAnnualProdVol",
+      "selector": "#ProdEmpStructureAnnualProdVol",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Annual production volume']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "04-production-and-employment-structure__search_2",
+      "type": "ui-select",
+      "order": 2,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Piece",
+          "label": "Piece"
+        },
+        {
+          "value": "Pair",
+          "label": "Pair"
+        },
+        {
+          "value": "Tonne",
+          "label": "Tonne"
+        },
+        {
+          "value": "Litre",
+          "label": "Litre"
+        },
+        {
+          "value": "Metre",
+          "label": "Metre"
+        },
+        {
+          "value": "Square meters",
+          "label": "Square meters"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJanuary-high",
+      "type": "radio",
+      "order": 4,
+      "label": "High",
+      "name": "732",
+      "selector": "#ProdEmpStructureProductionCalendarJanuary-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJanuary-medium",
+      "type": "radio",
+      "order": 5,
+      "label": "Medium",
+      "name": "735",
+      "selector": "#ProdEmpStructureProductionCalendarJanuary-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJanuary-low",
+      "type": "radio",
+      "order": 6,
+      "label": "Low",
+      "name": "738",
+      "selector": "#ProdEmpStructureProductionCalendarJanuary-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarFebruary-high",
+      "type": "radio",
+      "order": 7,
+      "label": "High",
+      "name": "747",
+      "selector": "#ProdEmpStructureProductionCalendarFebruary-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarFebruary-medium",
+      "type": "radio",
+      "order": 8,
+      "label": "Medium",
+      "name": "750",
+      "selector": "#ProdEmpStructureProductionCalendarFebruary-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarFebruary-low",
+      "type": "radio",
+      "order": 9,
+      "label": "Low",
+      "name": "753",
+      "selector": "#ProdEmpStructureProductionCalendarFebruary-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarMarch-high",
+      "type": "radio",
+      "order": 10,
+      "label": "High",
+      "name": "762",
+      "selector": "#ProdEmpStructureProductionCalendarMarch-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarMarch-medium",
+      "type": "radio",
+      "order": 11,
+      "label": "Medium",
+      "name": "765",
+      "selector": "#ProdEmpStructureProductionCalendarMarch-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarMarch-low",
+      "type": "radio",
+      "order": 12,
+      "label": "Low",
+      "name": "768",
+      "selector": "#ProdEmpStructureProductionCalendarMarch-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarApril-high",
+      "type": "radio",
+      "order": 13,
+      "label": "High",
+      "name": "777",
+      "selector": "#ProdEmpStructureProductionCalendarApril-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarApril-medium",
+      "type": "radio",
+      "order": 14,
+      "label": "Medium",
+      "name": "780",
+      "selector": "#ProdEmpStructureProductionCalendarApril-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarApril-low",
+      "type": "radio",
+      "order": 15,
+      "label": "Low",
+      "name": "783",
+      "selector": "#ProdEmpStructureProductionCalendarApril-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarMay-high",
+      "type": "radio",
+      "order": 16,
+      "label": "High",
+      "name": "792",
+      "selector": "#ProdEmpStructureProductionCalendarMay-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarMay-medium",
+      "type": "radio",
+      "order": 17,
+      "label": "Medium",
+      "name": "795",
+      "selector": "#ProdEmpStructureProductionCalendarMay-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarMay-low",
+      "type": "radio",
+      "order": 18,
+      "label": "Low",
+      "name": "798",
+      "selector": "#ProdEmpStructureProductionCalendarMay-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJune-high",
+      "type": "radio",
+      "order": 19,
+      "label": "High",
+      "name": "807",
+      "selector": "#ProdEmpStructureProductionCalendarJune-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJune-medium",
+      "type": "radio",
+      "order": 20,
+      "label": "Medium",
+      "name": "810",
+      "selector": "#ProdEmpStructureProductionCalendarJune-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJune-low",
+      "type": "radio",
+      "order": 21,
+      "label": "Low",
+      "name": "813",
+      "selector": "#ProdEmpStructureProductionCalendarJune-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJuly-high",
+      "type": "radio",
+      "order": 22,
+      "label": "High",
+      "name": "822",
+      "selector": "#ProdEmpStructureProductionCalendarJuly-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJuly-medium",
+      "type": "radio",
+      "order": 23,
+      "label": "Medium",
+      "name": "825",
+      "selector": "#ProdEmpStructureProductionCalendarJuly-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarJuly-low",
+      "type": "radio",
+      "order": 24,
+      "label": "Low",
+      "name": "828",
+      "selector": "#ProdEmpStructureProductionCalendarJuly-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarAugust-high",
+      "type": "radio",
+      "order": 25,
+      "label": "High",
+      "name": "837",
+      "selector": "#ProdEmpStructureProductionCalendarAugust-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarAugust-medium",
+      "type": "radio",
+      "order": 26,
+      "label": "Medium",
+      "name": "840",
+      "selector": "#ProdEmpStructureProductionCalendarAugust-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarAugust-low",
+      "type": "radio",
+      "order": 27,
+      "label": "Low",
+      "name": "843",
+      "selector": "#ProdEmpStructureProductionCalendarAugust-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarSeptember-high",
+      "type": "radio",
+      "order": 28,
+      "label": "High",
+      "name": "852",
+      "selector": "#ProdEmpStructureProductionCalendarSeptember-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarSeptember-medium",
+      "type": "radio",
+      "order": 29,
+      "label": "Medium",
+      "name": "855",
+      "selector": "#ProdEmpStructureProductionCalendarSeptember-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarSeptember-low",
+      "type": "radio",
+      "order": 30,
+      "label": "Low",
+      "name": "858",
+      "selector": "#ProdEmpStructureProductionCalendarSeptember-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarOctober-high",
+      "type": "radio",
+      "order": 31,
+      "label": "High",
+      "name": "867",
+      "selector": "#ProdEmpStructureProductionCalendarOctober-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarOctober-medium",
+      "type": "radio",
+      "order": 32,
+      "label": "Medium",
+      "name": "870",
+      "selector": "#ProdEmpStructureProductionCalendarOctober-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarOctober-low",
+      "type": "radio",
+      "order": 33,
+      "label": "Low",
+      "name": "873",
+      "selector": "#ProdEmpStructureProductionCalendarOctober-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarNovember-high",
+      "type": "radio",
+      "order": 34,
+      "label": "High",
+      "name": "882",
+      "selector": "#ProdEmpStructureProductionCalendarNovember-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarNovember-medium",
+      "type": "radio",
+      "order": 35,
+      "label": "Medium",
+      "name": "885",
+      "selector": "#ProdEmpStructureProductionCalendarNovember-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarNovember-low",
+      "type": "radio",
+      "order": 36,
+      "label": "Low",
+      "name": "888",
+      "selector": "#ProdEmpStructureProductionCalendarNovember-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarDecember-high",
+      "type": "radio",
+      "order": 37,
+      "label": "High",
+      "name": "897",
+      "selector": "#ProdEmpStructureProductionCalendarDecember-high",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'High']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarDecember-medium",
+      "type": "radio",
+      "order": 38,
+      "label": "Medium",
+      "name": "900",
+      "selector": "#ProdEmpStructureProductionCalendarDecember-medium",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Medium']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionCalendarDecember-low",
+      "type": "radio",
+      "order": 39,
+      "label": "Low",
+      "name": "903",
+      "selector": "#ProdEmpStructureProductionCalendarDecember-low",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Low']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "low",
+          "label": "Low"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureDepartment-0-0",
+      "type": "text",
+      "order": 40,
+      "label": "Department",
+      "name": "ProdEmpStructureProductionStructureDepartment-0-0",
+      "selector": "#ProdEmpStructureProductionStructureDepartment-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureNoofWorkers-0-0",
+      "type": "text",
+      "order": 41,
+      "label": "No of workers",
+      "name": "ProdEmpStructureProductionStructureNoofWorkers-0-0",
+      "selector": "#ProdEmpStructureProductionStructureNoofWorkers-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No of workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "04-production-and-employment-structure__search_42",
+      "type": "ui-select",
+      "order": 42,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 1,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift1Start-0-0",
+      "type": "time",
+      "order": 44,
+      "label": "Shift 1",
+      "name": "ProdEmpStructureProductionStructureShift1Start-0-0",
+      "selector": "#ProdEmpStructureProductionStructureShift1Start-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 1']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift1End-0-0",
+      "type": "time",
+      "order": 45,
+      "label": "Shift 1",
+      "name": "ProdEmpStructureProductionStructureShift1End-0-0",
+      "selector": "#ProdEmpStructureProductionStructureShift1End-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 1']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift2Start-0-0",
+      "type": "time",
+      "order": 46,
+      "label": "Shift 2",
+      "name": "ProdEmpStructureProductionStructureShift2Start-0-0",
+      "selector": "#ProdEmpStructureProductionStructureShift2Start-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 2']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift2End-0-0",
+      "type": "time",
+      "order": 47,
+      "label": "Shift 2",
+      "name": "ProdEmpStructureProductionStructureShift2End-0-0",
+      "selector": "#ProdEmpStructureProductionStructureShift2End-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 2']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift3Start-0-0",
+      "type": "time",
+      "order": 48,
+      "label": "Shift 3",
+      "name": "ProdEmpStructureProductionStructureShift3Start-0-0",
+      "selector": "#ProdEmpStructureProductionStructureShift3Start-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 3']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift3End-0-0",
+      "type": "time",
+      "order": 49,
+      "label": "Shift 3",
+      "name": "ProdEmpStructureProductionStructureShift3End-0-0",
+      "selector": "#ProdEmpStructureProductionStructureShift3End-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 3']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureDepartment-1-0",
+      "type": "text",
+      "order": 50,
+      "label": "Department",
+      "name": "ProdEmpStructureProductionStructureDepartment-1-0",
+      "selector": "#ProdEmpStructureProductionStructureDepartment-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Department']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureNoofWorkers-1-0",
+      "type": "text",
+      "order": 51,
+      "label": "No of workers",
+      "name": "ProdEmpStructureProductionStructureNoofWorkers-1-0",
+      "selector": "#ProdEmpStructureProductionStructureNoofWorkers-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No of workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "04-production-and-employment-structure__search_52",
+      "type": "ui-select",
+      "order": 52,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 2,
+      "optionsStatus": "complete"
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift1Start-1-0",
+      "type": "time",
+      "order": 54,
+      "label": "Shift 1",
+      "name": "ProdEmpStructureProductionStructureShift1Start-1-0",
+      "selector": "#ProdEmpStructureProductionStructureShift1Start-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 1']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift1End-1-0",
+      "type": "time",
+      "order": 55,
+      "label": "Shift 1",
+      "name": "ProdEmpStructureProductionStructureShift1End-1-0",
+      "selector": "#ProdEmpStructureProductionStructureShift1End-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 1']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift2Start-1-0",
+      "type": "time",
+      "order": 56,
+      "label": "Shift 2",
+      "name": "ProdEmpStructureProductionStructureShift2Start-1-0",
+      "selector": "#ProdEmpStructureProductionStructureShift2Start-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 2']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift2End-1-0",
+      "type": "time",
+      "order": 57,
+      "label": "Shift 2",
+      "name": "ProdEmpStructureProductionStructureShift2End-1-0",
+      "selector": "#ProdEmpStructureProductionStructureShift2End-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 2']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift3Start-1-0",
+      "type": "time",
+      "order": 58,
+      "label": "Shift 3",
+      "name": "ProdEmpStructureProductionStructureShift3Start-1-0",
+      "selector": "#ProdEmpStructureProductionStructureShift3Start-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 3']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureProductionStructureShift3End-1-0",
+      "type": "time",
+      "order": 59,
+      "label": "Shift 3",
+      "name": "ProdEmpStructureProductionStructureShift3End-1-0",
+      "selector": "#ProdEmpStructureProductionStructureShift3End-1-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Shift 3']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureActivityDuringNight-yes",
+      "type": "radio",
+      "order": 60,
+      "label": "Yes",
+      "name": "87",
+      "selector": "#ProdEmpStructureActivityDuringNight-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "ProdEmpStructureActivityDuringNight-no",
+      "type": "radio",
+      "order": 61,
+      "label": "No",
+      "name": "90",
+      "selector": "#ProdEmpStructureActivityDuringNight-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "ProductionStructureActivityProvidedDuringNight-yes",
+      "type": "radio",
+      "order": 62,
+      "label": "Yes",
+      "name": "98",
+      "selector": "#ProductionStructureActivityProvidedDuringNight-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "ProductionStructureActivityProvidedDuringNight-no",
+      "type": "radio",
+      "order": 63,
+      "label": "No",
+      "name": "101",
+      "selector": "#ProductionStructureActivityProvidedDuringNight-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "panelProdEmpStructureSubcontractAuditeeWorkWith-yes",
+      "type": "radio",
+      "order": 64,
+      "label": "Yes",
+      "name": "306",
+      "selector": "#panelProdEmpStructureSubcontractAuditeeWorkWith-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "panelProdEmpStructureSubcontractAuditeeWorkWith-no",
+      "type": "radio",
+      "order": 65,
+      "label": "No",
+      "name": "309",
+      "selector": "#panelProdEmpStructureSubcontractAuditeeWorkWith-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "panelProdEmpStructureSubcontractAuditeeWorkWith-informationIsNotDisclosed",
+      "type": "radio",
+      "order": 66,
+      "label": "Information is not disclosed",
+      "name": "312",
+      "selector": "#panelProdEmpStructureSubcontractAuditeeWorkWith-informationIsNotDisclosed",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Information is not disclosed']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "informationIsNotDisclosed",
+          "label": "Information is not disclosed"
+        }
+      ]
+    },
+    {
+      "key": "panelProdEmpStructureHowmanysubcontractors",
+      "type": "text",
+      "order": 67,
+      "label": "How many subcontractors does the auditee work with?",
+      "name": "panelProdEmpStructureHowmanysubcontractors",
+      "selector": "#panelProdEmpStructureHowmanysubcontractors",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'How many subcontractors does the auditee']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelProdEmpStructureForwhichprocesses",
+      "type": "text",
+      "order": 68,
+      "label": "For which processes?",
+      "name": "panelProdEmpStructureForwhichprocesses",
+      "selector": "#panelProdEmpStructureForwhichprocesses",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'For which processes?']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelProdEmpStructureForhowlong",
+      "type": "text",
+      "order": 69,
+      "label": "For how long?",
+      "name": "panelProdEmpStructureForhowlong",
+      "selector": "#panelProdEmpStructureForhowlong",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'For how long?']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelProdEmpStructureSameFacility-yes",
+      "type": "radio",
+      "order": 70,
+      "label": "Yes",
+      "name": "335",
+      "selector": "#panelProdEmpStructureSameFacility-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "panelProdEmpStructureSameFacility-partially",
+      "type": "radio",
+      "order": 71,
+      "label": "Partially",
+      "name": "338",
+      "selector": "#panelProdEmpStructureSameFacility-partially",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Partially']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "partially",
+          "label": "Partially"
+        }
+      ]
+    },
+    {
+      "key": "panelProdEmpStructureSameFacility-no",
+      "type": "radio",
+      "order": 72,
+      "label": "No",
+      "name": "341",
+      "selector": "#panelProdEmpStructureSameFacility-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "panelProdEmpStructureSameFacility-informationIsNotDisclosed",
+      "type": "radio",
+      "order": 73,
+      "label": "Information is not disclosed",
+      "name": "344",
+      "selector": "#panelProdEmpStructureSameFacility-informationIsNotDisclosed",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Information is not disclosed']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "informationIsNotDisclosed",
+          "label": "Information is not disclosed"
+        }
+      ]
+    },
+    {
+      "key": "TOT_WR",
+      "type": "text",
+      "order": 74,
+      "label": "Total workforce",
+      "name": "TOT_WR",
+      "selector": "#TOT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Total workforce']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_TOT_WR",
+      "type": "text",
+      "order": 75,
+      "label": "Male workers",
+      "name": "M_TOT_WR",
+      "selector": "#M_TOT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Male workers']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_TOT_WR",
+      "type": "text",
+      "order": 76,
+      "label": "Female workers",
+      "name": "F_TOT_WR",
+      "selector": "#F_TOT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Female workers']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_TOT_WR",
+      "type": "text",
+      "order": 77,
+      "label": "Non-binary workers",
+      "name": "NB_TOT_WR",
+      "selector": "#NB_TOT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Non-binary workers']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureEmpStructureGeneralTotal",
+      "type": "text",
+      "order": 78,
+      "label": "Total workforce",
+      "name": "ProdEmpStructureEmpStructureGeneralTotal",
+      "selector": "#ProdEmpStructureEmpStructureGeneralTotal",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Total workforce']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureEmpStructureGeneralMale",
+      "type": "text",
+      "order": 79,
+      "label": "Male workers",
+      "name": "ProdEmpStructureEmpStructureGeneralMale",
+      "selector": "#ProdEmpStructureEmpStructureGeneralMale",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Male workers']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureEmpStructureGeneralFemale",
+      "type": "text",
+      "order": 80,
+      "label": "Female workers",
+      "name": "ProdEmpStructureEmpStructureGeneralFemale",
+      "selector": "#ProdEmpStructureEmpStructureGeneralFemale",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Female workers']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "ProdEmpStructureEmpStructureGeneralNonBinary",
+      "type": "text",
+      "order": 81,
+      "label": "Non-binary workers",
+      "name": "ProdEmpStructureEmpStructureGeneralNonBinary",
+      "selector": "#ProdEmpStructureEmpStructureGeneralNonBinary",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Non-binary workers']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_PER_WR",
+      "type": "text",
+      "order": 82,
+      "label": "Permanent workers - Male",
+      "name": "M_PER_WR",
+      "selector": "#M_PER_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Permanent workers - Male']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_PER_WR",
+      "type": "text",
+      "order": 83,
+      "label": "Permanent workers - Female",
+      "name": "F_PER_WR",
+      "selector": "#F_PER_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Permanent workers - Female']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_PER_WR",
+      "type": "text",
+      "order": 84,
+      "label": "Permanent workers - Non-binary",
+      "name": "NB_PER_WR",
+      "selector": "#NB_PER_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Permanent workers - Non-binary']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_TMP_WR",
+      "type": "text",
+      "order": 85,
+      "label": "Temporary workers - Male",
+      "name": "M_TMP_WR",
+      "selector": "#M_TMP_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Temporary workers - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_TMP_WR",
+      "type": "text",
+      "order": 86,
+      "label": "Temporary workers - Female",
+      "name": "F_TMP_WR",
+      "selector": "#F_TMP_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Temporary workers - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_TMP_WR",
+      "type": "text",
+      "order": 87,
+      "label": "Temporary workers - Non-binary",
+      "name": "NB_TMP_WR",
+      "selector": "#NB_TMP_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Temporary workers - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_SEAS_WR",
+      "type": "text",
+      "order": 88,
+      "label": "Seasonal workers - Male",
+      "name": "M_SEAS_WR",
+      "selector": "#M_SEAS_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Seasonal workers - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_SEAS_WR",
+      "type": "text",
+      "order": 89,
+      "label": "Seasonal workers - Female",
+      "name": "F_SEAS_WR",
+      "selector": "#F_SEAS_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Seasonal workers - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_SEAS_WR",
+      "type": "text",
+      "order": 90,
+      "label": "Seasonal workers - Non-binary",
+      "name": "NB_SEAS_WR",
+      "selector": "#NB_SEAS_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Seasonal workers - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_MGMT_WR",
+      "type": "text",
+      "order": 91,
+      "label": "Management - Male",
+      "name": "M_MGMT_WR",
+      "selector": "#M_MGMT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Management - Male']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_MGMT_WR",
+      "type": "text",
+      "order": 92,
+      "label": "Management - Female",
+      "name": "F_MGMT_WR",
+      "selector": "#F_MGMT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Management - Female']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_MGMT_WR",
+      "type": "text",
+      "order": 93,
+      "label": "Management - Non-binary",
+      "name": "NB_MGMT_WR",
+      "selector": "#NB_MGMT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Management - Non-binary']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_APPR_WR",
+      "type": "text",
+      "order": 94,
+      "label": "Apprentices - Male",
+      "name": "M_APPR_WR",
+      "selector": "#M_APPR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Apprentices - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_APPR_WR",
+      "type": "text",
+      "order": 95,
+      "label": "Apprentices - Female",
+      "name": "F_APPR_WR",
+      "selector": "#F_APPR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Apprentices - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_APPR_WR",
+      "type": "text",
+      "order": 96,
+      "label": "Apprentices - Non-binary",
+      "name": "NB_APPR_WR",
+      "selector": "#NB_APPR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Apprentices - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_PROB_WR",
+      "type": "text",
+      "order": 97,
+      "label": "Workers on probation - Male",
+      "name": "M_PROB_WR",
+      "selector": "#M_PROB_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers on probation - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_PROB_WR",
+      "type": "text",
+      "order": 98,
+      "label": "Workers on probation - Female",
+      "name": "F_PROB_WR",
+      "selector": "#F_PROB_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers on probation - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_PROB_WR",
+      "type": "text",
+      "order": 99,
+      "label": "Workers on probation - Non-binary",
+      "name": "NB_PROB_WR",
+      "selector": "#NB_PROB_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers on probation - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_NGT_WR",
+      "type": "text",
+      "order": 100,
+      "label": "Workers with night shift - Male",
+      "name": "M_NGT_WR",
+      "selector": "#M_NGT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers with night shift - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_NGT_WR",
+      "type": "text",
+      "order": 101,
+      "label": "Workers with night shift - Female",
+      "name": "F_NGT_WR",
+      "selector": "#F_NGT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers with night shift - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_NGT_WR",
+      "type": "text",
+      "order": 102,
+      "label": "Workers with night shift - Non-binary",
+      "name": "NB_NGT_WR",
+      "selector": "#NB_NGT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers with night shift - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_DIS_WR",
+      "type": "text",
+      "order": 103,
+      "label": "Workers with disabilities - Male",
+      "name": "M_DIS_WR",
+      "selector": "#M_DIS_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers with disabilities - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_DIS_WR",
+      "type": "text",
+      "order": 104,
+      "label": "Workers with disabilities - Female",
+      "name": "F_DIS_WR",
+      "selector": "#F_DIS_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers with disabilities - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_DIS_WR",
+      "type": "text",
+      "order": 105,
+      "label": "Workers with disabilities - Non-binary",
+      "name": "NB_DIS_WR",
+      "selector": "#NB_DIS_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers with disabilities - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_NAT_MIG_WR",
+      "type": "text",
+      "order": 106,
+      "label": "Domestic migrant workers - Male",
+      "name": "M_NAT_MIG_WR",
+      "selector": "#M_NAT_MIG_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Domestic migrant workers - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_NAT_MIG_WR",
+      "type": "text",
+      "order": 107,
+      "label": "Domestic migrant workers - Female",
+      "name": "F_NAT_MIG_WR",
+      "selector": "#F_NAT_MIG_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Domestic migrant workers - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_NAT_MIG_WR",
+      "type": "text",
+      "order": 108,
+      "label": "Domestic migrant workers - Non-binary",
+      "name": "NB_NAT_MIG_WR",
+      "selector": "#NB_NAT_MIG_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Domestic migrant workers - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_FRGN_MIG_WR",
+      "type": "text",
+      "order": 109,
+      "label": "Foreign migrant workers - Male",
+      "name": "M_FRGN_MIG_WR",
+      "selector": "#M_FRGN_MIG_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Foreign migrant workers - Male']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_FRGN_MIG_WR",
+      "type": "text",
+      "order": 110,
+      "label": "Foreign migrant workers - Female",
+      "name": "F_FRGN_MIG_WR",
+      "selector": "#F_FRGN_MIG_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Foreign migrant workers - Female']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_FRGN_MIG_WR",
+      "type": "text",
+      "order": 111,
+      "label": "Foreign migrant workers - Non-binary",
+      "name": "NB_FRGN_MIG_WR",
+      "selector": "#NB_FRGN_MIG_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Foreign migrant workers - Non-binary']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_DIR_WR",
+      "type": "text",
+      "order": 112,
+      "label": "Workers hired directly - Male",
+      "name": "M_DIR_WR",
+      "selector": "#M_DIR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers hired directly - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_DIR_WR",
+      "type": "text",
+      "order": 113,
+      "label": "Workers hired directly - Female",
+      "name": "F_DIR_WR",
+      "selector": "#F_DIR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers hired directly - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_DIR_WR",
+      "type": "text",
+      "order": 114,
+      "label": "Workers hired directly - Non-binary",
+      "name": "NB_DIR_WR",
+      "selector": "#NB_DIR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers hired directly - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_INDIR_WR",
+      "type": "text",
+      "order": 115,
+      "label": "Workers hired indirectly - Male",
+      "name": "M_INDIR_WR",
+      "selector": "#M_INDIR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers hired indirectly - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_INDIR_WR",
+      "type": "text",
+      "order": 116,
+      "label": "Workers hired indirectly - Female",
+      "name": "F_INDIR_WR",
+      "selector": "#F_INDIR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers hired indirectly - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_INDIR_WR",
+      "type": "text",
+      "order": 117,
+      "label": "Workers hired indirectly - Non-binary",
+      "name": "NB_INDIR_WR",
+      "selector": "#NB_INDIR_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers hired indirectly - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_UNION_WR",
+      "type": "text",
+      "order": 118,
+      "label": "Unionised workers - Male",
+      "name": "M_UNION_WR",
+      "selector": "#M_UNION_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Unionised workers - Male']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_UNION_WR",
+      "type": "text",
+      "order": 119,
+      "label": "Unionised workers - Female",
+      "name": "F_UNION_WR",
+      "selector": "#F_UNION_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Unionised workers - Female']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_UNION_WR",
+      "type": "text",
+      "order": 120,
+      "label": "Unionised workers - Non-binary",
+      "name": "NB_UNION_WR",
+      "selector": "#NB_UNION_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Unionised workers - Non-binary']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_CBA_WR",
+      "type": "text",
+      "order": 121,
+      "label": "Workers under CBA - Male",
+      "name": "M_CBA_WR",
+      "selector": "#M_CBA_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers under CBA - Male']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_CBA_WR",
+      "type": "text",
+      "order": 122,
+      "label": "Workers under CBA - Female",
+      "name": "F_CBA_WR",
+      "selector": "#F_CBA_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers under CBA - Female']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_CBA_WR",
+      "type": "text",
+      "order": 123,
+      "label": "Workers under CBA - Non-binary",
+      "name": "NB_CBA_WR",
+      "selector": "#NB_CBA_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers under CBA - Non-binary']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "PRGNT_WR",
+      "type": "text",
+      "order": 124,
+      "label": "Pregnant workers",
+      "name": "PRGNT_WR",
+      "selector": "#PRGNT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Pregnant workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "M_PARENT_WR",
+      "type": "text",
+      "order": 125,
+      "label": "Workers on parental leave - Male",
+      "name": "M_PARENT_WR",
+      "selector": "#M_PARENT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers on parental leave - Male']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "F_PARENT_WR",
+      "type": "text",
+      "order": 126,
+      "label": "Workers on parental leave - Female",
+      "name": "F_PARENT_WR",
+      "selector": "#F_PARENT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers on parental leave - Female']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "NB_PARENT_WR",
+      "type": "text",
+      "order": 127,
+      "label": "Workers on parental leave - Non-binary",
+      "name": "NB_PARENT_WR",
+      "selector": "#NB_PARENT_WR",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Workers on parental leave - Non-binary']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MigrantWorkerDomesticRegion-0-0",
+      "type": "text",
+      "order": 128,
+      "label": "City/region of origin",
+      "name": "MigrantWorkerDomesticRegion-0-0",
+      "selector": "#MigrantWorkerDomesticRegion-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'City/region of origin']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MigrantWorkerDomestic-0-0",
+      "type": "text",
+      "order": 129,
+      "label": "Male workers",
+      "name": "MigrantWorkerDomestic-0-0",
+      "selector": "#MigrantWorkerDomestic-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Male workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MigrantWorkerDomesticFemale-0-0",
+      "type": "text",
+      "order": 130,
+      "label": "Female workers",
+      "name": "MigrantWorkerDomesticFemale-0-0",
+      "selector": "#MigrantWorkerDomesticFemale-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Female workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "MigrantWorkerDomesticNonBinary-0-0",
+      "type": "text",
+      "order": 131,
+      "label": "Non-binary workers",
+      "name": "MigrantWorkerDomesticNonBinary-0-0",
+      "selector": "#MigrantWorkerDomesticNonBinary-0-0",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Non-binary workers']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": []
+    },
+    {
+      "key": "panelMigrantWorkerIndicateRecruitmentAgency-yes",
+      "type": "radio",
+      "order": 132,
+      "label": "Yes",
+      "name": "609",
+      "selector": "#panelMigrantWorkerIndicateRecruitmentAgency-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "panelMigrantWorkerIndicateRecruitmentAgency-no",
+      "type": "radio",
+      "order": 133,
+      "label": "No",
+      "name": "612",
+      "selector": "#panelMigrantWorkerIndicateRecruitmentAgency-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "key": "panelMigrantWorkerAgencyDomesticMigrantWorkers-yes",
+      "type": "radio",
+      "order": 134,
+      "label": "Yes",
+      "name": "620",
+      "selector": "#panelMigrantWorkerAgencyDomesticMigrantWorkers-yes",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Yes']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "yes",
+          "label": "Yes"
+        }
+      ]
+    },
+    {
+      "key": "panelMigrantWorkerAgencyDomesticMigrantWorkers-no",
+      "type": "radio",
+      "order": 135,
+      "label": "No",
+      "name": "623",
+      "selector": "#panelMigrantWorkerAgencyDomesticMigrantWorkers-no",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'No']/following::input)[1]",
+      "required": true,
+      "disabled": false,
+      "readOnly": false,
+      "options": [],
+      "groupValues": [
+        {
+          "value": "no",
+          "label": "No"
+        }
+      ]
+    }
+  ]
+}

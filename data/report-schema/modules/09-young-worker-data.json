@@ -1,0 +1,43 @@
+{
+  "id": "09-young-worker-data",
+  "title": "Young Worker Data",
+  "sectionOrder": 8,
+  "layout": [
+    {
+      "type": "help",
+      "text": "Please find the amfori BSCI audit interpretation guidelines by opening this link in a new tab"
+    },
+    {
+      "type": "field",
+      "key": "09-young-worker-data__search_1"
+    }
+  ],
+  "tables": [],
+  "fields": [
+    {
+      "key": "09-young-worker-data__search_1",
+      "type": "ui-select",
+      "order": 1,
+      "label": "Select box",
+      "name": "",
+      "selector": "",
+      "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
+      "required": false,
+      "disabled": false,
+      "readOnly": false,
+      "options": [
+        {
+          "value": "Yes",
+          "label": "Yes"
+        },
+        {
+          "value": "No",
+          "label": "No"
+        }
+      ],
+      "groupValues": [],
+      "uiSelectIndex": 0,
+      "optionsStatus": "complete"
+    }
+  ]
+}
