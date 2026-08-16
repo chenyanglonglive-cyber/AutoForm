@@ -21,9 +21,29 @@
 | Report Attachments 独立上传 | 已验证 | 先显示文件名，再确认上传；不会填写文本字段。 |
 | Report 23 模块 schema | 已完成 | 23 个模块、1,302 个可编辑字段、46 个固定表格结构。 |
 | Report 本地编辑器与逐模块保存流程 | 已实现 | 支持选择模块、保存本地模板、逐模块 Save、刷新校验、失败停止。 |
-| Report 真实项目分批验证 | 待进行 | 必须先测试单模块和各类控件，不可直接执行全部模块。 |
+| Report 23 模块无保存 dry-run | 已验证，有 1 项待处理 | 23 个模块全部能打开；PA1-PA13 全部填写并在页面内校验通过；未点击 Save，登录后写请求已拦截。仅 `Remuneration and Working Hours` 有 3 个条件隐藏字段未出现，见下方专项记录。 |
 | 动态搜索下拉选项采集 | 已完成 | 90 个 `ui-select` 已展开采集，按内容去重为 20 组候选项源，全部为完整固定列表。 |
 | 本地页面与目标 Report 结构对齐 | 已采集并校验 | 23 模块的章节/分组/选项组/表格布局已采集并重建 schema；表格内无 id 的 ui-select 已按单元格绑定（兜底区为空），字段集不变性校验通过；待人工对照目标页核验。 |
+
+### Report dry-run 测试记录（2026-08-16）
+
+本轮使用当前本地模板和当前 `Monitoring ID` 做 23 个 Report 模块无保存测试。测试方式是在登录后拦截所有 `POST / PUT / PATCH / DELETE` 写请求，只在页面 DOM 内填入并读回校验，不点击 Save，不做刷新持久化校验。
+
+- 23 个模块全部能打开。
+- PA1-PA13 全部通过，包括每道 PA 问题的 `Yes / Partially / No / N/A` 答案、右侧 Evidence 复选框，以及展开后的 Finding/Advance 区域。
+- 页面内校验成功字段：1,056 个。
+- 跳过模块：`Housing Information`、`Young Worker Data`，原因是当前模板没有真实填写值。
+- 安全记录：测试期间未点击 Save；写请求拦截计数为 50。
+
+未通过字段集中在 `Remuneration and Working Hours`，共 3 个：
+
+| 字段 key | 标签 | 模板值 | 当前判断 |
+| --- | --- | --- | --- |
+| `LivingWagePleaseaddthelinkofGlwCSource` | `Please add the link of GLWC source.` | `The reference can be found in below link: https://www.globallivingwage.org/.` | 当前页面未渲染该输入框。 |
+| `CalculatedLivingWagePleaseEnterMonthAndYearGlwc-month` | `Month` | `string:09` | 当前页面未渲染该月份下拉框。 |
+| `CalculatedLivingWagePleaseEnterMonthAndYearGlwc-year` | `Year` | `2024` | 当前页面未渲染该年份输入框。 |
+
+这 3 个字段不是 PA 结构问题，也不是普通 selector 失效。截图显示当前页面 `Source of data` 为 `Manually collected by auditee`；上述 GLWC 链接和年月字段更像是依赖前置选项的条件字段。当前模板中对应前置字段为空，因此 dry-run 没有强行切换前置选项，以免改变业务含义。后续只需针对 `Remuneration and Working Hours` 做专项确认，不需要再全量跑 23 个模块。
 
 ## 启动
 

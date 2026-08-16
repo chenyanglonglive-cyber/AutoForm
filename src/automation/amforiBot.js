@@ -213,7 +213,7 @@ export async function runAmforiReportAutomation({ monitoringId, modules, values,
   }
 }
 
-async function launchPersistentContext(settings) {
+export async function launchPersistentContext(settings) {
   const userDataDir = resolveFromRoot(settings.amfori.browserUserDataDir);
   await ensureDir(userDataDir);
 
@@ -225,7 +225,7 @@ async function launchPersistentContext(settings) {
   });
 }
 
-function configurePageTimeouts(page, settings) {
+export function configurePageTimeouts(page, settings) {
   const timeout = Number(settings.amfori.navigationTimeoutMs || 60000);
   page.setDefaultTimeout(timeout);
   page.setDefaultNavigationTimeout(timeout);
@@ -280,7 +280,7 @@ async function collectAttachmentFiles(folderPath, addStep, selectedFileNames = n
   return files;
 }
 
-async function ensureLoggedIn(page, settings, credentials, addStep) {
+export async function ensureLoggedIn(page, settings, credentials, addStep) {
   const passwordLocator = page.locator(settings.login.passwordSelector).first();
   const hasPasswordField = await passwordLocator.isVisible().catch(() => false);
 
@@ -319,7 +319,7 @@ async function ensureLoggedIn(page, settings, credentials, addStep) {
   addStep('Login completed.');
 }
 
-async function openProjectByMonitoringId(page, monitoringId, settings, addStep) {
+export async function openProjectByMonitoringId(page, monitoringId, settings, addStep) {
   const idText = String(monitoringId).trim();
   addStep(`Looking for Monitoring ID ${idText}.`);
 
@@ -349,7 +349,7 @@ async function openProjectByMonitoringId(page, monitoringId, settings, addStep) 
   addStep(`Opened project ${idText}.`);
 }
 
-async function openReportIndex(page, addStep) {
+export async function openReportIndex(page, addStep) {
   const reportHref = await page.evaluate(() => {
     const link = [...document.querySelectorAll('a[href*="report-sections"]')]
       .find((element) => /report/i.test(element.textContent || '') || element.href.includes('report-sections'));
@@ -369,7 +369,7 @@ async function openReportIndex(page, addStep) {
   return page.url();
 }
 
-async function openReportModule(page, module, reportIndexUrl, addStep) {
+export async function openReportModule(page, module, reportIndexUrl, addStep) {
   await page.goto(reportIndexUrl, { waitUntil: 'domcontentloaded' });
   await page.waitForLoadState('networkidle').catch(() => {});
 
@@ -435,13 +435,13 @@ async function expandCollapsedPanels(page, addStep) {
   await page.waitForTimeout(250);
 }
 
-function hasTemplateValue(values, field) {
+export function hasTemplateValue(values, field) {
   if (!Object.hasOwn(values, field.key)) return false;
   const value = values[field.key];
   return typeof value === 'boolean' || String(value ?? '').trim() !== '';
 }
 
-async function fillReportField(page, field, value) {
+export async function fillReportField(page, field, value) {
   const locator = await resolveReportFieldLocator(page, field);
   if (field.type === 'radio') {
     if (value === true) await locator.check();
@@ -476,7 +476,7 @@ async function fillReportField(page, field, value) {
   await commitFieldChange(locator, stringValue);
 }
 
-async function resolveReportFieldLocator(page, field) {
+export async function resolveReportFieldLocator(page, field) {
   if (field.type === 'ui-select') {
     const search = page.locator('input.ui-select-search').nth(Number(field.uiSelectIndex || 0));
     await search.waitFor({ state: 'attached', timeout: 5000 }).catch(() => {
@@ -600,7 +600,8 @@ async function fillField(page, field, value) {
 async function resolveFieldLocator(page, field) {
   const selectors = [
     field.selector,
-    ...(field.fallbackSelectors || [])
+    ...(field.fallbackSelectors || []),
+    field.xpathFallback
   ].filter(Boolean);
 
   for (const selector of selectors) {
@@ -782,7 +783,7 @@ async function verifySavedFields(page, mapping, fields, settings, addStep) {
   addStep(`Verified ${fieldsToVerify.length} saved field(s) after page reload.`);
 }
 
-function normalizeFieldValue(value) {
+export function normalizeFieldValue(value) {
   return String(value ?? '').replace(/\r\n/g, '\n').trim();
 }
 

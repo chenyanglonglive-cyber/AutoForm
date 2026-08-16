@@ -20,12 +20,13 @@ AutoForm 是个人 Windows 电脑本地运行的 amfori 自动填表工具。工
 - 保存按钮被聊天浮层遮挡时的处理：精确定位页面 Save、临时隐藏聊天组件并在必要时强制点击。
 - 表单填写与附件上传已拆分为独立任务；附件上传不会覆盖文本表单内容。
 
-已实现，尚待真实项目分批验证：
+已实现并完成真实项目无保存 dry-run：
 
 - 已将 Report 采集结果拆分为 23 个模块 schema，当前包含 1,302 个可编辑字段；导航、只读和焦点辅助控件已排除。
 - 本地 Report 编辑器按模块懒加载，支持文本、多行文本、数字、时间、原生下拉、单选、复选、自定义下拉和固定表格。
 - Report 任务可选择单个、多个或全部模块；每个模块独立 Save、刷新并校验，失败后日志会记录已完成模块。
-- 仍须先在低风险项目上验证各控件类型，尤其是 90 个 `ui-select` 搜索下拉和复杂 PA 复选组合；未完成验证前不要一次执行全部 23 个模块。
+- 2026-08-16 已完成 23 个 Report 模块无保存 dry-run：23 个模块全部能打开，PA1-PA13 的问题答案、Evidence 复选框、Finding/Advance 展开区均页面内校验通过；测试期间未点击 Save，登录后写请求已拦截。
+- 当前只剩 `Remuneration and Working Hours` 的 3 个条件隐藏字段需要专项确认，不需要再全量跑 23 个模块。
 
 ## 技术路径
 
@@ -97,11 +98,26 @@ AutoForm/
 
 表格内控件绑定已修复：无唯一 id 的 `ui-select` 不再只按 `cell.id` 关联。采集器对表格单元格按 DOM 顺序记录 `uiSelectIndex`（或字段 id），并结合表格行列坐标绑定回原单元格；同时识别 `form-field-type-selectcurrency`（ui-select 或原生下拉）与 `form-field-type-selectboxes`（多选框组）等容器类型。重建后兜底追加区为空——1,302 个字段全部映射到布局，无未映射字段。已核对 Monitoring Details、Sampled Workers（5×14 多行表格）、PA-7 三个代表模块，并用无头浏览器实测本地渲染（表格内 Role/Gender 等 ui-select 渲染为原行列的下拉控件、复选框组渲染为选项组）。
 
-结构对齐是语义结构一致，不是目标网页的逐像素复制。仍未完成：
+结构对齐是语义结构一致，不是目标网页的逐像素复制。
+
+2026-08-16 无保存 dry-run 结果：
+
+- 测试范围：当前本地模板 + 当前 `Monitoring ID`，23 个 Report 模块。
+- 安全方式：登录后拦截所有 `POST / PUT / PATCH / DELETE` 写请求，只做页面 DOM 填写与读回校验，不点击 Save。
+- 汇总结果：23 个模块全部打开；20 个模块通过；`Housing Information`、`Young Worker Data` 因模板无真实值跳过；页面内校验成功字段 1,056 个；拦截写请求 50 个。
+- PA1-PA13：全部通过。覆盖每道 PA 问题的 `Yes / Partially / No / N/A` 单选、右侧 Evidence 复选框，以及折叠后的 Finding/Advance 字段区域。
+- 已修复验证脚本中的重复行场景：`Social Performance Management` 缺少第三个 worker representative 行时，dry-run 可先添加前端重复行再填，页面内校验通过。
+
+仍未完成：
 
 - 人工对照目标页核验各模块的章节顺序、选项组归属、固定表格表头与行数是否对应（结构绑定已程序化校验，尚未逐屏截图与目标页并排核对）。
 - 90 个 `ui-select` 候选项均已标 `complete`；若后续发现个别下拉实为远程搜索型，应改为 `partial` 并保留本地搜索框（当前采集结果全部为静态完整列表，未见远程搜索型）。
-- 真实项目分批自动化验证（见「接手步骤」）。
+- `Remuneration and Working Hours` 中 3 个 GLWC 相关条件字段未通过页面内填写校验：
+  - `LivingWagePleaseaddthelinkofGlwCSource`，标签 `Please add the link of GLWC source.`，模板值 `The reference can be found in below link: https://www.globallivingwage.org/.`，当前页面未渲染该输入框。
+  - `CalculatedLivingWagePleaseEnterMonthAndYearGlwc-month`，标签 `Month`，模板值 `string:09`，当前页面未渲染该月份下拉框。
+  - `CalculatedLivingWagePleaseEnterMonthAndYearGlwc-year`，标签 `Year`，模板值 `2024`，当前页面未渲染该年份输入框。
+
+上述 3 个字段不是 PA 结构问题，也不是普通 selector 失效。失败截图显示当前页面 `Source of data` 为 `Manually collected by auditee`；这些 GLWC 链接和年月字段更像是依赖前置选项的条件字段。当前模板中对应前置字段为空，dry-run 没有强行切换前置选项，以免改变业务含义。下一步只需针对 `Remuneration and Working Hours` 单模块确认前置字段与业务模板，不需要再全量测试 23 个模块。
 
 不要通过复制目标网站 HTML、CSS 或项目专属 URL 来实现结构对齐。应保存通用的模块、分组、表格、字段和选项元数据，并在真实网页中动态定位当前项目。
 
@@ -119,9 +135,9 @@ AutoForm/
 1. （布局与选项采集已完成）如需重新采集，运行 `node scrape_report_layout.mjs` 与 `node scrape_report_options.mjs`（均支持断点续跑，产物在 `data/report-layout/`，已忽略）。
 2. 运行 `npm run build:report-schema` 重建 schema，再 `node scripts/validate-report-schema.mjs` 确认字段集不变性（应显示 23 模块、1,302 字段）。
 3. 人工对照目标页核验各模块章节/选项组/表格结构对应，再 `npm start` 打开 http://127.0.0.1:3000 抽查本地渲染。
-4. 在低风险项目选择一个模块，分别验证文本、下拉、单选、复选、时间和表格字段。
-5. 单独验证一个自定义 `ui-select` 搜索下拉；若其候选项 DOM 与当前统一适配器不符，只调整该适配器，不要写死项目 URL。
-6. 再按基础信息、表格模块、PA 模块的顺序进行单模块测试，最后才测试多个模块连续运行。
+4. 23 个模块无保存 dry-run 已完成；后续不要重复全量跑，除非 schema 或模板大改。
+5. 只针对 `Remuneration and Working Hours` 的 3 个 GLWC 条件隐藏字段做专项确认：先确认前置 `Source of data` 业务值，再决定模板是否应填写 GLWC 链接与年月。
+6. 如需重新验证，优先运行单模块/专项检查；若其候选项 DOM 与当前统一适配器不符，只调整该适配器，不要写死项目 URL。
 7. 若平台改版，重新采集原始 schema 并运行生成脚本；不要手改浏览器 profile、凭据或本地导入值模板。
 
 ## 本地运行与检查
