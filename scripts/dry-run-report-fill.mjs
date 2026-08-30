@@ -1,6 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import { loadDotEnv } from '../src/env.js';
 import {
   configurePageTimeouts,
   ensureLoggedIn,
@@ -20,11 +21,12 @@ const RESULT_PATH = 'data/report-dry-run-result.json';
 const SCREENSHOT_DIR = 'data/screenshots';
 const openOnly = process.argv.includes('--open-only') || process.argv.includes('--expand-only');
 
+loadDotEnv();
 const settings = await readJsonFile('config/settings.json');
 const baseTemplate = await readJsonFile('data/templates/default.json');
 const reportTemplate = await readJsonFile('data/templates/report-imported.json');
 const reportIndex = await readJsonFile('data/report-schema/index.json');
-const credentials = await readJsonSafe('.runtime/credentials.json');
+const credentials = mergeCredentials(await readJsonSafe('.runtime/credentials.json'));
 const monitoringId = String(baseTemplate.monitoringId || '').trim();
 
 if (!monitoringId) {
@@ -521,4 +523,11 @@ async function readJsonSafe(relativePath) {
   return fs.readFile(resolveFromRoot(relativePath), 'utf8')
     .then(JSON.parse)
     .catch(() => ({}));
+}
+
+function mergeCredentials(credentials = {}) {
+  return {
+    username: String(credentials.username || process.env.AMFORI_USERNAME || '').trim(),
+    password: String(credentials.password || process.env.AMFORI_PASSWORD || '').trim()
+  };
 }

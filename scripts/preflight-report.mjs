@@ -1,14 +1,19 @@
 import { chromium } from 'playwright';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { loadDotEnv } from '../src/env.js';
 
 const root = process.cwd();
+loadDotEnv();
 const settings = JSON.parse(await fs.readFile(path.join(root, 'config/settings.json'), 'utf8'));
 const template = JSON.parse(await fs.readFile(path.join(root, 'data/templates/default.json'), 'utf8'));
 const reportIndex = JSON.parse(await fs.readFile(path.join(root, 'data/report-schema/index.json'), 'utf8'));
 const credentials = await fs.readFile(path.join(root, '.runtime/credentials.json'), 'utf8')
   .then(JSON.parse)
-  .catch(() => ({}));
+  .catch(() => ({
+    username: process.env.AMFORI_USERNAME,
+    password: process.env.AMFORI_PASSWORD
+  }));
 const targets = [
   '01-monitoring-details',
   '04-production-and-employment-structure',

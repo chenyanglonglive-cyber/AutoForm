@@ -1,6 +1,10 @@
 node_modules/
 .runtime/
 .codegraph/
+.env
+.env.*
+!.env.example
+delivery-packages/
 data/report_schema.json
 data/templates/report-imported.json
 data/report_layout.json

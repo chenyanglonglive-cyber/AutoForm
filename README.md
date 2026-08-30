@@ -48,6 +48,7 @@
 ## 启动
 
 全新环境的搭建与数据重建清单见 [SETUP.md](SETUP.md)。
+第三方交付和使用说明见 [DELIVERY_CHECKLIST.md](DELIVERY_CHECKLIST.md) 与 [THIRD_PARTY_USER_MANUAL.md](THIRD_PARTY_USER_MANUAL.md)。
 
 安装依赖后运行：
 

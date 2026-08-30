@@ -2,6 +2,7 @@ import http from 'node:http';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadDotEnv } from './env.js';
 import {
   appendRunLog,
   ensureRuntimeFiles,
@@ -18,6 +19,7 @@ const publicDir = path.resolve(__dirname, '..', 'public');
 
 let isRunning = false;
 
+loadDotEnv();
 await ensureRuntimeFiles();
 
 const settings = await readJsonFile('config/settings.json');
@@ -281,10 +283,16 @@ function normalizeTemplate(body) {
 
 async function readCredentials() {
   try {
-    return normalizeCredentials(await readJsonFile('.runtime/credentials.json'));
+    const credentials = normalizeCredentials(await readJsonFile('.runtime/credentials.json'));
+    if (credentials.username && credentials.password) {
+      return credentials;
+    }
   } catch {
-    return normalizeCredentials({});
   }
+  return normalizeCredentials({
+    username: process.env.AMFORI_USERNAME,
+    password: process.env.AMFORI_PASSWORD
+  });
 }
 
 async function writeCredentials(credentials) {
