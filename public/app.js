@@ -8,8 +8,9 @@ const controllerForm = document.querySelector('#controllerForm');
 const runButton = document.querySelector('#runButton');
 const runReportButton = document.querySelector('#runReportButton');
 const saveCredentialsButton = document.querySelector('#saveCredentialsButton');
-const saveTemplateButton = document.querySelector('#saveTemplateButton');
+const saveGeneralDescriptionButton = document.querySelector('#saveGeneralDescriptionButton');
 const saveReportTemplateButton = document.querySelector('#saveReportTemplateButton');
+const saveAttachmentSettingsButton = document.querySelector('#saveAttachmentSettingsButton');
 const selectAllReportButton = document.querySelector('#selectAllReportButton');
 const loadAttachmentsButton = document.querySelector('#loadAttachmentsButton');
 const uploadAttachmentsButton = document.querySelector('#uploadAttachmentsButton');
@@ -179,9 +180,10 @@ controllerForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   await runTextTask();
 });
-saveTemplateButton.addEventListener('click', saveTemplate);
+saveGeneralDescriptionButton.addEventListener('click', saveGeneralDescription);
 saveCredentialsButton.addEventListener('click', saveCredentials);
 saveReportTemplateButton.addEventListener('click', saveReportTemplate);
+saveAttachmentSettingsButton.addEventListener('click', saveAttachmentSettings);
 selectAllReportButton.addEventListener('click', toggleAllReportModules);
 runReportButton.addEventListener('click', runReportTask);
 closeReportRunDialogButton.addEventListener('click', () => reportRunDialog.close());
@@ -285,13 +287,17 @@ function toggleAllReportModules() {
 function renderReportModule(module) {
   currentReportModule = module;
   module = materializeRepeatableReportModule(module, reportTemplate.modules?.[module.id] || {});
+  saveReportTemplateButton.textContent = `保存“${module.title}”模块`;
   reportEditorHeader.replaceChildren();
   const title = document.createElement('h3');
   title.textContent = module.title;
+  const lastSaved = document.createElement('p');
+  lastSaved.className = 'report-last-saved hint';
+  lastSaved.textContent = formatReportModuleLastSavedAt(reportTemplate.moduleSavedAt?.[module.id]);
   const count = document.createElement('p');
   count.className = 'hint';
   count.textContent = `${module.fields.length} 个字段；留空内容在执行时会跳过。`;
-  reportEditorHeader.append(title, count);
+  reportEditorHeader.append(title, lastSaved, count);
   reportFields.replaceChildren();
 
   const fieldById = new Map(module.fields.map((field) => [field.key, field]));
@@ -473,6 +479,7 @@ function renderPaAnswers(question, moduleId) {
 function renderPaFindingToggle(question, moduleId) {
   const wrapper = document.createElement('details');
   wrapper.className = 'pa-finding';
+  wrapper.open = true;
   const summary = document.createElement('summary');
   summary.textContent = 'Finding / Advance';
   wrapper.append(summary);
@@ -672,7 +679,9 @@ function persistPaAnswerInput(event) {
 }
 
 async function saveReportTemplate() {
-  const module = reportIndex?.modules?.find((item) => item.id === currentReportModuleId) || currentReportModule;
+  const module = currentReportModule?.id === currentReportModuleId
+    ? currentReportModule
+    : reportIndex?.modules?.find((item) => item.id === currentReportModuleId);
   if (!module?.id) return setStatus('failed', '请先选择要保存的 Report 模块');
   const payload = await requestJson('/api/report/template', {
     method: 'POST',
@@ -685,6 +694,9 @@ async function saveReportTemplate() {
   });
   if (payload.ok) {
     reportDirty = false;
+    reportTemplate.moduleSavedAt ??= {};
+    reportTemplate.moduleSavedAt[module.id] = payload.savedAt || new Date().toISOString();
+    renderReportModule(module);
     setStatus('success', payload.message || `Report 模块“${module.title}”已保存到本机`);
     await loadLogs();
   }
@@ -808,9 +820,30 @@ function showReportRunDialog(result, moduleIds) {
   if (typeof reportRunDialog.showModal === 'function') reportRunDialog.showModal();
 }
 
-async function saveTemplate() {
-  const payload = await requestJson('/api/template', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(readFormTemplate()) });
-  setStatus(payload.ok ? 'success' : 'failed', payload.ok ? '模板已保存' : (payload.error || '模板保存失败'));
+async function saveGeneralDescription() {
+  const payload = await requestJson('/api/general-description', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      monitoringId: getValue('monitoringId'),
+      fields: {
+        generalDescription: getValue('generalDescription'),
+        confidentialComments: getValue('confidentialComments')
+      }
+    })
+  });
+  setStatus(payload.ok ? 'success' : 'failed', payload.ok ? (payload.message || 'General Description 已保存') : (payload.error || 'General Description 保存失败'));
+  if (payload.ok) await loadLogs();
+}
+
+async function saveAttachmentSettings() {
+  const payload = await requestJson('/api/attachments/settings', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ attachmentFolder: getValue('attachmentFolder') })
+  });
+  setStatus(payload.ok ? 'success' : 'failed', payload.ok ? (payload.message || '附件设置已保存') : (payload.error || '附件设置保存失败'));
+  if (payload.ok) await loadLogs();
 }
 
 async function saveCredentials() {
@@ -818,6 +851,7 @@ async function saveCredentials() {
   if (!credentials.username || !credentials.password) return setStatus('failed', '请输入 amfori 账号和密码后再保存');
   const payload = await requestJson('/api/credentials', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ credentials }) });
   setStatus(payload.ok ? 'success' : 'failed', payload.ok ? '登录信息已写入本地文件' : (payload.error || '登录信息保存失败'));
+  if (payload.ok) await loadLogs();
 }
 
 async function runTextTask() {
@@ -876,6 +910,16 @@ async function loadLogs(offset = 0) {
 async function requestJson(url, options) { const response = await fetch(url, options); const payload = await response.json().catch(() => ({ ok: false, error: '服务器返回无效数据。' })); return { ...payload, ok: response.ok && payload.ok }; }
 function getOverwriteFieldLabels(template) { const labels = { generalDescription: 'General Description', confidentialComments: 'Confidential Comments' }; return Object.entries(template.fields).filter(([, value]) => String(value || '').trim()).map(([key]) => labels[key] || key); }
 function renderLog(log) {
+  const saveOperationLabels = {
+    'general-description-save': 'General Description',
+    'attachment-settings-save': 'Report Attachments',
+    'credentials-save': '登录信息'
+  };
+  if (saveOperationLabels[log.operation]) {
+    const label = saveOperationLabels[log.operation];
+    const message = log.message || `${label}已保存到本机`;
+    return `<article class="log"><strong>已保存${escapeHtml(label)}</strong><small>${escapeHtml(log.time || '')}</small><div>${escapeHtml(message)}</div></article>`;
+  }
   if (log.operation === 'report-template-save') {
     const modules = Array.isArray(log.modules) ? log.modules.filter(Boolean) : [];
     const moduleName = modules[0] || log.moduleId || '未知模块';
@@ -890,7 +934,13 @@ function renderLog(log) {
     : '';
   return `<article class="log"><strong>${escapeHtml(log.status || '')} ${escapeHtml(log.monitoringId || '')}</strong><small>${escapeHtml(log.time || '')}</small><div>字段：${Number(log.filledFields || 0)}，附件：${Number(log.uploadedFiles || 0)}，${log.saved ? '已确认保存' : '未 Save'}</div>${moduleSummary}${reason}</article>`;
 }
-function setRunning(running) { for (const button of [runButton, runReportButton, saveCredentialsButton, saveTemplateButton, saveReportTemplateButton, loadAttachmentsButton, uploadAttachmentsButton, selectAllReportButton]) button.disabled = running; }
+function formatReportModuleLastSavedAt(savedAt) {
+  if (!savedAt) return '此模块尚未保存';
+  const date = new Date(savedAt);
+  if (Number.isNaN(date.getTime())) return '此模块保存时间未知';
+  return `此模块上次保存于：${date.toLocaleString('zh-CN', { hour12: false })}`;
+}
+function setRunning(running) { for (const button of [runButton, runReportButton, saveCredentialsButton, saveGeneralDescriptionButton, saveReportTemplateButton, saveAttachmentSettingsButton, loadAttachmentsButton, uploadAttachmentsButton, selectAllReportButton]) button.disabled = running; }
 function setStatus(type, message) { statusBox.className = `status ${type}`; statusBox.textContent = message; }
 function getValue(id) { return document.querySelector(`#${id}`).value.trim(); }
 function setValue(id, value) { document.querySelector(`#${id}`).value = value || ''; }

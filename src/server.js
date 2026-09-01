@@ -103,9 +103,28 @@ async function handleApi(req, res, url) {
       sendJson(res, 422, { ok: false, error: '请选择有效的 Report 模块后再保存。' });
       return;
     }
-    await writeReportTemplate(body.template);
+    const savedAt = new Date().toISOString();
+    const existingTemplate = await readReportTemplate();
+    const incomingModules = body.template?.modules && typeof body.template.modules === 'object'
+      ? body.template.modules
+      : {};
+    await writeReportTemplate({
+      ...existingTemplate,
+      modules: {
+        ...(existingTemplate.modules || {}),
+        [module.id]: incomingModules[module.id] && typeof incomingModules[module.id] === 'object'
+          ? incomingModules[module.id]
+          : {}
+      },
+      moduleSavedAt: {
+        ...(existingTemplate.moduleSavedAt || {}),
+        ...(body.template?.moduleSavedAt || {}),
+        [module.id]: savedAt
+      }
+    });
     const message = `Report 模块“${module.title}”已保存到本机`;
     const logEntry = await appendRunLog({
+      time: savedAt,
       operation: 'report-template-save',
       monitoringId: String(body.monitoringId || '').trim(),
       moduleId: module.id,
@@ -114,7 +133,7 @@ async function handleApi(req, res, url) {
       saved: true,
       message
     });
-    sendJson(res, 200, { ok: true, message, module: { id: module.id, title: module.title }, logEntry });
+    sendJson(res, 200, { ok: true, message, savedAt, module: { id: module.id, title: module.title }, logEntry });
     return;
   }
 
@@ -220,6 +239,58 @@ async function handleApi(req, res, url) {
     return;
   }
 
+  if (req.method === 'POST' && url.pathname === '/api/general-description') {
+    const body = await readJsonBody(req);
+    const currentTemplate = await readLocalTemplate();
+    const fields = body.fields && typeof body.fields === 'object' ? body.fields : {};
+    const template = {
+      ...currentTemplate,
+      monitoringId: body.monitoringId == null ? currentTemplate.monitoringId : String(body.monitoringId || '').trim(),
+      fields: {
+        ...currentTemplate.fields,
+        generalDescription: String(fields.generalDescription || '').trim(),
+        confidentialComments: String(fields.confidentialComments || '').trim()
+      }
+    };
+    await writeLocalTemplate(template);
+    const message = 'General Description 内容已保存到本机';
+    const logEntry = await appendRunLog({
+      operation: 'general-description-save',
+      monitoringId: template.monitoringId,
+      modules: ['General Description'],
+      status: 'success',
+      filledFields: Object.values(template.fields).filter((value) => String(value || '').trim()).length,
+      uploadedFiles: 0,
+      saved: true,
+      message
+    });
+    sendJson(res, 200, { ok: true, message, logEntry });
+    return;
+  }
+
+  if (req.method === 'POST' && url.pathname === '/api/attachments/settings') {
+    const body = await readJsonBody(req);
+    const currentTemplate = await readLocalTemplate();
+    const template = {
+      ...currentTemplate,
+      attachmentFolder: String(body.attachmentFolder || '').trim()
+    };
+    await writeLocalTemplate(template);
+    const message = 'Report Attachments 文件夹设置已保存到本机';
+    const logEntry = await appendRunLog({
+      operation: 'attachment-settings-save',
+      monitoringId: template.monitoringId,
+      modules: ['Report Attachments'],
+      status: 'success',
+      filledFields: 0,
+      uploadedFiles: 0,
+      saved: true,
+      message
+    });
+    sendJson(res, 200, { ok: true, message, logEntry });
+    return;
+  }
+
   if (req.method === 'POST' && url.pathname === '/api/template') {
     const body = await readJsonBody(req);
     await writeLocalTemplate(normalizeTemplate(body));
@@ -237,7 +308,15 @@ async function handleApi(req, res, url) {
     }
 
     await writeCredentials(credentials);
-    sendJson(res, 200, { ok: true });
+    const message = '登录信息已写入本地文件';
+    const logEntry = await appendRunLog({
+      operation: 'credentials-save',
+      modules: ['登录信息'],
+      status: 'success',
+      saved: true,
+      message
+    });
+    sendJson(res, 200, { ok: true, message, logEntry });
     return;
   }
 

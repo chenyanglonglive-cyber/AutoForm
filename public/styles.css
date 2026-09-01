@@ -176,8 +176,27 @@ select:focus {
   max-height: 720px;
   overflow: auto;
   padding: 8px;
+  background: #f8fafc;
+}
+
+.report-module-picker {
+  min-width: 0;
   border-right: 1px solid #d8e0ea;
   background: #f8fafc;
+}
+
+.report-module-picker-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid #d8e0ea;
+}
+
+.report-module-picker-toolbar .hint {
+  margin: 0;
+  white-space: nowrap;
 }
 
 .report-module-item {
@@ -260,6 +279,10 @@ select:focus {
 .report-editor-header h3,
 .report-editor-header p {
   margin: 0;
+}
+
+.report-last-saved {
+  text-align: center;
 }
 
 .report-fields {

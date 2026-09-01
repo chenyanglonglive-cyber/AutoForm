@@ -22,13 +22,16 @@ export async function readReportTemplate() {
   try {
     return await readJsonFile(importedTemplatePath);
   } catch {
-    return { version: 1, modules: {} };
+    return { version: 1, modules: {}, moduleSavedAt: {} };
   }
 }
 
 export async function writeReportTemplate(template) {
   await writeJsonFile(importedTemplatePath, {
     version: 1,
-    modules: template?.modules && typeof template.modules === 'object' ? template.modules : {}
+    modules: template?.modules && typeof template.modules === 'object' ? template.modules : {},
+    moduleSavedAt: template?.moduleSavedAt && typeof template.moduleSavedAt === 'object'
+      ? template.moduleSavedAt
+      : {}
   });
 }

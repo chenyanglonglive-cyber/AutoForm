@@ -29,14 +29,23 @@
             <textarea id="confidentialComments" name="confidentialComments" rows="4"></textarea>
           </label>
 
+          <div class="actions form-actions">
+            <button id="saveGeneralDescriptionButton" class="secondary" type="button">保存 General Description</button>
+          </div>
+
           <h2>Report</h2>
           <section id="reportWorkspace" class="report-workspace" aria-label="Report 模板编辑器">
             <div class="report-toolbar">
               <p id="reportSummary" class="hint">正在读取 Report schema...</p>
-              <button id="selectAllReportButton" class="secondary compact" type="button">选择全部模块</button>
             </div>
             <div class="report-layout">
-              <nav id="reportModuleList" class="report-module-list" aria-label="Report 模块"></nav>
+              <div class="report-module-picker">
+                <div class="report-module-picker-toolbar">
+                  <span class="hint">模块选择</span>
+                  <button id="selectAllReportButton" class="secondary compact" type="button">选择全部模块</button>
+                </div>
+                <nav id="reportModuleList" class="report-module-list" aria-label="Report 模块"></nav>
+              </div>
               <section class="report-editor">
                 <div id="reportEditorHeader" class="report-editor-header"></div>
                 <div id="reportFields" class="report-fields">请选择一个模块。</div>
@@ -53,15 +62,16 @@
             <input id="attachmentFolder" name="attachmentFolder" placeholder="留空则跳过附件上传">
           </label>
 
+          <div class="actions form-actions">
+            <button id="saveAttachmentSettingsButton" class="secondary" type="button">保存附件设置</button>
+          </div>
+
           <div class="attachment-actions">
             <button id="loadAttachmentsButton" class="secondary" type="button">加载附件文件</button>
             <button id="uploadAttachmentsButton" type="button" disabled>确认仅上传附件</button>
           </div>
           <div id="attachmentPreview" class="attachment-preview">填写文件夹路径后，可先加载文件名进行确认。</div>
 
-          <div class="actions form-actions">
-            <button id="saveTemplateButton" class="secondary" type="button">保存模板</button>
-          </div>
         </form>
 
         <aside class="panel side">
