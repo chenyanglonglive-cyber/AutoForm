@@ -14,6 +14,9 @@ const selectAllReportButton = document.querySelector('#selectAllReportButton');
 const loadAttachmentsButton = document.querySelector('#loadAttachmentsButton');
 const uploadAttachmentsButton = document.querySelector('#uploadAttachmentsButton');
 const refreshLogsButton = document.querySelector('#refreshLogsButton');
+const newerLogsButton = document.querySelector('#newerLogsButton');
+const olderLogsButton = document.querySelector('#olderLogsButton');
+const logPageInfo = document.querySelector('#logPageInfo');
 const statusBox = document.querySelector('#status');
 const resultBox = document.querySelector('#resultBox');
 const logsBox = document.querySelector('#logs');
@@ -36,6 +39,8 @@ let selectedReportModuleIds = new Set();
 let reportDirty = false;
 let reportModuleStates = new Map();
 let reportExecutionRunning = false;
+let logOffset = 0;
+const LOG_PAGE_SIZE = 10;
 
 const REPORT_MODULE_STATUS = {
   pending: '待执行',
@@ -182,7 +187,9 @@ runReportButton.addEventListener('click', runReportTask);
 closeReportRunDialogButton.addEventListener('click', () => reportRunDialog.close());
 loadAttachmentsButton.addEventListener('click', loadAttachments);
 uploadAttachmentsButton.addEventListener('click', uploadAttachmentsOnly);
-refreshLogsButton.addEventListener('click', loadLogs);
+refreshLogsButton.addEventListener('click', () => loadLogs());
+newerLogsButton.addEventListener('click', () => loadLogs(Math.max(0, logOffset - LOG_PAGE_SIZE)));
+olderLogsButton.addEventListener('click', () => loadLogs(logOffset + LOG_PAGE_SIZE));
 document.querySelector('#attachmentFolder').addEventListener('input', clearAttachmentPreview);
 document.querySelector('#monitoringId').addEventListener('input', clearAttachmentPreview);
 
@@ -665,10 +672,22 @@ function persistPaAnswerInput(event) {
 }
 
 async function saveReportTemplate() {
+  const module = reportIndex?.modules?.find((item) => item.id === currentReportModuleId) || currentReportModule;
+  if (!module?.id) return setStatus('failed', '请先选择要保存的 Report 模块');
   const payload = await requestJson('/api/report/template', {
-    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ template: reportTemplate })
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      template: reportTemplate,
+      moduleId: module.id,
+      monitoringId: getValue('monitoringId')
+    })
   });
-  if (payload.ok) { reportDirty = false; setStatus('success', 'Report 模板已保存到本机'); }
+  if (payload.ok) {
+    reportDirty = false;
+    setStatus('success', payload.message || `Report 模块“${module.title}”已保存到本机`);
+    await loadLogs();
+  }
   else setStatus('failed', payload.error || 'Report 模板保存失败');
 }
 
@@ -843,10 +862,27 @@ async function uploadAttachmentsOnly() {
 function readFormTemplate() { return { monitoringId: getValue('monitoringId'), attachmentFolder: getValue('attachmentFolder'), credentials: { username: getValue('username'), password: getValue('password') }, fields: { generalDescription: getValue('generalDescription'), confidentialComments: getValue('confidentialComments') } }; }
 function clearAttachmentPreview() { attachmentPreviewState = null; uploadAttachmentsButton.disabled = true; attachmentPreview.textContent = '填写文件夹路径后，可先加载文件名进行确认。'; }
 function renderAttachmentPreview(files) { attachmentPreview.replaceChildren(); const strong = document.createElement('strong'); strong.textContent = `检测到 ${files.length} 个文件`; attachmentPreview.append(strong); const list = document.createElement('ul'); for (const file of files) { const item = document.createElement('li'); item.textContent = file; list.append(item); } attachmentPreview.append(list); }
-async function loadLogs() { const payload = await requestJson('/api/logs?limit=20'); if (!payload.ok) return; logsBox.innerHTML = payload.logs.length ? payload.logs.map(renderLog).join('') : '<p class="hint">暂无日志</p>'; }
+async function loadLogs(offset = 0) {
+  const requestedOffset = Math.max(0, Number(offset) || 0);
+  const payload = await requestJson(`/api/logs?limit=${LOG_PAGE_SIZE}&offset=${requestedOffset}`);
+  if (!payload.ok) return;
+  logOffset = Number(payload.offset || 0);
+  logsBox.innerHTML = payload.logs.length ? payload.logs.map(renderLog).join('') : '<p class="hint">暂无日志</p>';
+  logsBox.scrollTop = 0;
+  newerLogsButton.disabled = logOffset === 0;
+  olderLogsButton.disabled = !payload.hasMore;
+  logPageInfo.textContent = `第 ${Math.floor(logOffset / LOG_PAGE_SIZE) + 1} 页`;
+}
 async function requestJson(url, options) { const response = await fetch(url, options); const payload = await response.json().catch(() => ({ ok: false, error: '服务器返回无效数据。' })); return { ...payload, ok: response.ok && payload.ok }; }
 function getOverwriteFieldLabels(template) { const labels = { generalDescription: 'General Description', confidentialComments: 'Confidential Comments' }; return Object.entries(template.fields).filter(([, value]) => String(value || '').trim()).map(([key]) => labels[key] || key); }
 function renderLog(log) {
+  if (log.operation === 'report-template-save') {
+    const modules = Array.isArray(log.modules) ? log.modules.filter(Boolean) : [];
+    const moduleName = modules[0] || log.moduleId || '未知模块';
+    const message = log.message || `Report 模块“${moduleName}”已保存到本机`;
+    const monitoringId = log.monitoringId ? `<div>Monitoring ID：${escapeHtml(log.monitoringId)}</div>` : '';
+    return `<article class="log"><strong>已保存 Report 模块：${escapeHtml(moduleName)}</strong><small>${escapeHtml(log.time || '')}</small><div>${escapeHtml(message)}</div>${monitoringId}</article>`;
+  }
   const reason = log.reason ? `<div>${escapeHtml(log.reason)}</div>` : '';
   const moduleResults = Array.isArray(log.moduleResults) ? log.moduleResults : [];
   const moduleSummary = moduleResults.length > 0

@@ -58,9 +58,13 @@ async function handleApi(req, res, url) {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/logs') {
-    const limit = Number(url.searchParams.get('limit') || 50);
-    const logs = await readRecentLogs(limit);
-    sendJson(res, 200, { ok: true, logs });
+    const requestedLimit = Number(url.searchParams.get('limit') || 50);
+    const requestedOffset = Number(url.searchParams.get('offset') || 0);
+    const limit = Number.isFinite(requestedLimit) ? Math.min(Math.max(Math.trunc(requestedLimit), 1), 100) : 50;
+    const offset = Number.isFinite(requestedOffset) ? Math.max(Math.trunc(requestedOffset), 0) : 0;
+    const recentLogs = await readRecentLogs(limit + offset + 1);
+    const logs = recentLogs.slice(offset, offset + limit);
+    sendJson(res, 200, { ok: true, logs, limit, offset, hasMore: recentLogs.length > offset + limit });
     return;
   }
 
@@ -92,8 +96,25 @@ async function handleApi(req, res, url) {
 
   if (req.method === 'POST' && url.pathname === '/api/report/template') {
     const body = await readJsonBody(req);
+    const moduleId = String(body.moduleId || '').trim();
+    const index = await readReportIndex();
+    const module = index.modules.find((item) => item.id === moduleId);
+    if (!module) {
+      sendJson(res, 422, { ok: false, error: '请选择有效的 Report 模块后再保存。' });
+      return;
+    }
     await writeReportTemplate(body.template);
-    sendJson(res, 200, { ok: true });
+    const message = `Report 模块“${module.title}”已保存到本机`;
+    const logEntry = await appendRunLog({
+      operation: 'report-template-save',
+      monitoringId: String(body.monitoringId || '').trim(),
+      moduleId: module.id,
+      modules: [module.title],
+      status: 'success',
+      saved: true,
+      message
+    });
+    sendJson(res, 200, { ok: true, message, module: { id: module.id, title: module.title }, logEntry });
     return;
   }
 

@@ -43,7 +43,7 @@
               </section>
             </div>
             <div class="actions report-actions">
-              <button id="saveReportTemplateButton" class="secondary" type="button">保存 Report 模板</button>
+              <button id="saveReportTemplateButton" class="secondary" type="button">保存当前 Report 模块</button>
             </div>
           </section>
 
@@ -100,10 +100,15 @@
 
           <section class="side-section">
             <div class="section-title-row">
-              <h2>最近日志</h2>
+              <h2>操作日志</h2>
               <button id="refreshLogsButton" class="secondary compact" type="button">刷新</button>
             </div>
             <div id="logs" class="logs"></div>
+            <div class="log-pagination" aria-label="日志翻页">
+              <button id="newerLogsButton" class="secondary compact" type="button">较新记录</button>
+              <span id="logPageInfo" class="hint">第 1 页</span>
+              <button id="olderLogsButton" class="secondary compact" type="button">更早记录</button>
+            </div>
           </section>
         </aside>
       </section>
