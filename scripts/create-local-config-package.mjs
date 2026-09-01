@@ -1,6 +1,7 @@
 import { spawn } from 'node:child_process';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { ensureLocalTemplate, LOCAL_TEMPLATE_PATH } from '../src/localTemplateStorage.js';
 
 const root = process.cwd();
 const packageDir = path.join(root, 'delivery-packages');
@@ -14,14 +15,15 @@ const stagingDir = path.join(packageDir, packageName);
 const zipPath = `${stagingDir}.zip`;
 
 await assertFile('.runtime/credentials.json', '缺少 .runtime/credentials.json，请先在页面保存账号密码。');
-await assertFile('data/templates/default.json', '缺少 data/templates/default.json。');
+await ensureLocalTemplate();
+await assertFile(LOCAL_TEMPLATE_PATH, `缺少 ${LOCAL_TEMPLATE_PATH}。`);
 await assertFile('data/templates/report-imported.json', '缺少 data/templates/report-imported.json，请先准备 Report 模板。');
 
 await fs.mkdir(path.join(stagingDir, '.runtime'), { recursive: true });
 await fs.mkdir(path.join(stagingDir, 'data', 'templates'), { recursive: true });
 
 await fs.copyFile(path.join(root, '.runtime', 'credentials.json'), path.join(stagingDir, '.runtime', 'credentials.json'));
-await fs.copyFile(path.join(root, 'data', 'templates', 'default.json'), path.join(stagingDir, 'data', 'templates', 'default.json'));
+await fs.copyFile(path.join(root, LOCAL_TEMPLATE_PATH), path.join(stagingDir, 'data', 'templates', 'local-default.json'));
 await fs.copyFile(path.join(root, 'data', 'templates', 'report-imported.json'), path.join(stagingDir, 'data', 'templates', 'report-imported.json'));
 
 const credentials = JSON.parse(await fs.readFile(path.join(root, '.runtime', 'credentials.json'), 'utf8'));
@@ -39,7 +41,7 @@ await fs.writeFile(path.join(stagingDir, 'LOCAL_CONFIG_README.md'), `# AutoForm 
 
 - \`.env\`：amfori 账号密码环境变量。
 - \`.runtime/credentials.json\`：本地账号密码，供页面控制器和自动化读取。
-- \`data/templates/default.json\`：默认 Monitoring ID 和基础模板。
+- \`data/templates/local-default.json\`：本机 Monitoring ID 和基础模板。
 - \`data/templates/report-imported.json\`：Report 23 个模块业务字段模板。
 
 ## 不包含内容
@@ -51,7 +53,7 @@ await fs.writeFile(path.join(stagingDir, 'LOCAL_CONFIG_README.md'), `# AutoForm 
 ## 使用方式
 
 1. 先 clone GitHub 仓库并安装依赖。
-2. 把本包解压到项目根目录，允许覆盖同名模板文件。
+2. 把本包解压到项目根目录，允许覆盖同名本地配置文件。
 3. 运行 \`npm start\`。
 4. 浏览器打开 \`http://127.0.0.1:3000\`。
 `, 'utf8');

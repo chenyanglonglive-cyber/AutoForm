@@ -15,6 +15,7 @@ import {
   resolveReportFieldLocator
 } from '../src/automation/amforiBot.js';
 import { ensureDir, readJsonFile, resolveFromRoot, writeJsonFile } from '../src/storage.js';
+import { readLocalTemplate } from '../src/localTemplateStorage.js';
 
 const WRITE_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
 const RESULT_PATH = 'data/report-dry-run-result.json';
@@ -23,14 +24,14 @@ const openOnly = process.argv.includes('--open-only') || process.argv.includes('
 
 loadDotEnv();
 const settings = await readJsonFile('config/settings.json');
-const baseTemplate = await readJsonFile('data/templates/default.json');
+const baseTemplate = await readLocalTemplate();
 const reportTemplate = await readJsonFile('data/templates/report-imported.json');
 const reportIndex = await readJsonFile('data/report-schema/index.json');
 const credentials = mergeCredentials(await readJsonSafe('.runtime/credentials.json'));
 const monitoringId = String(baseTemplate.monitoringId || '').trim();
 
 if (!monitoringId) {
-  throw new Error('Monitoring ID is required in data/templates/default.json.');
+  throw new Error('Monitoring ID is required in data/templates/local-default.json.');
 }
 
 const reportValues = reportTemplate.modules || {};

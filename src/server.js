@@ -12,15 +12,19 @@ import {
 } from './storage.js';
 import { runAmforiAttachmentUpload, runAmforiAutomation, runAmforiReportAutomation } from './automation/amforiBot.js';
 import { readReportIndex, readReportModule, readReportTemplate, writeReportTemplate } from './reportStorage.js';
+import { materializeRepeatableReportModule } from '../public/reportRepeatables.js';
+import { ensureLocalTemplate, readLocalTemplate, writeLocalTemplate } from './localTemplateStorage.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const publicDir = path.resolve(__dirname, '..', 'public');
 
 let isRunning = false;
+let reportRunProgress = null;
 
 loadDotEnv();
 await ensureRuntimeFiles();
+await ensureLocalTemplate();
 
 const settings = await readJsonFile('config/settings.json');
 const server = http.createServer(handleRequest);
@@ -46,7 +50,7 @@ async function handleRequest(req, res) {
 
 async function handleApi(req, res, url) {
   if (req.method === 'GET' && url.pathname === '/api/template') {
-    const template = await readJsonFile('data/templates/default.json');
+    const template = await readLocalTemplate();
     const credentials = await readCredentials();
     const mapping = await readJsonFile('config/field-mapping.json');
     sendJson(res, 200, { ok: true, template: { ...template, credentials }, mapping });
@@ -76,6 +80,16 @@ async function handleApi(req, res, url) {
     return;
   }
 
+  if (req.method === 'GET' && url.pathname === '/api/report/run-progress') {
+    const runId = String(url.searchParams.get('runId') || '').trim();
+    if (!reportRunProgress || (runId && reportRunProgress.runId !== runId)) {
+      sendJson(res, 404, { ok: false, error: 'Report run progress was not found.' });
+      return;
+    }
+    sendJson(res, 200, { ok: true, progress: reportRunProgress });
+    return;
+  }
+
   if (req.method === 'POST' && url.pathname === '/api/report/template') {
     const body = await readJsonBody(req);
     await writeReportTemplate(body.template);
@@ -91,6 +105,7 @@ async function handleApi(req, res, url) {
 
     isRunning = true;
     const body = await readJsonBody(req);
+    const runId = String(body.runId || '').trim() || `report-${Date.now()}`;
     const monitoringId = String(body.monitoringId || '').trim();
     const index = await readReportIndex();
     const requestedIds = Array.isArray(body.moduleIds) ? body.moduleIds : [];
@@ -113,20 +128,51 @@ async function handleApi(req, res, url) {
       const currentSettings = await readJsonFile('config/settings.json');
       const template = body.template?.modules ? body.template : await readReportTemplate();
       await writeReportTemplate(template);
-      const modules = await Promise.all(moduleIds.map((moduleId) => readReportModule(moduleId)));
+      const modules = await Promise.all(moduleIds.map(async (moduleId) => materializeRepeatableReportModule(
+        await readReportModule(moduleId),
+        template.modules?.[moduleId] || {}
+      )));
+      reportRunProgress = {
+        runId,
+        monitoringId,
+        status: 'running',
+        moduleResults: modules.map((module) => ({
+          id: module.id,
+          title: module.title,
+          status: 'pending',
+          filledFields: 0,
+          reason: '',
+          screenshot: ''
+        })),
+        updatedAt: new Date().toISOString()
+      };
       const result = await runAmforiReportAutomation({
         monitoringId,
         modules,
         values: template.modules || {},
         credentials,
-        settings: currentSettings
+        settings: currentSettings,
+        onModuleProgress: (moduleResult) => {
+          const index = reportRunProgress.moduleResults.findIndex((entry) => entry.id === moduleResult.id);
+          if (index >= 0) reportRunProgress.moduleResults[index] = moduleResult;
+          reportRunProgress.updatedAt = new Date().toISOString();
+        }
       });
+      reportRunProgress = {
+        ...reportRunProgress,
+        status: result.status,
+        moduleResults: result.moduleResults || reportRunProgress.moduleResults,
+        reason: result.reason || '',
+        finishedAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
 
       const logEntry = await appendRunLog({
         operation: 'report-fill',
         monitoringId,
         status: result.status,
         modules: result.completedModules || result.modules || [],
+        moduleResults: result.moduleResults || [],
         filledFields: result.filledFields || 0,
         uploadedFiles: 0,
         saved: Boolean(result.saved),
@@ -135,7 +181,18 @@ async function handleApi(req, res, url) {
         screenshot: result.screenshot || ''
       });
 
-      sendJson(res, result.status === 'success' ? 200 : 422, { ok: result.status === 'success', result, logEntry });
+      sendJson(res, result.status === 'failed' ? 422 : 200, { ok: result.status !== 'failed', result, logEntry });
+    } catch (error) {
+      if (reportRunProgress?.runId === runId) {
+        reportRunProgress = {
+          ...reportRunProgress,
+          status: 'failed',
+          reason: error.message,
+          finishedAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        };
+      }
+      sendJson(res, 500, { ok: false, error: error.message, progress: reportRunProgress?.runId === runId ? reportRunProgress : null });
     } finally {
       isRunning = false;
     }
@@ -144,7 +201,7 @@ async function handleApi(req, res, url) {
 
   if (req.method === 'POST' && url.pathname === '/api/template') {
     const body = await readJsonBody(req);
-    await writeJsonFile('data/templates/default.json', normalizeTemplate(body));
+    await writeLocalTemplate(normalizeTemplate(body));
     await writeCredentials(normalizeCredentials(body.credentials));
     sendJson(res, 200, { ok: true });
     return;
@@ -235,7 +292,7 @@ async function handleApi(req, res, url) {
     try {
       const mapping = await readJsonFile('config/field-mapping.json');
       const currentSettings = await readJsonFile('config/settings.json');
-      await writeJsonFile('data/templates/default.json', template);
+      await writeLocalTemplate(template);
       await writeCredentials(credentials);
 
       const result = await runAmforiAutomation({

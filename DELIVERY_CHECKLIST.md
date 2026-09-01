@@ -22,7 +22,7 @@ https://github.com/chenyanglonglive-cyber/AutoForm.git
 - 脚本：`scripts/`
 - 平台配置：`config/`
 - Report 结构 schema：`data/report-schema/`
-- 基础模板：`data/templates/default.json`
+- 基础模板：`data/templates/local-default.json`
 - 环境变量示例：`.env.example`
 - 使用和交接文档：`README.md`、`SETUP.md`、`PROJECT_HANDOFF.md`、`THIRD_PARTY_USER_MANUAL.md`
 
@@ -62,7 +62,7 @@ AutoForm-local-config-YYYYMMDD-HHMMSS.zip
   credentials.json
 data/
   templates/
-    default.json
+    local-default.json
     report-imported.json
 LOCAL_CONFIG_README.md
 ```
@@ -88,7 +88,7 @@ npm install
 npx playwright install chromium
 ```
 
-然后把本地配置包解压到项目根目录，确保 `.env`、`.runtime/credentials.json`、`data/templates/report-imported.json` 出现在对应位置。
+然后把本地配置包解压到项目根目录，确保 `.env`、`.runtime/credentials.json`、`data/templates/local-default.json`、`data/templates/report-imported.json` 出现在对应位置。
 
 启动：
 
@@ -114,8 +114,9 @@ npm start
 
 说明：
 
-- 如果只是代码、页面、脚本更新，通常 `git pull` 后直接 `npm start` 即可。
+- 如果只是代码、页面、脚本更新，通常 `git pull` 后直接 `npm start` 即可；首次升级到本版本时，服务会把原 `default.json` 的现有内容自动迁移到 Git 忽略的 `local-default.json`。
 - 如果 `package.json` 或 `package-lock.json` 更新，对方需要再运行 `npm install`。
+- 如果首次安装或报错提示浏览器可执行文件不存在，对方还需要运行 `npx playwright install chromium`。
 - 如果你更新了 `data/templates/report-imported.json` 里的业务模板，需要重新发送本地配置包，或单独发送这个 JSON 文件。
 - 账号密码变化时，可以让对方在页面右侧控制器重新保存，也可以重新发送 `.env` 或 `.runtime/credentials.json`。
 
@@ -127,7 +128,7 @@ npm start
 
 - `.runtime/credentials.json`：本机 amfori 账号密码。
 - `.runtime/browser-profile/`：Playwright 持久化浏览器登录态。
-- `data/templates/default.json`：基础模板，包含 `Monitoring ID` 和附件路径。
+- `data/templates/local-default.json`：本机基础模板，包含 `Monitoring ID` 和附件路径。
 - `data/templates/report-imported.json`：Report 23 个模块的本地业务字段值。
 - `data/run-logs.jsonl`：运行日志。
 
@@ -145,5 +146,5 @@ git status --short
 确认：
 
 - `npm run check` 通过。
-- Git 中没有 `.env`、`.runtime/`、`data/templates/report-imported.json`。
+- Git 中没有 `.env`、`.runtime/`、`data/templates/local-default.json`、`data/templates/report-imported.json`。
 - 本地配置包已生成并单独发送给第三方。

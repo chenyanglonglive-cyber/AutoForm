@@ -2,11 +2,12 @@ import { chromium } from 'playwright';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { loadDotEnv } from '../src/env.js';
+import { readLocalTemplate } from '../src/localTemplateStorage.js';
 
 const root = process.cwd();
 loadDotEnv();
 const settings = JSON.parse(await fs.readFile(path.join(root, 'config/settings.json'), 'utf8'));
-const template = JSON.parse(await fs.readFile(path.join(root, 'data/templates/default.json'), 'utf8'));
+const template = await readLocalTemplate();
 const reportIndex = JSON.parse(await fs.readFile(path.join(root, 'data/report-schema/index.json'), 'utf8'));
 const credentials = await fs.readFile(path.join(root, '.runtime/credentials.json'), 'utf8')
   .then(JSON.parse)
@@ -21,7 +22,7 @@ const targets = [
   '17-pa-7-occupational-health-and-safety'
 ].map((id) => reportIndex.modules.find((module) => module.id === id)).filter(Boolean);
 
-if (!template.monitoringId) throw new Error('Monitoring ID is required in data/templates/default.json.');
+if (!template.monitoringId) throw new Error('Monitoring ID is required in data/templates/local-default.json.');
 if (targets.length !== 4) throw new Error('Representative Report modules are missing from the schema index.');
 
 let browser = null;

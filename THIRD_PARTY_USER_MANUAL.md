@@ -2,6 +2,8 @@
 
 本文档给第三方使用 AutoForm 时参考。AutoForm 是本地运行的 amfori 自动填表工具，不部署服务器，不需要数据库。
 
+项目 GitHub 地址：<https://github.com/chenyanglonglive-cyber/AutoForm.git>
+
 ## 1. 准备环境
 
 请先安装：
@@ -58,7 +60,7 @@ AutoForm/
     credentials.json
   data/
     templates/
-      default.json
+      local-default.json
       report-imported.json
 ```
 
@@ -67,7 +69,7 @@ AutoForm/
 - `.env` 保存 amfori 账号密码环境变量。
 - `.runtime/credentials.json` 保存页面控制器使用的本地账号密码。
 - `data/templates/report-imported.json` 保存 Report 23 个模块的本地业务字段值。
-- `data/templates/default.json` 保存默认 `Monitoring ID` 和基础表单模板。
+- `data/templates/local-default.json` 保存本机 `Monitoring ID` 和基础表单模板；它不会被 GitHub 更新覆盖。
 
 如果提供方没有给账号密码，你也可以启动页面后在右侧控制器手动填写账号密码，并点击保存本地登录信息。
 
@@ -152,11 +154,15 @@ http://127.0.0.1:3000
 
 ## 9. 更新代码
 
-项目提供方更新代码后，你只需要在项目目录运行：
+项目提供方更新代码后，在项目目录运行：
 
 ```powershell
 git pull
+npm install
+npx playwright install chromium
 ```
+
+然后运行 `npm start`。若 Chromium 已安装，第三行可跳过；如果出现“browser executable does not exist”，运行该行即可。首次升级到此版本时，程序会把旧 `default.json` 的现有内容自动迁移到 Git 忽略的 `local-default.json`；Report 模板、账号、日志和截图也都会保留。
 
 如果依赖有变化，再运行：
 
@@ -192,12 +198,12 @@ AutoForm 没有数据库。
 
 - `.runtime/credentials.json`：账号密码。
 - `.runtime/browser-profile/`：本机浏览器登录态。
-- `data/templates/default.json`：基础模板。
+- `data/templates/local-default.json`：本机基础模板。
 - `data/templates/report-imported.json`：Report 业务模板。
 - `data/run-logs.jsonl`：运行日志。
 - `data/screenshots/`：失败截图。
 
-不要把 `.env`、`.runtime/`、`data/templates/report-imported.json`、日志或截图上传到公开仓库。
+不要把 `.env`、`.runtime/`、`data/templates/local-default.json`、`data/templates/report-imported.json`、日志或截图上传到公开仓库。
 
 ## 12. 常用检查
 

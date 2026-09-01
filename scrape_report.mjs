@@ -11,11 +11,13 @@ import { chromium } from 'playwright';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readLocalTemplate } from './src/localTemplateStorage.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ---- 读取项目配置 ----
 const projectRoot = 'd:/AIcode-hub/AutoForm';
+process.chdir(projectRoot);
 const settingsRaw = await fs.readFile(path.join(projectRoot, 'config/settings.json'), 'utf8');
 const settings = JSON.parse(settingsRaw);
 
@@ -30,8 +32,7 @@ try {
 const userDataDir = path.resolve(projectRoot, settings.amfori.browserUserDataDir);
 
 // ---- 读取上次使用的 Monitoring ID ----
-const templatePath = path.join(projectRoot, 'data/templates/default.json');
-const template = JSON.parse(await fs.readFile(templatePath, 'utf8'));
+const template = await readLocalTemplate();
 const monitoringId = template.monitoringId || '';
 
 console.log(`Using Monitoring ID: ${monitoringId}`);

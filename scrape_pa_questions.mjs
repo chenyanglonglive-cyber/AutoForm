@@ -8,12 +8,13 @@
 import { chromium } from 'playwright';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { readLocalTemplate } from './src/localTemplateStorage.js';
 
 const projectRoot = process.cwd();
 const settings = JSON.parse(await fs.readFile(path.join(projectRoot, 'config/settings.json'), 'utf8'));
 let credentials = {};
 try { credentials = JSON.parse(await fs.readFile(path.join(projectRoot, '.runtime/credentials.json'), 'utf8')); } catch {}
-const template = JSON.parse(await fs.readFile(path.join(projectRoot, 'data/templates/default.json'), 'utf8'));
+const template = await readLocalTemplate();
 const monitoringId = template.monitoringId;
 const userDataDir = path.resolve(projectRoot, settings.amfori.browserUserDataDir);
 

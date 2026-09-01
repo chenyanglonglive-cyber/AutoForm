@@ -54,7 +54,8 @@ AutoForm/
 │   ├── settings.json             平台地址、超时和浏览器 profile 配置
 │   └── field-mapping.json        模块 tab、字段 selector 和 Save selector
 ├── data/
-│   ├── templates/default.json    默认业务模板
+│   ├── templates/default.json    GitHub 随代码发布的出厂模板
+│   ├── templates/local-default.json  本机基础模板（自动迁移且忽略）
 │   ├── report-schema/            可提交的无值 Report schema，按模块拆分
 │   ├── templates/report-imported.json  本机当前值 Report 模板，忽略
 │   ├── report_schema.json        原始采集快照，本机来源文件，忽略

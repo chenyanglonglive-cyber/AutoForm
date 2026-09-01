@@ -141,15 +141,29 @@ export async function runAmforiAutomation({ template, mapping, settings }) {
   }
 }
 
-export async function runAmforiReportAutomation({ monitoringId, modules, values, credentials, settings }) {
+export async function runAmforiReportAutomation({ monitoringId, modules, values, credentials, settings, onModuleProgress }) {
   const steps = [];
   const completedModules = [];
+  const moduleResults = (modules || []).map((module) => ({
+    id: module.id,
+    title: module.title,
+    status: 'pending',
+    filledFields: 0,
+    reason: '',
+    screenshot: ''
+  }));
   let context;
   let page;
   let screenshot = '';
   let filledFields = 0;
 
   const addStep = (message) => steps.push({ time: new Date().toISOString(), message });
+  const updateModule = (module, update) => {
+    const result = moduleResults.find((entry) => entry.id === module.id);
+    if (!result) return;
+    Object.assign(result, update);
+    onModuleProgress?.(structuredClone(result));
+  };
 
   try {
     if (!String(monitoringId || '').trim()) {
@@ -168,45 +182,70 @@ export async function runAmforiReportAutomation({ monitoringId, modules, values,
     const reportIndexUrl = await openReportIndex(page, addStep);
 
     for (const module of modules) {
+      updateModule(module, { status: 'running', reason: '', screenshot: '' });
       const moduleValues = values?.[module.id] || {};
       const fieldsToFill = module.fields.filter((field) => hasTemplateValue(moduleValues, field));
       if (fieldsToFill.length === 0) {
         addStep(`${module.title}: no local values, skipped.`);
         completedModules.push(module.title);
+        updateModule(module, { status: 'skipped' });
         continue;
       }
 
-      await openReportModule(page, module, reportIndexUrl, addStep);
-      let moduleFilled = 0;
-      for (const field of fieldsToFill) {
-        await fillReportField(page, field, moduleValues[field.key]);
-        moduleFilled += 1;
-      }
+      try {
+        await openReportModule(page, module, reportIndexUrl, addStep);
+        await prepareRepeatableReportModule(page, module, fieldsToFill, addStep);
+        let moduleFilled = 0;
+        for (const field of fieldsToFill) {
+          await fillReportField(page, field, moduleValues[field.key]);
+          moduleFilled += 1;
+        }
 
-      const confirmation = await clickSave(page, {
-        selector: '#saveButtonTop:visible, button#saveButton:visible'
-      }, settings, addStep);
-      await page.reload({ waitUntil: 'domcontentloaded' });
-      await page.waitForTimeout(Number(settings.automation.saveSettleMs || 2500));
-      await openReportModule(page, module, reportIndexUrl, addStep);
-      await verifyReportModule(page, fieldsToFill, moduleValues);
-      filledFields += moduleFilled;
-      completedModules.push(module.title);
-      addStep(`${module.title}: saved and refreshed (${moduleFilled} field(s)).`);
-      if (!confirmation) {
-        throw new Error(`${module.title}: Save confirmation was not received.`);
+        const confirmation = await clickSave(page, {
+          selector: '#saveButtonTop:visible, button#saveButton:visible'
+        }, settings, addStep);
+        await page.reload({ waitUntil: 'domcontentloaded' });
+        await page.waitForTimeout(Number(settings.automation.saveSettleMs || 2500));
+        await openReportModule(page, module, reportIndexUrl, addStep);
+        await prepareRepeatableReportModule(page, module, fieldsToFill, addStep);
+        await verifyReportModule(page, fieldsToFill, moduleValues);
+        if (!confirmation) throw new Error(`${module.title}: Save confirmation was not received.`);
+
+        filledFields += moduleFilled;
+        completedModules.push(module.title);
+        updateModule(module, { status: 'completed', filledFields: moduleFilled });
+        addStep(`${module.title}: saved and refreshed (${moduleFilled} field(s)).`);
+      } catch (error) {
+        const moduleScreenshot = page ? await captureFailureScreenshot(page, `${monitoringId}_${module.id}`) : '';
+        updateModule(module, {
+          status: 'failed',
+          reason: error.message,
+          screenshot: moduleScreenshot
+        });
+        addStep(`${module.title}: failed and will require manual review (${error.message}).`);
       }
     }
 
+    const failedModules = moduleResults.filter((module) => module.status === 'failed');
     return {
-      status: 'success', monitoringId, modules: modules.map((module) => module.title),
-      completedModules, filledFields, saved: filledFields > 0, steps
+      status: failedModules.length > 0 ? 'partial' : 'success', monitoringId, modules: modules.map((module) => module.title),
+      completedModules, moduleResults, filledFields, saved: filledFields > 0, steps
     };
   } catch (error) {
     if (page) screenshot = await captureFailureScreenshot(page, monitoringId);
+    for (const moduleResult of moduleResults) {
+      if (moduleResult.status === 'pending' || moduleResult.status === 'running') {
+        const status = moduleResult.status === 'running' ? 'failed' : 'not-run';
+        const reason = moduleResult.status === 'running'
+          ? error.message
+          : `任务在此模块前停止：${error.message}`;
+        Object.assign(moduleResult, { status, reason, screenshot });
+        onModuleProgress?.(structuredClone(moduleResult));
+      }
+    }
     return {
       status: 'failed', monitoringId: monitoringId || '', reason: error.message, screenshot,
-      completedModules, filledFields, saved: completedModules.length > 0, steps
+      completedModules, moduleResults, filledFields, saved: completedModules.length > 0, steps
     };
   } finally {
     if (context) await context.close();
@@ -394,6 +433,85 @@ export async function openReportModule(page, module, reportIndexUrl, addStep) {
   });
   await expandCollapsedPanels(page, addStep);
   addStep(`Opened Report module: ${module.title}.`);
+}
+
+async function prepareRepeatableReportModule(page, module, fieldsToFill, addStep) {
+  const requiredRowsByGroup = new Map();
+  for (const field of fieldsToFill) {
+    const repeatable = field.repeatable;
+    if (!repeatable) continue;
+    requiredRowsByGroup.set(
+      repeatable.groupId,
+      Math.max(requiredRowsByGroup.get(repeatable.groupId) || 0, Number(repeatable.rowIndex) + 1)
+    );
+  }
+
+  for (const [groupId, requiredRows] of requiredRowsByGroup) {
+    const groupFields = module.fields.filter((field) => field.repeatable?.groupId === groupId);
+    const anchorsByRow = new Map();
+    for (const field of groupFields) {
+      const repeatable = field.repeatable;
+      if (!repeatable?.anchorSelector || anchorsByRow.has(repeatable.rowIndex)) continue;
+      anchorsByRow.set(repeatable.rowIndex, repeatable);
+    }
+    const first = anchorsByRow.get(0);
+    if (!first) continue;
+
+    await page.locator(first.anchorSelector).waitFor({ state: 'attached', timeout: 8000 }).catch(() => {
+      throw new Error(`${first.groupLabel}: first repeatable row was not found.`);
+    });
+
+    for (let rowIndex = 1; rowIndex < requiredRows; rowIndex += 1) {
+      const target = anchorsByRow.get(rowIndex);
+      if (!target) continue;
+      if (await page.locator(target.anchorSelector).count() > 0) continue;
+
+      const previous = anchorsByRow.get(rowIndex - 1) || first;
+      const addButton = await locateRepeatableAddButton(page, previous.anchorSelector, previous.addButtonTexts, groupId, rowIndex);
+      await addButton.click();
+      await page.locator(target.anchorSelector).waitFor({ state: 'attached', timeout: 8000 }).catch(() => {
+        throw new Error(`${target.groupLabel}: row ${rowIndex + 1} was not created after clicking its add button.`);
+      });
+    }
+
+    if (requiredRows > 1) addStep(`Prepared ${requiredRows} ${first.groupLabel} row(s).`);
+  }
+}
+
+async function locateRepeatableAddButton(page, anchorSelector, buttonTexts, groupId, rowIndex) {
+  const marker = `autofill-repeatable-${groupId}-${rowIndex}`.replace(/[^a-z0-9_-]/gi, '-');
+  const anchor = page.locator(anchorSelector).first();
+  const found = await anchor.evaluate((element, options) => {
+    const texts = new Set(options.buttonTexts.map((text) => String(text).trim().toLowerCase()));
+    const anchorRect = element.getBoundingClientRect();
+    let container = element.parentElement;
+    while (container && container !== document.body) {
+      const candidates = [...container.querySelectorAll('a, button')]
+        .filter((candidate) => texts.has((candidate.textContent || '').trim().toLowerCase()))
+        .filter((candidate) => candidate.getClientRects().length > 0);
+      if (candidates.length > 0) {
+        candidates.sort((left, right) => {
+          const leftRect = left.getBoundingClientRect();
+          const rightRect = right.getBoundingClientRect();
+          const leftDistance = Math.abs(leftRect.top - anchorRect.bottom) + Math.abs(leftRect.left - anchorRect.left) / 10;
+          const rightDistance = Math.abs(rightRect.top - anchorRect.bottom) + Math.abs(rightRect.left - anchorRect.left) / 10;
+          return leftDistance - rightDistance;
+        });
+        candidates[0].setAttribute('data-autofill-repeatable-add', options.marker);
+        return true;
+      }
+      container = container.parentElement;
+    }
+    return false;
+  }, { buttonTexts, marker });
+
+  if (!found) {
+    throw new Error(`Add button was not found for repeatable group: ${groupId}.`);
+  }
+
+  const button = page.locator(`[data-autofill-repeatable-add="${marker}"]`).first();
+  await button.waitFor({ state: 'visible', timeout: 5000 });
+  return button;
 }
 
 // 展开模块内默认关闭的折叠面板（如 PA 模块的 Finding 折叠区），使其中字段可见、可被填充。

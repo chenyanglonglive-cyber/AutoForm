@@ -2,6 +2,8 @@
 
 个人 Windows 电脑本地运行的 amfori 自动填表工具。它根据本地模板和一个 `Monitoring ID` 打开对应项目，再将确认过的内容写入真实 amfori 页面。
 
+项目 GitHub 地址：<https://github.com/chenyanglonglive-cyber/AutoForm.git>
+
 工具不部署线上，不使用 Python、数据库或 SQLite。账号、浏览器登录态、导入值模板和运行日志均只保留在本机。
 
 ## 当前范围
@@ -111,7 +113,8 @@ data/
   report-schema/index.json          23 个 Report 模块索引
   report-schema/modules/*.json      无值的字段、表格和定位 schema
   report-layout/                    每模块章节/分组/表格/选项组布局与下拉候选项，已忽略
-  templates/default.json            General Description 与附件路径模板
+  templates/default.json            GitHub 随代码发布的出厂默认模板
+  templates/local-default.json      本机 General Description、附件路径与 Monitoring ID，已忽略
   templates/report-imported.json    本机 Report 当前值模板，已忽略
   report_schema.json                原始采集快照，已忽略
   run-logs.jsonl                    本机运行日志，已忽略
@@ -133,7 +136,7 @@ npm run build:report-schema
 - 自动化不会直接调用或重放 amfori 内部写接口，只通过真实网页填写和点击 Save。
 - 找不到字段、模块或保存确认时，任务停止，不继续处理后续模块。
 - 失败截图写入 `data/screenshots/`；操作日志写入 `data/run-logs.jsonl`。
-- 不要提交 `.runtime/`、`report-imported.json`、原始采集快照、日志或截图。
+- 不要提交 `.runtime/`、`local-default.json`、`report-imported.json`、原始采集快照、日志或截图。
 
 ## Report 验证顺序
 

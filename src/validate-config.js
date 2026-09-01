@@ -1,8 +1,9 @@
 import { readJsonFile } from './storage.js';
+import { readLocalTemplate } from './localTemplateStorage.js';
 
 const settings = await readJsonFile('config/settings.json');
 const mapping = await readJsonFile('config/field-mapping.json');
-const template = await readJsonFile('data/templates/default.json');
+const template = await readLocalTemplate();
 
 assert(settings.server?.host, 'settings.server.host is required');
 assert(settings.server?.port, 'settings.server.port is required');

@@ -109,6 +109,21 @@
       </section>
     </main>
 
+    <dialog id="reportRunDialog" class="report-run-dialog" aria-labelledby="reportRunDialogTitle">
+      <section class="report-run-dialog-content">
+        <header class="report-run-dialog-header">
+          <div>
+            <p class="eyebrow">REPORT 执行结果</p>
+            <h2 id="reportRunDialogTitle">模块执行汇总</h2>
+          </div>
+          <button id="closeReportRunDialogButton" class="secondary compact" type="button">关闭</button>
+        </header>
+        <p id="reportRunDialogSummary" class="report-run-dialog-summary"></p>
+        <div id="reportRunDialogList" class="report-run-dialog-list"></div>
+        <p class="hint">标记为“错误”的模块未通过保存校验，请根据错误说明在 amfori 页面中人工复核和修正。</p>
+      </section>
+    </dialog>
+
     <script src="/app.js" type="module"></script>
   </body>
 </html>

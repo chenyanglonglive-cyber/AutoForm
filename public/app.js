@@ -1,3 +1,9 @@
+import {
+  addRepeatableRow,
+  getRepeatableGroupForTable,
+  materializeRepeatableReportModule
+} from './reportRepeatables.js';
+
 const controllerForm = document.querySelector('#controllerForm');
 const runButton = document.querySelector('#runButton');
 const runReportButton = document.querySelector('#runReportButton');
@@ -16,13 +22,29 @@ const reportSummary = document.querySelector('#reportSummary');
 const reportModuleList = document.querySelector('#reportModuleList');
 const reportEditorHeader = document.querySelector('#reportEditorHeader');
 const reportFields = document.querySelector('#reportFields');
+const reportRunDialog = document.querySelector('#reportRunDialog');
+const closeReportRunDialogButton = document.querySelector('#closeReportRunDialogButton');
+const reportRunDialogSummary = document.querySelector('#reportRunDialogSummary');
+const reportRunDialogList = document.querySelector('#reportRunDialogList');
 
 let attachmentPreviewState = null;
 let reportIndex = null;
 let reportTemplate = { version: 1, modules: {} };
 let currentReportModuleId = '';
+let currentReportModule = null;
 let selectedReportModuleIds = new Set();
 let reportDirty = false;
+let reportModuleStates = new Map();
+let reportExecutionRunning = false;
+
+const REPORT_MODULE_STATUS = {
+  pending: '待执行',
+  running: '执行中',
+  completed: '完成',
+  skipped: '已跳过',
+  failed: '错误',
+  'not-run': '未执行'
+};
 
 const PA_ANSWER_OPTIONS = [
   { suffix: 'yes', label: 'Yes' },
@@ -157,6 +179,7 @@ saveCredentialsButton.addEventListener('click', saveCredentials);
 saveReportTemplateButton.addEventListener('click', saveReportTemplate);
 selectAllReportButton.addEventListener('click', toggleAllReportModules);
 runReportButton.addEventListener('click', runReportTask);
+closeReportRunDialogButton.addEventListener('click', () => reportRunDialog.close());
 loadAttachmentsButton.addEventListener('click', loadAttachments);
 uploadAttachmentsButton.addEventListener('click', uploadAttachmentsOnly);
 refreshLogsButton.addEventListener('click', loadLogs);
@@ -200,26 +223,37 @@ async function openReportModule(moduleId) {
     return;
   }
   reportDirty = false;
+  currentReportModule = payload.module;
   renderReportModule(payload.module);
 }
 
 function renderReportModuleList() {
   if (!reportIndex) return;
   reportModuleList.replaceChildren(...reportIndex.modules.map((module) => {
+    const moduleState = reportModuleStates.get(module.id);
     const item = document.createElement('label');
-    item.className = `report-module-item${module.id === currentReportModuleId ? ' active' : ''}`;
+    item.className = `report-module-item${module.id === currentReportModuleId ? ' active' : ''}${moduleState ? ` module-${moduleState.status}` : ''}`;
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = selectedReportModuleIds.has(module.id);
+    checkbox.disabled = reportExecutionRunning;
     checkbox.addEventListener('change', () => {
       checkbox.checked ? selectedReportModuleIds.add(module.id) : selectedReportModuleIds.delete(module.id);
       updateReportSelectionButton();
     });
     const button = document.createElement('button');
     button.type = 'button';
+    button.disabled = reportExecutionRunning;
     button.textContent = `${module.title} (${module.fieldCount})`;
     button.addEventListener('click', () => openReportModule(module.id));
     item.append(checkbox, button);
+    if (moduleState) {
+      const status = document.createElement('span');
+      status.className = `module-status ${moduleState.status}`;
+      status.textContent = REPORT_MODULE_STATUS[moduleState.status] || moduleState.status;
+      status.title = moduleState.reason || status.textContent;
+      item.append(status);
+    }
     return item;
   }));
   updateReportSelectionButton();
@@ -242,6 +276,8 @@ function toggleAllReportModules() {
 }
 
 function renderReportModule(module) {
+  currentReportModule = module;
+  module = materializeRepeatableReportModule(module, reportTemplate.modules?.[module.id] || {});
   reportEditorHeader.replaceChildren();
   const title = document.createElement('h3');
   title.textContent = module.title;
@@ -514,7 +550,27 @@ function renderLayoutBlock(block, fieldById, module, coveredKeys) {
     case 'table': {
       if (!Array.isArray(block.rows) || block.rows.length === 0) return null;
       for (const row of block.rows) for (const key of row) if (key != null && fieldById.has(key)) coveredKeys.add(key);
-      return renderReportTable(block, fieldById, module.id);
+      const table = renderReportTable(block, fieldById, module.id);
+      const repeatableGroup = getRepeatableGroupForTable(module.id, block);
+      if (!table || !repeatableGroup) return table;
+      const wrapper = document.createElement('div');
+      wrapper.className = 'report-repeatable';
+      const addButton = document.createElement('button');
+      addButton.type = 'button';
+      addButton.className = 'secondary compact';
+      addButton.textContent = `添加${repeatableGroup.label}`;
+      addButton.addEventListener('click', () => {
+        reportTemplate.modules ??= {};
+        reportTemplate.modules[module.id] = addRepeatableRow(
+          reportTemplate.modules[module.id] || {},
+          repeatableGroup,
+          module
+        );
+        reportDirty = true;
+        renderReportModule(currentReportModule);
+      });
+      wrapper.append(table, addButton);
+      return wrapper;
     }
     default:
       return null;
@@ -622,16 +678,115 @@ async function runReportTask() {
   if (!monitoringId) return setStatus('failed', '请输入 Monitoring ID 后再执行 Report');
   if (moduleIds.length === 0) return setStatus('failed', '请先选择至少一个 Report 模块');
   const names = reportIndex.modules.filter((item) => moduleIds.includes(item.id)).map((item) => item.title);
-  if (!window.confirm(`将向 ${monitoringId} 写入 ${names.length} 个 Report 模块。每个模块保存后会刷新校验；失败将停止在对应模块。\n\n${names.join('\n')}\n\n确认继续吗？`)) return;
-  setRunning(true); setStatus('running', '正在执行 Report 模块，浏览器会自动打开。'); resultBox.textContent = '';
+  if (!window.confirm(`将向 ${monitoringId} 写入 ${names.length} 个 Report 模块。每个模块保存后会刷新校验；单个模块失败会记录并继续后续模块。\n\n${names.join('\n')}\n\n确认继续吗？`)) return;
+
+  const runId = createReportRunId();
+  reportExecutionRunning = true;
+  applyReportModuleStates(moduleIds.map((id) => ({ id, status: 'pending', reason: '' })));
+  setRunning(true); setStatus('running', `正在执行 ${moduleIds.length} 个 Report 模块，浏览器会自动打开。`); resultBox.textContent = '';
+  const progressTimer = window.setInterval(() => refreshReportRunProgress(runId), 1200);
   try {
     const payload = await requestJson('/api/report/run', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ monitoringId, moduleIds, template: reportTemplate })
+      body: JSON.stringify({ runId, monitoringId, moduleIds, template: reportTemplate })
     });
-    setStatus(payload.ok ? 'success' : 'failed', payload.ok ? 'Report 执行成功，已逐模块确认保存' : (payload.error || payload.result?.reason || 'Report 执行失败'));
-    resultBox.textContent = JSON.stringify(payload.result || payload, null, 2); await loadLogs();
-  } catch (error) { setStatus('failed', error.message); } finally { setRunning(false); }
+    const result = payload.result || payload.progress || { status: 'failed', reason: payload.error || 'Report 执行失败', moduleResults: [] };
+    applyReportModuleStates(result.moduleResults || []);
+    const summary = summarizeReportRun(result.moduleResults || []);
+    const statusType = result.status === 'success' ? 'success' : result.status === 'partial' ? 'partial' : 'failed';
+    const message = result.status === 'success'
+      ? `Report 执行完成：${summary.completed} 个模块已完成。`
+      : result.status === 'partial'
+        ? `Report 执行完成：${summary.completed} 个完成，${summary.failed} 个需人工处理。`
+        : (result.reason || 'Report 执行失败，请查看模块汇总。');
+    setStatus(statusType, message);
+    resultBox.textContent = formatReportRunSummary(summary, result.reason);
+    showReportRunDialog(result, moduleIds);
+    await loadLogs();
+  } catch (error) {
+    setStatus('failed', error.message);
+    resultBox.textContent = error.message;
+    showReportRunDialog({ status: 'failed', reason: error.message, moduleResults: [...reportModuleStates.values()] }, moduleIds);
+  } finally {
+    window.clearInterval(progressTimer);
+    await refreshReportRunProgress(runId);
+    reportExecutionRunning = false;
+    renderReportModuleList();
+    setRunning(false);
+  }
+}
+
+function createReportRunId() {
+  return typeof crypto.randomUUID === 'function'
+    ? crypto.randomUUID()
+    : `report-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+async function refreshReportRunProgress(runId) {
+  const payload = await requestJson(`/api/report/run-progress?runId=${encodeURIComponent(runId)}`);
+  if (payload.ok && payload.progress?.moduleResults) applyReportModuleStates(payload.progress.moduleResults);
+}
+
+function applyReportModuleStates(moduleResults) {
+  if (!Array.isArray(moduleResults) || moduleResults.length === 0) return;
+  reportModuleStates = new Map(moduleResults.map((result) => [result.id, result]));
+  renderReportModuleList();
+}
+
+function summarizeReportRun(moduleResults) {
+  const results = Array.isArray(moduleResults) ? moduleResults : [];
+  return {
+    completed: results.filter((result) => result.status === 'completed').length,
+    failed: results.filter((result) => result.status === 'failed').length,
+    skipped: results.filter((result) => result.status === 'skipped').length,
+    notRun: results.filter((result) => result.status === 'not-run').length,
+    running: results.filter((result) => result.status === 'running' || result.status === 'pending').length
+  };
+}
+
+function formatReportRunSummary(summary, reason = '') {
+  const lines = [`完成：${summary.completed}`, `错误：${summary.failed}`, `已跳过：${summary.skipped}`];
+  if (summary.notRun) lines.push(`未执行：${summary.notRun}`);
+  if (summary.running) lines.push(`执行中：${summary.running}`);
+  if (reason) lines.push(`原因：${reason}`);
+  return lines.join('\n');
+}
+
+function showReportRunDialog(result, moduleIds) {
+  const resultsById = new Map((result.moduleResults || []).map((module) => [module.id, module]));
+  const results = moduleIds.map((id) => resultsById.get(id) || {
+    id,
+    title: reportIndex.modules.find((module) => module.id === id)?.title || id,
+    status: 'not-run',
+    reason: result.reason || '未收到该模块的执行结果。'
+  });
+  const summary = summarizeReportRun(results);
+  reportRunDialogSummary.textContent = result.status === 'success'
+    ? `全部执行完成：${summary.completed} 个模块已通过保存校验。`
+    : `执行结束：${summary.completed} 个完成，${summary.failed} 个错误，${summary.skipped} 个跳过，${summary.notRun} 个未执行。`;
+  reportRunDialogList.replaceChildren(...results.map((module) => {
+    const item = document.createElement('article');
+    item.className = `report-run-result ${module.status}`;
+    const title = document.createElement('strong');
+    title.textContent = module.title;
+    const status = document.createElement('span');
+    status.className = `module-status ${module.status}`;
+    status.textContent = REPORT_MODULE_STATUS[module.status] || module.status;
+    item.append(title, status);
+    if (module.status === 'completed') {
+      const detail = document.createElement('small');
+      detail.textContent = `已保存并刷新校验，共 ${module.filledFields || 0} 个字段。`;
+      item.append(detail);
+    }
+    if (module.reason) {
+      const detail = document.createElement('p');
+      detail.className = 'report-run-error';
+      detail.textContent = module.reason;
+      item.append(detail);
+    }
+    return item;
+  }));
+  if (typeof reportRunDialog.showModal === 'function') reportRunDialog.showModal();
 }
 
 async function saveTemplate() {
@@ -691,7 +846,14 @@ function renderAttachmentPreview(files) { attachmentPreview.replaceChildren(); c
 async function loadLogs() { const payload = await requestJson('/api/logs?limit=20'); if (!payload.ok) return; logsBox.innerHTML = payload.logs.length ? payload.logs.map(renderLog).join('') : '<p class="hint">暂无日志</p>'; }
 async function requestJson(url, options) { const response = await fetch(url, options); const payload = await response.json().catch(() => ({ ok: false, error: '服务器返回无效数据。' })); return { ...payload, ok: response.ok && payload.ok }; }
 function getOverwriteFieldLabels(template) { const labels = { generalDescription: 'General Description', confidentialComments: 'Confidential Comments' }; return Object.entries(template.fields).filter(([, value]) => String(value || '').trim()).map(([key]) => labels[key] || key); }
-function renderLog(log) { const reason = log.reason ? `<div>${escapeHtml(log.reason)}</div>` : ''; return `<article class="log"><strong>${escapeHtml(log.status || '')} ${escapeHtml(log.monitoringId || '')}</strong><small>${escapeHtml(log.time || '')}</small><div>字段：${Number(log.filledFields || 0)}，附件：${Number(log.uploadedFiles || 0)}，${log.saved ? '已确认保存' : '未 Save'}</div>${reason}</article>`; }
+function renderLog(log) {
+  const reason = log.reason ? `<div>${escapeHtml(log.reason)}</div>` : '';
+  const moduleResults = Array.isArray(log.moduleResults) ? log.moduleResults : [];
+  const moduleSummary = moduleResults.length > 0
+    ? `<div>模块：完成 ${moduleResults.filter((module) => module.status === 'completed').length}，错误 ${moduleResults.filter((module) => module.status === 'failed').length}，跳过 ${moduleResults.filter((module) => module.status === 'skipped').length}</div>`
+    : '';
+  return `<article class="log"><strong>${escapeHtml(log.status || '')} ${escapeHtml(log.monitoringId || '')}</strong><small>${escapeHtml(log.time || '')}</small><div>字段：${Number(log.filledFields || 0)}，附件：${Number(log.uploadedFiles || 0)}，${log.saved ? '已确认保存' : '未 Save'}</div>${moduleSummary}${reason}</article>`;
+}
 function setRunning(running) { for (const button of [runButton, runReportButton, saveCredentialsButton, saveTemplateButton, saveReportTemplateButton, loadAttachmentsButton, uploadAttachmentsButton, selectAllReportButton]) button.disabled = running; }
 function setStatus(type, message) { statusBox.className = `status ${type}`; statusBox.textContent = message; }
 function getValue(id) { return document.querySelector(`#${id}`).value.trim(); }

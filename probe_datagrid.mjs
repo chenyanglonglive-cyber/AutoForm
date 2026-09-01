@@ -2,12 +2,13 @@
 import { chromium } from 'playwright';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { readLocalTemplate } from './src/localTemplateStorage.js';
 
 const root = process.cwd();
 const settings = JSON.parse(await fs.readFile(path.join(root, 'config/settings.json'), 'utf8'));
 let credentials = {};
 try { credentials = JSON.parse(await fs.readFile(path.join(root, '.runtime/credentials.json'), 'utf8')); } catch {}
-const template = JSON.parse(await fs.readFile(path.join(root, 'data/templates/default.json'), 'utf8'));
+const template = await readLocalTemplate();
 const monitoringId = template.monitoringId;
 const userDataDir = path.resolve(root, settings.amfori.browserUserDataDir);
 const targets = (process.argv[2] || '1,8').split(',').map(Number); // 模块序号

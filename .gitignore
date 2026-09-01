@@ -1,4 +1,5 @@
 node_modules/
+log/
 .runtime/
 .codegraph/
 .env
@@ -7,6 +8,7 @@ node_modules/
 delivery-packages/
 data/report_schema.json
 data/templates/report-imported.json
+data/templates/local-default.json
 data/report_layout.json
 data/report-layout/
 data/report_dom_probe.json

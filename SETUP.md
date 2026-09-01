@@ -2,6 +2,8 @@
 
 这份清单让一个全新的 agent 能从「空目录 / 干净 clone」一路把项目跑起来。按顺序执行即可，每一步都标了**为什么**和**怎么验证**。
 
+项目 GitHub 地址：<https://github.com/chenyanglonglive-cyber/AutoForm.git>
+
 > 项目定位：本地 Windows 上运行的 amfori 自动填表工具，Node.js + Playwright，不部署线上、不用数据库。核心是「本地 Report 模板结构与目标 amfori 页面结构对齐，供人工逐项对照并回填真实项目」。
 
 ---
@@ -54,7 +56,8 @@ npx playwright install chromium
 ```text
 config/settings.json          平台地址、登录选择器、浏览器 profile 路径、超时
 config/field-mapping.json     General Description / Report / 附件的 tab 与字段 selector
-data/templates/default.json   默认业务模板（monitoringId、附件目录、General Description 字段）
+data/templates/default.json         GitHub 发布的出厂默认模板
+data/templates/local-default.json   本机业务模板（monitoringId、附件目录、General Description 字段，自动生成且忽略）
 public/                       本地前端（index.html / app.js / styles.css）
 src/                          本机 HTTP 服务、存储、Report 读写、自动化 bot
 ```
@@ -76,7 +79,7 @@ scrape_report_full.mjs      →  data/report_schema.json         （原始采集
 scrape_report_layout.mjs    →  data/report-layout/modules/*.json（布局树，忽略）
 scrape_report_options.mjs   →  data/report-layout/options.json （ui-select 候选项，忽略）
 scripts/build-report-schema.mjs → data/report-schema/（已构建 schema，应提交）
-                               + data/templates/report-imported.json（本机当前值模板，忽略）
+                               + data/templates/local-default.json / report-imported.json（本机当前值模板，忽略）
 ```
 
 | 路径 | 性质 | 作用 | 缺失时怎么办 |
@@ -85,6 +88,7 @@ scripts/build-report-schema.mjs → data/report-schema/（已构建 schema，应
 | `data/report_schema.json` | 忽略 | 原始采集快照，重建 schema 的输入 | 跑 `scrape_report_full.mjs` |
 | `data/report-layout/` | 忽略 | 每模块章节/分组/表格/选项组布局 + ui-select 候选项 | 跑 `scrape_report_layout.mjs` + `scrape_report_options.mjs` |
 | `data/templates/report-imported.json` | 忽略 | 本机 Report 当前已填值 | 缺失时服务自动回退为空模板，无需手动建 |
+| `data/templates/local-default.json` | 忽略 | 本机 Monitoring ID、附件路径和基础表单值 | 首次启动时从 `default.json` 自动迁移 |
 | `.runtime/credentials.json` | 忽略 | amfori 账号密码（本机） | 在 UI「保存本地登录信息」，或手动建 |
 | `.runtime/browser-profile/` | 忽略 | Playwright 登录态 | 首次运行自动化时自动登录生成 |
 | `data/run-logs.jsonl` / `data/screenshots/` | 忽略 | 运行日志 / 失败截图 | 服务启动时自动创建 |
@@ -110,7 +114,7 @@ scripts/build-report-schema.mjs → data/report-schema/（已构建 schema，应
 
 ### 5.2 指定目标 Monitoring ID
 
-采集脚本从 `data/templates/default.json` 的 `monitoringId` 读目标项目。**先改成你要操作的那个项目**（在 UI 的 `Monitoring ID` 输入框保存，或直接改 default.json）。
+采集脚本从 `data/templates/local-default.json` 的 `monitoringId` 读目标项目。**先改成你要操作的那个项目**（在 UI 的 `Monitoring ID` 输入框保存即可）。
 
 > 安全规则：每次只操作**一个** `Monitoring ID`，采集脚本只读、不写真实数据。
 
@@ -173,7 +177,7 @@ curl -s http://127.0.0.1:3000/api/report/index
 - [ ] 第 2 步已下载 Chromium（`npx playwright install chromium`）
 - [ ] `.runtime/credentials.json` 有账号密码（或已通过 UI 保存）
 - [ ] `.runtime/browser-profile/` 存在且登录态有效（失效时脚本会尝试自动登录）
-- [ ] `data/templates/default.json` 的 `monitoringId` 是要操作的项目
+- [ ] `data/templates/local-default.json` 的 `monitoringId` 是要操作的项目
 
 > 首次运行可能弹出手动登录窗口，观察浏览器里是否已登录到 amfori 待办页。
 
@@ -203,7 +207,7 @@ curl -s http://127.0.0.1:3000/api/report/index
 - **登录态失效 / 采集脚本卡在登录**：删 `.runtime/browser-profile/` 后重跑，脚本会走账号密码自动登录；或先手动登录一次。
 - **`Report schema 读取失败`**：`data/report-schema/` 缺失，走第 5 步重建。
 - **采集脚本只读安全**：采集器登录后 `page.route` 拦截并 abort 非 GET 写请求；不会触发线上 Save。不要删掉这层拦截。
-- **不要提交**：`.runtime/`、`data/report_schema.json`、`data/report-layout/`、`data/templates/report-imported.json`、`data/run-logs.jsonl`、`data/screenshots/*`、`node_modules/`（详见 `.gitignore`）。
+- **不要提交**：`.runtime/`、`data/report_schema.json`、`data/report-layout/`、`data/templates/local-default.json`、`data/templates/report-imported.json`、`data/run-logs.jsonl`、`data/screenshots/*`、`node_modules/`（详见 `.gitignore`）。
 
 ---
 
