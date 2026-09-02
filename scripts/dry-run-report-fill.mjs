@@ -21,6 +21,7 @@ const WRITE_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
 const RESULT_PATH = 'data/report-dry-run-result.json';
 const SCREENSHOT_DIR = 'data/screenshots';
 const openOnly = process.argv.includes('--open-only') || process.argv.includes('--expand-only');
+const requestedModuleIds = parseRequestedModuleIds(process.argv);
 
 loadDotEnv();
 const settings = await readJsonFile('config/settings.json');
@@ -28,14 +29,15 @@ const baseTemplate = await readLocalTemplate();
 const reportTemplate = await readJsonFile('data/templates/report-imported.json');
 const reportIndex = await readJsonFile('data/report-schema/index.json');
 const credentials = mergeCredentials(await readJsonSafe('.runtime/credentials.json'));
-const monitoringId = String(baseTemplate.monitoringId || '').trim();
+const monitoringId = String(readArgumentValue(process.argv, '--monitoring-id') || baseTemplate.monitoringId || '').trim();
 
 if (!monitoringId) {
   throw new Error('Monitoring ID is required in data/templates/local-default.json.');
 }
 
 const reportValues = reportTemplate.modules || {};
-const modules = await loadReportModules(reportIndex);
+const allModules = await loadReportModules(reportIndex);
+const modules = selectRequestedModules(allModules, requestedModuleIds);
 const steps = [];
 const writeRequests = [];
 let browser = null;
@@ -126,6 +128,31 @@ async function loadReportModules(index) {
     });
   }
   return loaded.sort((left, right) => Number(left.sectionOrder) - Number(right.sectionOrder));
+}
+
+function parseRequestedModuleIds(args) {
+  const argument = readArgumentValue(args, '--modules');
+  if (!argument) return [];
+  return String(argument)
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
+function readArgumentValue(args, name) {
+  const prefix = `${name}=`;
+  const argument = args.find((value) => String(value).startsWith(prefix));
+  return argument ? String(argument).slice(prefix.length) : '';
+}
+
+function selectRequestedModules(allModules, requestedIds) {
+  if (requestedIds.length === 0) return allModules;
+  const modulesById = new Map(allModules.map((module) => [module.id, module]));
+  const missingIds = requestedIds.filter((id) => !modulesById.has(id));
+  if (missingIds.length > 0) {
+    throw new Error(`Unknown Report module ID(s): ${missingIds.join(', ')}`);
+  }
+  return requestedIds.map((id) => modulesById.get(id));
 }
 
 async function installWriteBlocker(browserContext, blockedRequests) {
