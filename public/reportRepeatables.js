@@ -28,6 +28,22 @@ const REPEATABLE_GROUPS = {
   ],
   '08-sampled-workers': [
     { id: 'sampled-workers', label: '员工', seedKey: 'SampledWorkerName-0-0', addButtonTexts: ['Add Another'] }
+  ],
+  '10-interview-evidence': [
+    {
+      id: 'worker-categories',
+      label: '访谈工人类别',
+      seedKey: '10-interview-evidence__search_5',
+      anchorKey: 'WorkerCategoriesInterviewedMale-0-1',
+      addButtonTexts: ['Add Another']
+    },
+    {
+      id: 'interview-details',
+      label: '访谈详情',
+      seedKey: '10-interview-evidence__search_22',
+      anchorKey: 'InterviewDetailsLanguage-0-0',
+      addButtonTexts: ['Add Another']
+    }
   ]
 };
 

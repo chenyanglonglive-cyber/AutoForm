@@ -5,6 +5,7 @@ import module from '../data/report-schema/modules/08-sampled-workers.json' with 
 import socialModule from '../data/report-schema/modules/03-social-performance-management.json' with { type: 'json' };
 import productionModule from '../data/report-schema/modules/04-production-and-employment-structure.json' with { type: 'json' };
 import remunerationModule from '../data/report-schema/modules/05-remuneration-and-working-hours.json' with { type: 'json' };
+import interviewModule from '../data/report-schema/modules/10-interview-evidence.json' with { type: 'json' };
 
 test('adds sampled-worker fields and rows beyond the five schema rows', () => {
   const template = addRepeatableRow({ __repeatableRowCounts: { 'sampled-workers': 6 } }, {
@@ -39,4 +40,20 @@ test('expands each feedback-table group without changing the original schema', (
   assert.ok(remuneration.fields.some((field) => field.key === 'BenefitsNonCBADetails-2-0'));
   assert.ok(remuneration.fields.some((field) => field.key === 'panelSampleDetailsWeeklyStandardWh-3-1'));
   assert.equal(socialModule.fields.some((field) => field.key === 'FoARepresentativesTitle-3-0'), false);
+});
+
+test('marks Interview Evidence rows as repeatable', () => {
+  const expanded = materializeRepeatableReportModule(interviewModule, {});
+  const categoryFields = expanded.fields.filter((field) => field.repeatable?.groupId === 'worker-categories');
+  const detailFields = expanded.fields.filter((field) => field.repeatable?.groupId === 'interview-details');
+
+  assert.equal(categoryFields.length, 12);
+  assert.equal(detailFields.length, 28);
+  assert.equal(expanded.fields.find((field) => field.key === '10-interview-evidence__search_10').repeatable.rowIndex, 1);
+  assert.equal(expanded.fields.find((field) => field.key === '10-interview-evidence__search_55').repeatable.rowIndex, 3);
+  assert.equal(
+    expanded.fields.find((field) => field.key === '10-interview-evidence__search_20').label,
+    'Were interpreters used during this activity?'
+  );
+  assert.equal(expanded.fields.find((field) => field.key === '10-interview-evidence__search_22').label, 'Interview type');
 });

@@ -384,6 +384,12 @@ select:focus {
   color: #243044;
 }
 
+.report-choice-warning {
+  display: block;
+  margin: 0 0 10px;
+  color: #a63a18;
+}
+
 .report-table-wrap {
   overflow: auto;
   margin-bottom: 18px;

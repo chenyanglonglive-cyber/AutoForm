@@ -3,6 +3,7 @@ import {
   getRepeatableGroupForTable,
   materializeRepeatableReportModule
 } from './reportRepeatables.js';
+import { isCheckedTemplateValue, normalizeExclusiveChoiceValues } from './reportChoices.js';
 
 const controllerForm = document.querySelector('#controllerForm');
 const runButton = document.querySelector('#runButton');
@@ -553,11 +554,20 @@ function renderLayoutBlock(block, fieldById, module, coveredKeys) {
       const legend = document.createElement('legend');
       legend.textContent = block.label || '';
       fieldset.append(legend);
+      const choiceGroup = block.controlType === 'radio'
+        ? prepareExclusiveChoiceGroup(module.id, block.optionKeys || [])
+        : null;
+      if (choiceGroup?.conflicted) {
+        const warning = document.createElement('small');
+        warning.className = 'report-choice-warning';
+        warning.textContent = '旧模板中同时选择了多个选项，请重新选择一个。';
+        fieldset.append(warning);
+      }
       for (const key of block.optionKeys || []) {
         const field = fieldById.get(key);
         if (!field) continue;
         coveredKeys.add(field.key);
-        fieldset.append(renderReportField(field, module.id));
+        fieldset.append(renderReportField(field, module.id, '', choiceGroup));
       }
       return fieldset;
     }
@@ -620,7 +630,7 @@ function renderReportTable(table, fieldById, moduleId) {
   element.append(body); wrapper.append(element); return wrapper;
 }
 
-function renderReportField(field, moduleId, overrideLabel = '') {
+function renderReportField(field, moduleId, overrideLabel = '', choiceGroup = null) {
   const wrapper = document.createElement('label');
   wrapper.className = 'report-field';
   const label = document.createElement('span');
@@ -640,7 +650,12 @@ function renderReportField(field, moduleId, overrideLabel = '') {
     input.value = value ?? '';
   } else if (field.type === 'radio' || field.type === 'checkbox') {
     wrapper.classList.add('report-choice');
-    input = document.createElement('input'); input.type = field.type; input.checked = Boolean(value);
+    input = document.createElement('input');
+    input.type = field.type;
+    if (field.type === 'radio' && choiceGroup) input.name = choiceGroup.name;
+    input.checked = choiceGroup
+      ? choiceGroup.selectedKey === field.key
+      : isCheckedTemplateValue(value);
     wrapper.replaceChildren(input, label);
   } else {
     input = document.createElement('input');
@@ -650,10 +665,30 @@ function renderReportField(field, moduleId, overrideLabel = '') {
   }
   input.dataset.reportModule = moduleId;
   input.dataset.reportKey = field.key;
-  input.addEventListener('input', persistReportInput);
-  input.addEventListener('change', persistReportInput);
+  if (field.type === 'radio' && choiceGroup) {
+    input.dataset.reportRadioGroup = choiceGroup.keys.join('|');
+    input.addEventListener('change', persistPaAnswerInput);
+  } else {
+    input.addEventListener('input', persistReportInput);
+    input.addEventListener('change', persistReportInput);
+  }
   if (!wrapper.contains(input)) wrapper.append(input);
   return wrapper;
+}
+
+function prepareExclusiveChoiceGroup(moduleId, keys) {
+  reportTemplate.modules ??= {};
+  reportTemplate.modules[moduleId] ??= {};
+  const values = reportTemplate.modules[moduleId];
+  const { selectedKey, conflicted, changed } = normalizeExclusiveChoiceValues(values, keys);
+  if (changed) reportDirty = true;
+
+  return {
+    name: `report-radio-${moduleId}-${keys[0] || 'group'}`,
+    keys,
+    selectedKey,
+    conflicted
+  };
 }
 
 function persistReportInput(event) {
