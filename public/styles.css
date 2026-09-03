@@ -46,6 +46,19 @@ h1 {
   font-size: 28px;
 }
 
+.app-version {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border: 1px solid #cbd8e8;
+  border-radius: 999px;
+  color: #51647d;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
 h2 {
   margin-bottom: 14px;
   font-size: 18px;
