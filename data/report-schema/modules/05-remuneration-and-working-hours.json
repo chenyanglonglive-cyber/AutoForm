@@ -1575,6 +1575,10 @@
       "required": false,
       "disabled": false,
       "readOnly": false,
+      "visibleWhen": {
+        "field": "05-remuneration-and-working-hours__search_19",
+        "equals": "GLWC website"
+      },
       "options": [],
       "groupValues": []
     },
@@ -1589,6 +1593,10 @@
       "required": false,
       "disabled": false,
       "readOnly": false,
+      "visibleWhen": {
+        "field": "05-remuneration-and-working-hours__search_19",
+        "equals": "GLWC website"
+      },
       "options": [
         {
           "value": "string:00",
@@ -1656,6 +1664,10 @@
       "required": false,
       "disabled": false,
       "readOnly": false,
+      "visibleWhen": {
+        "field": "05-remuneration-and-working-hours__search_19",
+        "equals": "GLWC website"
+      },
       "options": [],
       "groupValues": []
     },
@@ -2853,6 +2865,14 @@
           "label": "June"
         },
         {
+          "value": "July",
+          "label": "July"
+        },
+        {
+          "value": "August",
+          "label": "August"
+        },
+        {
           "value": "September",
           "label": "September"
         },
@@ -2863,6 +2883,10 @@
         {
           "value": "November",
           "label": "November"
+        },
+        {
+          "value": "December",
+          "label": "December"
         }
       ],
       "groupValues": [],

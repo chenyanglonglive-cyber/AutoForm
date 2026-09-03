@@ -184,7 +184,11 @@ export async function runAmforiReportAutomation({ monitoringId, modules, values,
     for (const module of modules) {
       updateModule(module, { status: 'running', reason: '', screenshot: '' });
       const moduleValues = values?.[module.id] || {};
-      const fieldsToFill = module.fields.filter((field) => hasTemplateValue(moduleValues, field));
+      const { fieldsToFill, skippedConditionalFields } = getReportFieldsToFill(moduleValues, module.fields);
+      if (skippedConditionalFields.length > 0) {
+        const labels = skippedConditionalFields.map((field) => field.label || field.key).join(', ');
+        addStep(`${module.title}: skipped hidden conditional field(s): ${labels}.`);
+      }
       if (fieldsToFill.length === 0) {
         addStep(`${module.title}: no local values, skipped.`);
         completedModules.push(module.title);
@@ -557,6 +561,32 @@ export function hasTemplateValue(values, field) {
   if (!Object.hasOwn(values, field.key)) return false;
   const value = values[field.key];
   return typeof value === 'boolean' || String(value ?? '').trim() !== '';
+}
+
+// Some amfori controls only exist after a preceding answer has been selected.
+// Keep that dependency in the schema so templates from another audit do not
+// fail merely because they retain values for a currently hidden control.
+export function getReportFieldsToFill(values, fields) {
+  const fieldsToFill = [];
+  const skippedConditionalFields = [];
+
+  for (const field of fields) {
+    if (!hasTemplateValue(values, field)) continue;
+    if (!matchesFieldVisibilityCondition(values, field.visibleWhen)) {
+      skippedConditionalFields.push(field);
+      continue;
+    }
+    fieldsToFill.push(field);
+  }
+
+  return { fieldsToFill, skippedConditionalFields };
+}
+
+export function matchesFieldVisibilityCondition(values, condition) {
+  if (!condition) return true;
+  const actual = String(values?.[condition.field] ?? '').trim();
+  const expected = Array.isArray(condition.equals) ? condition.equals : [condition.equals];
+  return expected.map((value) => String(value ?? '').trim()).includes(actual);
 }
 
 export async function fillReportField(page, field, value) {
