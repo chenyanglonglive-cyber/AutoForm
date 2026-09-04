@@ -195,15 +195,24 @@ export async function runAmforiReportAutomation({ monitoringId, modules, values,
         updateModule(module, { status: 'skipped' });
         continue;
       }
+      const missingRequiredFields = getMissingTemplateRequiredFields(moduleValues, module.fields);
+      if (missingRequiredFields.length > 0) {
+        const labels = missingRequiredFields.map(formatRequiredFieldLabel).join(', ');
+        const reason = `模板缺少生产页面必填项：${labels}`;
+        updateModule(module, { status: 'failed', reason });
+        addStep(`${module.title}: ${reason}.`);
+        continue;
+      }
 
       try {
         await openReportModule(page, module, reportIndexUrl, addStep);
-        await prepareRepeatableReportModule(page, module, fieldsToFill, addStep);
-        let moduleFilled = 0;
-        for (const field of fieldsToFill) {
-          await fillReportField(page, field, moduleValues[field.key]);
-          moduleFilled += 1;
-        }
+        const moduleFilled = await fillReportModuleFields(
+          page,
+          module,
+          fieldsToFill,
+          moduleValues,
+          addStep
+        );
 
         const confirmation = await clickSave(page, {
           selector: '#saveButtonTop:visible, button#saveButton:visible'
@@ -211,7 +220,6 @@ export async function runAmforiReportAutomation({ monitoringId, modules, values,
         await page.reload({ waitUntil: 'domcontentloaded' });
         await page.waitForTimeout(Number(settings.automation.saveSettleMs || 2500));
         await openReportModule(page, module, reportIndexUrl, addStep);
-        await prepareRepeatableReportModule(page, module, fieldsToFill, addStep);
         await verifyReportModule(page, fieldsToFill, moduleValues);
         if (!confirmation) throw new Error(`${module.title}: Save confirmation was not received.`);
 
@@ -465,6 +473,7 @@ async function prepareRepeatableReportModule(page, module, fieldsToFill, addStep
       throw new Error(`${first.groupLabel}: first repeatable row was not found.`);
     });
 
+    let addedRows = 0;
     for (let rowIndex = 1; rowIndex < requiredRows; rowIndex += 1) {
       const target = anchorsByRow.get(rowIndex);
       if (!target) continue;
@@ -476,9 +485,10 @@ async function prepareRepeatableReportModule(page, module, fieldsToFill, addStep
       await page.locator(target.anchorSelector).waitFor({ state: 'attached', timeout: 8000 }).catch(() => {
         throw new Error(`${target.groupLabel}: row ${rowIndex + 1} was not created after clicking its add button.`);
       });
+      addedRows += 1;
     }
 
-    if (requiredRows > 1) addStep(`Prepared ${requiredRows} ${first.groupLabel} row(s).`);
+    if (addedRows > 0) addStep(`Prepared ${requiredRows} ${first.groupLabel} row(s).`);
   }
 }
 
@@ -587,6 +597,51 @@ export function matchesFieldVisibilityCondition(values, condition) {
   const actual = String(values?.[condition.field] ?? '').trim();
   const expected = Array.isArray(condition.equals) ? condition.equals : [condition.equals];
   return expected.map((value) => String(value ?? '').trim()).includes(actual);
+}
+
+export function getMissingTemplateRequiredFields(values, fields) {
+  const moduleHasValues = fields.some((field) => hasTemplateValue(values, field));
+  if (!moduleHasValues) return [];
+
+  return fields.filter((field) => {
+    if (!field.templateRequired || hasTemplateValue(values, field)) return false;
+    if (field.templateRequired === 'module') return true;
+    if (field.templateRequired !== 'repeatable-row' || !field.repeatable) return false;
+    return fields.some((candidate) =>
+      candidate.key !== field.key
+      && candidate.repeatable?.groupId === field.repeatable.groupId
+      && Number(candidate.repeatable?.rowIndex) === Number(field.repeatable.rowIndex)
+      && hasTemplateValue(values, candidate)
+    );
+  });
+}
+
+function formatRequiredFieldLabel(field) {
+  if (!field.repeatable) return field.label || field.key;
+  return `${field.label || field.key}（第 ${Number(field.repeatable.rowIndex) + 1} 行）`;
+}
+
+export async function fillReportModuleFields(
+  page,
+  module,
+  fieldsToFill,
+  values,
+  addStep,
+  dependencies = {}
+) {
+  const ensureFieldRow = dependencies.ensureFieldRow || prepareRepeatableReportModule;
+  const fillField = dependencies.fillField || fillReportField;
+  let filledFields = 0;
+
+  // Some amfori grids reject Add Another until the preceding required row is complete.
+  // Ensure each row immediately before its first populated field is filled.
+  for (const field of fieldsToFill) {
+    await ensureFieldRow(page, module, [field], addStep);
+    await fillField(page, field, values[field.key]);
+    filledFields += 1;
+  }
+
+  return filledFields;
 }
 
 export async function fillReportField(page, field, value) {

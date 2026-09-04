@@ -634,7 +634,7 @@ function renderReportField(field, moduleId, overrideLabel = '', choiceGroup = nu
   const wrapper = document.createElement('label');
   wrapper.className = 'report-field';
   const label = document.createElement('span');
-  label.textContent = overrideLabel || field.label || field.key;
+  label.textContent = `${overrideLabel || field.label || field.key}${field.templateRequired ? ' *' : ''}`;
   wrapper.append(label);
   const value = reportTemplate.modules?.[moduleId]?.[field.key];
   let input;

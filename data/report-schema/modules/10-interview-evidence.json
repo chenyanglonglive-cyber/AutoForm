@@ -977,7 +977,8 @@
       "name": "",
       "selector": "",
       "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
-      "required": false,
+      "required": true,
+      "templateRequired": "module",
       "disabled": false,
       "readOnly": false,
       "options": [
@@ -1002,7 +1003,8 @@
       "name": "",
       "selector": "",
       "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
-      "required": false,
+      "required": true,
+      "templateRequired": "repeatable-row",
       "disabled": false,
       "readOnly": false,
       "options": [
@@ -1156,7 +1158,8 @@
       "name": "",
       "selector": "",
       "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
-      "required": false,
+      "required": true,
+      "templateRequired": "repeatable-row",
       "disabled": false,
       "readOnly": false,
       "options": [
@@ -1310,7 +1313,8 @@
       "name": "",
       "selector": "",
       "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
-      "required": false,
+      "required": true,
+      "templateRequired": "repeatable-row",
       "disabled": false,
       "readOnly": false,
       "options": [
@@ -1464,7 +1468,8 @@
       "name": "",
       "selector": "",
       "xpathFallback": "xpath=(//*[contains(normalize-space(),'Select box']/following::input)[1]",
-      "required": false,
+      "required": true,
+      "templateRequired": "repeatable-row",
       "disabled": false,
       "readOnly": false,
       "options": [
