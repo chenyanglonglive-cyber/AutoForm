@@ -95,6 +95,17 @@ test('Living Wage currency uses its single visible dropdown when the other condi
   assert.equal(await page.locator('.ui-select-match:visible').innerText(), 'CNY');
 });
 
+test('Living Wage currency does not settle for the Source of data dropdown in a nested wrapper', async (t) => {
+  const page = await fixture(t, `<section><h3>Living Wage</h3><div>${input('CalculatedLivingWage')}
+    ${select('Source of data', ['GLWC website', 'Manually collected by auditor'])}</div>
+    ${select('Local currency', ['CNY (Yuan Renminbi)'])}</section>`);
+  const module = materializeRepeatableReportModule(remunerationSchema);
+  const field = module.fields.find((field) => field.key === '05-remuneration-and-working-hours__search_24');
+  await fillReportField(page, field, 'CNY (Yuan Renminbi)');
+  await verifyReportModule(page, [field], { [field.key]: 'CNY (Yuan Renminbi)' });
+  assert.deepEqual(await page.locator('.ui-select-match').allTextContents(), ['', 'CNY (Yuan Renminbi)']);
+});
+
 test('annual production volume unit uses the first dropdown after its input inside a larger module', async (t) => {
   const page = await fixture(t, `<section><h3>Production and Employment Structure</h3>
     ${input('ProdEmpStructureAnnualProdVol')}${select('Select box', ['Pieces', 'Tons'])}
@@ -130,10 +141,10 @@ test('repeatable rows use the matching Add Another after the row anchor', async 
   assert.equal(await button.getAttribute('id'), 'target');
 });
 
-test('Interview Details may place its own Add Another before the row anchor', async (t) => {
+test('Interview Details recognizes its production Add Another Interview caption before the row anchor', async (t) => {
   const page = await fixture(t, `<main><button id="previous">+ Add Another</button>
-    <section><h3>Interview Details</h3><button id="target">+ Add Another</button>${input('anchor')}</section></main>`);
-  const button = await locateRepeatableAddButton(page, '#anchor', ['Add Another'], 'interview-details', 1, 'Interview Details');
+    <section><h3>Interview Details</h3><button id="target">+ Add Another Interview</button>${input('anchor')}</section></main>`);
+  const button = await locateRepeatableAddButton(page, '#anchor', ['Add Another Interview', 'Add Another'], 'interview-details', 1, 'Interview Details');
   assert.equal(await button.getAttribute('id'), 'target');
 });
 

@@ -14,6 +14,7 @@ data/report-layout/
 data/report_dom_probe.json
 data/report-preflight.json
 data/report-dry-run-result.json
+data/report-save-result.json
 data/report-preflight-run.log
 data/run-logs.jsonl
 data/screenshots/*

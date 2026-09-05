@@ -5,17 +5,18 @@ import { loadDotEnv } from '../src/env.js';
 import {
   configurePageTimeouts,
   ensureLoggedIn,
-  fillReportField,
-  hasTemplateValue,
+  fillReportModuleFields,
+  getMissingTemplateRequiredFields,
+  getReportFieldsToFill,
   launchPersistentContext,
-  normalizeFieldValue,
   openProjectByMonitoringId,
   openReportIndex,
   openReportModule,
-  resolveReportFieldLocator
+  verifyReportModule
 } from '../src/automation/amforiBot.js';
 import { ensureDir, readJsonFile, resolveFromRoot, writeJsonFile } from '../src/storage.js';
 import { readLocalTemplate } from '../src/localTemplateStorage.js';
+import { materializeRepeatableReportModule } from '../public/reportRepeatables.js';
 
 const WRITE_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
 const RESULT_PATH = 'data/report-dry-run-result.json';
@@ -172,26 +173,32 @@ async function installWriteBlocker(browserContext, blockedRequests) {
 }
 
 async function testReportModule(page, module, reportIndexUrl, moduleValues, addStep, options = {}) {
-  const fields = [...(module.fields || [])].sort((left, right) => Number(left.order || 0) - Number(right.order || 0));
-  const fieldsWithValues = fields.filter((field) => hasTemplateValue(moduleValues, field));
+  // Use the same materialization, conditional filtering, row creation,
+  // locating, filling and verification functions as a real report run.  The
+  // route interceptor above is the only difference: it prevents Save writes.
+  const liveModule = materializeRepeatableReportModule(module, moduleValues);
+  const fields = [...(liveModule.fields || [])].sort((left, right) => Number(left.order || 0) - Number(right.order || 0));
+  const { fieldsToFill, skippedConditionalFields } = getReportFieldsToFill(moduleValues, fields);
+  const fieldsWithValues = fields.filter((field) => Object.hasOwn(moduleValues, field.key) && (typeof moduleValues[field.key] === 'boolean' || String(moduleValues[field.key] ?? '').trim() !== ''));
+  const missingRequiredFields = getMissingTemplateRequiredFields(moduleValues, fields);
   const result = {
     id: module.id,
     title: module.title,
     status: 'pending',
     totalFields: fields.length,
     templateFields: fieldsWithValues.length,
-    fillableFields: fieldsWithValues.filter((field) => field.type !== 'radio' || moduleValues[field.key] === true).length,
+    fillableFields: fieldsToFill.length,
     filledFields: 0,
     verifiedFields: 0,
     failedFields: 0,
     blockedFields: 0,
-    skippedFields: fields.length - fieldsWithValues.length,
+    skippedFields: fields.length - fieldsToFill.length,
     errors: [],
     screenshot: ''
   };
 
   try {
-    await openReportModule(page, module, reportIndexUrl, addStep);
+    await openReportModule(page, liveModule, reportIndexUrl, addStep);
     result.status = fieldsWithValues.length === 0 ? 'skipped' : 'opened';
 
     if (options.openOnly) {
@@ -203,47 +210,34 @@ async function testReportModule(page, module, reportIndexUrl, moduleValues, addS
       return result;
     }
 
-    const fillFailures = new Set();
-    for (const field of fieldsWithValues) {
-      const value = moduleValues[field.key];
-      if (field.type === 'radio' && value !== true) {
-        continue;
-      }
-
-      try {
-        await fillReportFieldWithRowRetry(page, module, field, value, addStep);
-        result.filledFields += 1;
-      } catch (error) {
-        fillFailures.add(field.key);
-        const blocked = isFieldNotFoundError(error);
-        if (blocked) {
-          result.blockedFields += 1;
-        } else {
-          result.failedFields += 1;
-        }
-        result.errors.push(fieldError(blocked ? 'blocked' : 'fill', field, value, error.message));
-      }
+    for (const field of missingRequiredFields) {
+      result.failedFields += 1;
+      result.errors.push(fieldError('template', field, '', 'Template is missing a required field for this populated module.'));
     }
 
-    for (const field of fieldsWithValues) {
-      if (fillFailures.has(field.key)) {
-        continue;
-      }
+    // One-field calls intentionally preserve the production order while
+    // collecting every independent mismatch instead of stopping at the first
+    // problematic dropdown.  Each call still uses production row handling.
+    for (const field of fieldsToFill) {
       try {
-        await verifyDryRunField(page, field, moduleValues[field.key]);
+        const filled = await fillReportModuleFields(page, liveModule, [field], moduleValues, addStep);
+        result.filledFields += filled;
+        await verifyReportModule(page, [field], moduleValues);
         result.verifiedFields += 1;
       } catch (error) {
-        result.failedFields += 1;
-        result.errors.push(fieldError('verify', field, moduleValues[field.key], error.message));
+        const blocked = isFieldNotFoundError(error);
+        if (blocked) result.blockedFields += 1;
+        else result.failedFields += 1;
+        result.errors.push(fieldError(blocked ? 'blocked' : 'fill-or-verify', field, moduleValues[field.key], error.message));
       }
     }
 
     if (result.failedFields > 0) {
       result.status = 'failed';
-      result.screenshot = await captureModuleScreenshot(page, module);
+      result.screenshot = await captureModuleScreenshot(page, liveModule);
     } else if (result.blockedFields > 0) {
       result.status = 'blocked';
-      result.screenshot = await captureModuleScreenshot(page, module);
+      result.screenshot = await captureModuleScreenshot(page, liveModule);
     } else if (fieldsWithValues.length === 0) {
       result.status = 'skipped';
     } else {
@@ -253,7 +247,7 @@ async function testReportModule(page, module, reportIndexUrl, moduleValues, addS
     result.status = 'failed';
     result.failedFields += Math.max(fieldsWithValues.length - result.verifiedFields, 1);
     result.errors.push({ stage: 'module', message: error.message });
-    result.screenshot = await captureModuleScreenshot(page, module);
+    result.screenshot = await captureModuleScreenshot(page, liveModule);
   }
 
   return result;

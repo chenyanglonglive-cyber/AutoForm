@@ -43,7 +43,9 @@ const REPEATABLE_GROUPS = {
       sectionTitle: 'Interview Details',
       seedKey: '10-interview-evidence__search_22',
       anchorKey: 'InterviewDetailsLanguage-0-0',
-      addButtonTexts: ['Add Another']
+      // The production form gives this grid a distinct caption.  Keeping the
+      // generic caption as a fallback supports older report layouts too.
+      addButtonTexts: ['Add Another Interview', 'Add Another']
     }
   ]
 };

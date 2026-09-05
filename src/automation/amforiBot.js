@@ -793,12 +793,30 @@ export async function resolveReportDropdownContainer(page, field) {
     while (root && root !== document.body && root.tagName !== 'FORM') {
       const containers = [...root.querySelectorAll('.ui-select-container')].filter(isVisible);
       if (containers.length) {
-        const labelled = scope.label ? containers.filter((container) => {
+        const containerLabels = (container) => {
           const component = container.closest('.form-group, [class*="form-field-type-select"], .formio-component-select');
           const labels = component ? [...component.querySelectorAll('label')].filter((label) => !label.closest('.ui-select-container')) : [];
-          return labels.some((label) => normalize(label.textContent) === normalize(scope.label));
-        }) : [];
+          const accessibleLabels = String(container.getAttribute('aria-labelledby') || '')
+            .split(/\s+/)
+            .map((id) => document.getElementById(id)?.textContent || '');
+          return [...labels.map((label) => label.textContent), ...accessibleLabels]
+            .map(normalize)
+            .filter(Boolean);
+        };
+        const labelled = scope.label ? containers.filter((container) =>
+          containerLabels(container).some((label) => label === normalize(scope.label))
+        ) : [];
         let chosen = labelled.length === 1 ? labelled[0] : null;
+        // A named field can sit beside an earlier, differently named dropdown
+        // inside a smaller wrapper.  Do not accept that sole local dropdown:
+        // keep walking to the shared section and bind using the field's own
+        // label (including the aria-labelledby label used by Form.io).
+        const hasExplicitNonMatchingLabel = scope.label && containers
+          .some((container) => containerLabels(container).length > 0);
+        if (!chosen && hasExplicitNonMatchingLabel) {
+          root = root.parentElement;
+          continue;
+        }
         // Conditional sections can hide one of the controls recorded in the
         // template.  If the scoped section now exposes exactly one dropdown,
         // it is the only safe live target; rejecting it because an invisible
