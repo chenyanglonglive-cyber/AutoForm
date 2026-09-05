@@ -83,6 +83,17 @@ test('Source of data is found with fewer benefit rows and a hidden conditional f
   assert.equal(await page.locator('.ui-select-match').nth(0).innerText(), '');
 });
 
+test('Living Wage currency uses its single visible dropdown when the other conditional dropdown is hidden', async (t) => {
+  const page = await fixture(t, `<section><h3>Living Wage</h3>${input('CalculatedLivingWage')}
+    <div hidden>${select('Source of data', ['GLWC website', 'Manually collected by auditor'])}</div>
+    ${select('Local currency', ['CNY'])}</section>`);
+  const module = materializeRepeatableReportModule(remunerationSchema);
+  const field = module.fields.find((field) => field.key === '05-remuneration-and-working-hours__search_24');
+  await fillReportField(page, field, 'CNY');
+  await verifyReportModule(page, [field], { [field.key]: 'CNY' });
+  assert.equal(await page.locator('.ui-select-match:visible').innerText(), 'CNY');
+});
+
 test('text fields target the visible control and persist blur changes; mismatch identifies the exact Title', async (t) => {
   const id = 'OverallSocPerformanceMngRSPProceduresTitle-0-0';
   const page = await fixture(t, `<div hidden>${input(id)}</div>${input(id)}`);
@@ -99,6 +110,12 @@ test('text fields target the visible control and persist blur changes; mismatch 
 test('ambiguous add buttons do not click an adjacent grid', async (t) => {
   const page = await fixture(t, `<main>${input('anchor')}<section><button>Add Another</button></section><section><button>Add Another</button></section></main>`);
   await assert.rejects(locateRepeatableAddButton(page, '#anchor', ['Add Another'], 'details', 1), /Add button was not found/);
+});
+
+test('repeatable rows use the matching Add Another after the row anchor', async (t) => {
+  const page = await fixture(t, `<main><button id="previous">+ Add Another</button>${input('anchor')}<button id="target">+ Add Another</button></main>`);
+  const button = await locateRepeatableAddButton(page, '#anchor', ['Add Another'], 'details', 1);
+  assert.equal(await button.getAttribute('id'), 'target');
 });
 
 test('opens the Report tab when its section link is rendered lazily', async (t) => {

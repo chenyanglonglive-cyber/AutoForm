@@ -520,9 +520,15 @@ export async function locateRepeatableAddButton(page, anchorSelector, buttonText
         .filter((candidate) => texts.has(normalize(candidate.textContent)))
         .filter((candidate) => candidate.getClientRects().length > 0);
       if (candidates.length > 0) {
+        // A Form.io "Add Another" button belongs after the last field in its
+        // own row/grid.  A matching button before the anchor belongs to an
+        // earlier repeatable group, even when both groups share a wrapper.
+        const following = candidates.filter((candidate) =>
+          Boolean(element.compareDocumentPosition(candidate) & Node.DOCUMENT_POSITION_FOLLOWING)
+        );
         // Never choose a neighbouring grid's button merely because it is closer.
-        if (candidates.length !== 1) return false;
-        candidates[0].setAttribute('data-autofill-repeatable-add', options.marker);
+        if (following.length !== 1) return false;
+        following[0].setAttribute('data-autofill-repeatable-add', options.marker);
         return true;
       }
       container = container.parentElement;
@@ -756,6 +762,12 @@ export async function resolveReportDropdownContainer(page, field) {
           return labels.some((label) => normalize(label.textContent) === normalize(scope.label));
         }) : [];
         let chosen = labelled.length === 1 ? labelled[0] : null;
+        // Conditional sections can hide one of the controls recorded in the
+        // template.  If the scoped section now exposes exactly one dropdown,
+        // it is the only safe live target; rejecting it because an invisible
+        // sibling existed in the captured template prevents valid reports
+        // from being completed.
+        if (!chosen && containers.length === 1) chosen = containers[0];
         if (!chosen && containers.length === scope.selectCount) chosen = containers[scope.selectIndex];
         if (!chosen) return `区域内下拉框无法唯一匹配（找到 ${containers.length} 个，模板 ${scope.selectCount} 个）`;
         chosen.setAttribute('data-report-dropdown', marker);
