@@ -495,7 +495,14 @@ async function prepareRepeatableReportModule(page, module, fieldsToFill, addStep
       if (await page.locator(target.anchorSelector).count() > 0) continue;
 
       const previous = anchorsByRow.get(rowIndex - 1) || first;
-      const addButton = await locateRepeatableAddButton(page, previous.anchorSelector, previous.addButtonTexts, groupId, rowIndex);
+      const addButton = await locateRepeatableAddButton(
+        page,
+        previous.anchorSelector,
+        previous.addButtonTexts,
+        groupId,
+        rowIndex,
+        previous.sectionTitle
+      );
       await addButton.click();
       await page.locator(target.anchorSelector).waitFor({ state: 'attached', timeout: 8000 }).catch(async () => {
         const validation = await page.locator('.has-error .help-block:visible, .formio-errors:visible, .invalid-feedback:visible').allTextContents();
@@ -508,17 +515,47 @@ async function prepareRepeatableReportModule(page, module, fieldsToFill, addStep
   }
 }
 
-export async function locateRepeatableAddButton(page, anchorSelector, buttonTexts, groupId, rowIndex) {
+export async function locateRepeatableAddButton(page, anchorSelector, buttonTexts, groupId, rowIndex, sectionTitle = '') {
   const marker = `autofill-repeatable-${groupId}-${rowIndex}`.replace(/[^a-z0-9_-]/gi, '-');
   const anchor = page.locator(anchorSelector).first();
   const found = await anchor.evaluate((element, options) => {
     const normalize = (text) => String(text).replace(/^\s*[+＋]\s*/, '').replace(/\s+/g, ' ').trim().toLowerCase();
     const texts = new Set(options.buttonTexts.map(normalize));
+    const isVisible = (candidate) => candidate.getClientRects().length > 0;
+    const matchingButtons = (container) => [...container.querySelectorAll('a, button')]
+      .filter((candidate) => texts.has(normalize(candidate.textContent)))
+      .filter(isVisible);
+
+    if (options.sectionTitle) {
+      const normalizedTitle = normalize(options.sectionTitle);
+      const headings = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6,legend,.panel-heading,.card-header')]
+        .filter(isVisible)
+        .filter((heading) => {
+          const text = normalize(heading.textContent);
+          return text === normalizedTitle || text.startsWith(`${normalizedTitle} `);
+        });
+      let titledContainer = element.parentElement;
+      while (titledContainer && titledContainer !== document.body) {
+        const heading = headings.find((candidate) => titledContainer.contains(candidate));
+        if (heading) {
+          // The correct control may appear before the row anchor in Form.io's
+          // DOM, but it must appear after this group's own heading.  This also
+          // excludes the previous grid's identically named Add Another button.
+          const candidates = matchingButtons(titledContainer).filter((candidate) =>
+            Boolean(heading.compareDocumentPosition(candidate) & Node.DOCUMENT_POSITION_FOLLOWING)
+          );
+          if (candidates.length === 1) {
+            candidates[0].setAttribute('data-autofill-repeatable-add', options.marker);
+            return true;
+          }
+        }
+        titledContainer = titledContainer.parentElement;
+      }
+    }
+
     let container = element.parentElement;
     while (container && container !== document.body) {
-      const candidates = [...container.querySelectorAll('a, button')]
-        .filter((candidate) => texts.has(normalize(candidate.textContent)))
-        .filter((candidate) => candidate.getClientRects().length > 0);
+      const candidates = matchingButtons(container);
       if (candidates.length > 0) {
         // A Form.io "Add Another" button belongs after the last field in its
         // own row/grid.  A matching button before the anchor belongs to an
@@ -534,7 +571,7 @@ export async function locateRepeatableAddButton(page, anchorSelector, buttonText
       container = container.parentElement;
     }
     return false;
-  }, { buttonTexts, marker });
+  }, { buttonTexts, marker, sectionTitle });
 
   if (!found) {
     throw new Error(`Add button was not found for repeatable group: ${groupId}.`);
@@ -754,7 +791,7 @@ export async function resolveReportDropdownContainer(page, field) {
     }
     if (!root) return '所在区域或行未找到';
     while (root && root !== document.body && root.tagName !== 'FORM') {
-      const containers = [...root.querySelectorAll('.ui-select-container')];
+      const containers = [...root.querySelectorAll('.ui-select-container')].filter(isVisible);
       if (containers.length) {
         const labelled = scope.label ? containers.filter((container) => {
           const component = container.closest('.form-group, [class*="form-field-type-select"], .formio-component-select');
@@ -768,6 +805,15 @@ export async function resolveReportDropdownContainer(page, field) {
         // sibling existed in the captured template prevents valid reports
         // from being completed.
         if (!chosen && containers.length === 1) chosen = containers[0];
+        // A top-level select can share a large Form.io panel with grids that
+        // contain other selects.  When this layout position describes one
+        // select, bind it to the first live dropdown following its named/text
+        // anchor instead of comparing against the whole panel's count.
+        if (!chosen && !scope.label && scope.selectCount === 1 && anchors.length) {
+          chosen = containers.find((container) => anchors.some((anchor) =>
+            Boolean(anchor.compareDocumentPosition(container) & Node.DOCUMENT_POSITION_FOLLOWING)
+          )) || null;
+        }
         if (!chosen && containers.length === scope.selectCount) chosen = containers[scope.selectIndex];
         if (!chosen) return `区域内下拉框无法唯一匹配（找到 ${containers.length} 个，模板 ${scope.selectCount} 个）`;
         chosen.setAttribute('data-report-dropdown', marker);

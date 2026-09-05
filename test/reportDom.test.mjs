@@ -4,6 +4,7 @@ import { chromium } from 'playwright';
 import { materializeRepeatableReportModule } from '../public/reportRepeatables.js';
 import { fillReportModuleFields, fillReportField, getReportFieldsToFill, verifyReportModule, locateRepeatableAddButton, openReportIndex } from '../src/automation/amforiBot.js';
 import interviewSchema from '../data/report-schema/modules/10-interview-evidence.json' with { type: 'json' };
+import productionSchema from '../data/report-schema/modules/04-production-and-employment-structure.json' with { type: 'json' };
 import remunerationSchema from '../data/report-schema/modules/05-remuneration-and-working-hours.json' with { type: 'json' };
 
 let browser;
@@ -94,6 +95,17 @@ test('Living Wage currency uses its single visible dropdown when the other condi
   assert.equal(await page.locator('.ui-select-match:visible').innerText(), 'CNY');
 });
 
+test('annual production volume unit uses the first dropdown after its input inside a larger module', async (t) => {
+  const page = await fixture(t, `<section><h3>Production and Employment Structure</h3>
+    ${input('ProdEmpStructureAnnualProdVol')}${select('Select box', ['Pieces', 'Tons'])}
+    ${select('Department setting', ['Yes', 'No'])}${select('Other row', ['A', 'B'])}${select('Migrant row', ['C', 'D'])}</section>`);
+  const module = materializeRepeatableReportModule(productionSchema);
+  const field = module.fields.find((candidate) => candidate.key === '04-production-and-employment-structure__search_2');
+  await fillReportField(page, field, 'Pieces');
+  await verifyReportModule(page, [field], { [field.key]: 'Pieces' });
+  assert.deepEqual(await page.locator('.ui-select-match').allTextContents(), ['Pieces', '', '', '']);
+});
+
 test('text fields target the visible control and persist blur changes; mismatch identifies the exact Title', async (t) => {
   const id = 'OverallSocPerformanceMngRSPProceduresTitle-0-0';
   const page = await fixture(t, `<div hidden>${input(id)}</div>${input(id)}`);
@@ -115,6 +127,13 @@ test('ambiguous add buttons do not click an adjacent grid', async (t) => {
 test('repeatable rows use the matching Add Another after the row anchor', async (t) => {
   const page = await fixture(t, `<main><button id="previous">+ Add Another</button>${input('anchor')}<button id="target">+ Add Another</button></main>`);
   const button = await locateRepeatableAddButton(page, '#anchor', ['Add Another'], 'details', 1);
+  assert.equal(await button.getAttribute('id'), 'target');
+});
+
+test('Interview Details may place its own Add Another before the row anchor', async (t) => {
+  const page = await fixture(t, `<main><button id="previous">+ Add Another</button>
+    <section><h3>Interview Details</h3><button id="target">+ Add Another</button>${input('anchor')}</section></main>`);
+  const button = await locateRepeatableAddButton(page, '#anchor', ['Add Another'], 'interview-details', 1, 'Interview Details');
   assert.equal(await button.getAttribute('id'), 'target');
 });
 

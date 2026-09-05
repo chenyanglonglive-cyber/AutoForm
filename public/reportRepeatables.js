@@ -40,6 +40,7 @@ const REPEATABLE_GROUPS = {
     {
       id: 'interview-details',
       label: '访谈详情',
+      sectionTitle: 'Interview Details',
       seedKey: '10-interview-evidence__search_22',
       anchorKey: 'InterviewDetailsLanguage-0-0',
       addButtonTexts: ['Add Another']
@@ -192,7 +193,8 @@ function decorateExistingRows(rows, fieldByKey, group, anchor) {
         groupLabel: group.label,
         rowIndex,
         anchorSelector,
-        addButtonTexts: group.addButtonTexts
+        addButtonTexts: group.addButtonTexts,
+        sectionTitle: group.sectionTitle || ''
       };
     }
   }
