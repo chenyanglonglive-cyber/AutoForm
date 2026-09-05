@@ -106,6 +106,16 @@ test('Living Wage currency does not settle for the Source of data dropdown in a 
   assert.deepEqual(await page.locator('.ui-select-match').allTextContents(), ['', 'CNY (Yuan Renminbi)']);
 });
 
+test('re-running a multi-select succeeds when its template value is already selected and absent from choices', async (t) => {
+  const page = await fixture(t, `${select('Worker categories sampled', ['Temporary', 'Seasonal'])}`);
+  await page.locator('.ui-select-match').evaluate((element) => { element.textContent = 'Hired Indirectly'; });
+  const field = { key: 'worker-categories', label: 'Worker categories sampled', type: 'ui-select', uiSelectIndex: 0 };
+
+  await fillReportField(page, field, 'Hired Indirectly');
+  await verifyReportModule(page, [field], { [field.key]: 'Hired Indirectly' });
+  assert.equal(await page.locator('.ui-select-search').inputValue(), '');
+});
+
 test('annual production volume unit uses the first dropdown after its input inside a larger module', async (t) => {
   const page = await fixture(t, `<section><h3>Production and Employment Structure</h3>
     ${input('ProdEmpStructureAnnualProdVol')}${select('Select box', ['Pieces', 'Tons'])}

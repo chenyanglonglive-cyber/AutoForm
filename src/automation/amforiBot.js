@@ -730,8 +730,15 @@ export async function fillReportField(page, field, value) {
   if (field.type === 'ui-select') {
     const text = String(value ?? '').trim();
     if (!text) return;
-    await locator.fill(text);
     const container = locator.locator('xpath=ancestor::*[contains(concat(" ", normalize-space(@class), " "), " ui-select-container ")][1]');
+    // Multi-select controls remove selected values from their searchable menu.
+    // Re-running the same template must therefore treat an already selected
+    // value as successful instead of reporting that its menu option vanished.
+    if (await isReportDropdownValueSelected(container, text)) {
+      await page.keyboard.press('Escape').catch(() => {});
+      return;
+    }
+    await locator.fill(text);
     const escapedText = text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
     const choice = container.locator('.ui-select-choices-row:visible, [role="option"]:visible')
       .filter({ hasText: new RegExp(`^\\s*${escapedText}\\s*$`, 'i') }).first();
@@ -882,6 +889,19 @@ async function readReportDropdownValue(container) {
   const text = container.locator('.ui-select-match-text');
   if (await text.count()) return (await text.allTextContents()).join(', ').trim();
   return (await container.locator('.ui-select-match').innerText()).replace(/^\s*×\s*|\s*×\s*$/g, '').trim();
+}
+
+async function isReportDropdownValueSelected(container, expected) {
+  const normalizedExpected = normalizeFieldValue(expected).toLowerCase();
+  if (!normalizedExpected) return false;
+
+  const selectedItems = await container.locator('.ui-select-match-text').allTextContents();
+  if (selectedItems.some((item) => normalizeFieldValue(item).toLowerCase() === normalizedExpected)) {
+    return true;
+  }
+
+  const selected = await readReportDropdownValue(container);
+  return normalizeFieldValue(selected).toLowerCase() === normalizedExpected;
 }
 
 async function fillModule(page, moduleConfig, fields, addStep) {
