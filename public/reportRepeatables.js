@@ -71,7 +71,51 @@ export function materializeRepeatableReportModule(module, values = {}) {
   for (const group of groups) {
     materializeGroup(expanded, values, group);
   }
+  decorateLocatorScopes(expanded);
   return expanded;
+}
+
+// A snapshot's page-wide dropdown index changes whenever a grid grows or shrinks.
+// Describe a field by the named controls in its own row/section instead.
+function decorateLocatorScopes(module) {
+  const byKey = new Map(module.fields.map((field) => [field.key, field]));
+  const rowLabels = {
+    'interview-details': ['Interview type', 'The interviewer is:', 'Location of interview', 'The interviewee(s) is/are:'],
+    'worker-categories': ['Worker category'],
+    benefits: ['Type of benefit', 'Frequency'],
+    'sampled-months': ['Sampled month']
+  };
+  const remunerationLabels = {
+    1: 'Is there a valid collective bargaining agreement?', 5: 'Local currency',
+    19: 'Source of data', 24: 'Local currency', 46: 'Worker categories sampled',
+    47: 'Months sampled', 51: 'Frequency', 68: 'Frequency'
+  };
+  const decorate = (keys, title, rowIndex) => {
+    const fields = keys.map((key) => byKey.get(key)).filter(Boolean);
+    const anchors = fields.filter((field) => field.selector && field.type !== 'ui-select').map((field) => field.selector);
+    const selects = fields.filter((field) => field.type === 'ui-select');
+    for (const field of fields) {
+      field.locationLabel = [title, rowIndex == null ? '' : `第 ${rowIndex + 1} 行`, field.label].filter(Boolean).join(' / ');
+      if (field.type === 'ui-select') {
+        const selectIndex = selects.indexOf(field);
+        const searchNumber = field.key.match(/__search_(\d+)$/)?.[1];
+        const label = rowLabels[field.repeatable?.groupId]?.[selectIndex]
+          || (module.id === '05-remuneration-and-working-hours' && remunerationLabels[searchNumber])
+          || (field.label !== 'Select box' ? field.label : '');
+        field.locatorScope = { anchorSelectors: anchors, title, label, selectIndex, selectCount: selects.length };
+      }
+    }
+  };
+  const walk = (blocks, title = module.title) => {
+    decorate(blocks.filter((block) => block.type === 'field').map((block) => block.key), title);
+    for (const block of blocks) {
+      if (block.type === 'table') {
+        block.rows.forEach((row, index) => decorate(row, block.title || title, index));
+      }
+      if (block.children) walk(block.children, block.title || title);
+    }
+  };
+  walk(module.layout || []);
 }
 
 function materializeGroup(module, values, group) {

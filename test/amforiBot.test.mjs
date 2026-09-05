@@ -6,6 +6,7 @@ import {
   getReportFieldsToFill
 } from '../src/automation/amforiBot.js';
 import remunerationModule from '../data/report-schema/modules/05-remuneration-and-working-hours.json' with { type: 'json' };
+import dataValidationModule from '../data/report-schema/modules/02-data-validation.json' with { type: 'json' };
 
 const sourceField = '05-remuneration-and-working-hours__search_19';
 const conditionalKeys = [
@@ -45,6 +46,15 @@ test('the Sample Details month selector contains every month', () => {
   assert.deepEqual(field.options.map((option) => option.value), [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
+  ]);
+});
+
+test('skips NA in the optional official-language fallback field', () => {
+  const values = { 'LanguagesatSiteOfficialLanguageFree-0-1': 'NA' };
+  const result = getReportFieldsToFill(values, dataValidationModule.fields);
+  assert.deepEqual(result.fieldsToFill, []);
+  assert.deepEqual(result.skippedConditionalFields.map((field) => field.key), [
+    'LanguagesatSiteOfficialLanguageFree-0-1'
   ]);
 });
 

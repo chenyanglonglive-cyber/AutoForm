@@ -907,6 +907,11 @@
       "name": "LanguagesatSiteOfficialLanguageFree-0-1",
       "selector": "#LanguagesatSiteOfficialLanguageFree-0-1",
       "xpathFallback": "xpath=(//*[contains(normalize-space(),'If the official language of the site is ']/following::input)[1]",
+      "skipValues": [
+        "NA",
+        "N/A",
+        "Not applicable"
+      ],
       "required": false,
       "disabled": false,
       "readOnly": false,

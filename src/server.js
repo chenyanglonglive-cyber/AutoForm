@@ -14,6 +14,7 @@ import { runAmforiAttachmentUpload, runAmforiAutomation, runAmforiReportAutomati
 import { readReportIndex, readReportModule, readReportTemplate, writeReportTemplate } from './reportStorage.js';
 import { materializeRepeatableReportModule } from '../public/reportRepeatables.js';
 import { ensureLocalTemplate, readLocalTemplate, writeLocalTemplate } from './localTemplateStorage.js';
+import { readAppVersion } from './appVersion.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -49,6 +50,11 @@ async function handleRequest(req, res) {
 }
 
 async function handleApi(req, res, url) {
+  if (req.method === 'GET' && url.pathname === '/api/app-info') {
+    sendJson(res, 200, { ok: true, ...(await readAppVersion()) });
+    return;
+  }
+
   if (req.method === 'GET' && url.pathname === '/api/template') {
     const template = await readLocalTemplate();
     const credentials = await readCredentials();

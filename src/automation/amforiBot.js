@@ -235,6 +235,7 @@ export async function runAmforiReportAutomation({ monitoringId, modules, values,
           screenshot: moduleScreenshot
         });
         addStep(`${module.title}: failed and will require manual review (${error.message}).`);
+        if (isBrowserClosedError(error)) throw error;
       }
     }
 
@@ -256,7 +257,7 @@ export async function runAmforiReportAutomation({ monitoringId, modules, values,
       }
     }
     return {
-      status: 'failed', monitoringId: monitoringId || '', reason: error.message, screenshot,
+      status: completedModules.length > 0 ? 'partial' : 'failed', monitoringId: monitoringId || '', reason: error.message, screenshot,
       completedModules, moduleResults, filledFields, saved: completedModules.length > 0, steps
     };
   } finally {
@@ -401,11 +402,25 @@ export async function openProjectByMonitoringId(page, monitoringId, settings, ad
 }
 
 export async function openReportIndex(page, addStep) {
-  const reportHref = await page.evaluate(() => {
-    const link = [...document.querySelectorAll('a[href*="report-sections"]')]
-      .find((element) => /report/i.test(element.textContent || '') || element.href.includes('report-sections'));
-    return link?.href || '';
-  });
+  let reportHref = '';
+  for (let attempt = 0; attempt < 3 && !reportHref; attempt += 1) {
+    reportHref = await page.locator('a[href*="report-sections"]').first().getAttribute('href').catch(() => '') || '';
+    if (reportHref) break;
+    const reportTab = page.locator('[id="tab-monitoring.report"], a[role="tab"]:has-text("Report")').first();
+    if (await reportTab.isVisible().catch(() => false)) {
+      await reportTab.click();
+      await page.waitForLoadState('networkidle').catch(() => {});
+    } else if (attempt === 1) {
+      await page.reload({ waitUntil: 'domcontentloaded' });
+    }
+    await page.waitForTimeout(800);
+  }
+
+  if (reportHref) reportHref = new URL(reportHref, page.url()).href;
+  if (!reportHref) {
+    const currentReport = page.url().match(/^(.*\/report-sections)(?:\/[^/?#]+)?(?:[?#].*)?$/);
+    reportHref = currentReport?.[1] || '';
+  }
 
   if (!reportHref) {
     throw new Error('Report tab link was not found on the current project.');
@@ -482,8 +497,9 @@ async function prepareRepeatableReportModule(page, module, fieldsToFill, addStep
       const previous = anchorsByRow.get(rowIndex - 1) || first;
       const addButton = await locateRepeatableAddButton(page, previous.anchorSelector, previous.addButtonTexts, groupId, rowIndex);
       await addButton.click();
-      await page.locator(target.anchorSelector).waitFor({ state: 'attached', timeout: 8000 }).catch(() => {
-        throw new Error(`${target.groupLabel}: row ${rowIndex + 1} was not created after clicking its add button.`);
+      await page.locator(target.anchorSelector).waitFor({ state: 'attached', timeout: 8000 }).catch(async () => {
+        const validation = await page.locator('.has-error .help-block:visible, .formio-errors:visible, .invalid-feedback:visible').allTextContents();
+        throw new Error(`${target.groupLabel}：点击新增后未找到第 ${rowIndex + 1} 行（${target.anchorSelector}）。${validation.length ? `网页校验：${validation.join('；')}` : '请检查该组是否已新增，以及上一行必填项是否完整。'}`);
       });
       addedRows += 1;
     }
@@ -492,25 +508,20 @@ async function prepareRepeatableReportModule(page, module, fieldsToFill, addStep
   }
 }
 
-async function locateRepeatableAddButton(page, anchorSelector, buttonTexts, groupId, rowIndex) {
+export async function locateRepeatableAddButton(page, anchorSelector, buttonTexts, groupId, rowIndex) {
   const marker = `autofill-repeatable-${groupId}-${rowIndex}`.replace(/[^a-z0-9_-]/gi, '-');
   const anchor = page.locator(anchorSelector).first();
   const found = await anchor.evaluate((element, options) => {
-    const texts = new Set(options.buttonTexts.map((text) => String(text).trim().toLowerCase()));
-    const anchorRect = element.getBoundingClientRect();
+    const normalize = (text) => String(text).replace(/^\s*[+＋]\s*/, '').replace(/\s+/g, ' ').trim().toLowerCase();
+    const texts = new Set(options.buttonTexts.map(normalize));
     let container = element.parentElement;
     while (container && container !== document.body) {
       const candidates = [...container.querySelectorAll('a, button')]
-        .filter((candidate) => texts.has((candidate.textContent || '').trim().toLowerCase()))
+        .filter((candidate) => texts.has(normalize(candidate.textContent)))
         .filter((candidate) => candidate.getClientRects().length > 0);
       if (candidates.length > 0) {
-        candidates.sort((left, right) => {
-          const leftRect = left.getBoundingClientRect();
-          const rightRect = right.getBoundingClientRect();
-          const leftDistance = Math.abs(leftRect.top - anchorRect.bottom) + Math.abs(leftRect.left - anchorRect.left) / 10;
-          const rightDistance = Math.abs(rightRect.top - anchorRect.bottom) + Math.abs(rightRect.left - anchorRect.left) / 10;
-          return leftDistance - rightDistance;
-        });
+        // Never choose a neighbouring grid's button merely because it is closer.
+        if (candidates.length !== 1) return false;
         candidates[0].setAttribute('data-autofill-repeatable-add', options.marker);
         return true;
       }
@@ -582,6 +593,12 @@ export function getReportFieldsToFill(values, fields) {
 
   for (const field of fields) {
     if (!hasTemplateValue(values, field)) continue;
+    if ((field.skipValues || []).some((value) =>
+      normalizeFieldValue(value).toLowerCase() === normalizeFieldValue(values[field.key]).toLowerCase()
+    )) {
+      skippedConditionalFields.push(field);
+      continue;
+    }
     if (!matchesFieldVisibilityCondition(values, field.visibleWhen)) {
       skippedConditionalFields.push(field);
       continue;
@@ -590,6 +607,10 @@ export function getReportFieldsToFill(values, fields) {
   }
 
   return { fieldsToFill, skippedConditionalFields };
+}
+
+function isBrowserClosedError(error) {
+  return /Target page, context or browser has been closed|browser has been closed|page has been closed/i.test(error?.message || '');
 }
 
 export function matchesFieldVisibilityCondition(values, condition) {
@@ -637,6 +658,7 @@ export async function fillReportModuleFields(
   // Ensure each row immediately before its first populated field is filled.
   for (const field of fieldsToFill) {
     await ensureFieldRow(page, module, [field], addStep);
+    addStep(`Filling ${field.locationLabel || field.label || field.key} [${field.key}].`);
     await fillField(page, field, values[field.key]);
     filledFields += 1;
   }
@@ -666,12 +688,19 @@ export async function fillReportField(page, field, value) {
     const text = String(value ?? '').trim();
     if (!text) return;
     await locator.fill(text);
-    const choice = page.locator('.ui-select-choices-row:visible, [role="option"]:visible')
-      .filter({ hasText: text }).first();
+    const container = locator.locator('xpath=ancestor::*[contains(concat(" ", normalize-space(@class), " "), " ui-select-container ")][1]');
+    const escapedText = text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+    const choice = container.locator('.ui-select-choices-row:visible, [role="option"]:visible')
+      .filter({ hasText: new RegExp(`^\\s*${escapedText}\\s*$`, 'i') }).first();
     await choice.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {
-      throw new Error(`Dropdown option not found for ${field.label}: ${text}`);
+      throw new Error(`Dropdown option not found for ${field.locationLabel || field.label} [${field.key}]: ${text}`);
     });
     await choice.click();
+    await page.keyboard.press('Tab');
+    const selected = await readReportDropdownValue(container);
+    if (normalizeFieldValue(selected).toLowerCase() !== normalizeFieldValue(text).toLowerCase()) {
+      throw new Error(`${field.locationLabel || field.label} [${field.key}]：点击选项后未确认选中「${text}」（实际「${selected}」）。`);
+    }
     return;
   }
   const stringValue = String(value ?? '');
@@ -681,11 +710,11 @@ export async function fillReportField(page, field, value) {
 
 export async function resolveReportFieldLocator(page, field) {
   if (field.type === 'ui-select') {
-    const search = page.locator('input.ui-select-search').nth(Number(field.uiSelectIndex || 0));
+    const container = await resolveReportDropdownContainer(page, field);
+    const search = container.locator('input.ui-select-search');
     await search.waitFor({ state: 'attached', timeout: 5000 }).catch(() => {
       throw new Error(`Custom dropdown not found: ${field.label}`);
     });
-    const container = search.locator('xpath=ancestor::div[contains(concat(" ", normalize-space(@class), " "), " ui-select-container ")][1]');
     await container.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {
       throw new Error(`Custom dropdown container not found: ${field.label}`);
     });
@@ -698,9 +727,58 @@ export async function resolveReportFieldLocator(page, field) {
   return resolveFieldLocator(page, field);
 }
 
-async function verifyReportModule(page, fields, values) {
+export async function resolveReportDropdownContainer(page, field) {
+  if (!field.locatorScope) {
+    return page.locator('.ui-select-container').nth(Number(field.uiSelectIndex || 0));
+  }
+  const marker = `report-${field.key}`;
+  const result = await page.evaluate(({ scope, marker }) => {
+    const normalize = (text) => String(text || '').replace(/\s+/g, ' ').replace(/\s*\*\s*$/, '').trim().toLowerCase();
+    const isVisible = (element) => element.getClientRects().length > 0 && getComputedStyle(element).visibility !== 'hidden';
+    const anchors = scope.anchorSelectors.flatMap((selector) => [...document.querySelectorAll(selector)].filter(isVisible));
+    let root;
+    if (anchors.length) {
+      root = anchors[0].parentElement;
+      while (root && !anchors.every((anchor) => root.contains(anchor))) root = root.parentElement;
+    } else if (!scope.anchorSelectors.length) {
+      const headings = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6,legend,.panel-heading,.card-header')]
+        .filter((element) => normalize(element.textContent) === normalize(scope.title) && isVisible(element));
+      const leaves = headings.filter((heading) => !headings.some((other) => other !== heading && heading.contains(other)));
+      if (leaves.length === 1) root = leaves[0].parentElement;
+    }
+    if (!root) return '所在区域或行未找到';
+    while (root && root !== document.body && root.tagName !== 'FORM') {
+      const containers = [...root.querySelectorAll('.ui-select-container')];
+      if (containers.length) {
+        const labelled = scope.label ? containers.filter((container) => {
+          const component = container.closest('.form-group, [class*="form-field-type-select"], .formio-component-select');
+          const labels = component ? [...component.querySelectorAll('label')].filter((label) => !label.closest('.ui-select-container')) : [];
+          return labels.some((label) => normalize(label.textContent) === normalize(scope.label));
+        }) : [];
+        let chosen = labelled.length === 1 ? labelled[0] : null;
+        if (!chosen && containers.length === scope.selectCount) chosen = containers[scope.selectIndex];
+        if (!chosen) return `区域内下拉框无法唯一匹配（找到 ${containers.length} 个，模板 ${scope.selectCount} 个）`;
+        chosen.setAttribute('data-report-dropdown', marker);
+        return '';
+      }
+      root = root.parentElement;
+    }
+    return '所在区域内未找到下拉框';
+  }, { scope: field.locatorScope, marker });
+  if (result) throw new Error(`${field.locationLabel || field.label} [${field.key}]：${result}。`);
+  return page.locator(`[data-report-dropdown=${JSON.stringify(marker)}]`);
+}
+
+export async function verifyReportModule(page, fields, values) {
   for (const field of fields) {
-    if (field.type === 'ui-select') continue;
+    if (field.type === 'ui-select') {
+      const container = await resolveReportDropdownContainer(page, field);
+      const matches = await readReportDropdownValue(container);
+      if (normalizeFieldValue(matches).toLowerCase() !== normalizeFieldValue(values[field.key]).toLowerCase()) {
+        throw new Error(`${field.locationLabel || field.label} [${field.key}] 保存后选项不一致：期望「${values[field.key]}」，实际「${matches.trim()}」。`);
+      }
+      continue;
+    }
     const locator = await resolveReportFieldLocator(page, field);
     const expected = values[field.key];
     if (field.type === 'radio' || field.type === 'checkbox') {
@@ -718,9 +796,16 @@ async function verifyReportModule(page, fields, values) {
     }
     const actual = await locator.inputValue();
     if (normalizeFieldValue(actual) !== normalizeFieldValue(expected)) {
-      throw new Error(`${field.label} was not persisted after Save.`);
+      throw new Error(`${field.locationLabel || field.label} [${field.key}] 保存后内容不一致：期望「${expected}」，实际「${actual}」。`);
     }
   }
+}
+
+async function readReportDropdownValue(container) {
+  // ui-select's match can include a remove button (×), which is not part of the value.
+  const text = container.locator('.ui-select-match-text');
+  if (await text.count()) return (await text.allTextContents()).join(', ').trim();
+  return (await container.locator('.ui-select-match').innerText()).replace(/^\s*×\s*|\s*×\s*$/g, '').trim();
 }
 
 async function fillModule(page, moduleConfig, fields, addStep) {
@@ -808,13 +893,18 @@ async function resolveFieldLocator(page, field) {
   ].filter(Boolean);
 
   for (const selector of selectors) {
-    const locator = page.locator(selector).first();
-    const found = await locator.waitFor({ state: 'attached', timeout: 3000 })
+    const candidates = page.locator(selector);
+    const found = await candidates.first().waitFor({ state: 'attached', timeout: 3000 })
       .then(() => true)
       .catch(() => false);
 
     if (found) {
-      return locator;
+      const visible = candidates.filter({ visible: true });
+      const count = await visible.count();
+      if (count === 1) return visible;
+      if (count > 1) throw new Error(`${field.label || field.key} [${field.key}]：定位到多个可见输入框，请核对页面结构。`);
+      // Some radio inputs are visually hidden by their labels; retain that support.
+      if (await candidates.count() === 1 && ['radio', 'checkbox'].includes(field.type)) return candidates;
     }
   }
 

@@ -31,6 +31,7 @@ const reportRunDialog = document.querySelector('#reportRunDialog');
 const closeReportRunDialogButton = document.querySelector('#closeReportRunDialogButton');
 const reportRunDialogSummary = document.querySelector('#reportRunDialogSummary');
 const reportRunDialogList = document.querySelector('#reportRunDialogList');
+const appVersion = document.querySelector('#appVersion');
 
 let attachmentPreviewState = null;
 let reportIndex = null;
@@ -175,7 +176,7 @@ const PA_QUESTION_TEXT = {
   },
 };
 
-await Promise.all([loadTemplate(), loadReportWorkspace(), loadLogs()]);
+await Promise.all([loadAppInfo(), loadTemplate(), loadReportWorkspace(), loadLogs()]);
 
 controllerForm.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -195,6 +196,16 @@ newerLogsButton.addEventListener('click', () => loadLogs(Math.max(0, logOffset -
 olderLogsButton.addEventListener('click', () => loadLogs(logOffset + LOG_PAGE_SIZE));
 document.querySelector('#attachmentFolder').addEventListener('input', clearAttachmentPreview);
 document.querySelector('#monitoringId').addEventListener('input', clearAttachmentPreview);
+
+async function loadAppInfo() {
+  const payload = await requestJson('/api/app-info');
+  if (!payload.ok) {
+    appVersion.textContent = '版本未知';
+    return;
+  }
+  appVersion.textContent = `${payload.version}${payload.dirty ? '（本地修改）' : ''}`;
+  document.title = `amfori Auto Form ${payload.version}`;
+}
 
 async function loadTemplate() {
   const payload = await requestJson('/api/template');
